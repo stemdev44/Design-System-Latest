@@ -268,7 +268,7 @@
         "collapsible_row_WfrzNc"
       ],
       "settings": {
-        "caption": "",
+        "caption": "Collapsible Caption",
         "heading": "Collapsible content",
         "heading_size": "h1",
         "heading_alignment": "center",
