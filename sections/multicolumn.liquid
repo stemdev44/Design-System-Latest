@@ -32,7 +32,7 @@
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title" 
-          style="flex-direction: column; align-items: {{ section.settings.heading_alignment }};">
+          style="justify-content: {{ section.settings.heading_alignment }};">
           {%- if section.settings.caption != blank -%}
             <p class="caption-with-letter-spacing">
               {{ section.settings.caption | escape }}
