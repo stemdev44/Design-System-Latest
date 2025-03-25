@@ -207,7 +207,7 @@
         "caption": "Mutlicolumn Caption",
         "title": "Multicolumn Section",
         "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
