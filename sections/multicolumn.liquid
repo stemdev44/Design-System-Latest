@@ -51,7 +51,7 @@
 
 {% comment %} /////////// Addin description ///// {% endcomment %}
       {%- if section.settings.description != blank -%}
-        <div class="collection__description collection__title.title-wrapper">
+        <div class="collection__description" style="text-align:{{section.settings.heading_alignment}}" >
           {%- if section.settings.description != blank -%}
             {{ section.settings.description }}
           {%- endif %}
