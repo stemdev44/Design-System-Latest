@@ -49,9 +49,9 @@
       </div>     
     {%- endunless -%}
 
-{% comment %} /////////// Addin description ///// {% endcomment %}
+{% comment %} /////////// Adding description ///// {% endcomment %}
       {%- if section.settings.description != blank -%}
-        <div class="collection__description" style="text-align:{{section.settings.heading_alignment}}" >
+        <div class="collection__description" style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
           {%- if section.settings.description != blank -%}
             {{ section.settings.description }}
           {%- endif %}
