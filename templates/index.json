@@ -209,7 +209,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "description": "<p>Description</p>",
-        "description_style": "body",
+        "description_style": "uppercase",
         "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
