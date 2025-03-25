@@ -49,9 +49,7 @@
       </div>     
     {%- endunless -%}
     {%- if section.settings.description -%}
-      {{ section.settings.description }}
-    {%- else -%}
-      {{ section.settings.description -}}
+      <p style="text-align: {{ section.settings.heading_alignment }};">{{ section.settings.description }}</p>
     {%- endif %}    
     <slider-component class="slider-mobile-gutter">
       <ul
