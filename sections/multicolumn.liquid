@@ -30,14 +30,14 @@
       data-cascade
     {% endif %}
   >
+    {%- if section.settings.caption != blank -%}
+      <p class="caption-with-letter-spacing">
+        {{ section.settings.caption | escape }}
+      </p>
+    {% endif %}  
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title" 
-          style="justify-content: {{ section.settings.heading_alignment }};">
-          {%- if section.settings.caption != blank -%}
-            <p class="caption-with-letter-spacing">
-              {{ section.settings.caption | escape }}
-            </p>
-          {% endif %}          
+          style="justify-content: {{ section.settings.heading_alignment }};">          
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
