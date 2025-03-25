@@ -48,6 +48,7 @@
         {%- endif -%}
       </div>     
     {%- endunless -%}
+    <p>Debug: "{{ section.settings.description }}"</p>
     {%- unless section.settings.description == blank -%}
       <p style="text-align: {{ section.settings.heading_alignment }};">{{ section.settings.description | strip }}</p>
     {%- endunless -%}
