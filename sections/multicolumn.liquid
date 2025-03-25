@@ -51,7 +51,7 @@
 
 {% comment %} /////////// Adding description ///// {% endcomment %}
       {%- if section.settings.description != blank -%}
-        <div style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
+        <div class="{{ section.settings.description_style }}" style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
           {%- if section.settings.description != blank -%}
             {{ section.settings.description }}
           {%- endif %}
