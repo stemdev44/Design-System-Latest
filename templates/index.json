@@ -218,7 +218,7 @@
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "center",
-        "background_style": "none",
+        "background_style": "primary",
         "background_color": "#334fb4",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
