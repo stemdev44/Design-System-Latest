@@ -89,7 +89,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container" style="background:{{section.settings.background_color}}">
+            <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.background_color }}" {% endif %}>
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -190,7 +190,8 @@
                   {%- for block in section.blocks -%}
                     <button
                       class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                      aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"                      
+                      aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                      aria-controls="Slider-{{ section.id }}"
                     >
                       {%- if section.settings.slider_visual == 'numbers' -%}
                         {{ forloop.index -}}
