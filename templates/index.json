@@ -205,6 +205,7 @@
       ],
       "settings": {
         "caption": "Mutlicolumn Caption",
+        "text_style": "subtitle",
         "title": "Multicolumn Section",
         "heading_size": "h1",
         "heading_alignment": "center",
