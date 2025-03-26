@@ -223,7 +223,7 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "slider_visual": "numbers",
+        "slider_visual": "dots",
         "padding_top": 36,
         "padding_bottom": 36
       }
