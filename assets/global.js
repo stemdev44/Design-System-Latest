@@ -931,6 +931,7 @@ class SlideshowComponent extends SliderComponent {
     });
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);
+    console.log(this.currentPage - 1)
   }
 
   autoPlayToggle() {
