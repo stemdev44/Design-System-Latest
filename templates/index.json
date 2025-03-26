@@ -222,8 +222,8 @@
         "background_color": "#f3f3f3",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "slider_visual": "dots",
+        "swipe_on_mobile": true,
+        "slider_visual": "numbers",
         "padding_top": 36,
         "padding_bottom": 36
       }
