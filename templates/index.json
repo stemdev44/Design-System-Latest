@@ -206,7 +206,7 @@
       "settings": {
         "caption": "Mutlicolumn Caption",
         "text_style": "subtitle",
-        "text_size": "small",
+        "text_size": "large",
         "title": "Multicolumn Section",
         "heading_size": "h1",
         "heading_alignment": "center",
