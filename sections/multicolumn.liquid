@@ -31,7 +31,7 @@
     {% endif %}
   >
     {%- if section.settings.caption != blank -%}
-      <p class="{{ section.settings.text_style }}" style="text-align: {{ section.settings.heading_alignment }};">
+      <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" style="text-align: {{ section.settings.heading_alignment }};">
         {{ section.settings.caption | escape }}
       </p>
     {% endif %}  
