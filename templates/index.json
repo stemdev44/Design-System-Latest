@@ -383,7 +383,7 @@
         "layout": "image_first",
         "image_behavior": "none",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "content_layout": "full_bleed",
+        "content_layout": "grid",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
