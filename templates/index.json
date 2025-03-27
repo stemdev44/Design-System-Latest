@@ -333,7 +333,7 @@
         "slide_mdtfym"
       ],
       "settings": {
-        "layout": "grid",
+        "layout": "full_bleed",
         "slide_height": "medium",
         "slider_visual": "dots",
         "auto_rotate": false,
@@ -388,7 +388,7 @@
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
-        "content_layout": "overlap",
+        "content_layout": "full_bleed",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
