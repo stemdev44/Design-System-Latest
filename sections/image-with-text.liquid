@@ -103,7 +103,7 @@
                   {%- if block.settings.image != blank -%}
                       <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" />
                   {%- endif -%}   
-                                  
+
               {%- endcase -%}
             {%- endfor -%}
           </div>
@@ -483,6 +483,7 @@
     {
       "type": "image_picker",
       "name": "Image Block",
+      "limit": 8,
       "settings": [
         {
           "type": "image_picker",
