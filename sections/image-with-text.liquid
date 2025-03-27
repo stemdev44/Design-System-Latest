@@ -68,7 +68,11 @@
 
               {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
                 {%- if section.settings.video != null or section.settings.video_url != null -%}
-                      <div class="gradient">
+                      <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+                        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
+                          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+                        {% endif %}
+                      >
                         <div>
                           <deferred-media
                             class="video-section__media deferred-media"
