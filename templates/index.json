@@ -358,7 +358,7 @@
           "settings": {
             "text": "<ul><li>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</li><li>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</li></ul>",
             "text_style": "body",
-            "icon_image": "shopify://shop_images/bg_image.png"
+            "icon_image": "shopify://shop_images/checkmark.png"
           }
         },
         "button_UaqwYV": {
