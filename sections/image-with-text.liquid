@@ -92,14 +92,7 @@
                       {% else %}
                         href="{{ block.settings.button_link }}"
                       {% endif %}
-                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"                      
-                      {% if block.settings.no_button_style %}
-                        <style>
-                          #shopify-section-{{ section.id }} .button:after {
-                            box-shadow: none !important;
-                          }
-                        </style>
-                      {% endif %}
+                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
                     >
                       {{ block.settings.button_label | escape }}
