@@ -395,6 +395,7 @@
     },
     "video_7HrUgX": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
