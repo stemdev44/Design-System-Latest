@@ -23,18 +23,6 @@
     assign remove_color_classes = true
   endif
 
-  assign video_id = section.settings.video.id | default: section.settings.video_url.id
-  assign video_alt = section.settings.video.alt | default: section.settings.description
-  assign alt = 'sections.video.load_video' | t: description: video_alt | escape
-  assign poster = section.settings.video.preview_image | default: section.settings.cover_image
-
-  if section.settings.video != null
-    assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
-    if ratio_diff < 0.01 and ratio_diff > 0
-      assign fix_ratio = true
-    endif
-  endif
-
 -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
@@ -73,13 +61,7 @@
           </div>
           {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
           {%- if section.settings.video != null or section.settings.video_url != null -%}
-            <deferred-media
-              class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              data-media-id="{{ video_id }}"
-              {% if poster != null %}
-                style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-              {% endif %}
-            >
+            <deferred-media>
               <button
                 id="Deferred-Poster-Modal-{{ video_id }}"
                 class="video-section__poster media deferred-media__poster media--landscape"
@@ -103,12 +85,7 @@
               </button>
               <template>
                 {%- if section.settings.video == null and section.settings.video_url != null -%}
-                  {%- liquid
-                    assign loop = ''
-                    if section.settings.enable_video_looping
-                      assign loop = '&loop=1&playlist=' | append: video_id
-                    endif
-                  -%}
+
                   {%- if section.settings.video_url.type == 'youtube' -%}
                     <iframe
                       src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
@@ -132,7 +109,6 @@
                     | video_tag:
                       image_size: '1100x',
                       autoplay: true,
-                      loop: section.settings.enable_video_looping,
                       controls: true,
                       muted: false
                   }}
