@@ -95,7 +95,7 @@
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"                      
                       {% if block.settings.no_button_style %}
                         {% style %} 
-                          .button:after {
+                          .button::after {
                             box-shadow: none !important;
                           }
                         {%endstyle%}
