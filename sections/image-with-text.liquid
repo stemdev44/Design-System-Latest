@@ -174,7 +174,7 @@
                 {%- when 'text' -%}
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
-                    
+
                     {%-if block.settings.icon_image != blank -%}
                         <style>
                         #shopify-section-{{ section.id }} ul {
@@ -189,7 +189,7 @@
 
                         #shopify-section-{{ section.id }} ul li::before {
                           content: "";
-                          background: url("{{ block.settings.icon_image | asset_url }}") no-repeat center center;
+                          background: url("{{ block.settings.icon_image | img_url }}") no-repeat center center;
                           background-size: contain; /* Ensure the image fits well */
                           width: 20px; /* Adjust based on image size */
                           height: 20px;
