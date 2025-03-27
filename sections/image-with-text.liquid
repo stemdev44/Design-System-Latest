@@ -92,8 +92,7 @@
                       {% else %}
                         href="{{ block.settings.button_link }}"
                       {% endif %}
-                      class="{% if block.settings.button_style_secondary %} button button--secondary{% else %} button button--primary{% endif %}"
-                      {% if block.settings.no_button_style %} style="border: none; color: #000; text-decoration: none;"{% endif %}
+                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
                     >
                       {{ block.settings.button_label | escape }}
