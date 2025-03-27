@@ -60,9 +60,9 @@
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </div>
-        </div>
           {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
             {%- if section.settings.video != null or section.settings.video_url != null -%}
+                  <h1 class="video-section__media deferred-media gradient global-media-settings">Going to show the video</h1>
                   <div class="gradient">
                     <div class="video-section page-width">
                       <deferred-media
@@ -134,7 +134,8 @@
                     </div>
                   </div>                  
             {%- endif -%}
-          {% comment %} //////////////// Video End   //// {% endcomment %}        
+          {% comment %} //////////////// Video End   //// {% endcomment %}          
+        </div>        
         <div class="image-with-text__text-item grid__item">
           <div
             id="ImageWithText--{{ section.id }}"
