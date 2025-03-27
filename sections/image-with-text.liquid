@@ -61,7 +61,7 @@
           </div>
         </div>
           {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
-          {%- if section.settings.video != null or section.settings.video_url != null -%}
+          {% comment %} {%- if section.settings.video != null or section.settings.video_url != null -%}
             <deferred-media
               class="video-section__media deferred-media gradient global-media-settings global-media-settings--full-width media-fit-cover "
               data-media-id="{{ video_id }}"
@@ -122,7 +122,7 @@
                 {%- endif -%}
               </template>
             </deferred-media>             
-          {%- endif -%}       
+          {%- endif -%}        {% endcomment %}
           {% comment %} //////////////// Video End   //// {% endcomment %}        
         <div class="image-with-text__text-item grid__item">
           <div
