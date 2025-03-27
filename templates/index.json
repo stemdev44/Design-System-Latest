@@ -379,7 +379,8 @@
           "settings": {
             "button_label": "Demo",
             "button_link": "#",
-            "button_style_secondary": true
+            "button_style_secondary": true,
+            "no_button_style": true
           }
         }
       },
