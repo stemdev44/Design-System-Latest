@@ -59,6 +59,7 @@
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </div>
+        </div>
           {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
           {%- if section.settings.video != null or section.settings.video_url != null -%}
             <deferred-media
@@ -121,10 +122,8 @@
                 {%- endif -%}
               </template>
             </deferred-media>             
-          {%- endif -%}
-       
-          {% comment %} //////////////// Video End   //// {% endcomment %}
-        </div>
+          {%- endif -%}       
+          {% comment %} //////////////// Video End   //// {% endcomment %}        
         <div class="image-with-text__text-item grid__item">
           <div
             id="ImageWithText--{{ section.id }}"
