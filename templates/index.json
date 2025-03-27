@@ -383,6 +383,7 @@
         "layout": "image_first",
         "image_behavior": "none",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/bg_image.png",
         "content_layout": "grid",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
