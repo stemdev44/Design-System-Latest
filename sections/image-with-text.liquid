@@ -1,4 +1,6 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -61,7 +63,7 @@
 
           {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
             {%- if section.settings.video != null or section.settings.video_url != null -%}
-                  <h1>Going to show the video</h1>           
+                  <h1 class="video-section__media deferred-media gradient global-media-settings global-media-settings--full-width media-fit-cover">Going to show the video</h1>           
             {%- endif -%}
           {% comment %} //////////////// Video End   //// {% endcomment %}
 
