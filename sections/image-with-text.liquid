@@ -556,17 +556,11 @@
 <style>
 #shopify-section-{{ section.id }} ul {
   list-style: none; /* Remove default bullet points */
-  padding-left: 0; /* Remove default padding */
-}
-
-#shopify-section-{{ section.id }} ul li {
-  position: relative;
-  padding-left: 30px; /* Space for the custom bullet image */
 }
 
 #shopify-section-{{ section.id }} ul li::before {
   content: "";
-  background: url(' {{- 'icon-tick.svg' | inline_asset_content -}}') no-repeat center center;
+  background: url("{{ 'icon-tick.svg' | asset_url }}") no-repeat center center;
   background-size: contain; /* Ensure the image fits well */
   width: 20px; /* Adjust based on image size */
   height: 20px;
