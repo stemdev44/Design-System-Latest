@@ -58,6 +58,13 @@
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </div>
+
+          {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
+            {%- if section.settings.video != null or section.settings.video_url != null -%}
+                  <h1>Going to show the video</h1>           
+            {%- endif -%}
+          {% comment %} //////////////// Video End   //// {% endcomment %}
+
         </div>
         <div class="image-with-text__text-item grid__item">
           <div
