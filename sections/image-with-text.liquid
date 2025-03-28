@@ -116,15 +116,14 @@
                                   {%- endif -%}                                                                    
                                   {% comment %} ///////////// Adding Video Text Button Start /////////// {% endcomment %}
                                     {%- if section.settings.video_button_text != blank -%}
-                                      <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                                        {% if section.settings.video_no_border_style%}
-                                          {% style %}
-                                              .button:after{
-                                                  box-shadow: none;
-                                              }                                        
-                                          {% endstyle %}  
-                                        {% endif %}
-                                      >
+                                      {%- if section.settings.video_no_border_style -%}
+                                          <style>
+                                            .button:after{
+                                               box-shadow: none;
+                                             }                                        
+                                          </style>  
+                                        {%- endif -%}                                    
+                                      <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
                                         {{ section.settings.video_button_text | escape }}
                                       </a>
                                     {%- endif -%}
