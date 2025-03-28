@@ -102,7 +102,9 @@
                                 {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                               {%- endif -%}
                               <span class="deferred-media__poster-button motion-reduce">
-                                <button>Click Me</button>
+                                <span class="svg-wrapper">
+                                  {{- 'icon-play.svg' | inline_asset_content -}}
+                                </span>
                               </span>
                             </button>
                             <template>
