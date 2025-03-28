@@ -285,6 +285,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "slider_visual": "dots",
+        "show_pagenation": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
