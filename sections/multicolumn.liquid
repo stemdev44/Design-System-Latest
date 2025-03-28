@@ -89,7 +89,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}" {% endif %}>
+            <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}} " {% endif %}>
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -501,7 +501,7 @@
     },
     {
       "type": "range",
-      "id": "columns_corner_radius",
+      "id": "column_corner_radius",
       "min": 0,
       "max": 40,
       "default": 0,
