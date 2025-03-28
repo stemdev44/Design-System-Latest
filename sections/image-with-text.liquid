@@ -208,10 +208,12 @@
 
                             #shopify-section-{{ section.id }} ul li::before {
                               content: "";
-                              background: url("{{ block.settings.icon_image | img_url:"" }}") no-repeat center center;
-                              background-size: contain;
-                              width: 10%;
-                              height: 40px;
+                              background: url("{{ block.settings.icon_image | img_url:"" }}");
+                              background-size: cover;
+                              background-repeat: no-repeat;
+                              background-position: center;
+                              width: 20px;
+                              height: 20px;
                               position: absolute;
                               left: 0;
                               top: 50%;
