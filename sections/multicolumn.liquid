@@ -161,7 +161,7 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons large-up-hide">
+        <div class="slider-buttons large-up-hide" {% if section.settings.show_pagenation==false %} style="display:none;"{% endif %}>
           <button
             type="button"
             class="slider-button slider-button--prev"
