@@ -89,7 +89,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.background_color }}" {% endif %}>
+            <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}" {% endif %}>
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -134,10 +134,10 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                  <h3 class="inline-richtext" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.font_color }}" {% endif %}>{{ block.settings.text }}</div>
+                  <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
@@ -471,13 +471,13 @@
     },
     {
       "type": "color",
-      "id": "background_color",
-      "label": "Background Color"
+      "id": "column_background_color",
+      "label": "Column Background Color"
     },
     {
       "type": "color",
-      "id": "font_color",
-      "label": "Font Color"
+      "id": "column_font_color",
+      "label": "Column Font Color"
     },        
     {
       "type": "color_scheme",
