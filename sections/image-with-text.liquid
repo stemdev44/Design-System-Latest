@@ -106,6 +106,20 @@
                                   {{- 'icon-play.svg' | inline_asset_content -}}
                                 </span>
                               </span>
+                              {% comment %} ///////////// Adding Video Text Button Start /////////// {% endcomment %}
+                                {%- if section.settings.video_button_text != blank -%}
+                                  <a
+                                    {% unless section.settings.video_no_border_style %}
+                                      class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                                    {% endunless %}
+                                    {% if section.settings.video_no_border_style %}
+                                      style="text-decoration: none; color: #000;"
+                                    {% endif %}
+                                  >
+                                    {{ section.settings.video_button_text | escape }}
+                                  </a>
+                                {%- endif -%}                               
+                              {% comment %} ////////////Adding Video Text Button End {% endcomment %}
                             </button>
                             <template>
                               {%- if section.settings.video == null and section.settings.video_url != null -%}
