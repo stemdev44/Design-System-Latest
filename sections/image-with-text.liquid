@@ -118,11 +118,11 @@
                                     {%- if section.settings.video_button_text != blank -%}
                                       <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                                         {% if section.settings.video_no_border_style%}
-                                          <style>
+                                          {% style %}
                                               .button:after{
                                                   box-shadow: none;
                                               }                                        
-                                          </style>   
+                                          {% endstyle %}  
                                         {% endif %}
                                       >
                                         {{ section.settings.video_button_text | escape }}
