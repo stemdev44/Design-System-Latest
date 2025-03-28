@@ -210,10 +210,10 @@
                       {% else %}
                         href="{{ block.settings.button_link }}"
                       {% endif %}
-                      {% unless block.settings.no_button_style %}
+                      {% unless block.settings.no_border_style %}
                         class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {% endunless %}
-                      {% if block.settings.no_button_style %}
+                      {% if block.settings.no_border_style %}
                         style="text-decoration: none; color: #000;"
                       {% endif %}                               
                       {{ block.shopify_attributes }}
@@ -646,7 +646,7 @@
         },
         {
           "type": "checkbox",
-          "id": "no_button_style",
+          "id": "no_border_style",
           "default": false,
           "label": "No Border Style"
         }        
