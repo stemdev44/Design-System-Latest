@@ -209,7 +209,7 @@
         "column_font_color": "#ffffff",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "slider_visual": "dots",
         "padding_top": 36,
         "padding_bottom": 36
