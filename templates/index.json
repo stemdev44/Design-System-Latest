@@ -281,6 +281,7 @@
         "background_style": "primary",
         "column_background_color": "#334fb4",
         "column_font_color": "#ffffff",
+        "column_corner_radius": 28,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
