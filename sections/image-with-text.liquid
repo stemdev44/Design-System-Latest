@@ -101,16 +101,8 @@
                               {%- else -%}
                                 {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                               {%- endif -%}
-                              <span class="deferred-media__poster-button motion-reduce" 
-                                  {% if section.settings.video_button_text != blank %}
-                                    style="background-color: transparent; border: none; width:100%"
-                                  {% endif %}                                
-                              >
-                                <span class="svg-wrapper"
-                                  {% if section.settings.video_button_text != blank %}
-                                    style="width:100%"
-                                  {% endif %}                                 
-                                >
+                              <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
+                                <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
                                   {%- if section.settings.video_button_text == blank -%}
                                     {{- 'icon-play.svg' | inline_asset_content -}}
                                   {%- endif -%}                                                                    
@@ -122,7 +114,7 @@
                                                box-shadow: none;
                                              }                                        
                                           </style>  
-                                        {%- endif -%}                                    
+                                        {%- endif -%}
                                       <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                                          style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
                                       >
@@ -211,14 +203,14 @@
 
                             #shopify-section-{{ section.id }} ul li {
                               position: relative;
-                              padding-left: 50px; 
+                              padding-left: 30px; 
                             }
 
                             #shopify-section-{{ section.id }} ul li::before {
                               content: "";
                               background: url("{{ block.settings.icon_image | img_url:"" }}") no-repeat center center;
                               background-size: contain;
-                              width: 40px;
+                              width: 10%;
                               height: 40px;
                               position: absolute;
                               left: 0;
