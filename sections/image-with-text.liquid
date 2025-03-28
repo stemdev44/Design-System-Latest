@@ -189,7 +189,7 @@
 
                             #shopify-section-{{ section.id }} ul li::before {
                               content: "";
-                              background: url(//stem-sandbox44.myshopify.com/cdn/shop/files/bg_image_small.png?v=1743052203) no-repeat center center;
+                              background: url("{{ block.settings.icon_image | img_url:"" }}") no-repeat center center;
                               background-size: contain;
                               width: 40px;
                               height: 40px;
