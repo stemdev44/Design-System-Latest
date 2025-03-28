@@ -101,7 +101,11 @@
                               {%- else -%}
                                 {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                               {%- endif -%}
-                              <span class="deferred-media__poster-button motion-reduce">
+                              <span class="deferred-media__poster-button motion-reduce" 
+                                  {% if section.settings.video_button_text != blank %}
+                                    style="background-color: none; border: none;"
+                                  {% endif %}                                
+                              >
                                 <span class="svg-wrapper">
                                   {%- if section.settings.video_button_text == blank -%}
                                     {{- 'icon-play.svg' | inline_asset_content -}}
