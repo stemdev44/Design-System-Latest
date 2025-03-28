@@ -9,6 +9,79 @@
  */
 {
   "sections": {
+    "image_with_text_dJfY7c": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_picker_nP6yjb": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/bg_image.png"
+          }
+        },
+        "caption_8kY69t": {
+          "type": "caption",
+          "settings": {
+            "caption": "Image with text caption",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "heading_LCFf44": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_GCPqjX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe hydration should be simple, sustainable, and delicious. Bello purifies your tap water, enhances it with real flavors, and makes every sip effortless.</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/checkmark.png"
+          }
+        },
+        "button_UaqwYV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Demo",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "no_border_style": false
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_nP6yjb",
+        "caption_8kY69t",
+        "heading_LCFf44",
+        "text_GCPqjX",
+        "button_UaqwYV"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
+        "video_url": "",
+        "cover_image": "shopify://shop_images/bg_image.png",
+        "video_button_text": "See How it Works",
+        "video_button_background": "#334fb4",
+        "video_button_font": "#ffffff",
+        "video_button_style_secondary": false,
+        "video_no_border_style": true,
+        "layout_page": "full_bleed",
+        "content_layout": "grid",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -196,6 +269,7 @@
         "title": "Multicolumn Section",
         "heading_size": "h1",
         "heading_alignment": "center",
+        "description_alignment": "center",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
         "image_width": "third",
@@ -328,89 +402,16 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
-    },
-    "image_with_text_dJfY7c": {
-      "type": "image-with-text",
-      "blocks": {
-        "image_picker_nP6yjb": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/bg_image.png"
-          }
-        },
-        "caption_8kY69t": {
-          "type": "caption",
-          "settings": {
-            "caption": "Image with text caption",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "large"
-          }
-        },
-        "heading_LCFf44": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_GCPqjX": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</li><li>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/checkmark.png"
-          }
-        },
-        "button_UaqwYV": {
-          "type": "button",
-          "settings": {
-            "button_label": "Demo",
-            "button_link": "#",
-            "button_style_secondary": false,
-            "no_border_style": false
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_nP6yjb",
-        "caption_8kY69t",
-        "heading_LCFf44",
-        "text_GCPqjX",
-        "button_UaqwYV"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-        "video_url": "",
-        "cover_image": "shopify://shop_images/bg_image.png",
-        "video_button_text": "See How it Works",
-        "video_button_background": "#334fb4",
-        "video_button_font": "#ffffff",
-        "video_button_style_secondary": false,
-        "video_no_border_style": true,
-        "layout_page": "full_bleed",
-        "content_layout": "grid",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
+    "image_with_text_dJfY7c",
     "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
     "multicolumn",
     "collapsible_content_qUw7fA",
-    "slideshow_7cWhrY",
-    "image_with_text_dJfY7c"
+    "slideshow_7cWhrY"
   ]
 }
