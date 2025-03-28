@@ -367,7 +367,7 @@
             "button_label": "Demo",
             "button_link": "#",
             "button_style_secondary": true,
-            "no_border_style": true
+            "no_border_style": false
           }
         }
       },
