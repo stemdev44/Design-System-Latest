@@ -104,8 +104,6 @@
                               <span class="deferred-media__poster-button motion-reduce">
                                 <span class="svg-wrapper">
                                   {{- 'icon-play.svg' | inline_asset_content -}}
-                                </span>
-                              </span>
                               {% comment %} ///////////// Adding Video Text Button Start /////////// {% endcomment %}
                                 {%- if section.settings.video_button_text != blank -%}
                                   <a
@@ -119,7 +117,10 @@
                                     {{ section.settings.video_button_text | escape }}
                                   </a>
                                 {%- endif -%}                               
-                              {% comment %} ////////////Adding Video Text Button End {% endcomment %}
+                              {% comment %} ////////////Adding Video Text Button End {% endcomment %}                                  
+                                </span>
+                              </span>
+
                             </button>
                             <template>
                               {%- if section.settings.video == null and section.settings.video_url != null -%}
