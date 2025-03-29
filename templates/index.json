@@ -267,7 +267,7 @@
         "text_size": "large",
         "title": "Multicolumn Section",
         "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
