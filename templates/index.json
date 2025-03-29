@@ -284,8 +284,7 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "slider_visual": "dots",
-        "show_pagenation": false,
+        "slider_visual": "none",
         "padding_top": 36,
         "padding_bottom": 36
       }
