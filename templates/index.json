@@ -70,7 +70,7 @@
         "video_button_font": "#ffffff",
         "video_button_style_secondary": false,
         "video_no_border_style": true,
-        "layout_page": "full_bleed",
+        "layout_page": "grid",
         "content_layout": "grid",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
