@@ -59,6 +59,7 @@
         "button_UaqwYV"
       ],
       "settings": {
+        "layout_page": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -70,7 +71,6 @@
         "video_button_font": "#ffffff",
         "video_button_style_secondary": false,
         "video_no_border_style": true,
-        "layout_page": "grid",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -268,7 +268,7 @@
         "title": "Multicolumn Section",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "mobile_description_alignment": "center",
+        "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
         "image_width": "third",
