@@ -51,16 +51,15 @@
 
 {% comment %} /////////// Adding description test///// {% endcomment %}
       {%- if section.settings.description != blank -%}
-      <p>{{ section.id }}</p>
         <style>
           @media screen and (max-width: 749px) {
-            #{{ section.id }} .{{ section.settings.description_style }},
-            #{{ section.id }} .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
+            #shopify-section-{{ section.id }} .{{ section.settings.description_style }},
+            #shopify-section-{{ section.id }} .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
               {
                 text-align:{{section.settings.mobile_description_alignment}} !important;  
                 padding-left: 1.5rem;              
               }
-            #{{ section.id }} .multicolumn__title{
+            #shopify-section-{{ section.id }} .multicolumn__title{
                 justify-content: {{ section.settings.mobile_description_alignment }} !important;
               }
           }
