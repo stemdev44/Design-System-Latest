@@ -51,6 +51,7 @@
 
 {% comment %} /////////// Adding description test///// {% endcomment %}
       {%- if section.settings.description != blank -%}
+      <p>{{ section.id }}</p>
         <style>
           @media screen and (max-width: 749px) {
             #{{ section.id }} .{{ section.settings.description_style }},
