@@ -161,7 +161,7 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons large-up-hide" {% if section.settings.show_pagenation==false %} style="display:none;"{% endif %}>
+        <div class="slider-buttons large-up-hide" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
           <button
             type="button"
             class="slider-button slider-button--prev"
@@ -554,16 +554,14 @@
         {
           "value": "numbers",
           "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
-        }
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }        
       ],
       "default": "counter",
       "label": "t:sections.slideshow.settings.slider_visual.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_pagenation",
-      "default": true,
-      "label": "Show Pagination"
     },        
     {
       "type": "header",
