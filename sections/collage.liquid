@@ -25,11 +25,11 @@
         {{ section.settings.heading }}
       </h2>
     {%- endif -%}
-    <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %} grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %} ">
+    <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %} grid grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %} ">
       {% assign skip_card_product_styles = false %}
       {%- for block in section.blocks -%}
         <div
-          class="image-with-text__media-item--{{ section.settings.desktop_image_width }} collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="grid__item image-with-text__media-item--{{ section.settings.desktop_image_width }} collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
