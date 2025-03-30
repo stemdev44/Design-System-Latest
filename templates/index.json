@@ -61,7 +61,7 @@
       "settings": {
         "layout_page": "grid",
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "video_url": "https://www.youtube.com/watch?v=K4TOrB7at0Y",
@@ -218,7 +218,6 @@
         "heading": "Multimedia collage",
         "heading_size": "h2",
         "desktop_layout": "left",
-        "desktop_image_width": "large",
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
