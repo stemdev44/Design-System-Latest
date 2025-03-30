@@ -61,7 +61,7 @@
       "settings": {
         "layout_page": "grid",
         "height": "adapt",
-        "desktop_image_width": "large",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "video_url": "",
