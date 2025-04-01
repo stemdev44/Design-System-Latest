@@ -26,22 +26,24 @@
       </h2>
     {%- endif -%}
     <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
-      {%- if section.settings.desktop_image_width=='small' -%}
-        <style>
-          @media screen and (min-width: 750px) {
-              .collage__item--left:nth-child(3n-2) {
-                  grid-column: 1 / span 1 !important;
+        {% comment %} //////// Collage Width Style Start ////// {% endcomment %}
+          {%- if section.settings.desktop_image_width=='small' -%}
+            <style>
+              @media screen and (min-width: 750px) {
+                  .collage__item--left:nth-child(3n-2) {
+                      grid-column: 1 / span 1 !important;
+                  }
               }
-          }
 
-          @media screen and (min-width: 750px) {
-              .collage__item--left:nth-child(3n-1), .collage__item--left:nth-child(3n) {
-                  grid-column-start: 2 !important;
-                  grid-column-end: span 2 !important;
-              }
-          }        
-        </style>
-      {%- endif -%}
+              @media screen and (min-width: 750px) {
+                  .collage__item--left:nth-child(3n-1), .collage__item--left:nth-child(3n) {
+                      grid-column-start: 2 !important;
+                      grid-column-end: span 2 !important;
+                  }
+              }        
+            </style>
+          {%- endif -%}          
+        {% comment %} //////// Collage Width Style End ////// {% endcomment %}
       {% assign skip_card_product_styles = false %}
       {%- for block in section.blocks -%}
         <div
