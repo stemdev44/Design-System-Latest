@@ -26,8 +26,8 @@
       </h2>
     {%- endif -%}
     <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
-      {%- if desktop_image_width=='small' -%}
-      <h1>{{desktop_image_width}}</h1>
+      {%- if section.settings.desktop_image_width=='small' -%}
+      <h1>{{section.settings.desktop_image_width}}</h1>
         <style>
           @media screen and (min-width: 750px) {
               .collage__item--left:nth-child(3n-2) {
