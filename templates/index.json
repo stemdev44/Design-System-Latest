@@ -417,6 +417,7 @@
         "description_style": "body",
         "columns_desktop": 3,
         "enable_desktop_slider": true,
+        "slider_visual": "numbers",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
