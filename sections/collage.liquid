@@ -45,8 +45,7 @@
             </style>
           {%- endif -%}
 
-          {%- if section.settings.desktop_image_width=='large' -%}
-          <h1>{{section.settings.desktop_image_width}}</h1>
+          {%- if section.settings.desktop_image_width =='large' -%}
             {% comment %} <style>
               @media screen and (min-width: 750px) {
                   .collage__item--left:nth-child(3n-2) {
