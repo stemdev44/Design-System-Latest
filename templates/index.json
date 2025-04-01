@@ -218,7 +218,7 @@
         "heading": "Multimedia collage",
         "heading_size": "h2",
         "desktop_layout": "left",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
