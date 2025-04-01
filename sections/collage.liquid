@@ -45,12 +45,9 @@
           {%- if section.settings.desktop_image_width =='large' -%}
             <style>
               @media screen and (min-width: 750px) {
-                  .collage__item--left:nth-child(3n-2) {
+                  .collage > .collage__item--left{
                       grid-column: 1 / span 3 !important;
                   }
-                  .collage__item--left:nth-child(3n-1), .collage__item--left:nth-child(3n) {
-                      grid-column-start: none !important
-                  }                   
               }   
             </style>
           {%- endif -%}
