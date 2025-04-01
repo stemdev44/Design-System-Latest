@@ -170,7 +170,7 @@
         "description_style": "uppercase",
         "columns_desktop": 6,
         "enable_desktop_slider": true,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-1",
