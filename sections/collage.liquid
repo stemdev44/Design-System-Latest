@@ -51,6 +51,11 @@
                   .collage__item--left:nth-child(3n-2) {
                       grid-column: 1 / span 3;
                   }
+                  .collage {
+                      grid-column-gap: var(--grid-mobile-horizontal-spacing);
+                      grid-row-gap: var(--grid-mobile-vertical-spacing);
+                      grid-auto-flow: dense
+                  }                  
               }   
             </style>
           {%- endif -%}
