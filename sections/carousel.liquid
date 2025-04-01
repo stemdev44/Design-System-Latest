@@ -214,7 +214,7 @@
                     <span class="slider-counter--total">{{ section.blocks.size }}</span>
                 {%- else -%}
                     <div class="slideshow__control-wrapper">
-                    {%- for product in section.settings.collection.products -%}
+                    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
                         <button
                         class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                         aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
