@@ -1,1397 +1,809 @@
-function getFocusableElements(container) {
-  return Array.from(
-    container.querySelectorAll(
-      "summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
-    )
-  );
-}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-class SectionId {
-  static #separator = '__';
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
-  // for a qualified section id (e.g. 'template--22224696705326__main'), return just the section id (e.g. 'template--22224696705326')
-  static parseId(qualifiedSectionId) {
-    return qualifiedSectionId.split(SectionId.#separator)[0];
+{{ 'carousel.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.image_shape == 'blob' %}
+  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- unless section.settings.quick_add == 'none' -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endunless -%}
+
+{%- if section.settings.quick_add == 'standard' -%}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- if section.settings.quick_add == 'bulk' -%}
+  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  // for a qualified section id (e.g. 'template--22224696705326__main'), return just the section name (e.g. 'main')
-  static parseSectionName(qualifiedSectionId) {
-    return qualifiedSectionId.split(SectionId.#separator)[1];
-  }
-
-  // for a section id (e.g. 'template--22224696705326') and a section name (e.g. 'recommended-products'), return a qualified section id (e.g. 'template--22224696705326__recommended-products')
-  static getIdForSection(sectionId, sectionName) {
-    return `${sectionId}${SectionId.#separator}${sectionName}`;
-  }
-}
-
-class HTMLUpdateUtility {
-  /**
-   * Used to swap an HTML node with a new node.
-   * The new node is inserted as a previous sibling to the old node, the old node is hidden, and then the old node is removed.
-   *
-   * The function currently uses a double buffer approach, but this should be replaced by a view transition once it is more widely supported https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API
-   */
-  static viewTransition(oldNode, newContent, preProcessCallbacks = [], postProcessCallbacks = []) {
-    preProcessCallbacks?.forEach((callback) => callback(newContent));
-
-    const newNodeWrapper = document.createElement('div');
-    HTMLUpdateUtility.setInnerHTML(newNodeWrapper, newContent.outerHTML);
-    const newNode = newNodeWrapper.firstChild;
-
-    // dedupe IDs
-    const uniqueKey = Date.now();
-    oldNode.querySelectorAll('[id], [form]').forEach((element) => {
-      element.id && (element.id = `${element.id}-${uniqueKey}`);
-      element.form && element.setAttribute('form', `${element.form.getAttribute('id')}-${uniqueKey}`);
-    });
-
-    oldNode.parentNode.insertBefore(newNode, oldNode);
-    oldNode.style.display = 'none';
-
-    postProcessCallbacks?.forEach((callback) => callback(newNode));
-
-    setTimeout(() => oldNode.remove(), 500);
-  }
-
-  // Sets inner HTML and reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
-  static setInnerHTML(element, html) {
-    element.innerHTML = html;
-    element.querySelectorAll('script').forEach((oldScriptTag) => {
-      const newScriptTag = document.createElement('script');
-      Array.from(oldScriptTag.attributes).forEach((attribute) => {
-        newScriptTag.setAttribute(attribute.name, attribute.value);
-      });
-      newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
-      oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
-    });
-  }
-}
-
-document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
-  summary.setAttribute('role', 'button');
-  summary.setAttribute('aria-expanded', summary.parentNode.hasAttribute('open'));
-
-  if (summary.nextElementSibling.getAttribute('id')) {
-    summary.setAttribute('aria-controls', summary.nextElementSibling.id);
-  }
-
-  summary.addEventListener('click', (event) => {
-    event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
-  });
-
-  if (summary.closest('header-drawer, menu-drawer')) return;
-  summary.parentElement.addEventListener('keyup', onKeyUpEscape);
-});
-
-const trapFocusHandlers = {};
-
-function trapFocus(container, elementToFocus = container) {
-  var elements = getFocusableElements(container);
-  var first = elements[0];
-  var last = elements[elements.length - 1];
-
-  removeTrapFocus();
-
-  trapFocusHandlers.focusin = (event) => {
-    if (event.target !== container && event.target !== last && event.target !== first) return;
-
-    document.addEventListener('keydown', trapFocusHandlers.keydown);
-  };
-
-  trapFocusHandlers.focusout = function () {
-    document.removeEventListener('keydown', trapFocusHandlers.keydown);
-  };
-
-  trapFocusHandlers.keydown = function (event) {
-    if (event.code.toUpperCase() !== 'TAB') return; // If not TAB key
-    // On the last focusable element and tab forward, focus the first element.
-    if (event.target === last && !event.shiftKey) {
-      event.preventDefault();
-      first.focus();
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-
-    //  On the first focusable element and tab backward, focus the last element.
-    if ((event.target === container || event.target === first) && event.shiftKey) {
-      event.preventDefault();
-      last.focus();
-    }
-  };
-
-  document.addEventListener('focusout', trapFocusHandlers.focusout);
-  document.addEventListener('focusin', trapFocusHandlers.focusin);
-
-  elementToFocus.focus();
-
-  if (
-    elementToFocus.tagName === 'INPUT' &&
-    ['search', 'text', 'email', 'url'].includes(elementToFocus.type) &&
-    elementToFocus.value
-  ) {
-    elementToFocus.setSelectionRange(0, elementToFocus.value.length);
   }
-}
+{%- endstyle -%}
 
-// Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
-try {
-  document.querySelector(':focus-visible');
-} catch (e) {
-  focusVisiblePolyfill();
-}
+{%- liquid
+  assign products_to_display = section.settings.collection.all_products_count
 
-function focusVisiblePolyfill() {
-  const navKeys = [
-    'ARROWUP',
-    'ARROWDOWN',
-    'ARROWLEFT',
-    'ARROWRIGHT',
-    'TAB',
-    'ENTER',
-    'SPACE',
-    'ESCAPE',
-    'HOME',
-    'END',
-    'PAGEUP',
-    'PAGEDOWN',
-  ];
-  let currentFocusedElement = null;
-  let mouseClick = null;
+  if section.settings.collection.all_products_count > section.settings.products_to_show
+    assign products_to_display = section.settings.products_to_show
+    assign more_in_collection = true
+  endif
 
-  window.addEventListener('keydown', (event) => {
-    if (navKeys.includes(event.code.toUpperCase())) {
-      mouseClick = false;
-    }
-  });
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
 
-  window.addEventListener('mousedown', (event) => {
-    mouseClick = true;
-  });
+  assign max_columns_to_show = columns_mobile_int
+  if columns_desktop_int > columns_mobile_int
+    assign max_columns_to_show = columns_desktop_int
+  endif
 
-  window.addEventListener(
-    'focus',
-    () => {
-      if (currentFocusedElement) currentFocusedElement.classList.remove('focused');
+  assign show_desktop_slider = false
+  if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
+    assign show_desktop_slider = true
+  endif
+-%}
 
-      if (mouseClick) return;
+<div
+  class="color-{{ section.settings.color_scheme }} isolate gradient"
+>
+  <div
+    class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
+    id="collection-{{ section.id }}"
+    data-id="{{ section.id }}"
+  >
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+      {%- if section.settings.title != blank -%}
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ section.settings.title }}
+        </h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank
+        or section.settings.show_description
+        and section.settings.collection.description != empty
+      -%}
+        <div class="collection__description {{ section.settings.description_style }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {%- if section.settings.show_description -%}
+            {{ section.settings.collection.description }}
+          {%- else -%}
+            {{ section.settings.description -}}
+          {%- endif %}
+        </div>
+      {%- endif -%}
+    </div>
 
-      currentFocusedElement = document.activeElement;
-      currentFocusedElement.classList.add('focused');
+    <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+
+        {% comment %} //////// Show Products When No Block ////////       {% endcomment %}
+      {%- if section.blocks.size < 1 -%}
+        <ul
+            id="Slider-{{ section.id }}"
+            data-id="{{ section.id }}"
+            class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+            role="list"
+            aria-label="{{ 'general.slider.name' | t }}"
+        >
+                {% assign skip_card_product_styles = false %}
+
+                {%- if section.settings.collection.products.size > 0 -%}
+                {% assign lazy_load = false %}
+                {% paginate section.settings.collection.products by section.settings.products_to_show %}
+                    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+                    {% if lazy_load == false and forloop.index > max_columns_to_show %}
+                        {% assign lazy_load = true %}
+                    {% endif %}
+                    <li
+                        id="Slide-{{ section.id }}-{{ forloop.index }}"
+                        class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                        {% endif %}
+                    >
+                        {% render 'card-product',
+                        card_product: product,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        image_shape: section.settings.image_shape,
+                        lazy_load: lazy_load,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: section.settings.show_vendor,
+                        show_rating: section.settings.show_rating,
+                        skip_styles: skip_card_product_styles,
+                        section_id: section.id,
+                        quick_add: section.settings.quick_add
+                        %}
+                    </li>
+                    {%- assign skip_card_product_styles = true -%}
+                    {%- endfor -%}
+                {% endpaginate %}
+                {%- else -%}
+                {%- for i in (1..section.settings.columns_desktop) -%}
+                    <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                    >
+                    {% liquid
+                        assign ridx = forloop.rindex
+                        case ridx
+                        when 5
+                            assign ridx = 1
+                        when 6
+                            assign ridx = 2
+                        endcase
+                    %}
+                    {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
+                    {% render 'card-product',
+                        show_vendor: section.settings.show_vendor,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        image_shape: section.settings.image_shape,
+                        lazy_load: false,
+                        placeholder_image: placeholder_image
+                    %}
+                    </li>
+                {%- endfor -%}
+                {%- endif -%}
+        </ul>
+        {% comment %} ////////// Show Block When There is Block ///////     {% endcomment %}
+      {%-else-%}
+        <ul
+            class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+            id="Slider-{{ section.id }}"
+            role="list"
+            data-autoplay="{{ section.settings.auto_rotate }}"
+            data-speed="{{ section.settings.change_slides_speed }}"            
+        >
+            {%- liquid
+            assign highest_ratio = 0
+            for block in section.blocks
+                if block.settings.image.aspect_ratio > highest_ratio
+                assign highest_ratio = block.settings.image.aspect_ratio
+                endif
+            endfor
+            -%}
+            {%- for block in section.blocks -%}
+            {%- assign empty_column = '' -%}
+            {%- if block.settings.image == blank
+                and block.settings.title == blank
+                and block.settings.text == blank
+                and block.settings.link_label == blank
+            -%}
+                {%- assign empty_column = ' multicolumn-list__item--empty' -%}
+            {%- endif -%}
+
+            <li
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="multicolumn-list__item grid__item grid--1-col slider__slide center {{ empty_column }} scroll-trigger animate--slide-in"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+            >
+                <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px;" {% endif %}>
+                {%- if block.settings.image != blank -%}
+                    {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+                    {% assign spaced_image = true %}
+                    {% endif %}
+                    <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                    <div
+                        class="media media--transparent media--{{ section.settings.image_ratio }}"
+                        {% if section.settings.image_ratio == 'adapt' %}
+                        style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                        {% endif %}
+                    >
+                        {%- liquid
+                        assign number_of_columns = section.settings.columns_desktop
+                        assign number_of_columns_mobile = section.settings.columns_mobile
+                        assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                        if section.settings.image_width == 'half'
+                            assign image_width = 0.5
+                        elsif section.settings.image_width == 'third'
+                            assign image_width = 0.33
+                        else
+                            assign image_width = 1
+                        endif
+                        -%}
+                        {% capture sizes %}
+                        (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                        (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                        (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                        calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                        {% endcapture %}
+                        {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag:
+                            widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                            sizes: sizes,
+                            class: 'multicolumn-card__image'
+                        }}
+                    </div>
+                    </div>
+                {%- endif -%}
+                <div class="multicolumn-card__info">
+                    {%- if block.settings.title != blank -%}
+                    <h3 class="inline-richtext" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                    <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.text }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.link_label != blank -%}
+                    <a
+                        class="link animate-arrow"
+                        {% if block.settings.link == blank %}
+                        role="link" aria-disabled="true"
+                        {% else %}
+                        href="{{ block.settings.link }}"
+                        {% endif %}
+                    >
+                        {{- block.settings.link_label | escape -}}
+                        <span class="svg-wrapper"
+                        ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                        >
+                    </a>
+                    {%- endif -%}
+                </div>
+                </div>
+            </li>
+            {%- endfor -%}
+        </ul> 
+      {%- endif -%}
+
+      {%- if show_mobile_slider or show_desktop_slider -%}
+        {% comment %} <div class="slider-buttons">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ products_to_display }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div> {% endcomment %}
+        {% comment %} /////// Pagination Adding Start //////// {% endcomment %}
+
+            <div class="slider-buttons" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
+                <button
+                    type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+                >
+                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                </button>
+
+                    <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                    {%- if section.settings.slider_visual == 'counter' -%}
+                        <span class="slider-counter--current">1</span>
+                        <span aria-hidden="true"> / </span>
+                        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                        {%- if section.blocks.size < 1 -%}
+                            <span class="slider-counter--total">{{ products_to_display }}</span>
+                        {%-else-%}
+                            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+                        {%- endif -%}
+                        
+                    {%- else -%}
+                        <div class="slideshow__control-wrapper">
+                            {%- if section.blocks.size < 1 -%}
+                                {%- for product in section.settings.collection.products -%}
+                                    <button
+                                    class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                    aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                    aria-controls="Slider-{{ section.id }}"
+                                    >
+                                    {%- if section.settings.slider_visual == 'numbers' -%}
+                                        {{ forloop.index -}}
+                                    {%- else -%}
+                                        <span class="dot"></span>
+                                    {%- endif -%}
+                                    </button>
+                                {%- endfor -%}
+                            {%- endif -%}
+                            
+                            {%- if section.blocks.size > 1 -%}
+
+                                {%- assign total_blocks = section.blocks.size -%}
+                                {%- assign blocks_per_slide = section.settings.columns_desktop -%}
+                                {%- assign total_dots = total_blocks | divided_by: blocks_per_slide -%}
+
+                                {%- for i in (1..total_dots) -%}
+                                    <button
+                                    class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                    aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                    aria-controls="Slider-{{ section.id }}"
+                                    >
+                                    {%- if section.settings.slider_visual == 'numbers' -%}
+                                        {{ forloop.index -}}
+                                    {%- else -%}
+                                        <span class="dot"></span>
+                                    {%- endif -%}
+                                    </button>
+                                {%- endfor -%}                                
+                            {%- endif -%}                                
+
+                        </div>
+                    {%- endif -%}
+                    </div>
+                <button
+                    type="button"
+                    class="slider-button slider-button--next"
+                    name="next"
+                    aria-label="{{ 'general.slider.next_slide' | t }}"
+                >
+                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                </button>
+                {% comment %} ////// Auto Play Button Start ////// {% endcomment %}
+                    {%- if section.settings.auto_rotate -%}
+                        <button
+                        type="button"
+                        class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+                        aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+                        >
+                        <span class="svg-wrapper">
+                            {{- 'icon-pause.svg' | inline_asset_content -}}
+                        </span>
+                        <span class="svg-wrapper">
+                            {{- 'icon-play.svg' | inline_asset_content -}}
+                        </span>
+                        </button>
+                    {%- endif -%}                
+                {% comment %} ////// Auto Play button end //////// {% endcomment %}
+            </div>        
+        {% comment %} //////// Pagination Adding End /////////{% endcomment %}
+      {%- endif -%}
+    </slider-component>
+
+    {%- if section.settings.show_view_all and more_in_collection -%}
+      <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <a
+          href="{{ section.settings.collection.url }}"
+          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
+        >
+          {{ 'sections.featured_collection.view_all' | t }}
+        </a>
+      </div>
+    {%- endif -%}
+    {% if section.settings.image_shape == 'arch' %}
+      {{ 'mask-arch.svg' | inline_asset_content }}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Carousel",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
     },
-    true
-  );
-}
-
-function pauseAllMedia() {
-  document.querySelectorAll('.js-youtube').forEach((video) => {
-    video.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-  });
-  document.querySelectorAll('.js-vimeo').forEach((video) => {
-    video.contentWindow.postMessage('{"method":"pause"}', '*');
-  });
-  document.querySelectorAll('video').forEach((video) => video.pause());
-  document.querySelectorAll('product-model').forEach((model) => {
-    if (model.modelViewerUI) model.modelViewerUI.pause();
-  });
-}
-
-function removeTrapFocus(elementToFocus = null) {
-  document.removeEventListener('focusin', trapFocusHandlers.focusin);
-  document.removeEventListener('focusout', trapFocusHandlers.focusout);
-  document.removeEventListener('keydown', trapFocusHandlers.keydown);
-
-  if (elementToFocus) elementToFocus.focus();
-}
-
-function onKeyUpEscape(event) {
-  if (event.code.toUpperCase() !== 'ESCAPE') return;
-
-  const openDetailsElement = event.target.closest('details[open]');
-  if (!openDetailsElement) return;
-
-  const summaryElement = openDetailsElement.querySelector('summary');
-  openDetailsElement.removeAttribute('open');
-  summaryElement.setAttribute('aria-expanded', false);
-  summaryElement.focus();
-}
-
-class QuantityInput extends HTMLElement {
-  constructor() {
-    super();
-    this.input = this.querySelector('input');
-    this.changeEvent = new Event('change', { bubbles: true });
-    this.input.addEventListener('change', this.onInputChange.bind(this));
-    this.querySelectorAll('button').forEach((button) =>
-      button.addEventListener('click', this.onButtonClick.bind(this))
-    );
-  }
-
-  quantityUpdateUnsubscriber = undefined;
-
-  connectedCallback() {
-    this.validateQtyRules();
-    this.quantityUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.quantityUpdate, this.validateQtyRules.bind(this));
-  }
-
-  disconnectedCallback() {
-    if (this.quantityUpdateUnsubscriber) {
-      this.quantityUpdateUnsubscriber();
-    }
-  }
-
-  onInputChange(event) {
-    this.validateQtyRules();
-  }
-
-  onButtonClick(event) {
-    event.preventDefault();
-    const previousValue = this.input.value;
-
-    if (event.target.name === 'plus') {
-      if (parseInt(this.input.dataset.min) > parseInt(this.input.step) && this.input.value == 0) {
-        this.input.value = this.input.dataset.min;
-      } else {
-        this.input.stepUp();
-      }
-    } else {
-      this.input.stepDown();
-    }
-
-    if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
-
-    if (this.input.dataset.min === previousValue && event.target.name === 'minus') {
-      this.input.value = parseInt(this.input.min);
-    }
-  }
-
-  validateQtyRules() {
-    const value = parseInt(this.input.value);
-    if (this.input.min) {
-      const buttonMinus = this.querySelector(".quantity__button[name='minus']");
-      buttonMinus.classList.toggle('disabled', parseInt(value) <= parseInt(this.input.min));
-    }
-    if (this.input.max) {
-      const max = parseInt(this.input.max);
-      const buttonPlus = this.querySelector(".quantity__button[name='plus']");
-      buttonPlus.classList.toggle('disabled', value >= max);
-    }
-  }
-}
-
-customElements.define('quantity-input', QuantityInput);
-
-function debounce(fn, wait) {
-  let t;
-  return (...args) => {
-    clearTimeout(t);
-    t = setTimeout(() => fn.apply(this, args), wait);
-  };
-}
-
-
-function throttle(fn, delay) {
-  let lastCall = 0;
-  return function (...args) {
-    const now = new Date().getTime();
-    if (now - lastCall < delay) {
-      return;
-    }
-    lastCall = now;
-    return fn(...args);
-  };
-}
-
-function fetchConfig(type = 'json') {
-  return {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: `application/${type}` },
-  };
-}
-
-/*
- * Shopify Common JS
- *
- */
-if (typeof window.Shopify == 'undefined') {
-  window.Shopify = {};
-}
-
-Shopify.bind = function (fn, scope) {
-  return function () {
-    return fn.apply(scope, arguments);
-  };
-};
-
-Shopify.setSelectorByValue = function (selector, value) {
-  for (var i = 0, count = selector.options.length; i < count; i++) {
-    var option = selector.options[i];
-    if (value == option.value || value == option.innerHTML) {
-      selector.selectedIndex = i;
-      return i;
-    }
-  }
-};
-
-Shopify.addListener = function (target, eventName, callback) {
-  target.addEventListener
-    ? target.addEventListener(eventName, callback, false)
-    : target.attachEvent('on' + eventName, callback);
-};
-
-Shopify.postLink = function (path, options) {
-  options = options || {};
-  var method = options['method'] || 'post';
-  var params = options['parameters'] || {};
-
-  var form = document.createElement('form');
-  form.setAttribute('method', method);
-  form.setAttribute('action', path);
-
-  for (var key in params) {
-    var hiddenField = document.createElement('input');
-    hiddenField.setAttribute('type', 'hidden');
-    hiddenField.setAttribute('name', key);
-    hiddenField.setAttribute('value', params[key]);
-    form.appendChild(hiddenField);
-  }
-  document.body.appendChild(form);
-  form.submit();
-  document.body.removeChild(form);
-};
-
-Shopify.CountryProvinceSelector = function (country_domid, province_domid, options) {
-  this.countryEl = document.getElementById(country_domid);
-  this.provinceEl = document.getElementById(province_domid);
-  this.provinceContainer = document.getElementById(options['hideElement'] || province_domid);
-
-  Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler, this));
-
-  this.initCountry();
-  this.initProvince();
-};
-
-Shopify.CountryProvinceSelector.prototype = {
-  initCountry: function () {
-    var value = this.countryEl.getAttribute('data-default');
-    Shopify.setSelectorByValue(this.countryEl, value);
-    this.countryHandler();
-  },
-
-  initProvince: function () {
-    var value = this.provinceEl.getAttribute('data-default');
-    if (value && this.provinceEl.options.length > 0) {
-      Shopify.setSelectorByValue(this.provinceEl, value);
-    }
-  },
-
-  countryHandler: function (e) {
-    var opt = this.countryEl.options[this.countryEl.selectedIndex];
-    var raw = opt.getAttribute('data-provinces');
-    var provinces = JSON.parse(raw);
-
-    this.clearOptions(this.provinceEl);
-    if (provinces && provinces.length == 0) {
-      this.provinceContainer.style.display = 'none';
-    } else {
-      for (var i = 0; i < provinces.length; i++) {
-        var opt = document.createElement('option');
-        opt.value = provinces[i][0];
-        opt.innerHTML = provinces[i][1];
-        this.provinceEl.appendChild(opt);
-      }
-
-      this.provinceContainer.style.display = '';
-    }
-  },
-
-  clearOptions: function (selector) {
-    while (selector.firstChild) {
-      selector.removeChild(selector.firstChild);
-    }
-  },
-
-  setOptions: function (selector, values) {
-    for (var i = 0, count = values.length; i < values.length; i++) {
-      var opt = document.createElement('option');
-      opt.value = values[i];
-      opt.innerHTML = values[i];
-      selector.appendChild(opt);
-    }
-  },
-};
-
-class MenuDrawer extends HTMLElement {
-  constructor() {
-    super();
-
-    this.mainDetailsToggle = this.querySelector('details');
-
-    this.addEventListener('keyup', this.onKeyUp.bind(this));
-    this.addEventListener('focusout', this.onFocusOut.bind(this));
-    this.bindEvents();
-  }
-
-  bindEvents() {
-    this.querySelectorAll('summary').forEach((summary) =>
-      summary.addEventListener('click', this.onSummaryClick.bind(this))
-    );
-    this.querySelectorAll(
-      'button:not(.localization-selector):not(.country-selector__close-button):not(.country-filter__reset-button)'
-    ).forEach((button) => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
-  }
-
-  onKeyUp(event) {
-    if (event.code.toUpperCase() !== 'ESCAPE') return;
-
-    const openDetailsElement = event.target.closest('details[open]');
-    if (!openDetailsElement) return;
-
-    openDetailsElement === this.mainDetailsToggle
-      ? this.closeMenuDrawer(event, this.mainDetailsToggle.querySelector('summary'))
-      : this.closeSubmenu(openDetailsElement);
-  }
-
-  onSummaryClick(event) {
-    const summaryElement = event.currentTarget;
-    const detailsElement = summaryElement.parentNode;
-    const parentMenuElement = detailsElement.closest('.has-submenu');
-    const isOpen = detailsElement.hasAttribute('open');
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    function addTrapFocus() {
-      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
-      summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
-    }
-
-    if (detailsElement === this.mainDetailsToggle) {
-      if (isOpen) event.preventDefault();
-      isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
-
-      if (window.matchMedia('(max-width: 990px)')) {
-        document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
-      }
-    } else {
-      setTimeout(() => {
-        detailsElement.classList.add('menu-opening');
-        summaryElement.setAttribute('aria-expanded', true);
-        parentMenuElement && parentMenuElement.classList.add('submenu-open');
-        !reducedMotion || reducedMotion.matches
-          ? addTrapFocus()
-          : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
-      }, 100);
-    }
-  }
-
-  openMenuDrawer(summaryElement) {
-    setTimeout(() => {
-      this.mainDetailsToggle.classList.add('menu-opening');
-    });
-    summaryElement.setAttribute('aria-expanded', true);
-    trapFocus(this.mainDetailsToggle, summaryElement);
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
-  }
-
-  closeMenuDrawer(event, elementToFocus = false) {
-    if (event === undefined) return;
-
-    this.mainDetailsToggle.classList.remove('menu-opening');
-    this.mainDetailsToggle.querySelectorAll('details').forEach((details) => {
-      details.removeAttribute('open');
-      details.classList.remove('menu-opening');
-    });
-    this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach((submenu) => {
-      submenu.classList.remove('submenu-open');
-    });
-    document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
-    removeTrapFocus(elementToFocus);
-    this.closeAnimation(this.mainDetailsToggle);
-
-    if (event instanceof KeyboardEvent) elementToFocus?.setAttribute('aria-expanded', false);
-  }
-
-  onFocusOut() {
-    setTimeout(() => {
-      if (this.mainDetailsToggle.hasAttribute('open') && !this.mainDetailsToggle.contains(document.activeElement))
-        this.closeMenuDrawer();
-    });
-  }
-
-  onCloseButtonClick(event) {
-    const detailsElement = event.currentTarget.closest('details');
-    this.closeSubmenu(detailsElement);
-  }
-
-  closeSubmenu(detailsElement) {
-    const parentMenuElement = detailsElement.closest('.submenu-open');
-    parentMenuElement && parentMenuElement.classList.remove('submenu-open');
-    detailsElement.classList.remove('menu-opening');
-    detailsElement.querySelector('summary').setAttribute('aria-expanded', false);
-    removeTrapFocus(detailsElement.querySelector('summary'));
-    this.closeAnimation(detailsElement);
-  }
-
-  closeAnimation(detailsElement) {
-    let animationStart;
-
-    const handleAnimation = (time) => {
-      if (animationStart === undefined) {
-        animationStart = time;
-      }
-
-      const elapsedTime = time - animationStart;
-
-      if (elapsedTime < 400) {
-        window.requestAnimationFrame(handleAnimation);
-      } else {
-        detailsElement.removeAttribute('open');
-        if (detailsElement.closest('details[open]')) {
-          trapFocus(detailsElement.closest('details[open]'), detailsElement.querySelector('summary'));
-        }
-      }
-    };
-
-    window.requestAnimationFrame(handleAnimation);
-  }
-}
-
-customElements.define('menu-drawer', MenuDrawer);
-
-class HeaderDrawer extends MenuDrawer {
-  constructor() {
-    super();
-  }
-
-  openMenuDrawer(summaryElement) {
-    this.header = this.header || document.querySelector('.section-header');
-    this.borderOffset =
-      this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
-    document.documentElement.style.setProperty(
-      '--header-bottom-position',
-      `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
-    );
-    this.header.classList.add('menu-open');
-
-    setTimeout(() => {
-      this.mainDetailsToggle.classList.add('menu-opening');
-    });
-
-    summaryElement.setAttribute('aria-expanded', true);
-    window.addEventListener('resize', this.onResize);
-    trapFocus(this.mainDetailsToggle, summaryElement);
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
-  }
-
-  closeMenuDrawer(event, elementToFocus) {
-    if (!elementToFocus) return;
-    super.closeMenuDrawer(event, elementToFocus);
-    this.header.classList.remove('menu-open');
-    window.removeEventListener('resize', this.onResize);
-  }
-
-  onResize = () => {
-    this.header &&
-      document.documentElement.style.setProperty(
-        '--header-bottom-position',
-        `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
-      );
-    document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
-  };
-}
-
-customElements.define('header-drawer', HeaderDrawer);
-
-class ModalDialog extends HTMLElement {
-  constructor() {
-    super();
-    this.querySelector('[id^="ModalClose-"]').addEventListener('click', this.hide.bind(this, false));
-    this.addEventListener('keyup', (event) => {
-      if (event.code.toUpperCase() === 'ESCAPE') this.hide();
-    });
-    if (this.classList.contains('media-modal')) {
-      this.addEventListener('pointerup', (event) => {
-        if (event.pointerType === 'mouse' && !event.target.closest('deferred-media, product-model')) this.hide();
-      });
-    } else {
-      this.addEventListener('click', (event) => {
-        if (event.target === this) this.hide();
-      });
-    }
-  }
-
-  connectedCallback() {
-    if (this.moved) return;
-    this.moved = true;
-    this.dataset.section = this.closest('.shopify-section').id.replace('shopify-section-', '');
-    document.body.appendChild(this);
-  }
-
-  show(opener) {
-    this.openedBy = opener;
-    const popup = this.querySelector('.template-popup');
-    document.body.classList.add('overflow-hidden');
-    this.setAttribute('open', '');
-    if (popup) popup.loadContent();
-    trapFocus(this, this.querySelector('[role="dialog"]'));
-    window.pauseAllMedia();
-  }
-
-  hide() {
-    document.body.classList.remove('overflow-hidden');
-    document.body.dispatchEvent(new CustomEvent('modalClosed'));
-    this.removeAttribute('open');
-    removeTrapFocus(this.openedBy);
-    window.pauseAllMedia();
-  }
-}
-customElements.define('modal-dialog', ModalDialog);
-
-class BulkModal extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
-    const handleIntersection = (entries, observer) => {
-      if (!entries[0].isIntersecting) return;
-      observer.unobserve(this);
-      if (this.innerHTML.trim() === '') {
-        const productUrl = this.dataset.url.split('?')[0];
-        fetch(`${productUrl}?section_id=bulk-quick-order-list`)
-          .then((response) => response.text())
-          .then((responseText) => {
-            const html = new DOMParser().parseFromString(responseText, 'text/html');
-            const sourceQty = html.querySelector('.quick-order-list-container').parentNode;
-            this.innerHTML = sourceQty.innerHTML;
-          })
-          .catch((e) => {
-            console.error(e);
-          });
-      }
-    };
-
-    new IntersectionObserver(handleIntersection.bind(this)).observe(
-      document.querySelector(`#QuickBulk-${this.dataset.productId}-${this.dataset.sectionId}`)
-    );
-  }
-}
-
-customElements.define('bulk-modal', BulkModal);
-
-class ModalOpener extends HTMLElement {
-  constructor() {
-    super();
-
-    const button = this.querySelector('button');
-
-    if (!button) return;
-    button.addEventListener('click', () => {
-      const modal = document.querySelector(this.getAttribute('data-modal'));
-      if (modal) modal.show(button);
-    });
-  }
-}
-customElements.define('modal-opener', ModalOpener);
-
-class DeferredMedia extends HTMLElement {
-  constructor() {
-    super();
-    const poster = this.querySelector('[id^="Deferred-Poster-"]');
-    if (!poster) return;
-    poster.addEventListener('click', this.loadContent.bind(this));
-  }
-
-  loadContent(focus = true) {
-    window.pauseAllMedia();
-    if (!this.getAttribute('loaded')) {
-      const content = document.createElement('div');
-      content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
-
-      this.setAttribute('loaded', true);
-      const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
-      if (focus) deferredElement.focus();
-      if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
-        // force autoplay for safari
-        deferredElement.play();
-      }
-
-      // Workaround for safari iframe bug
-      const formerStyle = deferredElement.getAttribute('style');
-      deferredElement.setAttribute('style', 'display: block;');
-      window.setTimeout(() => {
-        deferredElement.setAttribute('style', formerStyle);
-      }, 0);
-    }
-  }
-}
-
-customElements.define('deferred-media', DeferredMedia);
-
-class SliderComponent extends HTMLElement {
-  constructor() {
-    super();
-    this.slider = this.querySelector('[id^="Slider-"]');
-    this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.enableSliderLooping = false;
-    this.currentPageElement = this.querySelector('.slider-counter--current');
-    this.pageTotalElement = this.querySelector('.slider-counter--total');
-    this.prevButton = this.querySelector('button[name="previous"]');
-    this.nextButton = this.querySelector('button[name="next"]');
-
-    if (!this.slider || !this.nextButton) return;
-
-    this.initPages();
-    const resizeObserver = new ResizeObserver((entries) => this.initPages());
-    resizeObserver.observe(this.slider);
-
-    this.slider.addEventListener('scroll', this.update.bind(this));
-    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
-    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
-
-    ///////// Adding Autoplay Start//////
-    if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
-    ///////// Adding Autoplay end //////
-  }
-
-  initPages() {
-    this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
-    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-    this.slidesPerPage = Math.floor(
-      (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
-    );
-    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-    this.update();
-  }
-
-  resetPages() {
-    this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.initPages();
-  }
-
-  update() {
-    // Temporarily prevents unneeded updates resulting from variant changes
-    // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
-    if (!this.slider || !this.nextButton) return;
-
-    const previousPage = this.currentPage;
-    this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
-
-    if (this.currentPageElement && this.pageTotalElement) {
-      this.currentPageElement.textContent = this.currentPage;
-      this.pageTotalElement.textContent = this.totalPages;
-    }
-
-    if (this.currentPage != previousPage) {
-      this.dispatchEvent(
-        new CustomEvent('slideChanged', {
-          detail: {
-            currentPage: this.currentPage,
-            currentElement: this.sliderItemsToShow[this.currentPage - 1],
-          },
-        })
-      );
-    }
-
-    if (this.enableSliderLooping) return;
-
-    if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
-      this.prevButton.setAttribute('disabled', 'disabled');
-    } else {
-      this.prevButton.removeAttribute('disabled');
-    }
-
-    if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
-      this.nextButton.setAttribute('disabled', 'disabled');
-    } else {
-      this.nextButton.removeAttribute('disabled');
-    }
-    ////////////////////
-    this.sliderControlButtons = this.querySelectorAll('.slider-counter__link');
-    this.prevButton.removeAttribute('disabled');
-
-    if (!this.sliderControlButtons.length) return;
-
-    this.sliderControlButtons.forEach((link) => {
-      link.classList.remove('slider-counter__link--active');
-      link.removeAttribute('aria-current');
-    });
-    this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
-    this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);    
-    ////////////////////
-  }
-
-  isSlideVisible(element, offset = 0) {
-    const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
-    return element.offsetLeft + element.clientWidth <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
-  }
-
-  onButtonClick(event) {
-    event.preventDefault();
-    const step = event.currentTarget.dataset.step || 1;
-    this.slideScrollPosition =
-      event.currentTarget.name === 'next'
-        ? this.slider.scrollLeft + step * this.sliderItemOffset
-        : this.slider.scrollLeft - step * this.sliderItemOffset;
-    this.setSlidePosition(this.slideScrollPosition);
-  }
-
-  setSlidePosition(position) {
-    this.slider.scrollTo({
-      left: position,
-    });
-  }
-
-  ///////////// Auto play functions starts ////////////
-  autoRotateSlides() {
-    const slideScrollPosition =
-    this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
-    this.setSlidePosition(slideScrollPosition);       
-  }
-
-  setAutoPlay() {
-    if (this.querySelector('.slideshow__autoplay')) {
-      this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
-      this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
-      this.autoplayButtonIsSetToPlay = true;
-      this.play();
-    }
-  }  
-
-  autoPlayToggle() {
-    this.togglePlayButtonState(this.autoplayButtonIsSetToPlay);
-    this.autoplayButtonIsSetToPlay ? this.pause() : this.play();
-    this.autoplayButtonIsSetToPlay = !this.autoplayButtonIsSetToPlay;
-  }  
-
-  play() {
-    this.autoplaySpeed = this.slider.dataset.speed * 1000;
-    console.log(this.autoplaySpeed)
-    this.slider.setAttribute('aria-live', 'off');
-    clearInterval(this.autoplay);
-    this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
-  }
-
-  pause() {
-    this.slider.setAttribute('aria-live', 'polite');
-    clearInterval(this.autoplay);
-  }  
-
-  togglePlayButtonState(pauseAutoplay) {
-    if (pauseAutoplay) {
-      this.sliderAutoplayButton.classList.add('slideshow__autoplay--paused');
-      this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.playSlideshow);
-    } else {
-      this.sliderAutoplayButton.classList.remove('slideshow__autoplay--paused');
-      this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.pauseSlideshow);
-    }
-  }  
-
-  ///////////// Auto play functions ends ////////////  
-  
-}
-
-customElements.define('slider-component', SliderComponent);
-
-class SlideshowComponent extends SliderComponent {
-  constructor() {
-    super();
-    this.sliderControlWrapper = this.querySelector('.slider-buttons');
-    this.enableSliderLooping = true;
-
-    if (!this.sliderControlWrapper) return;
-
-    this.sliderFirstItemNode = this.slider.querySelector('.slideshow__slide');
-    if (this.sliderItemsToShow.length > 0) this.currentPage = 1;
-
-    this.announcementBarSlider = this.querySelector('.announcement-bar-slider');
-    // Value below should match --duration-announcement-bar CSS value
-    this.announcerBarAnimationDelay = this.announcementBarSlider ? 250 : 0;
-
-    this.sliderControlLinksArray = Array.from(this.sliderControlWrapper.querySelectorAll('.slider-counter__link'));
-    this.sliderControlLinksArray.forEach((link) => link.addEventListener('click', this.linkToSlide.bind(this)));
-    this.slider.addEventListener('scroll', this.setSlideVisibility.bind(this));
-    this.setSlideVisibility();
-
-    if (this.announcementBarSlider) {
-      this.announcementBarArrowButtonWasClicked = false;
-
-      this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      this.reducedMotion.addEventListener('change', () => {
-        if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
-      });
-
-      [this.prevButton, this.nextButton].forEach((button) => {
-        button.addEventListener(
-          'click',
-          () => {
-            this.announcementBarArrowButtonWasClicked = true;
-          },
-          { once: true }
-        );
-      });
-    }
-
-    if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
-  }
-
-  setAutoPlay() {
-    this.autoplaySpeed = this.slider.dataset.speed * 1000;
-    this.addEventListener('mouseover', this.focusInHandling.bind(this));
-    this.addEventListener('mouseleave', this.focusOutHandling.bind(this));
-    this.addEventListener('focusin', this.focusInHandling.bind(this));
-    this.addEventListener('focusout', this.focusOutHandling.bind(this));
-
-    if (this.querySelector('.slideshow__autoplay')) {
-      this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
-      this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
-      this.autoplayButtonIsSetToPlay = true;
-      this.play();
-    } else {
-      this.reducedMotion.matches || this.announcementBarArrowButtonWasClicked ? this.pause() : this.play();
-    }
-  }
-
-  onButtonClick(event) {
-    super.onButtonClick(event);
-    this.wasClicked = true;
-
-    const isFirstSlide = this.currentPage === 1;
-    const isLastSlide = this.currentPage === this.sliderItemsToShow.length;
-
-    if (!isFirstSlide && !isLastSlide) {
-      this.applyAnimationToAnnouncementBar(event.currentTarget.name);
-      return;
-    }
-
-    if (isFirstSlide && event.currentTarget.name === 'previous') {
-      this.slideScrollPosition =
-        this.slider.scrollLeft + this.sliderFirstItemNode.clientWidth * this.sliderItemsToShow.length;
-    } else if (isLastSlide && event.currentTarget.name === 'next') {
-      this.slideScrollPosition = 0;
-    }
-
-    this.setSlidePosition(this.slideScrollPosition);
-
-    this.applyAnimationToAnnouncementBar(event.currentTarget.name);
-  }
-
-  setSlidePosition(position) {
-    if (this.setPositionTimeout) clearTimeout(this.setPositionTimeout);
-    this.setPositionTimeout = setTimeout(() => {
-      this.slider.scrollTo({
-        left: position,
-      });
-    }, this.announcerBarAnimationDelay);
-  }
-
-  update() {
-    super.update();
-    this.sliderControlButtons = this.querySelectorAll('.slider-counter__link');
-    this.prevButton.removeAttribute('disabled');
-
-    if (!this.sliderControlButtons.length) return;
-
-    this.sliderControlButtons.forEach((link) => {
-      link.classList.remove('slider-counter__link--active');
-      link.removeAttribute('aria-current');
-    });
-    this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
-    this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);
-  }
-
-  autoPlayToggle() {
-    this.togglePlayButtonState(this.autoplayButtonIsSetToPlay);
-    this.autoplayButtonIsSetToPlay ? this.pause() : this.play();
-    this.autoplayButtonIsSetToPlay = !this.autoplayButtonIsSetToPlay;
-  }
-
-  focusOutHandling(event) {
-    if (this.sliderAutoplayButton) {
-      const focusedOnAutoplayButton =
-        event.target === this.sliderAutoplayButton || this.sliderAutoplayButton.contains(event.target);
-      if (!this.autoplayButtonIsSetToPlay || focusedOnAutoplayButton) return;
-      this.play();
-    } else if (!this.reducedMotion.matches && !this.announcementBarArrowButtonWasClicked) {
-      this.play();
-    }
-  }
-
-  focusInHandling(event) {
-    if (this.sliderAutoplayButton) {
-      const focusedOnAutoplayButton =
-        event.target === this.sliderAutoplayButton || this.sliderAutoplayButton.contains(event.target);
-      if (focusedOnAutoplayButton && this.autoplayButtonIsSetToPlay) {
-        this.play();
-      } else if (this.autoplayButtonIsSetToPlay) {
-        this.pause();
-      }
-    } else if (this.announcementBarSlider.contains(event.target)) {
-      this.pause();
-    }
-  }
-
-  play() {
-    this.slider.setAttribute('aria-live', 'off');
-    clearInterval(this.autoplay);
-    this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
-  }
-
-  pause() {
-    this.slider.setAttribute('aria-live', 'polite');
-    clearInterval(this.autoplay);
-  }
-
-  togglePlayButtonState(pauseAutoplay) {
-    if (pauseAutoplay) {
-      this.sliderAutoplayButton.classList.add('slideshow__autoplay--paused');
-      this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.playSlideshow);
-    } else {
-      this.sliderAutoplayButton.classList.remove('slideshow__autoplay--paused');
-      this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.pauseSlideshow);
-    }
-  }
-
-  autoRotateSlides() {
-    const slideScrollPosition =
-      this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
-
-    this.setSlidePosition(slideScrollPosition);
-    this.applyAnimationToAnnouncementBar();
-  }
-
-  setSlideVisibility(event) {
-    this.sliderItemsToShow.forEach((item, index) => {
-      const linkElements = item.querySelectorAll('a');
-      if (index === this.currentPage - 1) {
-        if (linkElements.length)
-          linkElements.forEach((button) => {
-            button.removeAttribute('tabindex');
-          });
-        item.setAttribute('aria-hidden', 'false');
-        item.removeAttribute('tabindex');
-      } else {
-        if (linkElements.length)
-          linkElements.forEach((button) => {
-            button.setAttribute('tabindex', '-1');
-          });
-        item.setAttribute('aria-hidden', 'true');
-        item.setAttribute('tabindex', '-1');
-      }
-    });
-    this.wasClicked = false;
-  }
-
-  applyAnimationToAnnouncementBar(button = 'next') {
-    if (!this.announcementBarSlider) return;
-
-    const itemsCount = this.sliderItems.length;
-    const increment = button === 'next' ? 1 : -1;
-
-    const currentIndex = this.currentPage - 1;
-    let nextIndex = (currentIndex + increment) % itemsCount;
-    nextIndex = nextIndex === -1 ? itemsCount - 1 : nextIndex;
-
-    const nextSlide = this.sliderItems[nextIndex];
-    const currentSlide = this.sliderItems[currentIndex];
-
-    const animationClassIn = 'announcement-bar-slider--fade-in';
-    const animationClassOut = 'announcement-bar-slider--fade-out';
-
-    const isFirstSlide = currentIndex === 0;
-    const isLastSlide = currentIndex === itemsCount - 1;
-
-    const shouldMoveNext = (button === 'next' && !isLastSlide) || (button === 'previous' && isFirstSlide);
-    const direction = shouldMoveNext ? 'next' : 'previous';
-
-    currentSlide.classList.add(`${animationClassOut}-${direction}`);
-    nextSlide.classList.add(`${animationClassIn}-${direction}`);
-
-    setTimeout(() => {
-      currentSlide.classList.remove(`${animationClassOut}-${direction}`);
-      nextSlide.classList.remove(`${animationClassIn}-${direction}`);
-    }, this.announcerBarAnimationDelay * 2);
-  }
-
-  linkToSlide(event) {
-    event.preventDefault();
-    const slideScrollPosition =
-      this.slider.scrollLeft +
-      this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
-    this.slider.scrollTo({
-      left: slideScrollPosition,
-    });
-  }
-}
-
-customElements.define('slideshow-component', SlideshowComponent);
-
-class VariantSelects extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
-    this.addEventListener('change', (event) => {
-      const target = this.getInputForEventTarget(event.target);
-      this.updateSelectionMetadata(event);
-
-      publish(PUB_SUB_EVENTS.optionValueSelectionChange, {
-        data: {
-          event,
-          target,
-          selectedOptionValues: this.selectedOptionValues,
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 25,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.featured-collection.settings.products_to_show.label"
+    },     
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header_text.content"
+    },   
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "t:sections.featured-collection.settings.title.default",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
         },
-      });
-    });
-  }
-
-  updateSelectionMetadata({ target }) {
-    const { value, tagName } = target;
-
-    if (tagName === 'SELECT' && target.selectedOptions.length) {
-      Array.from(target.options)
-        .find((option) => option.getAttribute('selected'))
-        .removeAttribute('selected');
-      target.selectedOptions[0].setAttribute('selected', 'selected');
-
-      const swatchValue = target.selectedOptions[0].dataset.optionSwatchValue;
-      const selectedDropdownSwatchValue = target
-        .closest('.product-form__input')
-        .querySelector('[data-selected-value] > .swatch');
-      if (!selectedDropdownSwatchValue) return;
-      if (swatchValue) {
-        selectedDropdownSwatchValue.style.setProperty('--swatch--background', swatchValue);
-        selectedDropdownSwatchValue.classList.remove('swatch--unavailable');
-      } else {
-        selectedDropdownSwatchValue.style.setProperty('--swatch--background', 'unset');
-        selectedDropdownSwatchValue.classList.add('swatch--unavailable');
-      }
-
-      selectedDropdownSwatchValue.style.setProperty(
-        '--swatch-focal-point',
-        target.selectedOptions[0].dataset.optionSwatchFocalPoint || 'unset'
-      );
-    } else if (tagName === 'INPUT' && target.type === 'radio') {
-      const selectedSwatchValue = target.closest(`.product-form__input`).querySelector('[data-selected-value]');
-      if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.featured-collection.settings.description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "t:sections.featured-collection.settings.show_description.label",
+      "default": false   
+    },
+    {
+      "type": "select",
+      "id": "description_style",
+      "label": "t:sections.featured-collection.settings.description_style.label",
+      "options": [
+        {
+          "value": "body",
+          "label": "t:sections.featured-collection.settings.description_style.options__1.label"
+        },
+        {
+          "value": "subtitle",
+          "label": "t:sections.featured-collection.settings.description_style.options__2.label"
+        },
+        {
+          "value": "uppercase",
+          "label": "t:sections.featured-collection.settings.description_style.options__3.label"
+        }
+      ],
+      "default": "body"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header_collection.content"
+    },    
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.featured-collection.settings.columns_desktop.label"
+    },
+        {
+      "type": "checkbox",
+      "id": "enable_desktop_slider",
+      "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "t:sections.slideshow.settings.auto_rotate.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 3,
+      "max": 9,
+      "step": 2,
+      "unit": "s",
+      "label": "t:sections.slideshow.settings.change_slides_speed.label",
+      "default": 5
+    },    
+    {
+      "type": "select",
+      "id": "slider_visual",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.slideshow.settings.slider_visual.options__2.label"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.slideshow.settings.slider_visual.options__1.label"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }        
+      ],
+      "default": "counter",
+      "label": "t:sections.slideshow.settings.slider_visual.label"
+    },     
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.featured-collection.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "t:sections.featured-collection.settings.show_view_all.label",
+      "info": "t:sections.featured-collection.settings.show_view_all.info"
+    },
+    {
+      "type": "select",
+      "id": "view_all_style",
+      "label": "t:sections.featured-collection.settings.view_all_style.label",
+      "options": [
+        {
+          "value": "link",
+          "label": "t:sections.featured-collection.settings.view_all_style.options__1.label"
+        },
+        {
+          "value": "outline",
+          "label": "t:sections.featured-collection.settings.view_all_style.options__2.label"
+        },
+        {
+          "value": "solid",
+          "label": "t:sections.featured-collection.settings.view_all_style.options__3.label"
+        }
+      ],
+      "default": "solid"
+    }, 
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-collection.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.image_shape.options__1.label"
+        },
+        {
+          "value": "arch",
+          "label": "t:sections.all.image_shape.options__2.label"
+        },
+        {
+          "value": "blob",
+          "label": "t:sections.all.image_shape.options__3.label"
+        },
+        {
+          "value": "chevronleft",
+          "label": "t:sections.all.image_shape.options__4.label"
+        },
+        {
+          "value": "chevronright",
+          "label": "t:sections.all.image_shape.options__5.label"
+        },
+        {
+          "value": "diamond",
+          "label": "t:sections.all.image_shape.options__6.label"
+        },
+        {
+          "value": "parallelogram",
+          "label": "t:sections.all.image_shape.options__7.label"
+        },
+        {
+          "value": "round",
+          "label": "t:sections.all.image_shape.options__8.label"
+        }
+      ],
+      "default": "default",
+      "label": "t:sections.all.image_shape.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_rating.label",
+      "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "default": "none",
+      "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
+        },
+        {
+          "value": "standard",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
+        },
+        {
+          "value": "bulk",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "t:sections.featured-collection.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.featured-collection.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.featured-collection.settings.columns_mobile.options__2.label"
+        }
+      ]
+    },    
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.swipe_on_mobile.label"
+    },          
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
-  }
-
-  getInputForEventTarget(target) {
-    return target.tagName === 'SELECT' ? target.selectedOptions[0] : target;
-  }
-
-  get selectedOptionValues() {
-    return Array.from(this.querySelectorAll('select option[selected], fieldset input:checked')).map(
-      ({ dataset }) => dataset.optionValueId
-    );
-  }
-}
-
-customElements.define('variant-selects', VariantSelects);
-
-class ProductRecommendations extends HTMLElement {
-  observer = undefined;
-
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
-    this.initializeRecommendations(this.dataset.productId);
-  }
-
-  initializeRecommendations(productId) {
-    this.observer?.unobserve(this);
-    this.observer = new IntersectionObserver(
-      (entries, observer) => {
-        if (!entries[0].isIntersecting) return;
-        observer.unobserve(this);
-        this.loadRecommendations(productId);
-      },
-      { rootMargin: '0px 0px 400px 0px' }
-    );
-    this.observer.observe(this);
-  }
-
-  loadRecommendations(productId) {
-    fetch(`${this.dataset.url}&product_id=${productId}&section_id=${this.dataset.sectionId}`)
-      .then((response) => response.text())
-      .then((text) => {
-        const html = document.createElement('div');
-        html.innerHTML = text;
-        const recommendations = html.querySelector('product-recommendations');
-
-        if (recommendations?.innerHTML.trim().length) {
-          this.innerHTML = recommendations.innerHTML;
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label",
+          "info": "t:sections.multicolumn.blocks.column.settings.link_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
         }
-
-        if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {
-          this.remove();
-        }
-
-        if (html.querySelector('.grid__item')) {
-          this.classList.add('product-recommendations--loaded');
-        }
-      })
-      .catch((e) => {
-        console.error(e);
-      });
-  }
-}
-
-customElements.define('product-recommendations', ProductRecommendations);
-
-class AccountIcon extends HTMLElement {
-  constructor() {
-    super();
-
-    this.icon = this.querySelector('.icon');
-  }
-
-  connectedCallback() {
-    document.addEventListener('storefront:signincompleted', this.handleStorefrontSignInCompleted.bind(this));
-  }
-
-  handleStorefrontSignInCompleted(event) {
-    if (event?.detail?.avatar) {
-      this.icon?.replaceWith(event.detail.avatar.cloneNode());
+      ]
     }
-  }
-}
-
-customElements.define('account-icon', AccountIcon);
-
-class BulkAdd extends HTMLElement {
-  static ASYNC_REQUEST_DELAY = 250;
-
-  constructor() {
-    super();
-    this.queue = [];
-    this.setRequestStarted(false);
-    this.ids = [];
-  }
-
-  startQueue(id, quantity) {
-    this.queue.push({ id, quantity });
-
-    const interval = setInterval(() => {
-      if (this.queue.length > 0) {
-        if (!this.requestStarted) {
-          this.sendRequest(this.queue);
-        }
-      } else {
-        clearInterval(interval);
-      }
-    }, BulkAdd.ASYNC_REQUEST_DELAY);
-  }
-
-  sendRequest(queue) {
-    this.setRequestStarted(true);
-    const items = {};
-
-    queue.forEach((queueItem) => {
-      items[parseInt(queueItem.id)] = queueItem.quantity;
-    });
-    this.queue = this.queue.filter((queueElement) => !queue.includes(queueElement));
-
-    this.updateMultipleQty(items);
-  }
-
-  setRequestStarted(requestStarted) {
-    this._requestStarted = requestStarted;
-  }
-
-  get requestStarted() {
-    return this._requestStarted;
-  }
-
-  resetQuantityInput(id) {
-    const input = this.querySelector(`#Quantity-${id}`);
-    input.value = input.getAttribute('value');
-    this.isEnterPressed = false;
-  }
-
-  setValidity(event, index, message) {
-    event.target.setCustomValidity(message);
-    event.target.reportValidity();
-    this.resetQuantityInput(index);
-    event.target.select();
-  }
-
-  validateQuantity(event) {
-    const inputValue = parseInt(event.target.value);
-    const index = event.target.dataset.index;
-
-    if (inputValue < event.target.dataset.min) {
-      this.setValidity(event, index, window.quickOrderListStrings.min_error.replace('[min]', event.target.dataset.min));
-    } else if (inputValue > parseInt(event.target.max)) {
-      this.setValidity(event, index, window.quickOrderListStrings.max_error.replace('[max]', event.target.max));
-    } else if (inputValue % parseInt(event.target.step) != 0) {
-      this.setValidity(event, index, window.quickOrderListStrings.step_error.replace('[step]', event.target.step));
-    } else {
-      event.target.setCustomValidity('');
-      event.target.reportValidity();
-      event.target.setAttribute('value', inputValue);
-      this.startQueue(index, inputValue);
+  ],  
+  "presets": [
+    {
+      "name": "Carousel"
     }
-  }
-
-  getSectionInnerHTML(html, selector) {
-    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
-  }
+  ]
 }
-
-if (!customElements.get('bulk-add')) {
-  customElements.define('bulk-add', BulkAdd);
-}
-
-class CartPerformance {
-  static #metric_prefix = "cart-performance"
-
-  static createStartingMarker(benchmarkName) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
-    return performance.mark(`${metricName}:start`);
-  }
-
-  static measureFromEvent(benchmarkName, event) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
-    const startMarker = performance.mark(`${metricName}:start`, {
-      startTime: event.timeStamp
-    });
-
-    const endMarker = performance.mark(`${metricName}:end`);
-
-    performance.measure(
-      metricName,
-      `${metricName}:start`,
-      `${metricName}:end`
-    );
-  }
-
-  static measureFromMarker(benchmarkName, startMarker) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
-    const endMarker = performance.mark(`${metricName}:end`);
-
-    performance.measure(
-      metricName,
-      startMarker.name,
-      `${metricName}:end`
-    );
-  }
-
-  static measure(benchmarkName, callback) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
-    const startMarker = performance.mark(`${metricName}:start`);
-
-    callback();
-
-    const endMarker = performance.mark(`${metricName}:end`);
-
-    performance.measure(
-      metricName,
-      `${metricName}:start`,
-      `${metricName}:end`
-    );
-  }
-}
+{% endschema %}
