@@ -332,7 +332,7 @@
 
                         <div class="slideshow__control-wrapper">
                         {% comment %} {%- if section.blocks.size < 1 -%} {% endcomment %}
-                            {%- for product in section.settings.collection.products -%}
+                            {%- for block in section.blocks -%}
                                 <button
                                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                                 aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
