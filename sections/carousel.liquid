@@ -4,6 +4,8 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
+{{ 'carousel.css' | asset_url | stylesheet_tag }}
+
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -214,7 +216,7 @@
                     <span class="slider-counter--total">{{ section.blocks.size }}</span>
                 {%- else -%}
                     <div class="slideshow__control-wrapper">
-                    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+                    {%- for product in section.settings.collection.products -%}
                         <button
                         class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                         aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
