@@ -307,8 +307,8 @@
           </button>
         </div> {% endcomment %}
         {% comment %} /////// Pagination Adding Start //////// {% endcomment %}
-            <div class="slider-buttons" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
-            
+        <h1>Showing Block: {{section.blocks.size}}</h1>
+            <div class="slider-buttons" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>            
                 <button
                     type="button"
                     class="slider-button slider-button--prev"
@@ -348,7 +348,7 @@
                             {%- endif -%}
                             
                             {%- if section.blocks.size > 1 -%}
-                                <h1>Showing Block: {{section.blocks.size}}</h1>
+                                
                             {%- endif -%}                                
                                 {% comment %} {%- for block in section.blocks -%}
                                     <button
