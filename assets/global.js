@@ -349,11 +349,7 @@
                                 {%- endfor -%}
                             {%- endif -%}
                             
-                            {%- if section.blocks.size > 1 -%}
-
-                        {%- assign total_products = section.settings.collection.products.size -%}
-                        {%- assign products_per_slide = 3 -%}
-                        {%- assign total_dots = total_products | divided_by: products_per_slide -%}                            
+                            {%- if section.blocks.size > 1 -%}                         
                                 {%- for block in section.blocks -%}
                                     <button
                                     class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
