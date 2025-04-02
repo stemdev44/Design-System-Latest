@@ -842,12 +842,9 @@ class SliderComponent extends HTMLElement {
 
   ///////////// Auto play functions starts ////////////
   autoRotateSlides() {
-    // const slideScrollPosition =
-    // this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
-    // this.setSlidePosition(slideScrollPosition);
-    this.currentPage = this.previousPage;
-    this.currentPage= this.currentPage + 1;
-    this.setSlidePosition(this.currentPage);
+    const slideScrollPosition =
+    this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
+    this.setSlidePosition(slideScrollPosition);
   }
 
   setAutoPlay() {
@@ -867,7 +864,6 @@ class SliderComponent extends HTMLElement {
 
   play() {
     this.autoplaySpeed = this.slider.dataset.speed * 1000;
-    console.log(this.autoplaySpeed)
     this.slider.setAttribute('aria-live', 'off');
     clearInterval(this.autoplay);
     this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
