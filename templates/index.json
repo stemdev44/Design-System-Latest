@@ -30,6 +30,33 @@
             "link": ""
           }
         },
+        "column_pmETRE": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dQTp4V": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FCxmLb": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_bGQPCF": {
           "type": "column",
           "settings": {
@@ -43,21 +70,24 @@
       "block_order": [
         "column_3Cyxmn",
         "column_QnrnJb",
+        "column_pmETRE",
+        "column_dQTp4V",
+        "column_FCxmLb",
         "column_bGQPCF"
       ],
       "settings": {
-        "collection": "frontpage",
-        "products_to_show": 25,
+        "collection": "",
+        "products_to_show": 6,
         "title": "Carousel",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 1,
+        "columns_desktop": 5,
         "enable_desktop_slider": true,
         "auto_rotate": true,
         "change_slides_speed": 3,
-        "slider_visual": "numbers",
+        "slider_visual": "dots",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
@@ -68,7 +98,7 @@
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
