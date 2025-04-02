@@ -863,10 +863,9 @@ class SliderComponent extends HTMLElement {
   }  
 
   play() {
-    console.log(this.autoplaySpeed)
     this.slider.setAttribute('aria-live', 'off');
     clearInterval(this.autoplay);
-    this.autoplay = setInterval(this.autoRotateSlides.bind(this), 5000);
+    this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
   }
 
   pause() {
@@ -934,6 +933,7 @@ class SlideshowComponent extends SliderComponent {
 
   setAutoPlay() {
     this.autoplaySpeed = this.slider.dataset.speed * 1000;
+    console.log(this.autoplaySpeed)
     this.addEventListener('mouseover', this.focusInHandling.bind(this));
     this.addEventListener('mouseleave', this.focusOutHandling.bind(this));
     this.addEventListener('focusin', this.focusInHandling.bind(this));
