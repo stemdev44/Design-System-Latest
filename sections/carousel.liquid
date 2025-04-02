@@ -331,7 +331,7 @@
                     {%- else -%}
 
                         <div class="slideshow__control-wrapper">
-                        {%- if section.blocks.size > 1 -%}
+                        {% comment %} {%- if section.blocks.size < 1 -%} {% endcomment %}
                             {%- for product in section.settings.collection.products -%}
                                 <button
                                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
@@ -345,8 +345,8 @@
                                 {%- endif -%}
                                 </button>
                             {%- endfor -%}
-                        {%- else -%}
-                            {%- for block in section.blocks -%}
+                        {% comment %} {%- else -%} {% endcomment %}
+                            {% comment %} {%- for block in section.blocks -%}
                                 <button
                                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                                 aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
@@ -358,8 +358,8 @@
                                     <span class="dot"></span>
                                 {%- endif -%}
                                 </button>
-                            {%- endfor -%}                                                      
-                        {%- endif -%}
+                            {%- endfor -%}                                                       {% endcomment %}
+                        {% comment %} {%- endif -%} {% endcomment %}
                         </div>
                     {%- endif -%}
                     </div>
