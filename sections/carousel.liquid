@@ -356,7 +356,6 @@
                                     assign adjusted_blocks = total_blocks | plus: blocks_per_slide | minus: 1
                                     assign total_dots = adjusted_blocks | divided_by: blocks_per_slide | ceil
                                 -%}
-                                <h1>{{total_dots}}</h1>
                                 {%- for i in (1..total_dots)-%}
                                     <button
                                     class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
