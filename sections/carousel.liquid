@@ -96,7 +96,6 @@
     </div>
 
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <h1>{{section.blocks.size}}</h1>
       {%- if section.blocks.size < 1 -%}
         <ul
             id="Slider-{{ section.id }}"
@@ -168,6 +167,8 @@
                 {%- endfor -%}
                 {%- endif -%}
         </ul>
+      {%-else-%}
+          <h1>Showing Blocks: {{section.blocks.size}}</h1>  
       {%- endif -%}
 
       {%- if show_mobile_slider or show_desktop_slider -%}
