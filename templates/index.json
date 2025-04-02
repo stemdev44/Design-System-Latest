@@ -81,7 +81,7 @@
         "button_link": "",
         "layout": "grid",
         "columns_desktop": 4,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "column_background_color": "",
         "column_font_color": "",
