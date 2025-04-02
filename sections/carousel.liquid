@@ -353,7 +353,7 @@
                                 {%- liquid 
                                     assign total_blocks = section.blocks.size
                                     assign blocks_per_slide = section.settings.columns_desktop
-                                    assign total_dots = total_blocks | divided_by: blocks_per_slide | ceil
+                                    assign total_dots = total_blocks | divided_by: blocks_per_slide 
                                 -%}
                                 <h1>{{total_dots}}</h1>                                      
                                 {%- for i in (1..total_dots)-%}
