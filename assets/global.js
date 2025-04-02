@@ -843,25 +843,36 @@ class SliderComponent extends HTMLElement {
   }
 
   //////////// Adding Auto Play Functions Start ///////////
-  autoRotateSlides() {
-    const slideScrollPosition =
-    this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
-    this.setSlidePosition(slideScrollPosition);
-  }
+    autoRotateSlides() {
+      const slideScrollPosition =
+      this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
+      this.setSlidePosition(slideScrollPosition);
+    }
 
-  setAutoPlay() {
-    this.autoplaySpeed = this.slider.dataset.speed * 1000;
-	this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
-    this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
-    this.autoplayButtonIsSetToPlay = true;
-    this.play();
-  }  
+    setAutoPlay() {
+      this.autoplaySpeed = this.slider.dataset.speed * 1000;
+    this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
+      this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
+      this.autoplayButtonIsSetToPlay = true;
+      this.play();
+    }  
 
-  play() {
-    this.slider.setAttribute('aria-live', 'off');
-    clearInterval(this.autoplay);
-    this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
-  }  
+    autoPlayToggle() {
+      this.togglePlayButtonState(this.autoplayButtonIsSetToPlay);
+      this.autoplayButtonIsSetToPlay ? this.pause() : this.play();
+      this.autoplayButtonIsSetToPlay = !this.autoplayButtonIsSetToPlay;
+    }  
+
+    play() {
+      this.slider.setAttribute('aria-live', 'off');
+      clearInterval(this.autoplay);
+      this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
+    }
+
+    pause() {
+      this.slider.setAttribute('aria-live', 'polite');
+      clearInterval(this.autoplay);
+    } 
   //////////// Adding Auto Play Functions End ///////////
 
 }
