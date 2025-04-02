@@ -845,7 +845,6 @@ class SliderComponent extends HTMLElement {
     const slideScrollPosition =
     this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
     this.setSlidePosition(slideScrollPosition);
-    console.log("Auto play")
   }
 
   setAutoPlay() {
