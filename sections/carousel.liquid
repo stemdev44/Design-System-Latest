@@ -308,47 +308,69 @@
         </div> {% endcomment %}
         {% comment %} /////// Pagination Adding Start //////// {% endcomment %}
             <div class="slider-buttons" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
-            <button
-                type="button"
-                class="slider-button slider-button--prev"
-                name="previous"
-                aria-label="{{ 'general.slider.previous_slide' | t }}"
-            >
-                <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
-            </button>
+                <button
+                    type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+                >
+                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                </button>
 
-                <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
-                {%- if section.settings.slider_visual == 'counter' -%}
-                    <span class="slider-counter--current">1</span>
-                    <span aria-hidden="true"> / </span>
-                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                    <span class="slider-counter--total">{{ section.blocks.size }}</span>
-                {%- else -%}
-                    <div class="slideshow__control-wrapper">
-                    {%- for product in section.settings.collection.products -%}
-                        <button
-                        class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                        aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                        aria-controls="Slider-{{ section.id }}"
-                        >
-                        {%- if section.settings.slider_visual == 'numbers' -%}
-                            {{ forloop.index -}}
-                        {%- else -%}
-                            <span class="dot"></span>
+                    <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                    {%- if section.settings.slider_visual == 'counter' -%}
+                        <span class="slider-counter--current">1</span>
+                        <span aria-hidden="true"> / </span>
+                        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                        {%- if section.blocks.size < 1 -%}
+                            <span class="slider-counter--total">{{ products_to_display }}</span>
+                        {%-else-%}
+                            <span class="slider-counter--total">{{ section.blocks.size }}</span>
                         {%- endif -%}
-                        </button>
-                    {%- endfor -%}
+                        
+                    {%- else -%}
+
+                        <div class="slideshow__control-wrapper">
+                        {%- if section.blocks.size < 1 -%}
+                            {%- for product in section.settings.collection.products -%}
+                                <button
+                                class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                aria-controls="Slider-{{ section.id }}"
+                                >
+                                {%- if section.settings.slider_visual == 'numbers' -%}
+                                    {{ forloop.index -}}
+                                {%- else -%}
+                                    <span class="dot"></span>
+                                {%- endif -%}
+                                </button>
+                            {%- endfor -%}
+                        {%- else -%}
+                            {%- for block in section.blocks -%}
+                                <button
+                                class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                aria-controls="Slider-{{ section.id }}"
+                                >
+                                {%- if section.settings.slider_visual == 'numbers' -%}
+                                    {{ forloop.index -}}
+                                {%- else -%}
+                                    <span class="dot"></span>
+                                {%- endif -%}
+                                </button>
+                            {%- endfor -%}                                                      
+                        {%- endif -%}
+                        </div>
+                    {%- endif -%}
                     </div>
-                {%- endif -%}
-                </div>
-            <button
-                type="button"
-                class="slider-button slider-button--next"
-                name="next"
-                aria-label="{{ 'general.slider.next_slide' | t }}"
-            >
-                <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
-            </button>
+                <button
+                    type="button"
+                    class="slider-button slider-button--next"
+                    name="next"
+                    aria-label="{{ 'general.slider.next_slide' | t }}"
+                >
+                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                </button>
             </div>        
         {% comment %} //////// Pagination Adding End /////////{% endcomment %}
       {%- endif -%}
