@@ -842,11 +842,26 @@ class SliderComponent extends HTMLElement {
 
   ///////////// Auto play functions starts ////////////
   autoRotateSlides() {
-    console.log("Loaading Current Page: ", this.currentPage)
-    const slideScrollPosition =
-    this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
-    console.log("After Current Page: ", this.currentPage)
-    this.setSlidePosition(slideScrollPosition);
+    // const slideScrollPosition =
+    // this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
+    // this.setSlidePosition(slideScrollPosition);
+    
+    if (this.prevTempPage === this.currentPage) {
+      // If the page has not changed, reset to the first slide
+      this.setSlidePosition(0);
+  } else {
+      // Otherwise, move to the next slide
+      const slideScrollPosition =
+          this.currentPage === this.sliderItems.length
+              ? 0
+              : this.slider.scrollLeft + this.sliderItemOffset;
+      this.setSlidePosition(slideScrollPosition);
+  }
+
+  // Update prevTempPage for the next check
+  this.prevTempPage = this.currentPage;
+
+
   }
 
   setAutoPlay() {
