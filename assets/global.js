@@ -845,8 +845,7 @@ class SliderComponent extends HTMLElement {
     console.log(this.sliderItems.length)
     const step = 1;
     const slideScrollPosition =
-    this.currentPage === this.sliderItems.length ? this.slider.scrollLeft + step * this.sliderItemOffset
-    : this.slider.scrollLeft - step * this.sliderItemOffset;
+    this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft - step * this.sliderItemOffset;
     this.setSlidePosition(slideScrollPosition);       
   }
 
