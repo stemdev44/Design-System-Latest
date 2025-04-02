@@ -745,6 +745,7 @@ class SliderComponent extends HTMLElement {
     this.slider.addEventListener('scroll', this.update.bind(this));
     this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
     this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+    if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
   }
 
   initPages() {
