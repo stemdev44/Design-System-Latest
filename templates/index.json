@@ -83,7 +83,7 @@
         "description": "<p>Carousel Description</p>",
         "show_description": false,
         "description_style": "uppercase",
-        "columns_desktop": 5,
+        "columns_desktop": 1,
         "enable_desktop_slider": true,
         "auto_rotate": true,
         "change_slides_speed": 3,
