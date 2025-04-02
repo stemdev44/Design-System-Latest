@@ -853,6 +853,7 @@ class SliderComponent extends HTMLElement {
       this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
       this.autoplayButtonIsSetToPlay = true;
       this.play();
+      console.log("Auto play")
     }
   }  
 
@@ -866,7 +867,6 @@ class SliderComponent extends HTMLElement {
     this.slider.setAttribute('aria-live', 'off');
     clearInterval(this.autoplay);
     this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
-    console.log("Auto play")
   }
 
   pause() {
