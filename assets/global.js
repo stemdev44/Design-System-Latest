@@ -813,6 +813,12 @@ class SliderComponent extends HTMLElement {
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);    
     ////////////////////
+
+    //////////// Adding Auto Play Start ///////////    
+    // if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
+    // this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
+    //////////// Adding Auto Play end ///////////    
+
   }
 
   isSlideVisible(element, offset = 0) {
@@ -835,6 +841,50 @@ class SliderComponent extends HTMLElement {
       left: position,
     });
   }
+
+  //////////// Adding Auto Play Functions Start ///////////
+    autoRotateSlides() {
+      const slideScrollPosition =
+      this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
+      this.setSlidePosition(slideScrollPosition);
+    }
+
+    setAutoPlay() {
+      this.autoplaySpeed = this.slider.dataset.speed * 1000;
+    this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
+      this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
+      this.autoplayButtonIsSetToPlay = true;
+      this.play();
+    }  
+
+    autoPlayToggle() {
+      this.togglePlayButtonState(this.autoplayButtonIsSetToPlay);
+      this.autoplayButtonIsSetToPlay ? this.pause() : this.play();
+      this.autoplayButtonIsSetToPlay = !this.autoplayButtonIsSetToPlay;
+    }  
+
+    play() {
+      this.slider.setAttribute('aria-live', 'off');
+      clearInterval(this.autoplay);
+      this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
+    }
+
+    pause() {
+      this.slider.setAttribute('aria-live', 'polite');
+      clearInterval(this.autoplay);
+    }
+
+    togglePlayButtonState(pauseAutoplay) {
+      if (pauseAutoplay) {
+        this.sliderAutoplayButton.classList.add('slideshow__autoplay--paused');
+        this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.playSlideshow);
+      } else {
+        this.sliderAutoplayButton.classList.remove('slideshow__autoplay--paused');
+        this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.pauseSlideshow);
+      }
+    }    
+  //////////// Adding Auto Play Functions End ///////////
+
 }
 
 customElements.define('slider-component', SliderComponent);
