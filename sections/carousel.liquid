@@ -353,9 +353,10 @@
                                 {%- liquid 
                                     assign total_blocks = section.blocks.size
                                     assign blocks_per_slide = section.settings.columns_desktop
-                                    assign total_dots = total_blocks | divided_by: blocks_per_slide 
+                                    assign adjusted_blocks = total_blocks | plus: blocks_per_slide | minus: 1
+                                    assign total_dots = adjusted_blocks | divided_by: blocks_per_slide | ceil
                                 -%}
-                                <h1>{{total_dots}}</h1>                                      
+                                <h1>{{total_dots}}</h1>
                                 {%- for i in (1..total_dots)-%}
                                     <button
                                     class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
