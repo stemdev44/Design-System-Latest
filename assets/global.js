@@ -845,23 +845,16 @@ class SliderComponent extends HTMLElement {
     // const slideScrollPosition =
     // this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
     // this.setSlidePosition(slideScrollPosition);
-    
+
     if (this.prevTempPage === this.currentPage) {
-      // If the page has not changed, reset to the first slide
       this.setSlidePosition(0);
-  } else {
-      // Otherwise, move to the next slide
+    } 
+    else {
       const slideScrollPosition =
-          this.currentPage === this.sliderItems.length
-              ? 0
-              : this.slider.scrollLeft + this.sliderItemOffset;
+          this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
       this.setSlidePosition(slideScrollPosition);
-  }
-
-  // Update prevTempPage for the next check
-  this.prevTempPage = this.currentPage;
-
-
+    }  
+    this.prevTempPage = this.currentPage;
   }
 
   setAutoPlay() {
