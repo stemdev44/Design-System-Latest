@@ -46,14 +46,14 @@
         "column_8gqKPr"
       ],
       "settings": {
-        "caption": "",
+        "caption": "Carousel Caption",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
-        "title": "Multicolumn",
+        "title": "Carousel",
         "heading_size": "h1",
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
-        "description": "",
+        "description": "<p>Carouse Description</p>",
         "description_style": "body",
         "image_width": "full",
         "image_ratio": "adapt",
