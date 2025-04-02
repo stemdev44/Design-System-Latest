@@ -331,7 +331,7 @@
                     {%- else -%}
 
                         <div class="slideshow__control-wrapper">
-                        {%- if section.blocks.size < 1 -%}
+                        {%- if section.blocks.size > 1 -%}
                             {%- for product in section.settings.collection.products -%}
                                 <button
                                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
