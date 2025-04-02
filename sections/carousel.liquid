@@ -331,35 +331,36 @@
                     {%- else -%}
 
                         <div class="slideshow__control-wrapper">
-                        {% comment %} {%- if section.blocks.size < 1 -%} {% endcomment %}
-                            {%- for block in section.blocks -%}
-                                <button
-                                class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                                aria-controls="Slider-{{ section.id }}"
-                                >
-                                {%- if section.settings.slider_visual == 'numbers' -%}
-                                    {{ forloop.index -}}
-                                {%- else -%}
-                                    <span class="dot"></span>
-                                {%- endif -%}
-                                </button>
-                            {%- endfor -%}
-                        {% comment %} {%- else -%} {% endcomment %}
-                            {% comment %} {%- for block in section.blocks -%}
-                                <button
-                                class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                                aria-controls="Slider-{{ section.id }}"
-                                >
-                                {%- if section.settings.slider_visual == 'numbers' -%}
-                                    {{ forloop.index -}}
-                                {%- else -%}
-                                    <span class="dot"></span>
-                                {%- endif -%}
-                                </button>
-                            {%- endfor -%}                                                       {% endcomment %}
-                        {% comment %} {%- endif -%} {% endcomment %}
+                            {%- if section.blocks.size < 1 -%}
+                                {%- for product in section.settings.collection.products -%}
+                                    <button
+                                    class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                    aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                    aria-controls="Slider-{{ section.id }}"
+                                    >
+                                    {%- if section.settings.slider_visual == 'numbers' -%}
+                                        {{ forloop.index -}}
+                                    {%- else -%}
+                                        <span class="dot"></span>
+                                    {%- endif -%}
+                                    </button>
+                                {%- endfor -%}
+                            {%- else -%}
+                                <h1>Showing Block: {{section.blocks.size}}</h1>
+                                {%- for block in section.blocks -%}
+                                    <button
+                                    class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                    aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                    aria-controls="Slider-{{ section.id }}"
+                                    >
+                                    {%- if section.settings.slider_visual == 'numbers' -%}
+                                        {{ forloop.index -}}
+                                    {%- else -%}
+                                        <span class="dot"></span>
+                                    {%- endif -%}
+                                    </button>
+                                {%- endfor -%}
+                            {%- endif -%}
                         </div>
                     {%- endif -%}
                     </div>
