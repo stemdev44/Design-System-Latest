@@ -844,6 +844,7 @@ class SliderComponent extends HTMLElement {
   autoRotateSlides() {
     const slideScrollPosition =
     this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
+    console.log(currentPage)
     this.setSlidePosition(slideScrollPosition);
   }
 
