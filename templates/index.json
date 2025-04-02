@@ -12,7 +12,7 @@
     "carousel_PaXiHc": {
       "type": "carousel",
       "blocks": {
-        "column_TixNJK": {
+        "column_q384bB": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -21,7 +21,16 @@
             "link": ""
           }
         },
-        "column_Wyfeng": {
+        "column_RgRAXU": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TixNJK": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -32,8 +41,9 @@
         }
       },
       "block_order": [
-        "column_TixNJK",
-        "column_Wyfeng"
+        "column_q384bB",
+        "column_RgRAXU",
+        "column_TixNJK"
       ],
       "settings": {
         "collection": "frontpage",
