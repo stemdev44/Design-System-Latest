@@ -12,7 +12,7 @@
     "carousel_PaXiHc": {
       "type": "carousel",
       "blocks": {
-        "column_q384bB": {
+        "column_MBVXgC": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -21,7 +21,7 @@
             "link": ""
           }
         },
-        "column_RgRAXU": {
+        "column_aYGR8T": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -30,7 +30,7 @@
             "link": ""
           }
         },
-        "column_TixNJK": {
+        "column_XFaeRY": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -41,9 +41,9 @@
         }
       },
       "block_order": [
-        "column_q384bB",
-        "column_RgRAXU",
-        "column_TixNJK"
+        "column_MBVXgC",
+        "column_aYGR8T",
+        "column_XFaeRY"
       ],
       "settings": {
         "collection": "frontpage",
