@@ -813,6 +813,11 @@ class SliderComponent extends HTMLElement {
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);    
     ////////////////////
+
+    /////////// Adding Auto Play Start ///////////
+    if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
+    this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);    
+    ////////// Adding Auto play end ////////////// 
   }
 
   isSlideVisible(element, offset = 0) {
@@ -835,6 +840,33 @@ class SliderComponent extends HTMLElement {
       left: position,
     });
   }
+
+  /////////////// Adding Auto Play in Slider Start ///////////////
+    autoRotateSlides() {
+      const slideScrollPosition =
+        this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
+
+      this.setSlidePosition(slideScrollPosition);
+      this.applyAnimationToAnnouncementBar();
+    }
+
+    setAutoPlay() {
+      this.autoplaySpeed = this.slider.dataset.speed * 1000;
+      this.addEventListener('mouseover', this.focusInHandling.bind(this));
+      this.addEventListener('mouseleave', this.focusOutHandling.bind(this));
+      this.addEventListener('focusin', this.focusInHandling.bind(this));
+      this.addEventListener('focusout', this.focusOutHandling.bind(this));
+
+      if (this.querySelector('.slideshow__autoplay')) {
+        this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
+        this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
+        this.autoplayButtonIsSetToPlay = true;
+        this.play();
+      } else {
+        this.reducedMotion.matches || this.announcementBarArrowButtonWasClicked ? this.pause() : this.play();
+      }
+    }   
+  //////////////// Adding Auto Play in Slider End ///////////////
 }
 
 customElements.define('slider-component', SliderComponent);
