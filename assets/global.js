@@ -827,6 +827,7 @@ class SliderComponent extends HTMLElement {
   onButtonClick(event) {
     event.preventDefault();
     const step = event.currentTarget.dataset.step || 1;
+    console.log(step)
     this.slideScrollPosition =
       event.currentTarget.name === 'next'
         ? this.slider.scrollLeft + step * this.sliderItemOffset
@@ -843,7 +844,8 @@ class SliderComponent extends HTMLElement {
   ///////////// Auto play functions starts ////////////
   autoRotateSlides() {
     console.log(this.sliderItems.length)
-    const slideScrollPosition =Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
+    const slideScrollPosition =
+    this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
     this.setSlidePosition(slideScrollPosition);       
   }
 
