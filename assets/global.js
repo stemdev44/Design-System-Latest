@@ -865,7 +865,7 @@ class SliderComponent extends HTMLElement {
   play() {
     this.slider.setAttribute('aria-live', 'off');
     clearInterval(this.autoplay);
-    this.autoplay = setInterval(this.autoRotateSlides.bind(this), this.autoplaySpeed);
+    this.autoplay = setInterval(this.autoRotateSlides.bind(this), 5000);
   }
 
   pause() {
