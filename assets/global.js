@@ -350,11 +350,12 @@
                             {%- endif -%}
                             
                             {%- if section.blocks.size > 1 -%}
-
-                                {%- assign total_blocks = section.blocks.size -%}
-                                {%- assign blocks_per_slide = section.settings.columns_desktop -%}
-                                {%- assign total_dots = total_blocks | divided_by: blocks_per_slide -%}
-
+                            
+                                {%-liquid 
+                                    {%- assign total_blocks = section.blocks.size -%}
+                                    {%- assign blocks_per_slide = section.settings.columns_desktop -%}
+                                    {%- assign total_dots = total_blocks | divided_by: blocks_per_slide -%}                                
+                                -%}
                                 {%- for i in (1..total_dots) -%}
                                     <button
                                     class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
