@@ -872,7 +872,17 @@ class SliderComponent extends HTMLElement {
     pause() {
       this.slider.setAttribute('aria-live', 'polite');
       clearInterval(this.autoplay);
-    } 
+    }
+
+    togglePlayButtonState(pauseAutoplay) {
+      if (pauseAutoplay) {
+        this.sliderAutoplayButton.classList.add('slideshow__autoplay--paused');
+        this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.playSlideshow);
+      } else {
+        this.sliderAutoplayButton.classList.remove('slideshow__autoplay--paused');
+        this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.pauseSlideshow);
+      }
+    }    
   //////////// Adding Auto Play Functions End ///////////
 
 }
