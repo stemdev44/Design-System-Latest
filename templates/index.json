@@ -77,7 +77,7 @@
       ],
       "settings": {
         "collection": "",
-        "products_to_show": 6,
+        "products_to_show": 25,
         "title": "Carousel",
         "heading_size": "h1",
         "description": "<p>Carousel Description</p>",
