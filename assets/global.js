@@ -843,7 +843,6 @@ class SliderComponent extends HTMLElement {
   autoRotateSlides() {
 
     if (this.prevTempPage === this.currentPage) {
-      this.autoplaySpeed=1;
       this.setSlidePosition(0);
     } 
     else {
