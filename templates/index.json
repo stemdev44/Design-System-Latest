@@ -47,33 +47,13 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_jBUkyG": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_UgMYWJ": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "column_EDHpT7",
         "column_xdbqn4",
         "column_GYWLeB",
-        "column_KJbEip",
-        "column_jBUkyG",
-        "column_UgMYWJ"
+        "column_KJbEip"
       ],
       "settings": {
         "caption": "Carousel Caption",
