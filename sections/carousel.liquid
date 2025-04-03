@@ -190,8 +190,6 @@
 
       {%- if show_mobile_slider or show_desktop_slider -%}
 
-        {% comment %} /////// Pagination Adding Start //////// {% endcomment %}
-
             <div class="slider-buttons" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
                 <button
                     type="button"
@@ -246,7 +244,7 @@
                 >
                     <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
                 </button>
-                {% comment %} ////// Auto Play Button Start ////// {% endcomment %}
+
                     {%- if section.settings.auto_rotate -%}
                         <button
                         type="button"
@@ -261,9 +259,9 @@
                         </span>
                         </button>
                     {%- endif -%}                
-                {% comment %} ////// Auto Play button end //////// {% endcomment %}
+                
             </div>        
-        {% comment %} //////// Pagination Adding End /////////{% endcomment %}
+
       {%- endif -%}
     </slider-component>
 
