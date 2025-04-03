@@ -216,6 +216,12 @@
                               top: 0;
                               transform: translateY(30%);
                             }
+                              @media screen and (max-width: 749px) {
+                                .section-{{ section.id }}-padding .image-with-text__content--mobile-right>* 
+                                  {
+                                    text-align:{{section.settings.mobile_content_alignment}} !important;  
+                                  }
+                              }
                           </style>                    
                       {%-endif -%}
 
