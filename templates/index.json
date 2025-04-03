@@ -12,6 +12,42 @@
     "carousel_mVMEgi": {
       "type": "carousel",
       "blocks": {
+        "column_KJbEip": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jBUkyG": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UgMYWJ": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cqyR4y": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_3m7GX3": {
           "type": "column",
           "settings": {
@@ -41,6 +77,10 @@
         }
       },
       "block_order": [
+        "column_KJbEip",
+        "column_jBUkyG",
+        "column_UgMYWJ",
+        "column_cqyR4y",
         "column_3m7GX3",
         "column_MeJ3Q7",
         "column_qVtrYa"
@@ -61,8 +101,8 @@
         "button_link": "",
         "layout": "full_bleed",
         "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "auto_rotate": false,
+        "enable_desktop_slider": true,
+        "auto_rotate": true,
         "change_slides_speed": 3,
         "slider_visual": "counter",
         "column_alignment": "left",

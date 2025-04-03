@@ -50,6 +50,11 @@
     {%- endunless -%}
 
       {%- if section.settings.description != blank -%}
+        <div class="{{ section.settings.description_style }}" style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
+            {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
         <style>
           @media screen and (max-width: 749px) {
              .section-{{ section.id }}-padding .{{ section.settings.description_style }},
@@ -64,10 +69,6 @@
               }
           }
         </style>
-        <div class="{{ section.settings.description_style }}" style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
-            {{ section.settings.description }}
-        </div>
-      {%- endif -%}
 
     <slider-component class="slider-mobile-gutter">
       <ul
