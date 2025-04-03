@@ -843,7 +843,7 @@ class SliderComponent extends HTMLElement {
   autoRotateSlides() {
 
     if (this.prevTempPage === this.currentPage) {
-      this.setSlidePosition(200);
+      this.setSlidePosition(0);
     } 
     else {
       const slideScrollPosition =
