@@ -41,7 +41,7 @@
       <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
               
             <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-              {% comment %} /////////// When Video is not there Show image Start/////// {% endcomment %}  
+
                 {%- if section.settings.video == null and section.settings.video_url == null -%}
                   <div
                     class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
@@ -73,9 +73,7 @@
                     {%- endif -%}           
                   </div>                 
                 {%- endif -%} 
-              {% comment %} /////////// When Video is not there Show image End/////// {% endcomment %}       
 
-              {% comment %} /////////////// Video Adding Start /////////// {% endcomment %}
                 {%- if section.settings.video != null or section.settings.video_url != null -%}
                       <div>
                         <div>
@@ -106,11 +104,11 @@
                                   {%- if section.settings.video_button_text == blank -%}
                                     {{- 'icon-play.svg' | inline_asset_content -}}
                                   {%- endif -%}                                                                    
-                                  {% comment %} ///////////// Adding Video Text Button Start /////////// {% endcomment %}
+
                                     {%- if section.settings.video_button_text != blank -%}
                                       {%- if section.settings.video_no_border_style -%}
                                           <style>
-                                            #shopify-section-{{ section.id }} .button:after{
+                                            .section-{{ section.id }}-padding .button:after{
                                                box-shadow: none;
                                              }                                        
                                           </style>  
@@ -121,7 +119,6 @@
                                         {{ section.settings.video_button_text | escape }}
                                       </a>
                                     {%- endif -%}
-                                  {% comment %} ////////////Adding Video Text Button End {% endcomment %}                                  
                                 </span>
                               </span>
 
@@ -167,7 +164,7 @@
                         </div>
                       </div>                  
                 {%- endif -%}
-              {% comment %} //////////////// Video End   //// {% endcomment %}                  
+
             </div>                
         <div class="image-with-text__text-item grid__item">
           <div
@@ -193,20 +190,20 @@
                 {%- when 'text' -%}
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
-                    {% comment %} ///// If Bullet Icon Image Selected show the Image Start ////// {% endcomment %}
+
                       {%-if block.settings.icon_image != blank -%}
                           <style>
-                            #shopify-section-{{ section.id }} ul {
+                            .section-{{ section.id }}-padding ul {
                               list-style: none;
                               padding-left: 0; 
                             }
 
-                            #shopify-section-{{ section.id }} ul li {
+                            .section-{{ section.id }}-padding ul li {
                               position: relative;
                               padding-left: 30px; 
                             }
 
-                            #shopify-section-{{ section.id }} ul li::before {
+                            .section-{{ section.id }}-padding ul li::before {
                               content: "";
                               background: url("{{ block.settings.icon_image | img_url:"" }}");
                               background-size: cover;
@@ -221,7 +218,7 @@
                             }
                           </style>                    
                       {%-endif -%}
-                    {% comment %} ///// If Bullet Icon Image Selected show the Image End////// {% endcomment %}  
+
                   </div>
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
