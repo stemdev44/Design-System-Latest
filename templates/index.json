@@ -95,7 +95,7 @@
         "auto_rotate": true,
         "change_slides_speed": 3,
         "slider_visual": "dots",
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "column_background_color": "#242833",
         "column_font_color": "#ffffff",
