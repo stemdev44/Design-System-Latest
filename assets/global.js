@@ -746,9 +746,9 @@ class SliderComponent extends HTMLElement {
     this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
     this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
 
-    ///////// Adding Autoplay Start//////
+
     if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
-    ///////// Adding Autoplay end //////
+
   }
 
   initPages() {
@@ -804,7 +804,7 @@ class SliderComponent extends HTMLElement {
     } else {
       this.nextButton.removeAttribute('disabled');
     }
-    ////////////////////
+
     this.sliderControlButtons = this.querySelectorAll('.slider-counter__link');
     this.prevButton.removeAttribute('disabled');
 
@@ -816,7 +816,7 @@ class SliderComponent extends HTMLElement {
     });
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);    
-    ////////////////////
+
   }
 
   isSlideVisible(element, offset = 0) {
@@ -840,11 +840,7 @@ class SliderComponent extends HTMLElement {
     });
   }
 
-  ///////////// Auto play functions starts ////////////
   autoRotateSlides() {
-    // const slideScrollPosition =
-    // this.currentPage === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.sliderItemOffset;
-    // this.setSlidePosition(slideScrollPosition);
 
     if (this.prevTempPage === this.currentPage) {
       this.setSlidePosition(0);
@@ -893,8 +889,6 @@ class SliderComponent extends HTMLElement {
       this.sliderAutoplayButton.setAttribute('aria-label', window.accessibilityStrings.pauseSlideshow);
     }
   }  
-
-  ///////////// Auto play functions ends ////////////  
   
 }
 
