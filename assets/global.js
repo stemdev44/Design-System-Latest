@@ -845,6 +845,7 @@ class SliderComponent extends HTMLElement {
     if (this.prevTempPage === this.currentPage) {
       // this.setSlidePosition(0);
       this.currentPage=1;
+      this.setSlidePosition(0);
     } 
     else {
       const slideScrollPosition =
