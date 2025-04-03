@@ -215,10 +215,10 @@
                         <div class="slideshow__control-wrapper">                           
 
                                 {%- liquid 
-                                    assign total_blocks = section.blocks.size
-                                    assign blocks_per_slide = section.settings.columns_desktop
-                                    assign adjusted_blocks = total_blocks | plus: blocks_per_slide | minus: 1
-                                    assign total_dots = adjusted_blocks | divided_by: 1 | ceil
+    assign total_blocks = section.blocks.size
+    assign blocks_per_slide = section.settings.columns_desktop
+    assign adjusted_blocks = total_blocks | minus: 1
+    assign total_dots = adjusted_blocks | divided_by: 1 | ceil
                                 -%}
                                 {%- for i in (1..total_dots)-%}
                                     <button
