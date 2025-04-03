@@ -64,14 +64,14 @@
       {%- if section.settings.description != blank -%}
         <style>
           @media screen and (max-width: 749px) {
-             .{{ section.settings.description_style }},
-             .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
+             .section-{{ section.id }}-padding .{{ section.settings.description_style }},
+             .section-{{ section.id }}-padding .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
               {
                 text-align:{{section.settings.mobile_description_alignment}} !important;  
                 padding-left: 1.5rem;              
                 padding-right: 1.5rem;
               }
-            .multicolumn__title{
+            .section-{{ section.id }}-padding .multicolumn__title{
                 justify-content: {{ section.settings.mobile_description_alignment }} !important;
               }
           }
