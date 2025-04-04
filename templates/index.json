@@ -29,8 +29,8 @@
           "type": "button",
           "settings": {
             "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
+            "button_link": "#",
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -43,8 +43,8 @@
         "button_PcqV6i"
       ],
       "settings": {
-        "desktop_content_position": "right",
-        "content_alignment": "right",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
@@ -231,6 +231,15 @@
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
+        "column_PT77BW": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_NQmUhy": {
           "type": "column",
           "settings": {
@@ -248,21 +257,12 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "column_PT77BW",
         "column_NQmUhy",
-        "column1",
-        "column2"
+        "column1"
       ],
       "settings": {
         "caption": "Mutlicolumn Caption",
@@ -276,8 +276,8 @@
         "description_style": "uppercase",
         "image_width": "third",
         "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
+        "button_label": "Button",
+        "button_link": "#",
         "layout": "full_bleed",
         "columns_desktop": 3,
         "column_alignment": "center",
