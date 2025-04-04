@@ -703,6 +703,15 @@
     "blocks_with_text_EQxBGT": {
       "type": "blocks-with-text",
       "blocks": {
+        "column_RJbdGp": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
         "heading_gFaJUP": {
           "type": "heading",
           "settings": {
@@ -728,6 +737,7 @@
         }
       },
       "block_order": [
+        "column_RJbdGp",
         "heading_gFaJUP",
         "text_dtaJRN",
         "button_BaPrVg"
