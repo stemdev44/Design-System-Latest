@@ -48,9 +48,8 @@
       </p>
     {% endif %}  
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title" 
-          style="justify-content: {{ section.settings.heading_alignment }};">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
@@ -62,6 +61,11 @@
     {%- endunless -%}
 
       {%- if section.settings.description != blank -%}
+        <div class="{{ section.settings.description_style }}" style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
+            {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
         <style>
           @media screen and (max-width: 749px) {
              .section-{{ section.id }}-padding .{{ section.settings.description_style }},
@@ -71,15 +75,11 @@
                 padding-left: 1.5rem;              
                 padding-right: 1.5rem;
               }
-            .section-{{ section.id }}-padding .multicolumn__title{
-                justify-content: {{ section.settings.mobile_description_alignment }} !important;
+            .section-{{ section.id }}-padding .multicolumn__title .title{
+                text-align: {{ section.settings.mobile_description_alignment }} !important;
               }
           }
         </style>
-        <div class="{{ section.settings.description_style }}" style="text-align:{{section.settings.heading_alignment}}; margin-bottom: 3rem" >
-            {{ section.settings.description }}
-        </div>
-      {%- endif -%}
 
     <slider-component class="slider-mobile-gutter{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
 
