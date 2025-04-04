@@ -41,14 +41,48 @@
       <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
               
             <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-                {%-for block in section.blocks-%}
+                {% comment %} {%-for block in section.blocks-%}
                     {%-case block.type -%}
                         {%- when 'column' -%}
                   <h2>
                     {{ block.settings.title }}
                   </h2>                        
                     {%-endcase-%}
-                {%-endfor-%}     
+                {%-endfor-%} {% endcomment %}
+                    {% comment %} //////////////////////////                 {% endcomment %}
+                        <ul
+                            class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
+                            id="Slider-{{ section.id }}"
+                            role="list"
+                        >
+                            {%- for block in section.blocks -%}
+                                {%-case block.type -%}
+                                    {%- when 'column' -%}
+                                        <li
+                                            id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                            {{ block.shopify_attributes }}
+                                            {% if settings.animations_reveal_on_scroll %}
+                                            data-cascade
+                                            style="--animation-order: {{ forloop.index }};"
+                                            {% endif %}
+                                        >
+                                            <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px;" {% endif %}>
+
+                                            <div class="multicolumn-card__info">
+                                                {%- if block.settings.title != blank -%}
+                                                <h3 class="inline-richtext" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                                                {%- endif -%}
+                                                {%- if block.settings.description != blank -%}
+                                                <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.description }}</div>
+                                                {%- endif -%}
+                                            </div>
+                                            </div>
+                                        </li>            
+                                {%-endcase-%}
+                            {%- endfor -%}
+                        </ul>                    
+                    {% comment %} ////////////////////////////// {% endcomment %}
             </div>                
         <div class="image-with-text__text-item grid__item">
           <div
