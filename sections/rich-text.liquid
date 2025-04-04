@@ -108,6 +108,10 @@
               flex-end !important                            
           {%-endcase-%}
         }
+
+        .section-{{ section.id }}-padding .rich-text__blocks{
+          text-align: {{section.settings.mobile_content_alignment}} !important;
+        }
     }
   </style>
 
