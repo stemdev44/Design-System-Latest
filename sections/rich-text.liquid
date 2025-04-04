@@ -96,16 +96,16 @@
 
   <style>
     @media screen and (max-width: 749px) {
-        .section-{{ section.id }}-padding .rich-text__wrapper
+        .section-{{ section.id }}-padding .rich-text__wrapper--{{ section.settings.desktop_content_position }}
         {
           justify-content:
           {%-case section.settings.mobile_content_position-%}
             {%- when 'left' -%}
-              "flex-start !important"
+              flex-start !important
             {%- when 'center' -%}
-              "center !important"
+              center !important
             {%- when 'right' -%}
-              "flex-end !important"                            
+              flex-end !important                            
           {%-endcase-%}
         }
     }
