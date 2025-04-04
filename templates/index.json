@@ -9,6 +9,70 @@
  */
 {
   "sections": {
+    "blocks_with_text_EQxBGT": {
+      "type": "blocks-with-text",
+      "blocks": {
+        "column_RJbdGp": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "heading_gFaJUP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Blocks with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_dtaJRN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_BaPrVg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "no_border_style": false
+          }
+        }
+      },
+      "block_order": [
+        "column_RJbdGp",
+        "heading_gFaJUP",
+        "text_dtaJRN",
+        "button_BaPrVg"
+      ],
+      "settings": {
+        "layout_page": "full_bleed",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "carousel_mVMEgi": {
       "type": "carousel",
       "blocks": {
@@ -699,73 +763,10 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
-    },
-    "blocks_with_text_EQxBGT": {
-      "type": "blocks-with-text",
-      "blocks": {
-        "column_RJbdGp": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "description": "",
-            "description_style": "body"
-          }
-        },
-        "heading_gFaJUP": {
-          "type": "heading",
-          "settings": {
-            "heading": "Blocks with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_dtaJRN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_BaPrVg": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "no_border_style": false
-          }
-        }
-      },
-      "block_order": [
-        "column_RJbdGp",
-        "heading_gFaJUP",
-        "text_dtaJRN",
-        "button_BaPrVg"
-      ],
-      "settings": {
-        "layout_page": "full_bleed",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_button_text": "",
-        "video_button_background": "",
-        "video_button_font": "",
-        "video_button_style_secondary": false,
-        "video_no_border_style": false,
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
+    "blocks_with_text_EQxBGT",
     "carousel_mVMEgi",
     "carousel_mifEEX",
     "multicolumn",
@@ -777,7 +778,6 @@
     "featured_collection",
     "collage",
     "collapsible_content_qUw7fA",
-    "slideshow_7cWhrY",
-    "blocks_with_text_EQxBGT"
+    "slideshow_7cWhrY"
   ]
 }
