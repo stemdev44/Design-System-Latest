@@ -16,7 +16,7 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "description": "<p>Card Description<br/></p>",
             "description_style": "body"
           }
@@ -97,6 +97,10 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
+        "column_alignment": "center",
+        "column_background_color": "#000000",
+        "column_font_color": "#ffffff",
+        "column_corner_radius": 37,
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
