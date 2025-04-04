@@ -155,7 +155,7 @@
                                     <h3 class="inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
                                     {%- endif -%}
                                     {%- if block.settings.description != blank -%}
-                                    <div class="rte" style="color:{{ section.settings.column_font_color }}">{{ block.settings.description }}</div>
+                                    <div class="rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }}">{{ block.settings.description }}</div>
                                     {%- endif -%}
                                 </div>
                                 </div>
