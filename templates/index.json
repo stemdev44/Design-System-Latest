@@ -12,12 +12,39 @@
     "blocks_with_text_EQxBGT": {
       "type": "blocks-with-text",
       "blocks": {
-        "column_RJbdGp": {
+        "column_3finTW": {
           "type": "column",
           "settings": {
             "title": "Card",
             "heading_size": "h1",
-            "description": "",
+            "description": "<p>Card Description<br/></p>",
+            "description_style": "body"
+          }
+        },
+        "column_ExfrTD": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "description": "<p>Card Description</p>",
+            "description_style": "body"
+          }
+        },
+        "column_cXpQVT": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "description": "<p>Card Description</p>",
+            "description_style": "body"
+          }
+        },
+        "column_RKtWBP": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "description": "<p>Card Description</p>",
             "description_style": "body"
           }
         },
@@ -46,7 +73,10 @@
         }
       },
       "block_order": [
-        "column_RJbdGp",
+        "column_3finTW",
+        "column_ExfrTD",
+        "column_cXpQVT",
+        "column_RKtWBP",
         "heading_gFaJUP",
         "text_dtaJRN",
         "button_BaPrVg"
