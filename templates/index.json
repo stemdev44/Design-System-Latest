@@ -58,8 +58,9 @@
         "text_dtaJRN": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/icon-bottle.svg"
           }
         },
         "button_BaPrVg": {
