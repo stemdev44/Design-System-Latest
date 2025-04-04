@@ -82,7 +82,7 @@
         "button_BaPrVg"
       ],
       "settings": {
-        "layout_page": "full_bleed",
+        "layout_page": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
