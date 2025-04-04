@@ -94,6 +94,23 @@
   </div>
 </div>
 
+  <style>
+    @media screen and (max-width: 749px) {
+        .section-{{ section.id }}-padding .rich-text__wrapper
+        {
+          justify-content:
+          {%-case section.settings.mobile_content_position-%}
+            {%- when 'left' -%}
+              "flex-start !important"
+            {%- when 'center' -%}
+              "center !important"
+            {%- when 'right' -%}
+              "flex-end !important"                            
+          {%-endcase-%}
+        }
+    }
+  </style>
+
 {% schema %}
 {
   "name": "t:sections.rich-text.name",
