@@ -16,7 +16,7 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "h0",
+            "heading_size": "h1",
             "description": "<p>Card Description<br/></p>",
             "description_style": "body"
           }
