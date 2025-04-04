@@ -71,10 +71,10 @@
 
                                             <div class="multicolumn-card__info">
                                                 {%- if block.settings.title != blank -%}
-                                                <h3 class="inline-richtext" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                                                <h3 class="inline-richtext" style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
                                                 {%- endif -%}
                                                 {%- if block.settings.description != blank -%}
-                                                <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.description }}</div>
+                                                <div class="rte" style="color:{{ section.settings.column_font_color }}">{{ block.settings.description }}</div>
                                                 {%- endif -%}
                                             </div>
                                             </div>
