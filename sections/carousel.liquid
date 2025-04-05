@@ -79,6 +79,13 @@
                 text-align: {{ section.settings.mobile_description_alignment }} !important;
               }
           }
+            {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
+
+            @media screen and (min-width: 990px) {
+                .slider--desktop .slider__slide:first-child {
+                    margin-left: 0 !important;
+                }
+            {%- endif -%}          
         </style>
 
     <slider-component class="slider-mobile-gutter{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
