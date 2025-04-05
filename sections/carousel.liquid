@@ -168,7 +168,7 @@
                 {%- endif -%}
                 <div class="multicolumn-card__info">
                     {%- if block.settings.caption != blank -%}
-                        <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }};">
+                        <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }};color:{{ section.settings.column_font_color }}">
                             {{ block.settings.caption | escape }}
                         </p>
                     {%- endif -%}                
