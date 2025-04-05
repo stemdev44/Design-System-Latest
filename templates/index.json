@@ -248,6 +248,9 @@
         "column_PT77BW": {
           "type": "column",
           "settings": {
+            "caption": "Caption 1",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -257,6 +260,9 @@
         "column_NQmUhy": {
           "type": "column",
           "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -266,6 +272,9 @@
         "column1": {
           "type": "column",
           "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
