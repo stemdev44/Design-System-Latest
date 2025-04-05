@@ -370,8 +370,8 @@
       "settings": {
         "layout_page": "grid",
         "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
         "image_behavior": "none",
         "video_url": "",
         "cover_image": "shopify://shop_images/bg_image.png",
