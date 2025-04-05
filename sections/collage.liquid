@@ -33,10 +33,6 @@
                   .section-{{ section.id }}-padding .collage {
                       grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
                   }
-                  .section-{{ section.id }}-padding .collage__item--left:nth-child(3n-1),
-                  .section-{{ section.id }}-padding .collage__item--left:nth-child(3n){
-                    grid-column: 3 / span 4 !important;
-                  }
               }
             </style>
           {%- endif -%}
