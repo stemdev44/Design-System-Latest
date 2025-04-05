@@ -145,6 +145,11 @@
                 </div>
               {%- endif -%}
               <div class="multicolumn-card__info">
+                {%- if block.settings.caption != blank -%}
+                  <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="color:{{ section.settings.column_font_color }}">
+                    {{ block.settings.caption | escape }}
+                  </p>
+                {%- endif -%}              
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
                 {%- endif -%}
@@ -618,6 +623,47 @@
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
         },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "t:sections.collapsible_content.settings.caption.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__1.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__2.label"
+            }
+          ],
+          "default": "caption-with-letter-spacing",
+          "label": "t:sections.image-with-text.blocks.caption.settings.text_style.label"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__1.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__2.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__3.label"
+            }
+          ],
+          "default": "medium",
+          "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.label"
+        },        
         {
           "type": "inline_richtext",
           "id": "title",
