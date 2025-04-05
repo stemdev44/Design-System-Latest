@@ -71,6 +71,9 @@
             <style>
               @media screen and (max-width: 749px) {
 
+                  .section-{{ section.id }}-padding .collage__item--left:nth-child(3n-1){
+                      grid-column: 1 / span 2 !important;
+                  }                
                   .section-{{ section.id }}-padding .collage--mobile .collage__item--left:nth-child(3n){
                       grid-column-start:1;
                   }
