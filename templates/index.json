@@ -262,7 +262,7 @@
         "column_NQmUhy": {
           "type": "column",
           "settings": {
-            "caption": "",
+            "caption": "Caption 2",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
             "title": "Column",
@@ -274,7 +274,7 @@
         "column1": {
           "type": "column",
           "settings": {
-            "caption": "",
+            "caption": "Caption 3",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
             "title": "Column",
