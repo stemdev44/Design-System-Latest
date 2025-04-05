@@ -67,7 +67,7 @@
             </style>
           {%- endif -%}
 
-          {%- if section.settings.desktop_image_width=='small' or section.settings.desktop_image_width=='medium' -%}        
+          {% comment %} {%- if section.settings.desktop_image_width=='small' or section.settings.desktop_image_width=='medium' -%}        
             <style>
               @media screen and (max-width: 749px) {
 
@@ -80,7 +80,7 @@
                   }
               }
             </style>
-          {%- endif -%}
+          {%- endif -%} {% endcomment %}
 
       {% assign skip_card_product_styles = false %}
       {%- for block in section.blocks -%}
