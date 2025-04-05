@@ -301,6 +301,7 @@
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
+        "button_style_secondary": true,
         "layout": "full_bleed",
         "columns_desktop": 3,
         "column_alignment": "center",
