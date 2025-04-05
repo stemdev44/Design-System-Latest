@@ -67,6 +67,21 @@
             </style>
           {%- endif -%}
 
+          {%- if section.settings.desktop_image_width=='small' or section.settings.desktop_image_width=='medium' -%}        
+            <style>
+              @media screen and (max-width: 749px) {
+
+                  .section-{{ section.id }}-padding .collage--mobile .collage__item--left:nth-child(3n){
+                      grid-column-start:1;
+                  }
+
+                  .section-{{ section.id }}-padding .collage--mobile .collage__item--left:nth-child(3n-2){
+                    grid-column: span 1;
+                  }                  
+              }
+            </style>
+          {%- endif -%}
+
       {% assign skip_card_product_styles = false %}
       {%- for block in section.blocks -%}
         <div
