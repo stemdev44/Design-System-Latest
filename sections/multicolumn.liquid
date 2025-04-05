@@ -226,7 +226,7 @@
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
       {%- if section.settings.button_label != blank -%}
         <a
-          class="button {% unless section.settings.button_style_secondary %} button--primary {% endunless %} button--secondary"
+          class="button {% if section.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
           {% if section.settings.button_link == blank %}
             role="link" aria-disabled="true"
           {% else %}
