@@ -27,81 +27,96 @@
     {%- endif -%}
     <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
 
-      <style>
+      {%- if section.settings.desktop_layout=='left' -%} 
 
-        @media screen and (min-width: 750px) {
-          {%- if section.settings.desktop_layout=='left' -%}
-            {%- if section.settings.desktop_image_width=='medium' -%}        
-              .section-{{ section.id }}-padding .collage {
-                  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-              }
+        {%- if section.settings.desktop_image_width=='medium' -%}        
+          <style>
+            @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-padding .collage {
+                    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                }
 
-              .section-{{ section.id }}-padding .collage-item-1{
-                grid-column: 1 / span 2 !important;
-                grid-row: span 3 !important;
-              }
-              
-              .section-{{ section.id }}-padding .collage-item-2,
-              .section-{{ section.id }}-padding .collage-item-3{
-                grid-column: 3 / span 4 !important;
-              } 
-            {%- endif -%} 
+                .section-{{ section.id }}-padding .collage-item-1{
+                  grid-column: 1 / span 2 !important;
+                  grid-row: span 3 !important;
+                }
+                
+                .section-{{ section.id }}-padding .collage-item-2,
+                .section-{{ section.id }}-padding .collage-item-3{
+                  grid-column: 3 / span 4 !important;
+                }                  
+                
+            }
+          </style>
+        {%- endif -%}
 
-            {%- if section.settings.desktop_image_width=='small' -%}
+        {%- if section.settings.desktop_image_width=='small' -%}        
+          <style>
+            @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-padding .collage {
+                    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+                }
 
-              .section-{{ section.id }}-padding .collage {
-                  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-              }
+                .section-{{ section.id }}-padding .collage-item-1{
+                  grid-column: 1 / span 2 !important;
+                  grid-row: span 3 !important;
+                }
 
-              .section-{{ section.id }}-padding .collage-item-1{
-                grid-column: 1 / span 2 !important;
-                grid-row: span 3 !important;
-              }
+                .section-{{ section.id }}-padding .collage-item-2,
+                .section-{{ section.id }}-padding .collage-item-3{
+                  grid-column: 3 / span 4 !important;
+                }                  
+            }
+          </style>
+        {%- endif -%}
+      {%- endif -%}
 
-              .section-{{ section.id }}-padding .collage-item-2,
-              .section-{{ section.id }}-padding .collage-item-3{
-                grid-column: 3 / span 4 !important;
-              }                  
+      {%- if section.settings.desktop_layout=='right' -%} 
+        
+        {%- if section.settings.desktop_image_width=='medium' -%}        
+          <style>
+            @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-padding .collage {
+                    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                }
 
-            {%- endif -%}
-          {%- endif -%}                   
+                .section-{{ section.id }}-padding .collage-item-3{
+                  grid-column: 3 / span 4 !important;
+                  grid-row: span 3 !important;
+                }
+                
+                .section-{{ section.id }}-padding .collage-item-1,
+                .section-{{ section.id }}-padding .collage-item-2{
+                  grid-column: 1 / span 2 !important;
+                }                  
+                
+            }
+          </style>
+        {%- endif -%}
 
-          {%- if section.settings.desktop_layout=='right' -%}                 
-            {%- if section.settings.desktop_image_width=='medium' -%}
+       {%- if section.settings.desktop_image_width=='small' -%}        
+          <style>
+            @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-padding .collage {
+                    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+                }
 
-                    .section-{{ section.id }}-padding .collage {
-                        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-                    }
+                .section-{{ section.id }}-padding .collage-item-3{
+                  grid-column: 5 / span 6 !important;
+                  grid-row: span 3 !important;
+                }
 
-                    .section-{{ section.id }}-padding .collage-item-3{
-                      grid-column: 3 / span 4 !important;
-                      grid-row: span 3 !important;
-                    }
-                    
-                    .section-{{ section.id }}-padding .collage-item-1,
-                    .section-{{ section.id }}-padding .collage-item-2{
-                      grid-column: 1 / span 2 !important;
-                    }
-            {%- endif -%}
+                .section-{{ section.id }}-padding .collage-item-1,
+                .section-{{ section.id }}-padding .collage-item-2{
+                  grid-column: 1 / span 4 !important;
+                }
+            }
+          </style>
+        {%- endif -%}
 
-           {%- if section.settings.desktop_image_width=='small' -%}
-                    .section-{{ section.id }}-padding .collage {
-                        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-                    }
+      {%- endif -%}      
 
-                    .section-{{ section.id }}-padding .collage-item-3{
-                      grid-column: 5 / span 6 !important;
-                      grid-row: span 3 !important;
-                    }
 
-                    .section-{{ section.id }}-padding .collage-item-1,
-                    .section-{{ section.id }}-padding .collage-item-2{
-                      grid-column: 1 / span 4 !important;
-                    }
-            {%- endif -%}
-          {%- endif -%}            
-        }
-      </style>  
           {% comment %} {%- if section.settings.desktop_image_width=='small' or section.settings.desktop_image_width=='medium' -%}        
             <style>
               @media screen and (max-width: 749px) {
