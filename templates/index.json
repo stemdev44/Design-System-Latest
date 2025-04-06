@@ -59,6 +59,8 @@
         "products_to_show": 4,
         "title": "Featured collection",
         "heading_size": "h1",
+        "heading_alignment": "left",
+        "mobile_description_alignment": "center",
         "description": "<p>Featured Description</p>",
         "show_description": false,
         "description_style": "body",
