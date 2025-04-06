@@ -94,25 +94,25 @@
           </style>
         {%- endif -%}
 
-        {% comment %} {%- if section.settings.desktop_image_width=='small' -%}        
+       {%- if section.settings.desktop_image_width=='small' -%}        
           <style>
             @media screen and (min-width: 750px) {
                 .section-{{ section.id }}-padding .collage {
                     grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
                 }
 
-                .section-{{ section.id }}-padding .collage-item-1{
-                  grid-column: 1 / span 2 !important;
+                {% comment %} .section-{{ section.id }}-padding .collage-item-1{
+                  grid-column: 5 / span 2 !important;
                   grid-row: span 3 !important;
                 }
 
                 .section-{{ section.id }}-padding .collage-item-2,
                 .section-{{ section.id }}-padding .collage-item-3{
                   grid-column: 3 / span 4 !important;
-                }                  
+                }                   {% endcomment %}
             }
           </style>
-        {%- endif -%} {% endcomment %}
+        {%- endif -%}
 
       {%- endif -%}      
 
