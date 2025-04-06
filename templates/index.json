@@ -464,6 +464,12 @@
     "collapsible_content_qUw7fA": {
       "type": "collapsible-content",
       "blocks": {
+        "text_Aet6eU": {
+          "type": "text",
+          "settings": {
+            "caption": ""
+          }
+        },
         "collapsible_row_Fd3yMf": {
           "type": "collapsible_row",
           "settings": {
@@ -502,6 +508,7 @@
         }
       },
       "block_order": [
+        "text_Aet6eU",
         "collapsible_row_Fd3yMf",
         "collapsible_row_etFKTN",
         "collapsible_row_LMVPQn",
