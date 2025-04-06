@@ -59,7 +59,7 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "hxxl",
+            "heading_size": "h1",
             "description": "<p>Card Description<br/></p>",
             "description_style": "body"
           }
@@ -68,7 +68,7 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "hxxl",
+            "heading_size": "h1",
             "description": "<p>Card Description</p>",
             "description_style": "body"
           }
@@ -313,7 +313,7 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "slider_visual": "dots",
+        "slider_visual": "none",
         "padding_top": 36,
         "padding_bottom": 36
       }
