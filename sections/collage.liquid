@@ -119,9 +119,24 @@
                 .section-{{ section.id }}-padding .collage-item-1,
                 .section-{{ section.id }}-padding .collage-item-2{
                   grid-column: 1 / span 2 !important;
-                }                  
-                
+                }                
             }
+
+            @media screen and (max-width: 749px) {
+
+              .section-{{ section.id }}-padding .collage-item-1{
+                grid-column: 1 / span 1 !important;
+              }
+              
+              .section-{{ section.id }}-padding .collage-item-2{
+                grid-column: 2 !important;
+              }
+              .section-{{ section.id }}-padding .collage-item-3{
+                grid-column: 1 / span 2 !important;
+              }                  
+              
+          }
+            
           </style>
         {%- endif -%}
 
@@ -142,6 +157,22 @@
                   grid-column: 1 / span 4 !important;
                 }
             }
+
+            @media screen and (max-width: 749px) {
+
+              .section-{{ section.id }}-padding .collage-item-1{
+                grid-column: 1 / span 1 !important;
+              }
+              
+              .section-{{ section.id }}-padding .collage-item-2{
+                grid-column: 2 !important;
+              }
+              .section-{{ section.id }}-padding .collage-item-3{
+                grid-column: 1 / span 2 !important;
+              }                  
+              
+          }            
+
           </style>
         {%- endif -%}
 
