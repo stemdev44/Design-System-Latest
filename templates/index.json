@@ -130,7 +130,7 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "mobile_layout": "image_first",
+        "mobile_layout": "text_first",
         "image_behavior": "none",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_button_text": "",
