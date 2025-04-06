@@ -64,6 +64,16 @@
   endif
 -%}
 
+<style>
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding .collection__title .title,
+    .section-{{ section.id }}-padding .collection__title .collection__description
+    {
+      text-align:{{ section.settings.mobile_description_alignment }} !important
+    }                
+  }
+</style>
+
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
