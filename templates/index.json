@@ -89,8 +89,8 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "hxxl",
-            "heading_size_mobile": "hxl",
+            "heading_size": "hxl",
+            "heading_size_mobile": "h2",
             "description": "<p>Card Description<br/></p>",
             "description_style": "body"
           }
