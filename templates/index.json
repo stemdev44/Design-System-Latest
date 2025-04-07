@@ -89,7 +89,7 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "hxl",
+            "heading_size": "h2",
             "heading_size_mobile": "hxl",
             "description": "<p>Card Description<br/></p>",
             "description_style": "body"
