@@ -91,7 +91,7 @@
             "title": "Card",
             "heading_size": "hxl",
             "heading_size_mobile": "h2",
-            "description": "<p>Card Description<br/></p>",
+            "description": "<p>Description<br/></p>",
             "description_style": "body"
           }
         },
@@ -101,7 +101,7 @@
             "title": "Card",
             "heading_size": "hxxl",
             "heading_size_mobile": "h2",
-            "description": "<p>Card Description</p>",
+            "description": "<p>Description</p>",
             "description_style": "body"
           }
         },
@@ -111,7 +111,7 @@
             "title": "Card",
             "heading_size": "h1",
             "heading_size_mobile": "h1",
-            "description": "<p>Card Description</p>",
+            "description": "<p>Description</p>",
             "description_style": "body"
           }
         },
@@ -121,7 +121,7 @@
             "title": "Card",
             "heading_size": "h1",
             "heading_size_mobile": "h1",
-            "description": "<p>Card Description</p>",
+            "description": "<p>Description</p>",
             "description_style": "body"
           }
         },
