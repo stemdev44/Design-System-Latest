@@ -297,10 +297,10 @@
                     {%- else -%}
                         <div class="slideshow__control-wrapper ">
                             {%- liquid 
-                                assign mobile_total_blocks = section.blocks.size
-                                assign mobile_blocks_per_slide = section.settings.columns_mobile
-                                assign mobile_adjusted_blocks = mobile_total_blocks | minus: mobile_blocks_per_slide
-                                assign mobile_total_dots = mobile_adjusted_blocks
+                              assign mobile_total_blocks = section.blocks.size
+                              assign mobile_blocks_per_slide = section.settings.columns_mobile
+                              assign mobile_adjusted_blocks = mobile_total_blocks | minus: mobile_blocks_per_slide | plus: 1
+                              assign mobile_total_dots = mobile_adjusted_blocks
                             -%}                      
                             {%- for i in (1..mobile_total_dots)-%}
                                 <button
