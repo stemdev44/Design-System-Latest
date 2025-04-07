@@ -298,12 +298,12 @@
                       <div class="slideshow__control-wrapper ">                           
 
                               {%- liquid 
-                                  assign total_blocks = section.blocks.size
-                                  assign blocks_per_slide = section.settings.columns_desktop
-                                  assign adjusted_blocks = total_blocks | minus: blocks_per_slide
-                                  assign total_dots = adjusted_blocks | plus: 1
+                                  assign mobile_total_blocks = section.blocks.size
+                                  assign mobile_blocks_per_slide = section.settings.columns_mobile
+                                  assign mobile_adjusted_blocks = mobile_total_blocks | minus: mobile_blocks_per_slide
+                                  assign mobile_total_dots = mobile_adjusted_blocks | plus: 1
                               -%}
-                              {%- for i in (1..total_dots)-%}
+                              {%- for i in (1..mobile_total_dots)-%}
                                   <button
                                   class="slider-counter__link slider-counter__link--{{ section.settings.mobile_slider_visual }} link"
                                   aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
