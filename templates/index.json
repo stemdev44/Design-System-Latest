@@ -484,7 +484,9 @@
         "text_Aet6eU": {
           "type": "text",
           "settings": {
-            "caption": ""
+            "caption": "Text",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
           }
         },
         "collapsible_row_Fd3yMf": {
