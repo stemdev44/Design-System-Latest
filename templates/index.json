@@ -284,7 +284,7 @@
         "column_font_color": "#121212",
         "column_corner_radius": 27,
         "color_scheme": "",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "mobile_slider_visual": "dots",
         "padding_top": 36,
