@@ -369,15 +369,6 @@
     "image_with_text_dJfY7c": {
       "type": "image-with-text",
       "blocks": {
-        "collapsible_row_MRBKzV": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
         "image_picker_nP6yjb": {
           "type": "image_picker",
           "settings": {
@@ -403,7 +394,8 @@
           "type": "text",
           "settings": {
             "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
-            "text_style": "body"
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/checkmark.png"
           }
         },
         "button_UaqwYV": {
@@ -412,12 +404,11 @@
             "button_label": "Demo",
             "button_link": "#",
             "button_style_secondary": true,
-            "no_button_style": false
+            "no_border_style": false
           }
         }
       },
       "block_order": [
-        "collapsible_row_MRBKzV",
         "image_picker_nP6yjb",
         "caption_8kY69t",
         "heading_LCFf44",
@@ -425,10 +416,17 @@
         "button_UaqwYV"
       ],
       "settings": {
+        "layout_page": "full_bleed",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
+        "video_url": "",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
