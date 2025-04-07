@@ -299,7 +299,7 @@
 
                               {%- liquid 
                                   assign total_blocks = section.blocks.size
-                                  assign blocks_per_slide = section.settings.columns_mobile
+                                  assign blocks_per_slide = section.settings.columns_desktop
                                   assign adjusted_blocks = total_blocks | minus: blocks_per_slide
                                   assign total_dots = adjusted_blocks | plus: 1
                               -%}
