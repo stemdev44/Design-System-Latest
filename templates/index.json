@@ -481,14 +481,6 @@
     "collapsible_content_qUw7fA": {
       "type": "collapsible-content",
       "blocks": {
-        "text_Aet6eU": {
-          "type": "text",
-          "settings": {
-            "caption": "Text",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
         "collapsible_row_Fd3yMf": {
           "type": "collapsible_row",
           "settings": {
@@ -524,14 +516,22 @@
             "row_content": "",
             "page": ""
           }
+        },
+        "text_TeMYtJ": {
+          "type": "text",
+          "settings": {
+            "caption": "This is simple text",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
         }
       },
       "block_order": [
-        "text_Aet6eU",
         "collapsible_row_Fd3yMf",
         "collapsible_row_etFKTN",
         "collapsible_row_LMVPQn",
-        "collapsible_row_WfrzNc"
+        "collapsible_row_WfrzNc",
+        "text_TeMYtJ"
       ],
       "settings": {
         "caption": "Collapsible Caption",
