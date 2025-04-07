@@ -379,6 +379,29 @@
   </div>
 </div>
 
+<script>
+function handleResponsiveSliderButtons() {
+  const desktopButtons = document.querySelector('.slider-buttons.small-hide.medium-hide');
+  const mobileButtons = document.querySelector('.slider-buttons.large-up-hide');
+
+  if (window.innerWidth > 750) {
+    // Desktop view — hide mobile buttons, show desktop buttons
+    mobileButtons.classList.add('large-up-hide');
+    desktopButtons.classList.remove('small-hide', 'medium-hide');
+  } else {
+    // Mobile view — hide desktop buttons, show mobile buttons
+    desktopButtons.classList.add('small-hide', 'medium-hide');
+    mobileButtons.classList.remove('large-up-hide');
+  }
+}
+
+// Run on load
+document.addEventListener('DOMContentLoaded', handleResponsiveSliderButtons);
+
+// Run on resize
+window.addEventListener('resize', handleResponsiveSliderButtons);  
+</script>
+
 {% schema %}
 {
   "name": "Carousel",
