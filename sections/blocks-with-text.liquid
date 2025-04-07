@@ -96,6 +96,12 @@
                                           font-size: calc(var(--font-heading-scale)* 6.2rem) !important;
                                         }
                                       {%- endif -%}
+
+                                      {%- if block.settings.heading_size_mobile=="hxxl" -%}
+                                        .section-{{ section.id }}-padding .inline-richtext.{{ block.settings.heading_size }}{
+                                          font-size: calc(var(--font-heading-scale)* 6.2rem) !important;
+                                        }
+                                      {%- endif -%}                                      
                                     }
                                   </style>
                                     {%- if block.settings.title != blank -%}
