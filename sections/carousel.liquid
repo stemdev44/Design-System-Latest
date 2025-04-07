@@ -301,7 +301,7 @@
                                   assign mobile_total_blocks = section.blocks.size
                                   assign mobile_blocks_per_slide = section.settings.columns_mobile
                                   assign mobile_adjusted_blocks = mobile_total_blocks | minus: mobile_blocks_per_slide
-                                  assign mobile_total_dots = mobile_adjusted_blocks | plus: 1
+                                  assign mobile_total_dots = section.blocks.size
                               -%}
                               {%- for i in (1..mobile_total_dots)-%}
                                   <button
