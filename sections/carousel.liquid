@@ -904,8 +904,8 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const desktopButtons = document.querySelector('.slider-buttons.small-hide.medium-hide');
-    const mobileButtons = document.querySelector('.slider-buttons.large-up-hide');
+    const desktopButtons = document.querySelector('.section-{{ section.id }}-padding .slider-buttons.small-hide.medium-hide');
+    const mobileButtons = document.querySelector('.section-{{ section.id }}-padding .slider-buttons.large-up-hide');
 
     function updateSliderButtons() {
       const isMobile = window.innerWidth <= 750;
