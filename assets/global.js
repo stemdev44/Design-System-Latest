@@ -825,7 +825,6 @@ class SliderComponent extends HTMLElement {
   }
 
   onButtonClick(event) {
-    console.log("button clicked");
     event.preventDefault();
     const step = event.currentTarget.dataset.step || 1;
     this.slideScrollPosition =
