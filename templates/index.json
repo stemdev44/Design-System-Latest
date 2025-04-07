@@ -286,7 +286,7 @@
         "color_scheme": "",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "mobile_slider_visual": "counter",
+        "mobile_slider_visual": "numbers",
         "padding_top": 36,
         "padding_bottom": 36
       }
