@@ -201,7 +201,7 @@
 
       {%- if show_mobile_slider or show_desktop_slider -%}
 
-            <div class="slider-buttons" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
+            <div class="slider-buttons small-hide medium-hide" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
                 <button
                     type="button"
                     class="slider-button slider-button--prev"
@@ -223,7 +223,7 @@
                         {%- endif -%}
                         
                     {%- else -%}
-                        <div class="slideshow__control-wrapper small-hide medium-hide">                           
+                        <div class="slideshow__control-wrapper ">                           
 
                                 {%- liquid 
                                     assign total_blocks = section.blocks.size
