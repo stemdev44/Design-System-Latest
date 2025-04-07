@@ -103,9 +103,9 @@
                   </div>
 
                 {%- when 'text' -%}
-                  <h2>
-                    {{ block.settings.caption }}
-                  </h2>
+                  <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}">
+                    {{ block.settings.caption | escape }}
+                  </p>
               {%- endcase -%}
             {%- endfor -%}
           </div>
