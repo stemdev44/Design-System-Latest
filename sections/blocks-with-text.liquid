@@ -71,7 +71,7 @@
                                 <div class="multicolumn-card content-container" style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px;">
 
                                 <div class="multicolumn-card__info">
-                                  <style>
+                                  {% comment %} <style>
                                     @media screen and (max-width: 749px) {
                                       {%- if block.settings.heading_size_mobile=="h2" -%}
                                         .section-{{ section.id }}-padding .inline-richtext.{{ block.settings.heading_size }}{
@@ -103,9 +103,10 @@
                                         }
                                       {%- endif -%}                                      
                                     }
-                                  </style>
+                                  </style> {% endcomment %}
                                     {%- if block.settings.title != blank -%}
-                                    <h3 class="inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
+                                    <h3 class="small-hide medium-hide inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
+                                    <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
                                     {%- endif -%}
                                     {%- if block.settings.description != blank -%}
                                     <div class="rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }}">{{ block.settings.description }}</div>
