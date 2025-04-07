@@ -120,7 +120,7 @@
           "settings": {
             "title": "Card",
             "heading_size": "h1",
-            "heading_size_mobile": "h1",
+            "heading_size_mobile": "h2",
             "description": "<p>Description</p>",
             "description_style": "body"
           }

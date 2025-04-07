@@ -201,7 +201,7 @@
 
       {%- if show_mobile_slider or show_desktop_slider -%}
 
-            <div class="slider-buttons small-hide medium-hide" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
+            {% comment %} <div class="slider-buttons small-hide medium-hide" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
                 <button
                     type="button"
                     class="slider-button slider-button--prev"
@@ -271,7 +271,7 @@
                         </button>
                     {%- endif -%}                
                 
-            </div>
+            </div> {% endcomment %}
  
             <div class="slider-buttons large-up-hide" {% if section.settings.mobile_slider_visual=='none' %} style="display:none;"{% endif %}>
               <button
