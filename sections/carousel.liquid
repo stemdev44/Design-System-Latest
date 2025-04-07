@@ -201,6 +201,7 @@
 
       {%- if show_mobile_slider or show_desktop_slider -%}
 
+        {%-if section.settings.columns_mobile=='2' or section.settings.columns_mobile=='1'-%}
             <div class="slider-buttons small-hide medium-hide" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
                 <button
                     type="button"
@@ -272,7 +273,7 @@
                     {%- endif -%}                
                 
             </div>
-            
+        {%-endif-%}    
             <div class="slider-buttons large-up-hide" {% if section.settings.mobile_slider_visual=='none' %} style="display:none;"{% endif %}>
               <button
                   type="button"
