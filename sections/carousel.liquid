@@ -343,7 +343,7 @@
                     {%- endif -%}                
                 
             </div>
-            
+
       {%- endif -%}
     </slider-component>
 
@@ -901,3 +901,34 @@
   ]
 }
 {% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const desktopButtons = document.querySelector('.slider-buttons.small-hide.medium-hide');
+    const mobileButtons = document.querySelector('.slider-buttons.large-up-hide');
+
+    function updateSliderButtons() {
+      const isMobile = window.innerWidth <= 750;
+
+      if (isMobile) {
+        // Remove desktop buttons if they exist
+        if (desktopButtons && desktopButtons.parentNode) {
+          desktopButtons.parentNode.removeChild(desktopButtons);
+        }
+      } else {
+        // Remove mobile buttons if they exist
+        if (mobileButtons && mobileButtons.parentNode) {
+          mobileButtons.parentNode.removeChild(mobileButtons);
+        }
+      }
+    }
+
+    updateSliderButtons(); // Run on load
+
+    // Optional: Run on resize
+    window.addEventListener('resize', () => {
+      // Reload the page on screen size change to reset Liquid-rendered HTML
+      location.reload(); 
+    });
+  });
+</script>
