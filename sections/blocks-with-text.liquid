@@ -71,6 +71,33 @@
                                 <div class="multicolumn-card content-container" style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px;">
 
                                 <div class="multicolumn-card__info">
+                                  <style>
+                                    @media screen and (max-width: 749px) {
+                                      {%- if block.settings.heading_size_mobile=="h2" -%}
+                                        .section-{{ section.id }}-padding .inline-richtext .{{ block.settings.heading_size }}{
+                                          font-size: calc(var(--font-heading-scale)* 2.4rem);
+                                        }
+                                      {%- endif -%}
+
+                                      {%- if block.settings.heading_size_mobile=="h1" -%}
+                                        .section-{{ section.id }}-padding .inline-richtext .{{ block.settings.heading_size }}{
+                                          font-size: calc(var(--font-heading-scale)* 4rem);
+                                        }
+                                      {%- endif -%}
+
+                                      {%- if block.settings.heading_size_mobile=="h0" -%}
+                                        .section-{{ section.id }}-padding .inline-richtext .{{ block.settings.heading_size }}{
+                                          font-size: calc(var(--font-heading-scale)* 5.2rem);
+                                        }
+                                      {%- endif -%}
+
+                                      {%- if block.settings.heading_size_mobile=="hxl" -%}
+                                        .section-{{ section.id }}-padding .inline-richtext .{{ block.settings.heading_size }}{
+                                          font-size: calc(var(--font-heading-scale)* 6.2rem);
+                                        }
+                                      {%- endif -%}
+                                    }
+                                  </style>
                                     {%- if block.settings.title != blank -%}
                                     <h3 class="inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
                                     {%- endif -%}
