@@ -421,7 +421,7 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>test row content</p>",
             "page": ""
           }
         },
@@ -492,6 +492,7 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
+        "open_first_collapsible_row": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
