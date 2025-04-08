@@ -179,6 +179,28 @@
       {%- endif -%}      
 
       {% assign skip_card_product_styles = false %}
+      {% assign first_block = section.blocks[0] %}
+      {% assign second_block = section.blocks[1] %}
+
+      {%- if section.blocks.size==3 and  first_block.type=='collapsible_row' and second_block.type=='collapsible_row' -%}
+        <style>
+          @media screen and (max-width: 749px) {
+
+            .section-{{ section.id }}-padding .collage-item-1{
+              grid-column: 1 / span 2 !important;
+            }
+            
+            .section-{{ section.id }}-padding .collage-item-2{
+              grid-column: 1 / span 2 !important;
+            }
+            .section-{{ section.id }}-padding .collage-item-3{
+              grid-column: 1 / span 2 !important;
+            }                  
+            
+        }
+        </style>      
+      {%- endif -%}        
+
       {%- for block in section.blocks -%}
         <div
           class="collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} collage-item-{{ forloop.index }}"
