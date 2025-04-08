@@ -297,7 +297,6 @@
         "column_PT77BW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/image9xxl-BLACK_f862b3a0-37d9-443e-96d0-ed43bbe37d8c.webp",
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
