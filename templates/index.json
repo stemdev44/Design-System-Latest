@@ -237,6 +237,7 @@
         "column_HHkpbj": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/icon-bottle.svg",
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -312,7 +313,7 @@
         "mobile_description_alignment": "center",
         "description": "<p>Carouse Description</p>",
         "description_style": "body",
-        "image_width": "full",
+        "image_width": "Six-Tenth",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
