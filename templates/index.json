@@ -451,24 +451,6 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collapsible_row_pc3BTF": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>Description goes here</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_LAVgBq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
         "collection-0": {
           "type": "collection",
           "settings": {
@@ -490,8 +472,6 @@
         }
       },
       "block_order": [
-        "collapsible_row_pc3BTF",
-        "collapsible_row_LAVgBq",
         "collection-0",
         "product",
         "collection-1"
