@@ -473,7 +473,7 @@
         "button_UaqwYV"
       ],
       "settings": {
-        "layout_page": "full_bleed",
+        "layout_page": "grid",
         "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
         "height": "adapt",
         "desktop_image_width": "medium",
