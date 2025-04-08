@@ -416,21 +416,21 @@
     "image_with_text_dJfY7c": {
       "type": "image-with-text",
       "blocks": {
-        "collapsible_row_MXawYe": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
         "collapsible_row_9RwW6U": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
             "row_content": "<p>test row content</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MXawYe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
             "page": ""
           }
         },
@@ -474,8 +474,8 @@
         }
       },
       "block_order": [
-        "collapsible_row_MXawYe",
         "collapsible_row_9RwW6U",
+        "collapsible_row_MXawYe",
         "image_picker_nP6yjb",
         "caption_8kY69t",
         "heading_LCFf44",
