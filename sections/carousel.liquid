@@ -19,6 +19,39 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Tenth-width {
+            width: 10%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Two-Fifth-width {
+            width: 40%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Three-Tenth-width {
+            width: 30%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Four-Tenth-width {
+            width: 40%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Six-Tenth-width {
+            width: 60%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Seven-Tenth-width {
+            width: 70%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Four-fifth-width {
+            width: 80%;
+        }
+        
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Nine-Tenth-width {
+            width: 90%;
+        }
+
 {%- endstyle -%}
 
 {%- liquid
@@ -145,6 +178,24 @@
                             assign image_width = 0.5
                         elsif section.settings.image_width == 'third'
                             assign image_width = 0.33
+                        elsif section.settings.image_width == 'One-Tenth'
+                          assign image_width = 0.1
+                        elsif section.settings.image_width == 'Two-Fifth'
+                          assign image_width = 0.4
+                        elsif section.settings.image_width == 'Three-Tenth'
+                          assign image_width = 0.3
+                        elsif section.settings.image_width == 'Four-Tenth'
+                          assign image_width = 0.4
+                        elsif section.settings.image_width == 'Six-Tenth'
+                          assign image_width = 0.6 
+                        elsif section.settings.image_width == 'Seven-Tenth'
+                          assign image_width = 0.7
+                        elsif section.settings.image_width == 'Four-fifth'
+                          assign image_width = 0.8
+                        elsif section.settings.image_width == 'Four-fifth'
+                          assign image_width = 0.9                          
+                        else
+                          assign image_width = 1                            
                         else
                             assign image_width = 1
                         endif
@@ -538,6 +589,38 @@
       "type": "select",
       "id": "image_width",
       "options": [
+        {
+          "value": "One-Tenth",
+          "label": "One-Tenth"
+        },
+        {
+          "value": "Two-Fifth",
+          "label": "Two-Fifth"
+        },
+        {
+          "value": "Three-Tenth",
+          "label": "Three-Tenth"
+        },
+        {
+          "value": "Four-Tenth",
+          "label": "Four-Tenth"
+        },
+        {
+          "value": "Six-Tenth",
+          "label": "Six-Tenth"
+        },
+        {
+          "value": "Seven-Tenth",
+          "label": "Seven-Tenth"
+        },
+        {
+          "value": "Four-fifth",
+          "label": "Four-fifth"
+        },
+        {
+          "value": "Nine-Tenth",
+          "label": "Nine-Tenth"
+        },                
         {
           "value": "third",
           "label": "t:sections.multicolumn.settings.image_width.options__1.label"
