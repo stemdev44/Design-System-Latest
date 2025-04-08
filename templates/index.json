@@ -12,7 +12,7 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collapsible_row_eD7WqH": {
+        "collapsible_row_yF4RdF": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
@@ -21,13 +21,11 @@
             "page": ""
           }
         },
-        "collapsible_row_yF4RdF": {
-          "type": "collapsible_row",
+        "product_Pwwjgb": {
+          "type": "product",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
+            "product": "",
+            "second_image": false
           }
         },
         "collection-0": {
@@ -38,8 +36,8 @@
         }
       },
       "block_order": [
-        "collapsible_row_eD7WqH",
         "collapsible_row_yF4RdF",
+        "product_Pwwjgb",
         "collection-0"
       ],
       "settings": {
@@ -47,7 +45,7 @@
         "heading_size": "h2",
         "desktop_layout": "right",
         "desktop_image_width": "medium",
-        "mobile_layout": "collage",
+        "mobile_layout": "image_first",
         "columns_mobile": "1",
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
@@ -344,6 +342,7 @@
         "column_PT77BW": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/icon-bottle.svg",
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
