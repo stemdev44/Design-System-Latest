@@ -183,22 +183,35 @@
       {% assign second_block = section.blocks[1] %}
 
       {%- if section.blocks.size==3 and  first_block.type=='collapsible_row' and second_block.type=='collapsible_row' -%}
-      <style>
-        @media screen and (max-width: 749px) {
+        {% if section.settings.columns_mobile  == '1' %}
+          <style>
+            @media screen and (max-width: 749px) {
+              .section-{{ section.id }}-padding .collage-item-1,
+              .section-{{ section.id }}-padding .collage-item-2,
+              .section-{{ section.id }}-padding .collage-item-3{
+                grid-column: 1 / span 2 !important;
+              }
+            }
+          </style>          
+        {% endif %}
 
-          .section-{{ section.id }}-padding .collage-item-1{
-            grid-column: 1 / span 1 !important;
-          }
-          
-          .section-{{ section.id }}-padding .collage-item-2{
-            grid-column: 2 !important;
-          }
-          .section-{{ section.id }}-padding .collage-item-3{
-            grid-column: 1 / span 2 !important;
-          }                  
-          
-      }
-      </style>      
+        {% if section.settings.columns_mobile == '2' %}
+          <style>
+            @media screen and (max-width: 749px) {
+              .section-{{ section.id }}-padding .collage-item-1{
+                grid-column: 1 / span 1 !important;
+              }
+              
+              .section-{{ section.id }}-padding .collage-item-2{
+                grid-column: 2 !important;
+              }
+              .section-{{ section.id }}-padding .collage-item-3{
+                grid-column: 1 / span 2 !important;
+              } 
+            }
+          </style>          
+        {% endif %}        
+        
       {%- endif -%}        
 
       {%- for block in section.blocks -%}
