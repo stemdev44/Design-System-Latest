@@ -392,7 +392,7 @@
         "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
