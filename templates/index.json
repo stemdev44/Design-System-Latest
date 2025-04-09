@@ -557,7 +557,7 @@
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
             "content_alignment": "left",
-            "mobile_content_alignment": "center"
+            "mobile_content_alignment": "left"
           }
         }
       },
