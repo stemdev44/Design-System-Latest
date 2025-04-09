@@ -266,7 +266,7 @@
                   >
                     <details
                       id="Details-{{ block.id }}-{{ section.id }}"
-                      {% if section.settings.open_first_collapsible_row and forloop.first %}
+                      {% if block.settings.open_first_collapsible_row  %}
                         open
                       {% endif %}
                     >
@@ -567,12 +567,7 @@
       "label": "t:sections.multirow.settings.container_color_scheme.label",
       "default": "scheme-1"
     },
-    {
-      "type": "checkbox",
-      "id": "open_first_collapsible_row",
-      "default": false,
-      "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
-    },    
+    
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
@@ -969,7 +964,13 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.page.label"
-        }
+        },
+        {
+          "type": "checkbox",
+          "id": "open_first_collapsible_row",
+          "default": false,
+          "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
+        },        
       ]
     }      
   ],
