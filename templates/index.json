@@ -29,7 +29,7 @@
             "icon": "check_mark",
             "row_content": "<p>row des 2</p>",
             "page": "",
-            "open_first_collapsible_row": true
+            "open_first_collapsible_row": false
           }
         },
         "product_Pwwjgb": {
