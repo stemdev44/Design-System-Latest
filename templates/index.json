@@ -566,7 +566,7 @@
             "button_style_secondary_2": false,
             "desktop_content_position": "center",
             "content_alignment": "left",
-            "mobile_content_alignment": "center"
+            "mobile_content_alignment": "right"
           }
         }
       },
