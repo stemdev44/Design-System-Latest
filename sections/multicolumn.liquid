@@ -72,13 +72,9 @@
             width: 10%;
         }
 
-        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Fifth-width {
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Two-Tenth-width {
             width: 20%;
         }        
-        
-        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Two-Fifth-width {
-            width: 40%;
-        }
         
         .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Three-Tenth-width {
             width: 30%;
@@ -96,7 +92,7 @@
             width: 70%;
         }
         
-        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Four-Fifth-width {
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Eight-Tenth-width {
             width: 80%;
         }
         
@@ -162,7 +158,7 @@
                         assign image_width = 0.33
                       elsif section.settings.image_width == 'One-Tenth'
                         assign image_width = 0.1
-                        elsif section.settings.image_width == 'One-Fifth'
+                        elsif section.settings.image_width == 'Two-Tenth'
                         assign image_width = 0.2
                       elsif section.settings.image_width == 'Three-Tenth'
                         assign image_width = 0.3                        
@@ -172,7 +168,7 @@
                         assign image_width = 0.6 
                       elsif section.settings.image_width == 'Seven-Tenth'
                         assign image_width = 0.7
-                      elsif section.settings.image_width == 'Four-Fifth'
+                      elsif section.settings.image_width == 'Eight-Tenth'
                         assign image_width = 0.8
                       elsif section.settings.image_width == 'Nine-Tenth'
                         assign image_width = 0.9                          
@@ -469,8 +465,8 @@
           "label": "One-Tenth"
         },
         {
-          "value": "One-Fifth",
-          "label": "One-Fifth"
+          "value": "Two-Tenth",
+          "label": "Two-Tenth"
         },
         {
           "value": "Three-Tenth",
@@ -489,8 +485,8 @@
           "label": "Seven-Tenth"
         },
         {
-          "value": "Four-Fifth",
-          "label": "Four-Fifth"
+          "value": "Eight-Tenth",
+          "label": "Eight-Tenth"
         },
         {
           "value": "Nine-Tenth",
