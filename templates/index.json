@@ -324,7 +324,7 @@
         "button_link": "#",
         "button_style_secondary": true,
         "layout": "full_bleed",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "enable_desktop_slider": true,
         "auto_rotate": true,
         "change_slides_speed": 3,
