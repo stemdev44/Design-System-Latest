@@ -17,8 +17,19 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
-            "row_content": "",
-            "page": ""
+            "row_content": "<p>Row des 1</p>",
+            "page": "",
+            "open_first_collapsible_row": true
+          }
+        },
+        "collapsible_row_N6cqVB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>row des 2</p>",
+            "page": "",
+            "open_first_collapsible_row": true
           }
         },
         "product_Pwwjgb": {
@@ -27,18 +38,12 @@
             "product": "",
             "second_image": false
           }
-        },
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
         }
       },
       "block_order": [
         "collapsible_row_yF4RdF",
-        "product_Pwwjgb",
-        "collection-0"
+        "collapsible_row_N6cqVB",
+        "product_Pwwjgb"
       ],
       "settings": {
         "heading": "Multimedia collage",
@@ -49,7 +54,6 @@
         "columns_mobile": "1",
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
-        "open_first_collapsible_row": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
