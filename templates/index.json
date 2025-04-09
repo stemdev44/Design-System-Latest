@@ -548,7 +548,7 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>this is test and what is test</p>",
             "page": ""
           }
         },
