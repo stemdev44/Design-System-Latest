@@ -20,9 +20,13 @@
     }
   }
 
-        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Tenth-width {
+      .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Tenth-width {
             width: 10%;
         }
+
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Fifth-width {
+            width: 20%;
+        }        
         
         .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Two-Fifth-width {
             width: 40%;
@@ -44,7 +48,7 @@
             width: 70%;
         }
         
-        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Four-fifth-width {
+        .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Four-Fifth-width {
             width: 80%;
         }
         
@@ -180,24 +184,22 @@
                             assign image_width = 0.33
                         elsif section.settings.image_width == 'One-Tenth'
                           assign image_width = 0.1
-                        elsif section.settings.image_width == 'Two-Fifth'
-                          assign image_width = 0.4
+                        elsif section.settings.image_width == 'One-Fifth'
+                          assign image_width = 0.2
                         elsif section.settings.image_width == 'Three-Tenth'
-                          assign image_width = 0.3
+                          assign image_width = 0.3                        
                         elsif section.settings.image_width == 'Four-Tenth'
                           assign image_width = 0.4
                         elsif section.settings.image_width == 'Six-Tenth'
                           assign image_width = 0.6 
                         elsif section.settings.image_width == 'Seven-Tenth'
                           assign image_width = 0.7
-                        elsif section.settings.image_width == 'Four-fifth'
+                        elsif section.settings.image_width == 'Four-Fifth'
                           assign image_width = 0.8
-                        elsif section.settings.image_width == 'Four-fifth'
-                          assign image_width = 0.9                          
+                        elsif section.settings.image_width == 'Nine-Tenth'
+                            assign image_width = 0.9                          
                         else
-                          assign image_width = 1                            
-                        else
-                            assign image_width = 1
+                          assign image_width = 1 
                         endif
                         -%}
                         {% capture sizes %}
@@ -594,8 +596,8 @@
           "label": "One-Tenth"
         },
         {
-          "value": "Two-Fifth",
-          "label": "Two-Fifth"
+          "value": "One-Fifth",
+          "label": "One-Fifth"
         },
         {
           "value": "Three-Tenth",
@@ -614,8 +616,8 @@
           "label": "Seven-Tenth"
         },
         {
-          "value": "Four-fifth",
-          "label": "Four-fifth"
+          "value": "Four-Fifth",
+          "label": "Four-Fifth"
         },
         {
           "value": "Nine-Tenth",
