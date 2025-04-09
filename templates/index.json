@@ -516,6 +516,20 @@
     "collapsible_content_qUw7fA": {
       "type": "collapsible-content",
       "blocks": {
+        "text_TeMYtJ": {
+          "type": "text",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "button_label": "Button label",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
         "collapsible_row_Fd3yMf": {
           "type": "collapsible_row",
           "settings": {
@@ -552,21 +566,28 @@
             "page": ""
           }
         },
-        "text_TeMYtJ": {
+        "text_TC8TRc": {
           "type": "text",
           "settings": {
-            "caption": "This is simple text",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "large"
+            "heading": "Talk about your brand",
+            "heading_size": "h1",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
+        "text_TeMYtJ",
         "collapsible_row_Fd3yMf",
         "collapsible_row_etFKTN",
         "collapsible_row_LMVPQn",
         "collapsible_row_WfrzNc",
-        "text_TeMYtJ"
+        "text_TC8TRc"
       ],
       "settings": {
         "caption": "Collapsible Caption",
