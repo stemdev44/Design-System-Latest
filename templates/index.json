@@ -564,8 +564,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
-            "desktop_content_position": "left",
-            "content_alignment": "center",
+            "desktop_content_position": "center",
+            "content_alignment": "left",
             "mobile_content_alignment": "center"
           }
         }
