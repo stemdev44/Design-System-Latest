@@ -29,7 +29,7 @@
             "icon": "check_mark",
             "row_content": "<p>row des 2</p>",
             "page": "",
-            "open_first_collapsible_row": false
+            "open_first_collapsible_row": true
           }
         },
         "product_Pwwjgb": {
@@ -51,6 +51,7 @@
         "desktop_layout": "right",
         "desktop_image_width": "medium",
         "mobile_layout": "image_first",
+        "mobile_block_order": "image_first",
         "columns_mobile": "1",
         "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
@@ -426,7 +427,8 @@
             "heading": "Collapsible row",
             "icon": "check_mark",
             "row_content": "<p>test row content</p>",
-            "page": ""
+            "page": "",
+            "open_first_collapsible_row": false
           }
         },
         "collapsible_row_MXawYe": {
@@ -435,7 +437,8 @@
             "heading": "Collapsible row",
             "icon": "check_mark",
             "row_content": "",
-            "page": ""
+            "page": "",
+            "open_first_collapsible_row": false
           }
         },
         "image_picker_nP6yjb": {
@@ -506,7 +509,6 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
-        "open_first_collapsible_row": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
