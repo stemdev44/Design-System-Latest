@@ -428,7 +428,7 @@
             "icon": "check_mark",
             "row_content": "<p>test row content</p>",
             "page": "",
-            "open_first_collapsible_row": false
+            "open_first_collapsible_row": true
           }
         },
         "collapsible_row_MXawYe": {
