@@ -1091,7 +1091,7 @@
 
       if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 ){
         console.log("inside full ");
-        const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
+        let sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
         console.log(sliderUl)
         if (sliderUl) {
           sliderUl.classList.add('temp-shift');
