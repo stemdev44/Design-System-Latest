@@ -255,7 +255,30 @@
                                 }}
                               {%- else -%}
                                 {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                              {%- endif -%}                        
+                              {%- endif -%}
+                              <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
+                                <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
+                                  {%- if section.settings.video_button_text == blank -%}
+                                    {{- 'icon-play.svg' | inline_asset_content -}}
+                                  {%- endif -%}                                                                    
+                        
+                                    {%- if section.settings.video_button_text != blank -%}
+                                      {%- if section.settings.video_no_border_style -%}
+                                          <style>
+                                            .section-{{ section.id }}-padding .svg-wrapper .button:after{
+                                              box-shadow: none;
+                                            }                                        
+                                          </style>  
+                                        {%- endif -%}
+                                      <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                                        style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
+                                      >
+                                        {{ section.settings.video_button_text | escape }}
+                                      </a>
+                                    {%- endif -%}
+                                </span>
+                              </span>
+                        
                             </button>
                             <template>
                                 {{
@@ -1147,13 +1170,7 @@
       }, 200); // Check every 200ms        
 
     }
-
-    console.log("Looking in Carousel Section")
-    console.log(document.querySelectorAll('.video-section__poster').length)
-    for(let i=0; i<document.querySelectorAll('.video-section__poster').length;i++){
-      document.querySelectorAll('.video-section__poster')[i].click();
-    }
-
+    
     updateSliderButtons();
   });
 </script>
