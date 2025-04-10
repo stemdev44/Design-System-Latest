@@ -140,57 +140,131 @@
                   {% assign spaced_image = true %}
                 {% endif %}
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
-                  >
+                  
+                  {%-if block.settings.video != null -%}
                     {%- liquid
-                      assign number_of_columns = section.settings.columns_desktop
-                      assign number_of_columns_mobile = section.settings.columns_mobile
-                      assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                      if section.settings.image_width == 'half'
-                        assign image_width = 0.5
-                      elsif section.settings.image_width == 'third'
-                        assign image_width = 0.33
-                      elsif section.settings.image_width == 'One-Tenth'
-                        assign image_width = 0.1
-                      elsif section.settings.image_width == 'Two-Tenth'
-                        assign image_width = 0.2
-                      elsif section.settings.image_width == 'Three-Tenth'
-                        assign image_width = 0.3                        
-                      elsif section.settings.image_width == 'Four-Tenth'
-                        assign image_width = 0.4
-                      elsif section.settings.image_width == 'Six-Tenth'
-                        assign image_width = 0.6 
-                      elsif section.settings.image_width == 'Seven-Tenth'
-                        assign image_width = 0.7
-                      elsif section.settings.image_width == 'Eight-Tenth'
-                        assign image_width = 0.8
-                      elsif section.settings.image_width == 'Nine-Tenth'
-                        assign image_width = 0.9                          
-                      else
-                        assign image_width = 1
-                      endif
+                      assign video_id = block.settings.video.id
+                      assign poster = block.settings.video.preview_image
+                      if block.settings.video != null
+                        assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+                        if ratio_diff < 0.01 and ratio_diff > 0
+                          assign fix_ratio = true
+                        endif
+                      endif  
                     -%}
-                    {% capture sizes %}
-                      (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                      (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                      (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                      calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
-                    {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
-                  </div>
+                    <deferred-media
+                      class="video-section__media deferred-media"
+                      data-media-id="{{ video_id }}"
+                      {% if poster != null %}
+                        style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                      {% endif %}
+                    >
+                      <button
+                        id="Deferred-Poster-Modal-{{ video_id }}"
+                        class="video-section__poster media deferred-media__poster media--landscape"
+                        type="button"
+                        aria-label="{{ alt }}"
+                      >
+                        {%- if poster != null -%}
+                          {{
+                            poster
+                            | image_url: width: 3840
+                            | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                          }}
+                        {%- else -%}
+                          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        {%- endif -%}
+                        <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
+                          <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
+                            {%- if section.settings.video_button_text == blank -%}
+                              {{- 'icon-play.svg' | inline_asset_content -}}
+                            {%- endif -%}                                                                    
+
+                              {%- if section.settings.video_button_text != blank -%}
+                                {%- if section.settings.video_no_border_style -%}
+                                    <style>
+                                      .section-{{ section.id }}-padding .svg-wrapper .button:after{
+                                         box-shadow: none;
+                                       }                                        
+                                    </style>  
+                                  {%- endif -%}
+                                <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                                   style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
+                                >
+                                  {{ section.settings.video_button_text | escape }}
+                                </a>
+                              {%- endif -%}
+                          </span>
+                        </span>
+
+                      </button>
+                      <template>
+                          {{
+                            block.settings.video
+                            | video_tag:
+                              image_size: '1100x',
+                              autoplay: true,
+                              loop: section.settings.enable_video_looping,
+                              controls: true,
+                              muted: false
+                          }}
+                      </template>
+                    </deferred-media>                    
+                  {%- else -%}
+                    <div
+                      class="media media--transparent media--{{ section.settings.image_ratio }}"
+                      {% if section.settings.image_ratio == 'adapt' %}
+                        style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                      {% endif %}
+                    >
+                      {%- liquid
+                        assign number_of_columns = section.settings.columns_desktop
+                        assign number_of_columns_mobile = section.settings.columns_mobile
+                        assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                        if section.settings.image_width == 'half'
+                          assign image_width = 0.5
+                        elsif section.settings.image_width == 'third'
+                          assign image_width = 0.33
+                        elsif section.settings.image_width == 'One-Tenth'
+                          assign image_width = 0.1
+                        elsif section.settings.image_width == 'Two-Tenth'
+                          assign image_width = 0.2
+                        elsif section.settings.image_width == 'Three-Tenth'
+                          assign image_width = 0.3                        
+                        elsif section.settings.image_width == 'Four-Tenth'
+                          assign image_width = 0.4
+                        elsif section.settings.image_width == 'Six-Tenth'
+                          assign image_width = 0.6 
+                        elsif section.settings.image_width == 'Seven-Tenth'
+                          assign image_width = 0.7
+                        elsif section.settings.image_width == 'Eight-Tenth'
+                          assign image_width = 0.8
+                        elsif section.settings.image_width == 'Nine-Tenth'
+                          assign image_width = 0.9                          
+                        else
+                          assign image_width = 1
+                        endif
+                      -%}
+                      {% capture sizes %}
+                        (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                        (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                        (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                        calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                      {% endcapture %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag:
+                          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                          sizes: sizes,
+                          class: 'multicolumn-card__image'
+                      }}
+                    </div>                  
+                  {%-endif%}
+
+
                 </div>
               {%- endif -%}
               <div class="multicolumn-card__info">
