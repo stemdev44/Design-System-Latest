@@ -1,4 +1,3 @@
-
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -1149,16 +1148,15 @@
           }
         }
       }
-    if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 && {{section.settings.enable_desktop_slider}}){
+      //if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 && {{section.settings.enable_desktop_slider}}){
 
-        const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
-    
-        if (sliderUl && sliderUl.classList.contains('temp-shift')) {    
-         setTimeout(() => {
-            sliderUl.classList.remove('temp-shift');
-          }, {{ section.settings.change_slides_speed }}*1000);
-        }
-    }      
+        //  const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');    
+         // if (sliderUl && sliderUl.classList.contains('temp-shift')) {    
+          //setTimeout(() => {
+          //    sliderUl.classList.remove('temp-shift');
+           // }, {{ section.settings.change_slides_speed }}*1000);
+         // }
+      //}
     
     updateSliderButtons();
   });
