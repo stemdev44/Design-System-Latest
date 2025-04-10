@@ -160,7 +160,6 @@
                 {% endif %}
             >
                 <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px;" {% endif %}>
-
                   
                     {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                       {% assign spaced_image = true %}
@@ -1171,7 +1170,8 @@
       }, 200); // Check every 200ms        
 
     }
-
+    console.log("Looking in Carousel Section")
+    console.log(document.querySelectorAll('.deferred-media__poster-button').length)
     updateSliderButtons();
   });
 </script>
