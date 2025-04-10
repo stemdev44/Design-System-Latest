@@ -326,12 +326,6 @@
       {%- if show_mobile_slider or show_desktop_slider -%}
 
             <div class="slider-buttons small-hide medium-hide" {% if section.settings.slider_visual=='none' %} style="display:none;"{% endif %}>
-
-              <script>
-                if( '{{section.settings.layout}}' == 'full_bleed'){
-                  console.log("inside full ");
-                }
-              </script>
               
                 <button
                     type="button"
@@ -1091,6 +1085,10 @@
         }
       }
     }
+
+      if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 ){
+        console.log("inside full ");
+      }
 
     updateSliderButtons();
   });
