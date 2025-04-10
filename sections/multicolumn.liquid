@@ -200,6 +200,8 @@
                 {%- liquid
                   assign video_id = block.settings.video.id
                   assign poster = block.settings.video.preview_image
+                  assign video_alt = section.settings.video.alt | default: section.settings.description
+                  assign alt = 'sections.video.load_video' | t: description: video_alt | escape                  
                   if block.settings.video != null
                     assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
                     if ratio_diff < 0.01 and ratio_diff > 0
