@@ -1170,6 +1170,11 @@
       }, 200); // Check every 200ms        
 
     }
+    console.log("Looking in Carousel Section")
+    console.log(document.querySelectorAll('.video-section__poster').length)
+    for(let i=0; i<document.querySelectorAll('.video-section__poster').length;i++){
+      document.querySelectorAll('.video-section__poster')[i].click();
+    }
     updateSliderButtons();
   });
 </script>
