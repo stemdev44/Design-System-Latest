@@ -375,6 +375,7 @@
         "column_NQmUhy": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/icon-bottle.svg",
             "caption": "Caption 2",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -416,7 +417,7 @@
         "mobile_description_alignment": "right",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
-        "image_width": "Four-Tenth",
+        "image_width": "Two-Tenth",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
