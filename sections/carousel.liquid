@@ -52,6 +52,9 @@
             width: 90%;
         }
 
+      .temp-shift {
+        transform: translateX(-35px) !important;
+      }        
 {%- endstyle -%}
 
 {%- liquid
@@ -1090,11 +1093,10 @@
         console.log("inside full ");
         const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
         console.log(sliderUl)
-        sliderUl.style.transform = 'translateX(-35px) !important';
+        sliderUl.classList.add('temp-shift');
         setTimeout(() => {
-          sliderUl.style.transform = '';
-        }, {{ section.settings.change_slides_speed }});
-        
+          sliderUl.classList.remove('temp-shift');
+        }, {{ section.settings.change_slides_speed }});        
       }
 
     updateSliderButtons();
