@@ -1089,6 +1089,7 @@
       if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 ){
         console.log("inside full ");
         const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
+        console.log(sliderUl)
         sliderUl.style.transform = 'translateX(-35px) !important';
         setTimeout(() => {
           sliderUl.style.transform = '';
