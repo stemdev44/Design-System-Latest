@@ -349,6 +349,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/icon-bottle.svg",
+            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -398,7 +399,7 @@
         "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
-        "image_width": "Three-Tenth",
+        "image_width": "Four-Tenth",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
