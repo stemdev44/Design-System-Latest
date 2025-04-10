@@ -145,8 +145,9 @@
                 and block.settings.title == blank
                 and block.settings.text == blank
                 and block.settings.link_label == blank
+                and block.settings.video == null
             -%}
-                {% comment %} {%- assign empty_column = ' multicolumn-list__item--empty' -%} {% endcomment %}
+                {%- assign empty_column = ' multicolumn-list__item--empty' -%}
             {%- endif -%}
 
             <li
