@@ -1141,6 +1141,8 @@
           if (desktopButtons && desktopButtons.parentNode) {
             desktopButtons.parentNode.removeChild(desktopButtons);
           }
+          const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');    
+          sliderUl.classList.remove('temp-shift');
         } else {
           // Remove mobile buttons if they exist
           if (mobileButtons && mobileButtons.parentNode) {
