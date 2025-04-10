@@ -348,7 +348,6 @@
         "column_PT77BW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/icon-bottle.svg",
             "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
