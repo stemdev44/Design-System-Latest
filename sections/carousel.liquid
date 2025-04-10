@@ -1089,7 +1089,7 @@
       }
     }
 
-    if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 && section.settings.enable_desktop_slider){
+    if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 && {{section.settings.enable_desktop_slider}}){
       const interval = setInterval(() => {
         const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
     
