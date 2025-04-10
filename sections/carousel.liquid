@@ -1089,28 +1089,27 @@
       }
     }
 
-      if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 ){
-        console.log({{ section.settings.enable_desktop_slider }});
-        const interval = setInterval(() => {
-          const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
-      
-          if (sliderUl && !sliderUl.classList.contains('temp-shift')) {
-            console.log('sliderUl found and adding class');
-            sliderUl.classList.add('temp-shift');
-      
-            // Remove class after 3 seconds (or any duration you want)
-            setTimeout(() => {
-              console.log({{ section.settings.change_slides_speed }});
-              sliderUl.classList.remove('temp-shift');
-              console.log('temp-shift class removed');
-            }, {{ section.settings.change_slides_speed }}*1000);
-            clearInterval(interval);
-          } else {
-            console.log('Waiting for sliderUl...');
-          }
-        }, 200); // Check every 200ms        
+    if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 && section.settings.enable_desktop_slider){
+      const interval = setInterval(() => {
+        const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
+    
+        if (sliderUl && !sliderUl.classList.contains('temp-shift')) {
+          console.log('sliderUl found and adding class');
+          sliderUl.classList.add('temp-shift');
+    
+          // Remove class after 3 seconds (or any duration you want)
+          setTimeout(() => {
+            console.log({{ section.settings.change_slides_speed }});
+            sliderUl.classList.remove('temp-shift');
+            console.log('temp-shift class removed');
+          }, {{ section.settings.change_slides_speed }}*1000);
+          clearInterval(interval);
+        } else {
+          console.log('Waiting for sliderUl...');
+        }
+      }, 200); // Check every 200ms        
 
-      }
+    }
 
     updateSliderButtons();
   });
