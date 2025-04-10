@@ -39,11 +39,8 @@
     {% endif %}  
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
-        <h2 class="small-hide medium-hide title inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
-          {{ section.settings.title }}
-        </h2>
-        <h2 class="large-up-hide title inline-richtext {{ section.settings.heading_size_mobile }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
-          {{ section.settings.title }}
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
+            {{ section.settings.title }}
         </h2>        
         {% comment %} {%- if section.settings.button_label != blank and show_mobile_slider -%}
           <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
