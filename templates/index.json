@@ -134,7 +134,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-            "caption": "Caption 1",
+            "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
             "title": "",
