@@ -1066,8 +1066,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-    console.log({{section.settings.layout}});
-
+    if( {{section.settings.layout}} == 'full_bleed'){
+      console.log("inside full ");
+    }
     const desktopButtons = document.querySelector('.section-{{ section.id }}-padding .slider-buttons.small-hide.medium-hide');
     const mobileButtons = document.querySelector('.section-{{ section.id }}-padding .slider-buttons.large-up-hide');
 
