@@ -1099,6 +1099,7 @@
       
             // Remove class after 3 seconds (or any duration you want)
             setTimeout(() => {
+              console.log({{ section.settings.change_slides_speed }});
               sliderUl.classList.remove('temp-shift');
               console.log('temp-shift class removed');
             }, 3000);
