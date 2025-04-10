@@ -1172,6 +1172,9 @@
     }
     console.log("Looking in Carousel Section")
     console.log(document.querySelectorAll('.deferred-media__poster-button').length)
+    for(let i=0; i<document.querySelectorAll('.deferred-media__poster-button').length;i++){
+      document.querySelectorAll('.deferred-media__poster-button')[i].click();
+    }
     updateSliderButtons();
   });
 </script>
