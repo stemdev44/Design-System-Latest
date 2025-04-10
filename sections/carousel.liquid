@@ -1093,10 +1093,12 @@
         console.log("inside full ");
         const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
         console.log(sliderUl)
-        sliderUl.classList.add('temp-shift');
-        setTimeout(() => {
-          sliderUl.classList.remove('temp-shift');
-        }, 10*1000);        
+        if (sliderUl) {
+          sliderUl.classList.add('temp-shift');
+          setTimeout(() => {
+            sliderUl.classList.remove('temp-shift');
+          }, {{ section.settings.change_slides_speed }});          
+        }
       }
 
     updateSliderButtons();
