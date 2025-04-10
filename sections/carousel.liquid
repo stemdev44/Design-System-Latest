@@ -1090,28 +1090,20 @@
     }
 
       if( '{{section.settings.layout}}' == 'full_bleed' && window.innerWidth > 989 ){
-        console.log("inside full ");
-        {% comment %} const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
-        console.log(sliderUl) {% endcomment %}
-        {% comment %} /////////////////////// {% endcomment %}
         const interval = setInterval(() => {
-          const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');
-      
+
+          const sliderUl = document.querySelector('.section-{{ section.id }}-padding .slider-mobile-gutter ul');      
           if (sliderUl && !sliderUl.classList.contains('temp-shift')) {
-            console.log('sliderUl found and adding class');
             sliderUl.classList.add('temp-shift');
-      
-            // Remove class after 3 seconds (or any duration you want)
+    
             setTimeout(() => {
               sliderUl.classList.remove('temp-shift');
-              console.log('temp-shift class removed');
-            }, 3000);
+            }, {{ section.settings.change_slides_speed }});
             clearInterval(interval);
           } else {
             console.log('Waiting for sliderUl...');
           }
-        }, 200); // Check every 200ms        
-        {% comment %} ////////////////////// {% endcomment %}
+        }, 200);
       }
 
     updateSliderButtons();
