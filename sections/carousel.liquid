@@ -161,11 +161,13 @@
             >
                 <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px;" {% endif %}>
 
-                  {%- if block.settings.image != blank and section.settings.video == null -%}
+                  
                     {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                       {% assign spaced_image = true %}
                     {% endif %}
                     <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                        
+                      {%- if block.settings.video == null -%}  
                         <div
                           class="media media--transparent media--{{ section.settings.image_ratio }}"
                           {% if section.settings.image_ratio == 'adapt' %}
@@ -217,82 +219,82 @@
                               class: 'multicolumn-card__image'
                           }}
                         </div>
-                    </div>
-                  {%- endif -%}
-    
-                  {%- if block.settings.image == blank and block.settings.video != null -%}
-                    {%- liquid
-                      assign video_id = block.settings.video.id
-                      assign poster = block.settings.video.preview_image
-                      assign video_alt = section.settings.video.alt | default: section.settings.description
-                      assign alt = 'sections.video.load_video' | t: description: video_alt | escape
-                      if block.settings.video != null
-                        assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
-                        if ratio_diff < 0.01 and ratio_diff > 0
-                          assign fix_ratio = true
-                        endif
-                      endif  
-                    -%}
-                    <deferred-media style="display:flex;"
-                      class="video-section__media deferred-media"
-                      data-media-id="{{ video_id }}"
-                      {% if poster != null %}
-                        style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-                      {% endif %}
-                    >
-                      <button
-                        id="Deferred-Poster-Modal-{{ video_id }}"
-                        class="video-section__poster media deferred-media__poster media--landscape"
-                        type="button"
-                        aria-label="{{ alt }}"
-                      >
-                        {%- if poster != null -%}
-                          {{
-                            poster
-                            | image_url: width: 3840
-                            | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-                          }}
-                        {%- else -%}
-                          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                        {%- endif -%}
-                        <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
-                          <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
-                            {%- if section.settings.video_button_text == blank -%}
-                              {{- 'icon-play.svg' | inline_asset_content -}}
-                            {%- endif -%}                                                                    
-                  
-                              {%- if section.settings.video_button_text != blank -%}
-                                {%- if section.settings.video_no_border_style -%}
-                                    <style>
-                                      .section-{{ section.id }}-padding .svg-wrapper .button:after{
-                                         box-shadow: none;
-                                       }                                        
-                                    </style>  
-                                  {%- endif -%}
-                                <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                                   style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
-                                >
-                                  {{ section.settings.video_button_text | escape }}
-                                </a>
+                      {%- else -%}
+                          {% comment %} /////////////////////// Adding Video start////////////////////// {% endcomment %}
+                          {%- liquid
+                            assign video_id = block.settings.video.id
+                            assign poster = block.settings.video.preview_image
+                            assign video_alt = section.settings.video.alt | default: section.settings.description
+                            assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+                            if block.settings.video != null
+                              assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+                              if ratio_diff < 0.01 and ratio_diff > 0
+                                assign fix_ratio = true
+                              endif
+                            endif  
+                          -%}
+                          <deferred-media style="display:flex;"
+                            class="video-section__media deferred-media"
+                            data-media-id="{{ video_id }}"
+                            {% if poster != null %}
+                              style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                            {% endif %}
+                          >
+                            <button
+                              id="Deferred-Poster-Modal-{{ video_id }}"
+                              class="video-section__poster media deferred-media__poster media--landscape"
+                              type="button"
+                              aria-label="{{ alt }}"
+                            >
+                              {%- if poster != null -%}
+                                {{
+                                  poster
+                                  | image_url: width: 3840
+                                  | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                                }}
+                              {%- else -%}
+                                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                               {%- endif -%}
-                          </span>
-                        </span>
-                  
-                      </button>
-                      <template>
-                          {{
-                            block.settings.video
-                            | video_tag:
-                              image_size: '1100x',
-                              autoplay: true,
-                              loop: section.settings.enable_video_looping,
-                              controls: true,
-                              muted: false
-                          }}
-                      </template>
-                    </deferred-media>   
-                  {%- endif -%}   
-
+                              <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
+                                <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
+                                  {%- if section.settings.video_button_text == blank -%}
+                                    {{- 'icon-play.svg' | inline_asset_content -}}
+                                  {%- endif -%}                                                                    
+                        
+                                    {%- if section.settings.video_button_text != blank -%}
+                                      {%- if section.settings.video_no_border_style -%}
+                                          <style>
+                                            .section-{{ section.id }}-padding .svg-wrapper .button:after{
+                                              box-shadow: none;
+                                            }                                        
+                                          </style>  
+                                        {%- endif -%}
+                                      <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                                        style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
+                                      >
+                                        {{ section.settings.video_button_text | escape }}
+                                      </a>
+                                    {%- endif -%}
+                                </span>
+                              </span>
+                        
+                            </button>
+                            <template>
+                                {{
+                                  block.settings.video
+                                  | video_tag:
+                                    image_size: '1100x',
+                                    autoplay: true,
+                                    loop: section.settings.enable_video_looping,
+                                    controls: true,
+                                    muted: false
+                                }}
+                            </template>
+                          </deferred-media>   
+                          {% comment %} /////////////////////// Adding Video end////////////////////// {% endcomment %}
+                      {%- endif -%}
+                    </div>
+    
                 <div class="multicolumn-card__info">
                     {%- if block.settings.caption != blank -%}
                         <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }};color:{{ section.settings.column_font_color }}">
