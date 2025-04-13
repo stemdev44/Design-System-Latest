@@ -103,7 +103,7 @@
         "mobile_description_alignment": "center",
         "description": "<p>Carouse Description</p>",
         "description_style": "body",
-        "image_width": "full",
+        "image_width": "One-Tenth",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
