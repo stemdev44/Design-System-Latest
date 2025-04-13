@@ -227,7 +227,7 @@
                         {%- endif -%}  
                       {%- else -%}
                           {% comment %} /////////////////////// Adding Video start////////////////////// {% endcomment %}
-
+                                <p>{{block.settings.video.sources[0].url}}</p>
                                 {{
                                   block.settings.video
                                   | video_tag:
