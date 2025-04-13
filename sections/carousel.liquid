@@ -239,13 +239,6 @@
                               endif
                             endif  
                           -%}
-                          <deferred-media style="display:flex;"
-                            class="video-section__media deferred-media"
-                            data-media-id="{{ video_id }}"
-                            {% if poster != null %}
-                              style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-                            {% endif %}
-                          >
                             <template>
                                 {{
                                   block.settings.video
@@ -256,8 +249,7 @@
                                     controls: true,
                                     muted: false
                                 }}
-                            </template>
-                          </deferred-media>   
+                            </template>  
                           {% comment %} /////////////////////// Adding Video end////////////////////// {% endcomment %}
                       {%- endif -%}
                     </div>
