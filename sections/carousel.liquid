@@ -246,45 +246,6 @@
                               style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
                             {% endif %}
                           >
-                            <button
-                              id="Deferred-Poster-Modal-{{ video_id }}"
-                              class="video-section__poster media deferred-media__poster media--landscape"
-                              type="button"
-                              aria-label="{{ alt }}"
-                            >
-                              {%- if poster != null -%}
-                                {{
-                                  poster
-                                  | image_url: width: 3840
-                                  | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-                                }}
-                              {%- else -%}
-                                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                              {%- endif -%}
-                              <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
-                                <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
-                                  {%- if section.settings.video_button_text == blank -%}
-                                    {{- 'icon-play.svg' | inline_asset_content -}}
-                                  {%- endif -%}                                                                    
-                        
-                                    {%- if section.settings.video_button_text != blank -%}
-                                      {%- if section.settings.video_no_border_style -%}
-                                          <style>
-                                            .section-{{ section.id }}-padding .svg-wrapper .button:after{
-                                              box-shadow: none;
-                                            }                                        
-                                          </style>  
-                                        {%- endif -%}
-                                      <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                                        style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
-                                      >
-                                        {{ section.settings.video_button_text | escape }}
-                                      </a>
-                                    {%- endif -%}
-                                </span>
-                              </span>
-                        
-                            </button>
                             <template>
                                 {{
                                   block.settings.video
