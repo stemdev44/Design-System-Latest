@@ -228,15 +228,15 @@
                       {%- else -%}
                           {% comment %} /////////////////////// Adding Video start////////////////////// {% endcomment %}
                                 <p>{{block.settings.video.sources[0].url}}</p>
-                                {{
+                                {% comment %} {{
                                   block.settings.video
                                   | video_tag:
                                     autoplay: true,
                                     loop: section.settings.enable_video_looping,
                                     controls: true,
                                     muted: false
-                                }}
-
+                                }} {% endcomment %}
+                          <video src="{{block.settings.video.sources[0].url}}" loop muted playsinline autoplay></video>
                           {% comment %} /////////////////////// Adding Video end////////////////////// {% endcomment %}
                       {%- endif -%}
                     </div>
