@@ -226,7 +226,7 @@
                           </div>
                         {%- endif -%}  
                       {%- else -%}
-                            {%- echo block.settings.video -%}
+                            {%- echo block.settings.video.sources[1].url -%}
                            <video src="{{block.settings.video.sources[1].url}}" loop muted playsinline autoplay style="display:flex; width:100%"></video>
                       {%- endif -%}
                     </div>
