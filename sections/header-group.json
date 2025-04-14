@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": "shopify://products/blaze-2"
+            "link": "shopify://policies/privacy-policy"
           }
         }
       },
