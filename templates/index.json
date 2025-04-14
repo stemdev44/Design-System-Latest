@@ -151,10 +151,10 @@
             "image": "shopify://shop_images/icon-bottle.svg",
             "caption": "Caption 2",
             "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
+            "text_size": "large",
             "title": "Column",
-            "heading_size": "h2",
-            "heading_size_mobile": "hxxl",
+            "heading_size": "h0",
+            "heading_size_mobile": "h2",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
@@ -185,7 +185,7 @@
         "text_style": "subtitle",
         "text_size": "large",
         "title": "Multicolumn Section",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "heading_alignment": "center",
         "mobile_description_alignment": "right",
         "description": "<p>Description</p>",
@@ -267,7 +267,7 @@
           "type": "heading",
           "settings": {
             "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_rH7nPp": {
