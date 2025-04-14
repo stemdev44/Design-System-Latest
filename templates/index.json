@@ -643,6 +643,10 @@
     "newsletter_nAwejx": {
       "type": "newsletter",
       "blocks": {
+        "email_form_VBKA7z": {
+          "type": "email_form",
+          "settings": {}
+        },
         "heading_TREpa6": {
           "type": "heading",
           "settings": {
@@ -662,6 +666,7 @@
         }
       },
       "block_order": [
+        "email_form_VBKA7z",
         "heading_TREpa6",
         "paragraph_tXrknb",
         "email_form_44zDDH"
