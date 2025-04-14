@@ -185,7 +185,7 @@
         "text_style": "subtitle",
         "text_size": "large",
         "title": "Multicolumn Section",
-        "heading_size": "h0",
+        "heading_size": "h2",
         "heading_alignment": "center",
         "mobile_description_alignment": "right",
         "description": "<p>Description</p>",
