@@ -183,7 +183,7 @@
       "settings": {
         "caption": "Mutlicolumn Caption",
         "text_style": "subtitle",
-        "text_size": "large",
+        "text_size": "medium",
         "title": "Multicolumn Section",
         "heading_size": "h2",
         "heading_alignment": "center",
