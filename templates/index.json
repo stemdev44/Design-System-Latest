@@ -82,7 +82,7 @@
         "text_size": "medium",
         "title": "Carousel",
         "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "mobile_description_alignment": "center",
         "description": "<p>Carouse Description</p>",
         "description_style": "body",
