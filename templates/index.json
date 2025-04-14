@@ -163,7 +163,7 @@
         "button_link": "#",
         "button_style_secondary": true,
         "layout": "grid",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "center",
         "background_style": "primary",
         "column_background_color": "rgba(0,0,0,0)",
