@@ -470,7 +470,7 @@
           "type": "caption",
           "settings": {
             "caption": "Image with text caption",
-            "text_style": "caption-with-letter-spacing",
+            "text_style": "subtitle",
             "text_size": "large"
           }
         },
