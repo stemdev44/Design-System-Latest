@@ -12,32 +12,16 @@
     "carousel_mVMEgi": {
       "type": "carousel",
       "blocks": {
-        "column_HHkpbj": {
+        "column_YTwwpC": {
           "type": "column",
           "settings": {
-            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
-            "title": "",
-            "heading_size": "h2",
-            "heading_size_mobile": "hxxl",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_EDHpT7": {
-          "type": "column",
-          "settings": {
-            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "text": "",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -50,7 +34,7 @@
             "text_style": "subtitle",
             "text_size": "medium",
             "title": "Column",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "heading_size_mobile": "h1",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
@@ -87,8 +71,7 @@
         }
       },
       "block_order": [
-        "column_HHkpbj",
-        "column_EDHpT7",
+        "column_YTwwpC",
         "column_xdbqn4",
         "column_GYWLeB",
         "column_KJbEip"
