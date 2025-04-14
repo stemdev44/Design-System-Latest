@@ -209,7 +209,7 @@
                   </p>
                 {%- endif -%}              
                 {%- if block.settings.title != blank -%}
-                  <h3 class="small-hide medium-hide inline-richtext {% unless block.settings.heading_size == 'large' %} subtitle--{{ block.settings.heading_size }} {% endunless %} " {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                  <h3 class="small-hide medium-hide inline-richtext {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} " {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
                   <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }}" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
