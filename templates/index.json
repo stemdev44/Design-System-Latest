@@ -77,14 +77,14 @@
         "column_KJbEip"
       ],
       "settings": {
-        "caption": "Carousel Caption",
+        "caption": "",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "title": "Carousel",
         "heading_size": "h1",
         "heading_alignment": "left",
         "mobile_description_alignment": "center",
-        "description": "<p>Carouse Description</p>",
+        "description": "",
         "description_style": "body",
         "image_width": "half",
         "image_ratio": "adapt",
