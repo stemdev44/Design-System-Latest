@@ -151,7 +151,7 @@
             "image": "shopify://shop_images/icon-bottle.svg",
             "caption": "Caption 2",
             "text_style": "caption-with-letter-spacing",
-            "text_size": "large",
+            "text_size": "small",
             "title": "Column",
             "heading_size": "h0",
             "heading_size_mobile": "h2",
