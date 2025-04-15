@@ -12,7 +12,7 @@
     "image_banner_7dCW3j": {
       "type": "image-banner",
       "blocks": {
-        "heading_mL9F8A": {
+        "heading_hpRrwE": {
           "type": "heading",
           "settings": {
             "heading": "Image banner",
@@ -39,7 +39,7 @@
         }
       },
       "block_order": [
-        "heading_mL9F8A",
+        "heading_hpRrwE",
         "text_CTpheH",
         "buttons_hiP4im"
       ],
