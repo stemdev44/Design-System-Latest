@@ -92,6 +92,7 @@
         <script>
           const desktop_image = document.querySelector('.section-{{ section.id }}-padding .desktop_image');
           const isMobile = window.innerWidth < 750;
+          console.log(isMobile)
           if(isMobile){
             desktop_image.remove();
           }
