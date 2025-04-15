@@ -17,6 +17,9 @@
     >
       <span>
         <span class="svg-wrapper">
+          {%- if icon_for_search != blank -%}
+            {{ icon_for_search | image_url: '' | image_tag }}
+          {%- endif -%}
           {{- 'icon-search.svg' | inline_asset_content -}}
         </span>
         <span class="svg-wrapper header__icon-close">
