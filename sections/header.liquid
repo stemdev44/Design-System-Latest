@@ -136,10 +136,7 @@
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
         render 'header-search', input_id: 'Search-In-Modal-1'
       endif
-
-      if section.settings.logo_position == 'middle-left' or section.settings.menu != blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif      
+      
     -%}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
@@ -586,6 +583,10 @@
       "label": "t:sections.header.settings.menu_color_scheme.label",
       "default": "scheme-1"
     },
+    {
+      "type": "header",
+      "content": "Icons"
+    },    
     {
       "type": "header",
       "content": "t:sections.header.settings.header__utilities.content"
