@@ -134,7 +134,8 @@
       endif
       
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
+      
+        render 'header-search', input_id: 'Search-In-Modal-1', icon_for_search:section.settings.icon_for_search
       endif
       
     -%}
