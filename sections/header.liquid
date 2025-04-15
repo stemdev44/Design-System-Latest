@@ -285,17 +285,21 @@
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
-            {%- if section.settings.icon_for_cart != blank -%}
-              <img src="{{ section.settings.icon_for_cart | img_url:"" }}" class="icon">
-            {%- else -%}
-              <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
-            {%- endif -%}
+            <span class="svg-wrapper">
+              {%- if section.settings.icon_for_cart != blank -%}
+                <img src="{{ section.settings.icon_for_cart | img_url:"" }}" class="icon">
+              {%- else -%}
+                {{'icon-cart-empty.svg' | inline_asset_content }}
+              {%- endif -%}          
+            </span>
           {% else %}
-            {%- if section.settings.icon_for_cart != blank -%}
-              <img src="{{ section.settings.icon_for_cart | img_url:"" }}" class="icon">
-            {%- else -%}
-              <span class="svg-wrapper">{{'icon-cart.svg' | inline_asset_content }}</span>
-            {%- endif -%}                        
+            <span class="svg-wrapper">
+              {%- if section.settings.icon_for_cart != blank -%}
+                <img src="{{ section.settings.icon_for_cart | img_url:"" }}" class="icon">
+              {%- else -%}
+                {{'icon-cart.svg' | inline_asset_content }}
+              {%- endif -%}                            
+            </span>
           {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
