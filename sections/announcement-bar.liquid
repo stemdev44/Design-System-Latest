@@ -42,7 +42,7 @@
           <p class="announcement-bar__message h5">
             <span class="small-hide medium-hide" >{{ section.blocks.first.settings.text | escape }}</span>
             <span class="large-up-hide" >{{ section.blocks.first.settings.mobile_text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
+            {%- if section.blocks.first.settings.link != blank and section.blocks.first.settings.display_link_arrow -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
           </p>
@@ -103,7 +103,7 @@
                     <p class="announcement-bar__message h5">
                       <span class="small-hide medium-hide" >{{ block.settings.text | escape }}</span>
                       <span class="large-up-hide" >{{ block.settings.mobile_text | escape }}</span>
-                      {%- if block.settings.link != blank -%}
+                      {%- if block.settings.link != blank and block.settings.display_link_arrow -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}
                     </p>
@@ -252,7 +252,13 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
-        }
+        },
+        {
+          "type": "checkbox",
+          "id": "display_link_arrow",
+          "default": true,
+          "label": "Display Link Arrow"
+        },        
       ]
     }
   ],
