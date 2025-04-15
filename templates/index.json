@@ -9,6 +9,75 @@
  */
 {
   "sections": {
+    "featured_product_cYrmtf": {
+      "type": "featured-product",
+      "blocks": {
+        "text_WQa6JW": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_cRErnr": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_rVMVCp": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_zwwpDw": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_BYyxxe": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_6t3mQD": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_DVRDjT": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_WQa6JW",
+        "title_cRErnr",
+        "price_rVMVCp",
+        "variant_picker_zwwpDw",
+        "quantity_selector_BYyxxe",
+        "buy_buttons_6t3mQD",
+        "share_DVRDjT"
+      ],
+      "settings": {
+        "product": "",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_7dCW3j": {
       "type": "image-banner",
       "blocks": {
@@ -730,6 +799,7 @@
     }
   },
   "order": [
+    "featured_product_cYrmtf",
     "image_banner_7dCW3j",
     "carousel_mVMEgi",
     "multicolumn",
