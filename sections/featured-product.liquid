@@ -448,7 +448,7 @@
               {% else %}
                 href="{{ product.url }}"
               {% endif %}
-              class="link product__view-details animate-arrow {% if section.settings.view_full_details != 'true' %} small-hide medium-hide large-up-hide {% endif %}"
+              class="link product__view-details animate-arrow {% if section.settings.view_full_details == false %} small-hide medium-hide large-up-hide {% endif %}"
             >              
               {{ 'products.product.view_full_details' | t }}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
