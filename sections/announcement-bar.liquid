@@ -32,7 +32,7 @@
         aria-label="{{ 'sections.header.announcement' | t }}"
         {{ section.blocks.first.shopify_attributes }}
       >
-        {%- if section.blocks.first.settings.text != blank -%}
+        {%- if section.blocks.first.settings.text != blank or section.blocks.first.settings.mobile_text != blank -%}
           {%- if section.blocks.first.settings.link != blank -%}
             <a
               href="{{ section.blocks.first.settings.link }}"
@@ -40,7 +40,8 @@
             >
           {%- endif -%}
           <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
+            <span class="small-hide medium-hide" >{{ section.blocks.first.settings.text | escape }}</span>
+            <span class="large-up-hide" >{{ section.blocks.first.settings.mobile_text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
