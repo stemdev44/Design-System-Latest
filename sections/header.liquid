@@ -248,20 +248,23 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                {%- if section.settings.icon_for_account != blank -%}
-                  <img src="{{ section.settings.icon_for_account | img_url:"" }}" class="icon">
-                {%- else -%}  
-                  <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-                {%- endif -%}
-                
+                <span class="svg-wrapper">
+                  {%- if section.settings.icon_for_account != blank -%}
+                    <img src="{{ section.settings.icon_for_account | img_url:"" }}" class="icon">
+                  {%- else -%}
+                    {{ 'icon-account.svg' | inline_asset_content }}
+                  {%- endif -%}                                    
+                </span>                
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            {%- if section.settings.icon_for_account != blank -%}
-              <img src="{{ section.settings.icon_for_account | img_url:"" }}" class="icon">
-            {%- else -%}  
-              <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-            {%- endif -%}            
+              <span class="svg-wrapper">
+                {%- if section.settings.icon_for_account != blank -%}
+                  <img src="{{ section.settings.icon_for_account | img_url:"" }}" class="icon">
+                {%- else -%}
+                  {{ 'icon-account.svg' | inline_asset_content }}
+                {%- endif -%}                 
+              </span>            
             
           {%- endif -%}
           <span class="visually-hidden">
