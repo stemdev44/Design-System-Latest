@@ -49,6 +49,7 @@
         "mobile_search_icon_position": "left",
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
+        "icon_for_search": "shopify://shop_images/checkmark.png",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "enable_customer_avatar": true,
