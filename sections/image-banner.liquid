@@ -92,7 +92,10 @@
         <script>
           const dektop_image = document.querySelector('.section-{{ section.id }}-padding .dektop_image');
           const isMobile = window.innerWidth < 750;
-          dektop_image.parentNode.removeChild(dektop_image);
+          if(isMobile){
+            dektop_image.parentNode.removeChild(dektop_image);
+          }
+          
         </script>
         <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
           {%- liquid
