@@ -19,7 +19,8 @@
           "settings": {
             "text": "Welcome to our store",
             "mobile_text": "this is mobile",
-            "link": "shopify://policies/privacy-policy"
+            "link": "shopify://policies/privacy-policy",
+            "display_link_arrow": false
           }
         }
       },
