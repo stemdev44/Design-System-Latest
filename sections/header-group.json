@@ -18,6 +18,7 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
+            "mobile_text": "this is mobile",
             "link": "shopify://policies/privacy-policy"
           }
         }
