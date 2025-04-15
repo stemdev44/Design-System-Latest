@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_size": "h1"
+            "heading_size": "h2",
+            "mobile_heading_size": "h1"
           }
         },
         "text_CTpheH": {
