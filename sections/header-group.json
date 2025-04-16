@@ -49,7 +49,7 @@
         "mobile_search_icon_position": "left",
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
-        "icon_for_search": "shopify://shop_images/checkmark.png",
+        "icon_for_search": "shopify://shop_images/MagnifyingGlass.svg",
         "icon_for_account": "shopify://shop_images/checkmark.png",
         "icon_for_cart": "shopify://shop_images/Handbag.svg",
         "enable_country_selector": true,
