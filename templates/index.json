@@ -67,7 +67,24 @@
     },
     "image_banner_7dCW3j": {
       "type": "image-banner",
+      "blocks": {
+        "buttons_XDbELD": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "buttons_XDbELD"
+      ],
       "settings": {
+        "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
