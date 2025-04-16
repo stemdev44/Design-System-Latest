@@ -621,7 +621,7 @@
             "row_content": "<p>test row content</p>",
             "page": "",
             "open_first_collapsible_row": false,
-            "background_style": "primary",
+            "background_style": "none",
             "column_background_color": "#242833",
             "column_font_color": "#ffffff"
           }
@@ -633,7 +633,7 @@
             "icon": "check_mark",
             "row_content": "<p>This is test 2</p>",
             "page": "",
-            "open_first_collapsible_row": false,
+            "open_first_collapsible_row": true,
             "background_style": "primary",
             "column_background_color": "#000000",
             "column_font_color": "#f3f3f3"
