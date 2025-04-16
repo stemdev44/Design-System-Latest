@@ -261,14 +261,14 @@
 
                 {%- when 'collapsible_row' -%}
 
-                {%- if block.settings.background_style == 'primary' -%}
+                {% comment %} {%- if block.settings.background_style == 'primary' -%}
                   <style>
                     .section-{{ section.id }}-padding .accordion+.accordion {
                           margin-top: 2.5rem;
                           border-top: none;
                       }                    
                   </style>                
-                {%- endif -%}
+                {%- endif -%} {% endcomment %}
 
                   <div
                     class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" 
