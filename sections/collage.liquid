@@ -430,7 +430,7 @@
                     {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}" {% endif %}
                   >
                     {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h3 class="accordion__title inline-richtext h4">
+                    <h3 class="accordion__title inline-richtext h4" style="color:{{block.settings.column_font_color}}">
                       {{ block.settings.heading | default: block.settings.page.title | escape }}
                     </h3>
                     {{- 'icon-caret.svg' | inline_asset_content -}}
