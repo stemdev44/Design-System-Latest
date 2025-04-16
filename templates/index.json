@@ -101,6 +101,7 @@
         "buttons_hiP4im"
       ],
       "settings": {
+        "image": "shopify://shop_images/Product4_home1_984dd6f1-7450-4e6f-a748-98e0d4da2b4a.png",
         "mobile_image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
         "image_2": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
         "image_overlay_opacity": 0,
