@@ -429,11 +429,11 @@
                   <summary id="Summary-{{ block.id }}-{{ section.id }}" 
                     {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}" {% endif %}
                   >
-                    <style>
+                    {% comment %} <style>
                       #Summary-{{ block.id }}-{{ section.id }} span.svg-wrapper{
                         fill: {{block.settings.column_font_color}}
                       }
-                    </style>
+                    </style> {% endcomment %}
 
                     {% render 'icon-accordion', icon: block.settings.icon %}
                     <h3 class="accordion__t
