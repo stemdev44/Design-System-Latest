@@ -429,8 +429,15 @@
                   <summary id="Summary-{{ block.id }}-{{ section.id }}" 
                     {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}" {% endif %}
                   >
+                    <style>
+                      #Summary-{{ block.id }}-{{ section.id }} span.svg-wrapper{
+                        fill: {{block.settings.column_font_color}}
+                      }
+                    </style>
+
                     {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h3 class="accordion__title inline-richtext h4" style="color:{{block.settings.column_font_color}}">
+                    <h3 class="accordion__t
+                      itle inline-richtext h4" style="color:{{block.settings.column_font_color}}">
                       {{ block.settings.heading | default: block.settings.page.title | escape }}
                     </h3>
                     {{- 'icon-caret.svg' | inline_asset_content -}}
