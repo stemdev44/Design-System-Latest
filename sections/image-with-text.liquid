@@ -260,6 +260,16 @@
                   {%- endif -%}   
 
                 {%- when 'collapsible_row' -%}
+
+                {%- if block.settings.background_style == 'primary' -%}
+                  <style>
+                    .section-{{ section.id }}-padding .accordion+.accordion {
+                          margin-top: 2.5rem;
+                          border-top: none;
+                      }                    
+                  </style>                
+                {%- endif -%}
+
                   <div
                     class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" 
                     style="width: 100%;{% if block.settings.background_style == 'primary' %} background: {{ block.settings.column_background_color }}; color: {{ block.settings.column_font_color }};{% endif %}"                    
