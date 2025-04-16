@@ -262,7 +262,7 @@
                 {%- when 'collapsible_row' -%}
                   <div
                     class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" style="width:100%"
-                    {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}" {% endif %}                    
+                    {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}" {% endif %}
                     {{ block.shopify_attributes }}
                   >
                     <details
