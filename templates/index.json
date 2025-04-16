@@ -20,9 +20,9 @@
             "row_content": "<p>Row des 1</p>",
             "page": "",
             "open_first_collapsible_row": false,
-            "background_style": "none",
+            "background_style": "primary",
             "column_background_color": "#121212",
-            "column_font_color": "#f3f3f3"
+            "column_font_color": "rgba(0,0,0,0)"
           }
         },
         "collapsible_row_N6cqVB": {
