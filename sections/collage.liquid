@@ -234,7 +234,7 @@
         
       {%- endif -%}        
 
-      {%- for block in section.blocks -%}
+      {% comment %} {%- for block in section.blocks -%}
         <div
           class="collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} collage-item-{{ forloop.index }}"
           {{ block.shopify_attributes }}
@@ -457,7 +457,7 @@
               </div>              
           {%- endcase -%}
         </div>
-      {%- endfor -%}
+      {%- endfor -%} {% endcomment %}
 
       {% comment %} /////////////////// Column Starts //////////// {% endcomment %}
     <slider-component class="slider-mobile-gutter">
