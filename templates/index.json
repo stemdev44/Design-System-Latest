@@ -9,78 +9,6 @@
  */
 {
   "sections": {
-    "featured_product_8NLdG4": {
-      "type": "featured-product",
-      "blocks": {
-        "text_jkU4ke": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_8zM4Cy": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_43b9nh": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_TKp3nc": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_3yr6er": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_cetWRk": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_jGAL36": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_jkU4ke",
-        "title_8zM4Cy",
-        "price_43b9nh",
-        "variant_picker_TKp3nc",
-        "quantity_selector_3yr6er",
-        "buy_buttons_cetWRk",
-        "share_jGAL36"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "blaze-2",
-        "color_scheme": "",
-        "secondary_background": false,
-        "hide_view_full_details": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "column_corner_radius": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -893,7 +821,6 @@
     }
   },
   "order": [
-    "featured_product_8NLdG4",
     "collage",
     "image_banner_7dCW3j",
     "featured_product_cYrmtf",
