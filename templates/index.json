@@ -56,6 +56,7 @@
         "heading_size": "h2",
         "desktop_layout": "right",
         "desktop_image_width": "medium",
+        "desktop_layout_2": "column",
         "mobile_layout": "image_first",
         "mobile_block_order": "image_first",
         "columns_mobile": "1",
