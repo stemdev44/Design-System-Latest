@@ -51,6 +51,7 @@
         "menu_color_scheme": "",
         "icon_for_search": "shopify://shop_images/checkmark.png",
         "icon_for_account": "shopify://shop_images/checkmark.png",
+        "icon_for_cart": "shopify://shop_images/MagnifyingGlass.svg",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "enable_customer_avatar": true,
