@@ -311,7 +311,7 @@
                   </div>
 
                 {%- when 'table_row' -%}
-                  <div>
+                  <div style="display: flex; gap: 4px; border-bottom: 1px solid;">
                     {%- if block.settings.image != blank -%}
                         <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" />
                     {%- endif -%}
