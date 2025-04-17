@@ -25,7 +25,7 @@
         {{ section.settings.heading }}
       </h2>
     {%- endif -%}
-    {%- if section.settings.desktop_layout_2 == 'collage' -%}
+    {%- if section.settings.desktop_layout_2 == 'collage' or section.settings.mobile_layout != blank -%}
       <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}{% if section.settings.desktop_layout_2 == 'column' %} medium-hide large-up-hide{% endif %}">
         {%- if section.settings.desktop_layout=='left' -%} 
 
@@ -56,6 +56,7 @@
                 .section-{{ section.id }}-padding .collage-item-2{
                   grid-column: 1 / span 1 !important;
                 }
+
                 .section-{{ section.id }}-padding .collage-item-3{
                   grid-column: 2 !important;
                 }                  
