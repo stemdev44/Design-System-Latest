@@ -38,19 +38,6 @@
             "column_font_color": "#f3f3f3"
           }
         },
-        "collapsible_row_N6cqVB": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>row des 2</p>",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "none",
-            "column_background_color": "#334fb4",
-            "column_font_color": "#f3f3f3"
-          }
-        },
         "product_Pwwjgb": {
           "type": "product",
           "settings": {
@@ -62,7 +49,6 @@
       "block_order": [
         "collapsible_row_DKF3XV",
         "collapsible_row_yF4RdF",
-        "collapsible_row_N6cqVB",
         "product_Pwwjgb"
       ],
       "settings": {
@@ -70,7 +56,7 @@
         "heading_size": "h2",
         "desktop_layout": "right",
         "desktop_image_width": "medium",
-        "desktop_layout_2": "column",
+        "desktop_layout_2": "collage",
         "mobile_layout": "column",
         "mobile_block_order": "image_first",
         "columns_mobile": "1",
@@ -854,8 +840,8 @@
     }
   },
   "order": [
-    "collage",
     "image_banner_7dCW3j",
+    "collage",
     "featured_product_cYrmtf",
     "carousel_mVMEgi",
     "multicolumn",
