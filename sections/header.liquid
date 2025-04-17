@@ -239,8 +239,8 @@
             {%- endform -%}
           </localization-form>
         {%- endif -%}
-      </div>
-      {% render 'header-search', input_id: 'Search-In-Modal', icon_for_search:section.settings.icon_for_search %}
+      </div>      
+      {% render 'header-search', input_id: 'Search-In-Modal', icon_for_search:section.settings.icon_for_search, mobile_search_icon_position: section.settings.mobile_search_icon_position %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a
