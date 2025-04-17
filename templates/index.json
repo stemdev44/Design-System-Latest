@@ -38,7 +38,8 @@
         "table_row_T7FJFw": {
           "type": "table_row",
           "settings": {
-            "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png"
+            "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+            "image_2": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png"
           }
         }
       },
@@ -55,6 +56,7 @@
         "column_corner_radius": 0,
         "layout": "image_first",
         "image_behavior": "none",
+        "video_url": "",
         "video_button_text": "",
         "video_button_background": "",
         "video_button_font": "",
