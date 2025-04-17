@@ -11,6 +11,15 @@
   "sections": {
     "image_with_table_dhzm7w": {
       "type": "image-with-table",
+      "blocks": {
+        "table_row_Cccbdc": {
+          "type": "table_row",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "table_row_Cccbdc"
+      ],
       "settings": {
         "layout_page": "full_bleed"
       }
