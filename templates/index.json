@@ -14,7 +14,10 @@
       "blocks": {
         "table_row_Cccbdc": {
           "type": "table_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/image9xxl-PINK_878c995a-6791-4522-a994-2332580c39b3.webp",
+            "image_2": "shopify://shop_images/Product2_home2_52a9d332-4134-4717-b637-03c73e2242c3.png"
+          }
         }
       },
       "block_order": [
