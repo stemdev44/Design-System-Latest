@@ -25,10 +25,10 @@
             {%-for block in section.blocks-%}
                 <div class="tableRow">
                     <div>
-                        <img src="{{ block.settings.image_1 | img_url: '' }}" width="{{ block.settings.image_1.width }}" />
+                        <img src="{{ block.settings.image_1 | img_url: '' }}"/>
                     </div>
                     <div>
-                        <img src="{{ block.settings.image_2 | img_url: '' }}" width="{{ block.settings.image_2.width }}" />
+                        <img src="{{ block.settings.image_2 | img_url: '' }}" />
                     </div>
                 </div>            
             {%- endfor -%}
