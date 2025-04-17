@@ -261,14 +261,14 @@
 
                 {%- when 'collapsible_row' -%}
 
-                {% comment %} {%- if block.settings.background_style == 'primary' -%}
-                  <style>
-                    .section-{{ section.id }}-padding .accordion+.accordion {
-                          margin-top: 2.5rem;
-                          border-top: none;
-                      }                    
-                  </style>                
-                {%- endif -%} {% endcomment %}
+                    {% comment %} {%- if block.settings.background_style == 'primary' -%}
+                    <style>
+                        .section-{{ section.id }}-padding .accordion+.accordion {
+                            margin-top: 2.5rem;
+                            border-top: none;
+                        }                    
+                    </style>                
+                    {%- endif -%} {% endcomment %}
 
                   <div
                     class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" 
@@ -309,6 +309,17 @@
                       </div>
                     </details>
                   </div>
+
+                {%- when 'table_row' -%}
+                  <div>
+                    {%- if block.settings.image != blank -%}
+                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" />
+                    {%- endif -%}
+                    {%- if block.settings.image_2 != blank -%}
+                        <img src="{{ block.settings.image_2 | img_url: 'medium' }}" alt="" />
+                    {%- endif -%}                    
+                  </div>  
+
 
               {%- endcase -%}
             {%- endfor -%}
@@ -1028,7 +1039,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
-        }
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image_2"
+        }        
       ]
     }          
   ],
