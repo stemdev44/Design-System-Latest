@@ -18,22 +18,23 @@
 
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="{% if section.settings.layout_page == 'grid' %} page-width{% endif %} ">
-    <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-        <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-            {%-for block in section.blocks-%}
-                <div class="tableRow">
-                    <div>
-                        <img src="{{ block.settings.image_1 | img_url: '' }}"/>
-                    </div>
-                    <div>
-                        <img src="{{ block.settings.image_2 | img_url: '' }}" />
-                    </div>
-                </div>            
-            {%- endfor -%}
-
-        </div>
+  <div class="{% if section.settings.layout_page == 'grid' %}page-width{% endif %}">
+    <div class="image-with-text isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <div class="table-section">
+        {%- for block in section.blocks -%}
+          <div class="tableRow">
+            {%- if block.settings.image_1 != blank -%}
+              <div>
+                <img src="{{ block.settings.image_1 | image_url: 'medium' }}" alt="Image 1" />
+              </div>
+            {%- endif -%}
+            {%- if block.settings.image_2 != blank -%}
+              <div>
+                <img src="{{ block.settings.image_2 | image_url: 'medium' }}" alt="Image 2" />
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
       </div>
     </div>
   </div>
