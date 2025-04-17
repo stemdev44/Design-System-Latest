@@ -326,7 +326,7 @@
                         <button
                         type="button"
                         class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
-                        aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+                        aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}" style="display:none;"
                         >
                         <span class="svg-wrapper">
                             {{- 'icon-pause.svg' | inline_asset_content -}}
