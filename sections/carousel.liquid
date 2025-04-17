@@ -20,7 +20,7 @@
     }
   }
 
-  {%- if section.settings.auto_rotate == false -%}
+  {%- if section.settings.auto_rotate == false and section.settings.layout=='grid' -%}
     @media screen and (min-width: 990px) {
         .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
             margin-left: 0 !important;
