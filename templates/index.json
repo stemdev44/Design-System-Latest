@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "mobile_heading_size": "h1"
           }
         },
         "text_4Ce7TC": {
@@ -45,7 +46,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+        "mobile_image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
