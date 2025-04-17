@@ -85,6 +85,8 @@
   {%- elsif section.settings.image_2 == blank -%}
       {% liquid
           if section.settings.image == blank and section.settings.mobile_image == blank and section.settings.image_2 == blank
+            assign small_hide = ''
+          else
             assign small_hide = 'small-hide'
           endif  
       %}
