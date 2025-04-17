@@ -9,30 +9,58 @@
  */
 {
   "sections": {
-    "image_with_table_dhzm7w": {
+    "image_with_table_q4c6Tf": {
       "type": "image-with-table",
       "blocks": {
-        "table_row_Cccbdc": {
-          "type": "table_row",
+        "heading_hER89y": {
+          "type": "heading",
           "settings": {
-            "image_1": "shopify://shop_images/image9xxl-PINK_878c995a-6791-4522-a994-2332580c39b3.webp",
-            "image_2": "shopify://shop_images/Product2_home2_52a9d332-4134-4717-b637-03c73e2242c3.png"
+            "heading": "Image with Table",
+            "heading_size": "h1"
           }
         },
-        "table_row_abV8Wx": {
-          "type": "table_row",
+        "text_rTnqJP": {
+          "type": "text",
           "settings": {
-            "image_1": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
-            "image_2": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_FG3w94": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "no_border_style": false
           }
         }
       },
       "block_order": [
-        "table_row_Cccbdc",
-        "table_row_abV8Wx"
+        "heading_hER89y",
+        "text_rTnqJP",
+        "button_FG3w94"
       ],
       "settings": {
-        "layout_page": "full_bleed"
+        "layout_page": "full_bleed",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 0,
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_banner_cTFcJk": {
@@ -883,7 +911,7 @@
     }
   },
   "order": [
-    "image_with_table_dhzm7w",
+    "image_with_table_q4c6Tf",
     "image_banner_cTFcJk",
     "collage",
     "featured_product_cYrmtf",
