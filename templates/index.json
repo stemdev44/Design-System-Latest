@@ -46,6 +46,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Product4_home2_466c4dc0-5595-4d23-a8f4-119f091dbd1b.png",
         "mobile_image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
         "image_2": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
         "image_overlay_opacity": 0,
