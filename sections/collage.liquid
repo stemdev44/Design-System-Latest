@@ -26,7 +26,7 @@
       </h2>
     {%- endif -%}
     {%- if section.settings.desktop_layout_2 == 'collage' -%}
-      <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
+      <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}{% if section.settings.desktop_layout_2 == 'column' %} medium-hide large-up-hide{% endif %}">
         {%- if section.settings.desktop_layout=='left' -%} 
 
           {%- if section.settings.desktop_image_width=='medium' -%}        
@@ -463,7 +463,7 @@
 
       {% comment %} /////////////////// Column Starts //////////// {% endcomment %}
         {%- if section.settings.desktop_layout_2 == 'column' -%}
-          <slider-component class="slider-mobile-gutter">
+          <slider-component class="slider-mobile-gutter small-hide">
             <ul
               class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
               id="Slider-{{ section.id }}"
