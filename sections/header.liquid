@@ -134,7 +134,7 @@
       {%- if section.settings.menu != blank -%}
         {% render 'header-drawer' %}
       {%- endif -%}
-      {%- if section.settings.logo_position == 'middle-center' and section.settings.mobile_search_icon_position == 'left' or section.settings.menu == blank -%}
+      {%- if section.settings.logo_position == 'middle-center' and section.settings.mobile_search_icon_position == 'left'-%}
         <div class="large-up-hide medium-hide">        
           {%- render 'header-search', input_id: 'Search-In-Modal-1', icon_for_search: section.settings.icon_for_search -%}        
         </div>
