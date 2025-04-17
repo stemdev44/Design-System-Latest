@@ -14,7 +14,9 @@
       "blocks": {
         "table_row_T7FJFw": {
           "type": "table_row",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png"
+          }
         },
         "heading_hER89y": {
           "type": "heading",
