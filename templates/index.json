@@ -58,7 +58,7 @@
         "table_row_QXF7N9"
       ],
       "settings": {
-        "layout_page": "full_bleed",
+        "layout_page": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
         "column_corner_radius": 0,
