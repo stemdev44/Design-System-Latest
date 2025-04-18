@@ -186,10 +186,10 @@
           >
             {%- unless section.settings.title == blank -%}
             {% comment %} <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title" style="width:100%; padding-left:0; padding-right:0;"> {% endcomment %}
-                <h2 class="small-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="text-align:{{section.settings.heading_alignment}};">
+                <h2 class="small-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
                     {{ section.settings.title }}
                 </h2>
-                <h2 class="medium-hide large-up-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.mobile_description_alignment}};">
+                <h2 class="medium-hide large-up-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="width:100%; width:100%; text-align:{{section.settings.mobile_description_alignment}};">
                     {{ section.settings.title }}
                 </h2>                
             {% comment %} </div>      {% endcomment %}
