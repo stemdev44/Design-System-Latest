@@ -185,25 +185,27 @@
           <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
             {%- unless section.settings.title == blank -%}
-            {% comment %} <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title" style="width:100%; padding-left:0; padding-right:0;"> {% endcomment %}
                 <h2 class="small-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
                     {{ section.settings.title }}
                 </h2>
-                <h2 class="medium-hide large-up-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="width:100%; width:100%; text-align:{{section.settings.mobile_description_alignment}};">
+                <h2 class="medium-hide large-up-hide image-with-text__heading inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.mobile_description_alignment}};">
                     {{ section.settings.title }}
                 </h2>                
-            {% comment %} </div>      {% endcomment %}
             {%- endunless -%}    
 
             {%- for block in section.blocks -%}
               {% case block.type %}
                 {%- when 'table_row' -%}
                   <div class="table-row">
-                    {%- if block.settings.image != blank -%}
-                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" />
+                    {%- if block.settings.text_column_A != blank -%}
+                        <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}">
+                            {{ block.settings.text_column_A }}
+                        </h2>
                     {%- endif -%}
-                    {%- if block.settings.image_2 != blank -%}
-                        <img src="{{ block.settings.image_2 | img_url: 'medium' }}" alt="" />
+                    {%- if block.settings.text_column_B != blank -%}
+                        <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}">
+                            {{ block.settings.text_column_B }}
+                        </h2>
                     {%- endif -%}                    
                   </div>
               {%- endcase -%}
