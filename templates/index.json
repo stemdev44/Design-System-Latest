@@ -360,6 +360,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/icon-bottle.svg",
+            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
             "caption": "Caption 2",
             "text_style": "subtitle",
             "text_size": "medium",
