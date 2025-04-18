@@ -439,7 +439,9 @@
                     {% endif %}
                   >
                     <summary id="Summary-{{ block.id }}-{{ section.id }}" 
-                      {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}" {% endif %}
+                      {% if block.settings.background_style == 'primary' %}
+                       style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}; padding: 1.5rem 1.5rem"
+                      {% endif %}
                     >
                       {% if block.settings.background_style == 'primary' %}
                         <style>
