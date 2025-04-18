@@ -67,7 +67,14 @@
     .temp-shift {
       transform: translateX(0px) !important;
     }
-  }      
+  } 
+
+  {%-if section.settings.image_width == 'full' -%}
+    .section-{{ section.id }}-padding .multicolumn-list__item.center .media--adapt img {
+      width: 100%;
+    }         
+  {%- endif -%}
+
 {%- endstyle -%}
 
 {%- liquid
