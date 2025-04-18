@@ -462,6 +462,9 @@
                       id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
                       role="region"
                       aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                      {% if block.settings.background_style == 'primary' %}
+                       style="padding: 0 1.5rem"
+                      {% endif %}
                     >
                       {{ block.settings.row_content }}
                       {{ block.settings.page.content }}
