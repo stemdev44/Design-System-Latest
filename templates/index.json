@@ -15,8 +15,8 @@
         "table_row_QdEEcb": {
           "type": "table_row",
           "settings": {
-            "text_column_A": "Text Column A",
-            "text_column_B": "Text Column B",
+            "text_column_A": "this is test of all time",
+            "text_column_B": "This is test b of all time",
             "columns_desktop": "2"
           }
         },
