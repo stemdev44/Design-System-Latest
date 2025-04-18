@@ -423,7 +423,7 @@
         "button_style_secondary": true,
         "layout": "grid",
         "columns_desktop": 3,
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "auto_rotate": true,
         "change_slides_speed": 3,
         "slider_visual": "dots",
