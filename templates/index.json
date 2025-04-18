@@ -34,8 +34,8 @@
       "settings": {
         "title": "Image with Table",
         "heading_size": "h1",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
+        "heading_alignment": "right",
+        "mobile_description_alignment": "left",
         "layout_page": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
