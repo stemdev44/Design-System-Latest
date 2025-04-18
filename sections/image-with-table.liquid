@@ -15,6 +15,11 @@
     }
   }
 
+    .section-{{ section.id }}-padding .table-row{
+        display: flex; 
+        gap: 4px; 
+        border-bottom: 1px solid;
+    }
     {% comment %} @media screen and (max-width: 749px) {
      .section-{{ section.id }}-padding .multicolumn__title .title{
             text-align: {{ section.settings.mobile_description_alignment }} !important;
@@ -56,7 +61,7 @@
             {%- for block in section.blocks -%}
               {% case block.type %}
                 {%- when 'table_row' -%}
-                  <div style="display: flex; gap: 4px; border-bottom: 1px solid;">
+                  <div class="table-row">
                     {%- if block.settings.image != blank -%}
                         <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" />
                     {%- endif -%}
