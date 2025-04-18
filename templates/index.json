@@ -73,7 +73,8 @@
             "open_first_collapsible_row": false,
             "background_style": "primary",
             "column_background_color": "#121212",
-            "column_font_color": "#f3f3f3"
+            "column_font_color": "#f3f3f3",
+            "column_corner_radius": 22
           }
         },
         "collapsible_row_DKF3XV": {
@@ -86,7 +87,8 @@
             "open_first_collapsible_row": false,
             "background_style": "primary",
             "column_background_color": "#121212",
-            "column_font_color": "#ffffff"
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 0
           }
         },
         "product_Pwwjgb": {
