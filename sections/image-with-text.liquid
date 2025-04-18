@@ -278,10 +278,8 @@
                         open
                       {% endif %}
                     >
-                      <summary id="Summary-{{ block.id }}-{{ section.id }}"
-                        {% if block.settings.background_style == 'primary' %} 
-                          style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}; padding: 1.5rem 1.5rem" 
-                        {% endif %}
+                      <summary id="Summary-{{ block.id }}-{{ section.id }}"                         
+                          style="padding: 1.5rem 1.5rem; {% if block.settings.background_style == 'primary' %} background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}};{% endif %}"                         
                       >
                         {% if block.settings.background_style == 'primary' %}
                           <style>
@@ -302,9 +300,7 @@
                         id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
                         role="region"
                         aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
-                        {% if block.settings.background_style == 'primary' %}
-                          style="padding: 0 1.5rem"
-                        {% endif %}                        
+                        style="padding: 0 1.5rem"
                       >
                         {{ block.settings.row_content }}
                         {{ block.settings.page.content }}
