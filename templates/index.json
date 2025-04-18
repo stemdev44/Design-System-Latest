@@ -625,7 +625,7 @@
             "row_content": "",
             "page": "",
             "open_first_collapsible_row": false,
-            "background_style": "primary",
+            "background_style": "none",
             "column_background_color": "",
             "column_font_color": "",
             "column_corner_radius": 0
