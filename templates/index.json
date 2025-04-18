@@ -18,10 +18,18 @@
             "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
             "image_2": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png"
           }
+        },
+        "table_row_NtfnjQ": {
+          "type": "table_row",
+          "settings": {
+            "image": "shopify://shop_images/Product4_home2_f793edf6-1a33-4947-8297-40a5460c5af6.png",
+            "image_2": "shopify://shop_images/Product4_home1_984dd6f1-7450-4e6f-a748-98e0d4da2b4a.png"
+          }
         }
       },
       "block_order": [
-        "table_row_9fNx47"
+        "table_row_9fNx47",
+        "table_row_NtfnjQ"
       ],
       "settings": {
         "title": "Image with Table",
