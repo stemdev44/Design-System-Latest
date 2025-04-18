@@ -37,7 +37,7 @@
         "title": "Image with Table",
         "heading_size": "h1",
         "heading_alignment": "right",
-        "mobile_description_alignment": "left",
+        "mobile_description_alignment": "center",
         "layout_page": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
