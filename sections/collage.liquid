@@ -184,6 +184,17 @@
         {% assign second_block = section.blocks[1] %}
 
         {%- if section.blocks.size==3 and  first_block.type=='collapsible_row' and second_block.type=='collapsible_row' -%}
+
+            <style>
+              @media screen and (min-width: 749px) {
+                .section-{{ section.id }}-padding .collage-item-1{
+                  grid-row: span 1 !important;
+                }
+                .section-{{ section.id }}-padding .accordion{
+                  margin-top: 0;
+                }
+            </style>
+
           {% if section.settings.columns_mobile  == '1' %}          
             <style>
               @media screen and (max-width: 749px) {
