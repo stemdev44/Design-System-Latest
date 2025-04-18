@@ -12,12 +12,19 @@
     "image_with_table_fE4tBh": {
       "type": "image-with-table",
       "blocks": {
+        "table_row_QdEEcb": {
+          "type": "table_row",
+          "settings": {
+            "text_column_A": "Text Column A",
+            "text_column_B": "Text Column B",
+            "columns_desktop": "2"
+          }
+        },
         "table_row_9fNx47": {
           "type": "table_row",
           "settings": {
             "text_column_A": "Text Column A",
             "text_column_B": "Text Column B",
-            "heading_size": "h2",
             "columns_desktop": "2"
           }
         },
@@ -26,18 +33,18 @@
           "settings": {
             "text_column_A": "Text Column A",
             "text_column_B": "Text Column B",
-            "heading_size": "h2",
             "columns_desktop": "2"
           }
         }
       },
       "block_order": [
+        "table_row_QdEEcb",
         "table_row_9fNx47",
         "table_row_NtfnjQ"
       ],
       "settings": {
         "title": "Image with Table",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "heading_alignment": "left",
         "mobile_description_alignment": "center",
         "layout_page": "grid",
