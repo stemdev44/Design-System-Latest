@@ -11,6 +11,18 @@
   "sections": {
     "image_with_table_fE4tBh": {
       "type": "image-with-table",
+      "blocks": {
+        "table_row_9fNx47": {
+          "type": "table_row",
+          "settings": {
+            "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+            "image_2": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png"
+          }
+        }
+      },
+      "block_order": [
+        "table_row_9fNx47"
+      ],
       "settings": {
         "title": "Image with Table",
         "heading_size": "h1",
