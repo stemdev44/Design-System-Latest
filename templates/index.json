@@ -34,7 +34,7 @@
       "settings": {
         "title": "Multicolumn",
         "heading_size": "h1",
-        "heading_alignment": "left",
+        "heading_alignment": "center",
         "layout_page": "full_bleed",
         "image_behavior": "none",
         "section_color_scheme": "",
