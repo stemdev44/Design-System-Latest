@@ -84,9 +84,9 @@
             "row_content": "",
             "page": "",
             "open_first_collapsible_row": false,
-            "background_style": "none",
-            "column_background_color": "",
-            "column_font_color": ""
+            "background_style": "primary",
+            "column_background_color": "#121212",
+            "column_font_color": "#ffffff"
           }
         },
         "product_Pwwjgb": {
