@@ -88,7 +88,7 @@
             "background_style": "primary",
             "column_background_color": "#121212",
             "column_font_color": "#ffffff",
-            "column_corner_radius": 0
+            "column_corner_radius": 40
           }
         },
         "product_Pwwjgb": {
@@ -627,7 +627,8 @@
             "open_first_collapsible_row": false,
             "background_style": "primary",
             "column_background_color": "",
-            "column_font_color": ""
+            "column_font_color": "",
+            "column_corner_radius": 0
           }
         },
         "collapsible_row_9RwW6U": {
@@ -640,7 +641,8 @@
             "open_first_collapsible_row": false,
             "background_style": "primary",
             "column_background_color": "#000000",
-            "column_font_color": "#ffffff"
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 0
           }
         },
         "collapsible_row_MXawYe": {
@@ -653,7 +655,8 @@
             "open_first_collapsible_row": true,
             "background_style": "primary",
             "column_background_color": "#000000",
-            "column_font_color": "#f3f3f3"
+            "column_font_color": "#f3f3f3",
+            "column_corner_radius": 0
           }
         },
         "image_picker_nP6yjb": {
