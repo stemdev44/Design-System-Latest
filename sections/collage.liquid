@@ -428,7 +428,7 @@
                 <div
                   class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
                   {% if block.settings.background_style == 'primary' %} 
-                    style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}; overflow: hidden; border-radius:{{block.settings.column_corner_radius}}" 
+                    style="background:{{ block.settings.column_background_color }}; color:{{block.settings.column_font_color}}; overflow: hidden; border-radius:{{block.settings.column_corner_radius}}px" 
                   {% endif %}
                   {{ block.shopify_attributes }}
                 >
