@@ -35,6 +35,7 @@
         "title": "Multicolumn",
         "heading_size": "h1",
         "heading_alignment": "center",
+        "mobile_description_alignment": "left",
         "layout_page": "full_bleed",
         "image_behavior": "none",
         "section_color_scheme": "",
