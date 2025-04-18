@@ -9,35 +9,28 @@
  */
 {
   "sections": {
-    "image_with_table_QBp6mW": {
+    "image_with_table_fE4tBh": {
       "type": "image-with-table",
-      "blocks": {
-        "table_row_JkAMRD": {
-          "type": "table_row",
-          "settings": {
-            "image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
-            "image_2": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png"
-          }
-        },
-        "table_row_FYHnKg": {
-          "type": "table_row",
-          "settings": {
-            "image": "shopify://shop_images/Product4_home2_f793edf6-1a33-4947-8297-40a5460c5af6.png",
-            "image_2": "shopify://shop_images/Product4_home1_ef123e37-1cf0-41c9-bba6-01343b06b2f8.png"
-          }
-        }
-      },
-      "block_order": [
-        "table_row_JkAMRD",
-        "table_row_FYHnKg"
-      ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Image with Table",
         "heading_size": "h1",
-        "heading_alignment": "left",
-        "mobile_description_alignment": "right",
-        "layout_page": "full_bleed",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "layout_page": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 0,
+        "layout": "image_first",
         "image_behavior": "none",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
@@ -892,7 +885,7 @@
     }
   },
   "order": [
-    "image_with_table_QBp6mW",
+    "image_with_table_fE4tBh",
     "multicolumn",
     "image_banner_cTFcJk",
     "collage",
