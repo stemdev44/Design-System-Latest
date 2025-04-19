@@ -70,7 +70,7 @@
         "hide_view_full_details": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "media_position": "left",
         "image_zoom": "none",
         "hide_variants": false,
