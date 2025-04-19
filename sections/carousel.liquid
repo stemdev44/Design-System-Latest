@@ -179,107 +179,101 @@
                 style="--animation-order: {{ forloop.index }};"
                 {% endif %}
             >
-
-              {%-if blocks.settings.link != blank-%}
-                <a href="{{ block.settings.link }}">
-                  <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>
-                    
-                      {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                        {% assign spaced_image = true %}
-                      {% endif %}
-                      <div class="{% unless section.settings.image_width== 'full' %} multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {%endunless%}">
-                        {%- if block.settings.video == null -%}
-                          {%- if block.settings.image != blank-%}
-                            <div
-                              class="media media--transparent media--{{ section.settings.image_ratio }}"
-                              {% if section.settings.image_ratio == 'adapt' %}
-                                style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                              {% endif %}
-                            >
-                              {%- liquid
-                                assign number_of_columns = section.settings.columns_desktop
-                                assign number_of_columns_mobile = section.settings.columns_mobile
-                                assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                                assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                                assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                                if section.settings.image_width == 'half'
-                                  assign image_width = 0.5
-                                elsif section.settings.image_width == 'third'
-                                  assign image_width = 0.33
-                                elsif section.settings.image_width == 'One-Tenth'
-                                  assign image_width = 0.1
-                                elsif section.settings.image_width == 'Two-Tenth'
-                                  assign image_width = 0.2
-                                elsif section.settings.image_width == 'Three-Tenth'
-                                  assign image_width = 0.3                        
-                                elsif section.settings.image_width == 'Four-Tenth'
-                                  assign image_width = 0.4
-                                elsif section.settings.image_width == 'Six-Tenth'
-                                  assign image_width = 0.6 
-                                elsif section.settings.image_width == 'Seven-Tenth'
-                                  assign image_width = 0.7
-                                elsif section.settings.image_width == 'Eight-Tenth'
-                                  assign image_width = 0.8
-                                elsif section.settings.image_width == 'Nine-Tenth'
-                                  assign image_width = 0.9                          
-                                else
-                                  assign image_width = 1
-                                endif
-                              -%}
-                              {% capture sizes %}
-                                (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                                (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                                (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                                calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
-                              {% endcapture %}
-                              {{
-                                block.settings.image
-                                | image_url: width: 3200
-                                | image_tag:
-                                  widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                                  sizes: sizes,
-                                  class: 'multicolumn-card__image'
-                              }}
-                            </div>
-                          {%- endif -%}  
-                        {%- else -%}
-                            <video src="{{block.settings.video.sources[1].url}}" loop muted playsinline autoplay style="display:flex; width:100%"></video>
-                        {%- endif -%}
-                      </div>
-      
-                      <div class="multicolumn-card__info">
-                          {%- if block.settings.caption != blank -%}
-                              <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }};color:{{ section.settings.column_font_color }}">
-                                  {{ block.settings.caption | escape }}
-                              </p>
-                          {%- endif -%}                
-                          {%- if block.settings.title != blank -%}
-                            <h3 class="small-hide medium-hide inline-richtext {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} " {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
-                            <h3 class="large-up-hide inline-richtext {% unless block.settings.heading_size_mobile == 'large' %} {% if block.settings.heading_size_mobile == 'h2' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %} {% endunless %}" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
-                          {%- endif -%}
-                          {%- if block.settings.text != blank -%}
-                              <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.text }}</div>
-                          {%- endif -%}
-                          {%- if block.settings.link_label != blank -%}
-                          <a
-                              class="link animate-arrow"
-                              {% if block.settings.link == blank %}
-                              role="link" aria-disabled="true"
-                              {% else %}
-                              href="{{ block.settings.link }}"
-                              {% endif %}
+                <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>
+                  
+                    {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+                      {% assign spaced_image = true %}
+                    {% endif %}
+                    <div class="{% unless section.settings.image_width== 'full' %} multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {%endunless%}">
+                      {%- if block.settings.video == null -%}
+                        {%- if block.settings.image != blank-%}
+                          <div
+                            class="media media--transparent media--{{ section.settings.image_ratio }}"
+                            {% if section.settings.image_ratio == 'adapt' %}
+                              style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                            {% endif %}
                           >
-                              {{- block.settings.link_label | escape -}}
-                              <span class="svg-wrapper"
-                              ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
-                              >
-                          </a>
-                          {%- endif -%}
-                      </div>
-                  </div>                
-                </a>
-              {%- endif -%}
-
+                            {%- liquid
+                              assign number_of_columns = section.settings.columns_desktop
+                              assign number_of_columns_mobile = section.settings.columns_mobile
+                              assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                              assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                              assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                              if section.settings.image_width == 'half'
+                                assign image_width = 0.5
+                              elsif section.settings.image_width == 'third'
+                                assign image_width = 0.33
+                              elsif section.settings.image_width == 'One-Tenth'
+                                assign image_width = 0.1
+                              elsif section.settings.image_width == 'Two-Tenth'
+                                assign image_width = 0.2
+                              elsif section.settings.image_width == 'Three-Tenth'
+                                assign image_width = 0.3                        
+                              elsif section.settings.image_width == 'Four-Tenth'
+                                assign image_width = 0.4
+                              elsif section.settings.image_width == 'Six-Tenth'
+                                assign image_width = 0.6 
+                              elsif section.settings.image_width == 'Seven-Tenth'
+                                assign image_width = 0.7
+                              elsif section.settings.image_width == 'Eight-Tenth'
+                                assign image_width = 0.8
+                              elsif section.settings.image_width == 'Nine-Tenth'
+                                assign image_width = 0.9                          
+                              else
+                                assign image_width = 1
+                              endif
+                            -%}
+                            {% capture sizes %}
+                              (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                              (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                              (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                              calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                            {% endcapture %}
+                            {{
+                              block.settings.image
+                              | image_url: width: 3200
+                              | image_tag:
+                                widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                                sizes: sizes,
+                                class: 'multicolumn-card__image'
+                            }}
+                          </div>
+                        {%- endif -%}  
+                      {%- else -%}
+                           <video src="{{block.settings.video.sources[1].url}}" loop muted playsinline autoplay style="display:flex; width:100%"></video>
+                      {%- endif -%}
+                    </div>
+    
+                <div class="multicolumn-card__info">
+                    {%- if block.settings.caption != blank -%}
+                        <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }};color:{{ section.settings.column_font_color }}">
+                            {{ block.settings.caption | escape }}
+                        </p>
+                    {%- endif -%}                
+                    {%- if block.settings.title != blank -%}
+                      <h3 class="small-hide medium-hide inline-richtext {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'h2' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} " {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                      <h3 class="large-up-hide inline-richtext {% unless block.settings.heading_size_mobile == 'large' %} {% if block.settings.heading_size_mobile == 'h2' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %} {% endunless %}" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.title }}</h3>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                        <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.text }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.link_label != blank -%}
+                    <a
+                        class="link animate-arrow"
+                        {% if block.settings.link == blank %}
+                        role="link" aria-disabled="true"
+                        {% else %}
+                        href="{{ block.settings.link }}"
+                        {% endif %}
+                    >
+                        {{- block.settings.link_label | escape -}}
+                        <span class="svg-wrapper"
+                        ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                        >
+                    </a>
+                    {%- endif -%}
+                </div>
+                </div>
             </li>
             {%- endfor -%}
         </ul> 
