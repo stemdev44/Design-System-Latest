@@ -3,6 +3,8 @@
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -100,8 +102,7 @@
         
         .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Nine-Tenth-width {
             width: 90%;
-        }
-          
+        }          
         </style>
     <slider-component class="slider-mobile-gutter">
       <ul
