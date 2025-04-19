@@ -46,9 +46,9 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
-        "mobile_image": "shopify://shop_images/icon-bottle.svg",
+        "mobile_image": "shopify://shop_images/720_1096.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
