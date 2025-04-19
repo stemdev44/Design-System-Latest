@@ -187,12 +187,22 @@
 
             <style>
               @media screen and (min-width: 749px) {
-                .section-{{ section.id }}-padding .collage-item-1{
+                .section-{{ section.id }}-padding .collage-item-1{                  
                   grid-row: span 1 !important;
+                  {%-if section.settings.desktop_layout == 'left'-%}
+                    grid-row: span 2 !important;
+                  {%-endif-%}
                 }
                 .section-{{ section.id }}-padding .collage-item-1 .accordion{
                   margin-top: 0 !important;
-                }                
+                }
+
+                {%-if section.settings.desktop_layout == 'left'-%}
+                  .section-{{ section.id }}-padding .collage-item-2 .accordion{
+                    margin-top: 0 !important;
+                }
+                {%-endif-%}
+
             </style>
 
           {% if section.settings.columns_mobile  == '1' %}          
