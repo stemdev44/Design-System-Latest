@@ -530,7 +530,6 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "custom",
-            "custom_image": "shopify://shop_images/MagnifyingGlass.svg",
             "row_content": "",
             "page": "",
             "open_first_collapsible_row": false,
