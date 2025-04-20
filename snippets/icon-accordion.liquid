@@ -1,4 +1,11 @@
 {%- if icon != 'none' -%}
-  {%- assign file = icon | replace: '_', '-' | prepend: 'icon-' | append: '.svg' -%}
-  <span class="svg-wrapper">{{ file | inline_asset_content }}</span>
+  {%- if icon == 'custom' and custom_image != blank -%}
+    <span class="svg-wrapper">
+      <img src="{{ custom_image | img_url:"" }}" class="icon">      
+    </span>
+  {%- else -%}
+    {%- assign file = icon | replace: '_', '-' | prepend: 'icon-' | append: '.svg' -%}
+    <span class="svg-wrapper">{{ file | inline_asset_content }}</span>
+  {%- endif -%}
+
 {%- endif -%}
