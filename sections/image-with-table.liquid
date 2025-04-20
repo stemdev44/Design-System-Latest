@@ -214,21 +214,48 @@
                 {% for block in section.blocks %}
                     {% case block.type %}
                     {%- when 'table_row' -%}
+                        {%-if block.settings.icon_image != blank -%}
+                            <style>
+                              .section-{{ section.id }}-padding ul {
+                                list-style: none;
+                                padding-left: 0; 
+                              }
+
+                              .section-{{ section.id }}-padding ul li {
+                                position: relative;
+                                padding-left: 30px; 
+                              }
+
+                              .section-{{ section.id }}-padding ul li::before {
+                                content: "";
+                                background: url("{{ block.settings.icon_image | img_url:"" }}");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transform: translateY(30%);
+                              }
+                            </style>                    
+                        {%-endif -%}                      
                         <div class="table-row">
-                        {%- if block.settings.text_column_A != blank -%}
-                            <div class="table-cell">
-                                <p class="image-with-text__heading inline-richtext" style="margin-top:0">
-                                    {{ block.settings.text_column_A }}
-                                </p>
-                            </div>
-                        {%- endif -%}
-                        {%- if block.settings.text_column_B != blank -%}
-                            <div class="table-cell">
-                                <p class="image-with-text__heading inline-richtext" style="margin-top:0">
-                                    {{ block.settings.text_column_B }}
-                                </p>
-                            </div>
-                        {%- endif -%}
+                          {%- if block.settings.text_column_A != blank -%}
+                              <div class="table-cell">
+                                  <p class="image-with-text__heading inline-richtext" style="margin-top:0">
+                                      {{ block.settings.text_column_A }}
+                                  </p>
+                              </div>
+                          {%- endif -%}
+                          {%- if block.settings.text_column_B != blank -%}
+                              <div class="table-cell">
+                                  <p class="image-with-text__heading inline-richtext" style="margin-top:0">
+                                      {{ block.settings.text_column_B }}
+                                  </p>
+                              </div>
+                          {%- endif -%}
                         </div>
                     {% endcase %}
                 {% endfor %}
