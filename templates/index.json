@@ -33,7 +33,7 @@
           "type": "text",
           "settings": {
             "text": "<ul><li>Text block</li></ul>",
-            "text_style": "body",
+            "text_style": "uppercase",
             "icon_image": "shopify://shop_images/Handbag.svg"
           }
         },
