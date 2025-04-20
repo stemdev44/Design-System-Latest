@@ -137,7 +137,7 @@
             {% endif %}
           >
             {%- if block.settings.link != blank -%}
-              <a href="{{ block.settings.link }}">
+              <a href="{{ block.settings.link }}" style="text-decoration: none;">
                 <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>
              
                   {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
