@@ -105,6 +105,33 @@
                 {%- when '@app' -%}
                   {% render block %}
                 {%- when 'text' -%}
+                  {%-if block.settings.icon_image != blank -%}
+                      <style>
+                        .section-{{ section.id }}-padding ul {
+                          list-style: none;
+                          padding-left: 0; 
+                        }
+
+                        .section-{{ section.id }}-padding ul li {
+                          position: relative;
+                          padding-left: 30px; 
+                        }
+
+                        .section-{{ section.id }}-padding ul li::before {
+                          content: "";
+                          background: url("{{ block.settings.icon_image | img_url:"" }}");
+                          background-size: cover;
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          width: 20px;
+                          height: 20px;
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          transform: translateY(30%);
+                        }
+                      </style>                    
+                  {%-endif -%}                  
                   <p
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                     {{ block.shopify_attributes }}
@@ -534,7 +561,12 @@
           ],
           "default": "body",
           "label": "t:sections.featured-product.blocks.text.settings.text_style.label"
-        }
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image for Bullet Point"
+        }        
       ]
     },
     {
