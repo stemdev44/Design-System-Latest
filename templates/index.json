@@ -23,7 +23,7 @@
             "heading_size": "large",
             "heading_size_mobile": "large",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "go high",
+            "link_label": "",
             "link": "shopify://collections/frontpage"
           }
         },
