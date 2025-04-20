@@ -12,13 +12,6 @@
     "featured_product_cYrmtf": {
       "type": "featured-product",
       "blocks": {
-        "text_M6hFtp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Text block</p>",
-            "text_style": "body"
-          }
-        },
         "text_WQa6JW": {
           "type": "text",
           "settings": {
@@ -35,6 +28,13 @@
         "price_rVMVCp": {
           "type": "price",
           "settings": {}
+        },
+        "text_M6hFtp": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>This is product 1</li><li>This is product 2</li></ul>",
+            "text_style": "uppercase"
+          }
         },
         "variant_picker_zwwpDw": {
           "type": "variant_picker",
@@ -62,10 +62,10 @@
         }
       },
       "block_order": [
-        "text_M6hFtp",
         "text_WQa6JW",
         "title_cRErnr",
         "price_rVMVCp",
+        "text_M6hFtp",
         "variant_picker_zwwpDw",
         "quantity_selector_BYyxxe",
         "buy_buttons_6t3mQD",
