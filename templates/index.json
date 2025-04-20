@@ -15,24 +15,24 @@
         "table_row_QdEEcb": {
           "type": "table_row",
           "settings": {
-            "text_column_A": "<strong>this is test of all time </strong>",
-            "text_column_B": "<strong>This is test b of all time</strong>",
+            "text_column_A": "<ul><li><strong>this is test of all time </strong></li><li><strong>this is test of all time </strong></li></ul>",
+            "text_column_B": "<ul><li><strong>This is test b of all time</strong></li><li><strong>This is test b of all time</strong></li></ul>",
             "columns_desktop": "2"
           }
         },
         "table_row_9fNx47": {
           "type": "table_row",
           "settings": {
-            "text_column_A": "Text Column A",
-            "text_column_B": "Text Column B",
+            "text_column_A": "<p>Text Column A</p>",
+            "text_column_B": "<p>Text Column B</p>",
             "columns_desktop": "2"
           }
         },
         "table_row_NtfnjQ": {
           "type": "table_row",
           "settings": {
-            "text_column_A": "Text Column A",
-            "text_column_B": "Text Column B",
+            "text_column_A": "<p>Text Column A</p>",
+            "text_column_B": "<p>Text Column B</p>",
             "columns_desktop": "2"
           }
         }
