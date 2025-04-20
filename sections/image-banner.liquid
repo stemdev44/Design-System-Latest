@@ -94,7 +94,7 @@
           sizes="{{ sizes }}"
           fetchpriority="{{ fetch_priority }}"
           alt="Mobile Image"
-          style="height: auto !important; ">
+          style="{%- if section.settings.image_height == 'adapt' -%} height: auto !important; {%- endif -%}">
       {%- endif -%}
   
       {%- if section.settings.image != blank -%}
