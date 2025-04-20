@@ -33,7 +33,8 @@
           "type": "text",
           "settings": {
             "text": "<ul><li>Text block</li></ul>",
-            "text_style": "body"
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/Handbag.svg"
           }
         },
         "variant_picker_zwwpDw": {
