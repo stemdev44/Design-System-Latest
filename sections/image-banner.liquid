@@ -161,6 +161,33 @@
               {{ block.settings.heading }}
             </h2>            
           {%- when 'text' -%}
+              {%-if block.settings.icon_image != blank -%}
+                <style>
+                  .section-{{ section.id }}-padding ul {
+                    list-style: none;
+                    padding-left: 0; 
+                  }
+
+                  .section-{{ section.id }}-padding ul li {
+                    position: relative;
+                    padding-left: 30px; 
+                  }
+
+                  .section-{{ section.id }}-padding ul li::before {
+                    content: "";
+                    background: url("{{ block.settings.icon_image | img_url:"" }}");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateY(30%);
+                  }
+                </style>                    
+            {%-endif -%}            
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
