@@ -29,11 +29,11 @@
           "type": "price",
           "settings": {}
         },
-        "text_M6hFtp": {
+        "text_da4MLJ": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>This is product 1</li><li>This is product 2</li></ul>",
-            "text_style": "uppercase"
+            "text": "<ul><li>Text block</li></ul>",
+            "text_style": "body"
           }
         },
         "variant_picker_zwwpDw": {
@@ -65,7 +65,7 @@
         "text_WQa6JW",
         "title_cRErnr",
         "price_rVMVCp",
-        "text_M6hFtp",
+        "text_da4MLJ",
         "variant_picker_zwwpDw",
         "quantity_selector_BYyxxe",
         "buy_buttons_6t3mQD",
