@@ -163,17 +163,17 @@
           {%- when 'text' -%}
               {%-if block.settings.icon_image != blank -%}
                 <style>
-                  .section-{{ section.id }}-padding ul {
+                  .banner__text ul {
                     list-style: none;
                     padding-left: 0; 
                   }
 
-                  .section-{{ section.id }}-padding ul li {
+                  .banner__text ul li {
                     position: relative;
                     padding-left: 30px; 
                   }
 
-                  .section-{{ section.id }}-padding ul li::before {
+                  .banner__text ul li::before {
                     content: "";
                     background: url("{{ block.settings.icon_image | img_url:"" }}");
                     background-size: cover;
