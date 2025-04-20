@@ -450,6 +450,77 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_qUw7fA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Fd3yMf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "custom",
+            "custom_image": "shopify://shop_images/Handbag.svg",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_etFKTN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_LMVPQn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_WfrzNc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>this is test and what is test</p>",
+            "page": ""
+          }
+        },
+        "text_TC8TRc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "content_alignment": "left",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Fd3yMf",
+        "collapsible_row_etFKTN",
+        "collapsible_row_LMVPQn",
+        "collapsible_row_WfrzNc",
+        "text_TC8TRc"
+      ],
+      "settings": {
+        "caption": "Collapsible Caption",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_dJfY7c": {
       "type": "image-with-text",
       "blocks": {
@@ -745,76 +816,6 @@
         "padding_bottom": 36
       }
     },
-    "collapsible_content_qUw7fA": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_Fd3yMf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_etFKTN": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_LMVPQn": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_WfrzNc": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>this is test and what is test</p>",
-            "page": ""
-          }
-        },
-        "text_TC8TRc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "content_alignment": "left",
-            "mobile_content_alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_Fd3yMf",
-        "collapsible_row_etFKTN",
-        "collapsible_row_LMVPQn",
-        "collapsible_row_WfrzNc",
-        "text_TC8TRc"
-      ],
-      "settings": {
-        "caption": "Collapsible Caption",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "slideshow_7cWhrY": {
       "type": "slideshow",
       "blocks": {
@@ -932,11 +933,11 @@
     "featured_product_cYrmtf",
     "image_with_table_fE4tBh",
     "collage",
+    "collapsible_content_qUw7fA",
     "image_with_text_dJfY7c",
     "rich_text_gdexpz",
     "featured_collection_khAdtP",
     "blocks_with_text_EQxBGT",
-    "collapsible_content_qUw7fA",
     "slideshow_7cWhrY",
     "newsletter_nAwejx"
   ]
