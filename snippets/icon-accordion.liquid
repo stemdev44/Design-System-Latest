@@ -1,7 +1,7 @@
 {%- if icon != 'none' -%}
   {%- if icon == 'custom' and custom_image != blank -%}
     <span class="svg-wrapper">
-      <img src="{{ custom_image | img_url:"" }}" class="icon">      
+      <img src="{{ custom_image | img_url:"" }}" class="icon" style="width: 100%">      
     </span>
   {%- else -%}
     {%- assign file = icon | replace: '_', '-' | prepend: 'icon-' | append: '.svg' -%}
