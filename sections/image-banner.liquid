@@ -71,7 +71,7 @@
       {%- liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
         assign mobile_image_height = section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio
-  
+        echo mobile_image_height
         if section.settings.image_2 != blank
           assign image_class = 'banner__media-image-half '
         endif
