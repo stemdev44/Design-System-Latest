@@ -63,6 +63,13 @@
     "featured_product_cYrmtf": {
       "type": "featured-product",
       "blocks": {
+        "text_M6hFtp": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "body"
+          }
+        },
         "text_WQa6JW": {
           "type": "text",
           "settings": {
@@ -106,6 +113,7 @@
         }
       },
       "block_order": [
+        "text_M6hFtp",
         "text_WQa6JW",
         "title_cRErnr",
         "price_rVMVCp",
