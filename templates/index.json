@@ -790,6 +790,7 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
+            "custom_image": "shopify://shop_images/CalendarCheck.png",
             "row_content": "",
             "page": ""
           }
