@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "image_with_blocks_GqxVzw": {
+      "type": "image-with-blocks",
+      "settings": {
+        "title": "Image with Blocks",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "layout_page": "full_bleed",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 0,
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_cYrmtf": {
       "type": "featured-product",
       "blocks": {
@@ -941,6 +969,7 @@
     }
   },
   "order": [
+    "image_with_blocks_GqxVzw",
     "featured_product_cYrmtf",
     "image_banner_cTFcJk",
     "multicolumn",
