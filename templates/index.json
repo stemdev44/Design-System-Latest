@@ -12,14 +12,6 @@
     "image_banner_cTFcJk": {
       "type": "image-banner",
       "blocks": {
-        "text_DiwMjz": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/Prohibit.svg"
-          }
-        },
         "heading_c7Vb3m": {
           "type": "heading",
           "settings": {
@@ -49,7 +41,6 @@
         }
       },
       "block_order": [
-        "text_DiwMjz",
         "heading_c7Vb3m",
         "text_4Ce7TC",
         "buttons_h8Jd4b"
