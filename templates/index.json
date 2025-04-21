@@ -172,7 +172,7 @@
             "title": "Column",
             "heading_size": "large",
             "heading_size_mobile": "h2",
-            "heading_icon_image": "shopify://shop_images/Product1_home2_9d8515e7-36d7-43de-910c-7ce92bf1337d.png",
+            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": "shopify://collections/frontpage"
