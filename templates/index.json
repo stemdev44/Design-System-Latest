@@ -16,7 +16,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
-        "layout_page": "full_bleed",
+        "layout_page": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
         "column_corner_radius": 0,
