@@ -107,17 +107,17 @@
                 {%- when 'text' -%}
                   {%-if block.settings.icon_image != blank -%}
                       <style>
-                        .section-{{ section.id }}-padding ul {
+                        .section-{{ section.id }}-padding .product__info-wrapper ul {
                           list-style: none;
                           padding-left: 0; 
                         }
 
-                        .section-{{ section.id }}-padding ul li {
+                        .section-{{ section.id }}-padding .product__info-wrapper ul li {
                           position: relative;
                           padding-left: 30px; 
                         }
 
-                        .section-{{ section.id }}-padding ul li::before {
+                        .section-{{ section.id }}-padding .product__info-wrapper ul li::before {
                           content: "";
                           background: url("{{ block.settings.icon_image | img_url:"" }}");
                           background-size: cover;
@@ -131,7 +131,7 @@
                           transform: translateY(30%);
                         }
                       </style>                    
-                  {%-endif -%}                  
+                  {%-endif -%}
                   <p
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                     {{ block.shopify_attributes }}
