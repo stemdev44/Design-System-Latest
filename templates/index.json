@@ -11,6 +11,54 @@
   "sections": {
     "image_with_blocks_GqxVzw": {
       "type": "image-with-blocks",
+      "blocks": {
+        "column_9TAikN": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_bKYH8G": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_NWpHeh": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_X3CAed": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "<p>This is test Card</p>",
+            "description_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "column_9TAikN",
+        "column_bKYH8G",
+        "column_NWpHeh",
+        "column_X3CAed"
+      ],
       "settings": {
         "title": "Image with Blocks",
         "heading_size": "h1",
