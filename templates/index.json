@@ -9,6 +9,86 @@
  */
 {
   "sections": {
+    "featured_product_cYrmtf": {
+      "type": "featured-product",
+      "blocks": {
+        "text_WQa6JW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ section.settings.product.vendor }}</p>",
+            "text_style": "uppercase"
+          }
+        },
+        "title_cRErnr": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_rVMVCp": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_da4MLJ": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Text block</li></ul>",
+            "text_style": "uppercase",
+            "icon_image": "shopify://shop_images/Handbag.svg"
+          }
+        },
+        "variant_picker_zwwpDw": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_BYyxxe": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_6t3mQD": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_DVRDjT": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_WQa6JW",
+        "title_cRErnr",
+        "price_rVMVCp",
+        "text_da4MLJ",
+        "variant_picker_zwwpDw",
+        "quantity_selector_BYyxxe",
+        "buy_buttons_6t3mQD",
+        "share_DVRDjT"
+      ],
+      "settings": {
+        "product": "one-shoulder-bow-top-1",
+        "color_scheme": "",
+        "secondary_background": false,
+        "hide_view_full_details": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "column_corner_radius": 21,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_cTFcJk": {
       "type": "image-banner",
       "blocks": {
@@ -259,86 +339,6 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "mobile_slider_visual": "numbers",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_cYrmtf": {
-      "type": "featured-product",
-      "blocks": {
-        "text_WQa6JW": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ section.settings.product.vendor }}</p>",
-            "text_style": "uppercase"
-          }
-        },
-        "title_cRErnr": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_rVMVCp": {
-          "type": "price",
-          "settings": {}
-        },
-        "text_da4MLJ": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Text block</li></ul>",
-            "text_style": "uppercase",
-            "icon_image": "shopify://shop_images/Handbag.svg"
-          }
-        },
-        "variant_picker_zwwpDw": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_BYyxxe": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_6t3mQD": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_DVRDjT": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_WQa6JW",
-        "title_cRErnr",
-        "price_rVMVCp",
-        "text_da4MLJ",
-        "variant_picker_zwwpDw",
-        "quantity_selector_BYyxxe",
-        "buy_buttons_6t3mQD",
-        "share_DVRDjT"
-      ],
-      "settings": {
-        "product": "one-shoulder-bow-top-1",
-        "color_scheme": "",
-        "secondary_background": false,
-        "hide_view_full_details": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "media_position": "left",
-        "image_zoom": "none",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "column_corner_radius": 21,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -941,10 +941,10 @@
     }
   },
   "order": [
+    "featured_product_cYrmtf",
     "image_banner_cTFcJk",
     "multicolumn",
     "carousel_mVMEgi",
-    "featured_product_cYrmtf",
     "image_with_table_fE4tBh",
     "image_with_text_dJfY7c",
     "collage",
