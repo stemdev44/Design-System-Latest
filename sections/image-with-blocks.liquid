@@ -209,7 +209,6 @@
                     {{ section.settings.title }}
                 </h2>                
             {%- endunless -%}    
-            {% comment %} ////////////////////////////////// {% endcomment %}
                 <ul
                     class="multicolumn-list contains-content-container grid grid--2-col-tablet-down grid--2-col-desktop"
                     id="Slider-{{ section.id }}"
@@ -228,22 +227,20 @@
                                     {% endif %}
                                 >
                                     <div class="multicolumn-card content-container" style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius_2}}px;">
-
-                                    <div class="multicolumn-card__info">
-                                        {%- if block.settings.title != blank -%}
-                                        <h3 class="small-hide medium-hide inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
-                                        <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
-                                        {%- endif -%}
-                                        {%- if block.settings.description != blank -%}
-                                        <div class="rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }}">{{ block.settings.description }}</div>
-                                        {%- endif -%}
-                                    </div>
+                                        <div class="multicolumn-card__info">
+                                            {%- if block.settings.title != blank -%}
+                                                <h3 class="small-hide medium-hide inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
+                                                <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }} " style="color:{{ section.settings.column_font_color }}">{{ block.settings.title }}</h3>
+                                            {%- endif -%}
+                                            {%- if block.settings.description != blank -%}
+                                                <div class="rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }}">{{ block.settings.description }}</div>
+                                            {%- endif -%}
+                                        </div>
                                     </div>
                                 </li>            
                         {%-endcase-%}
                     {%- endfor -%}
-                </ul>            
-            {% comment %} ////////////////////////////////// {% endcomment %}
+                </ul>
           </div>
         </div>
       </div>
