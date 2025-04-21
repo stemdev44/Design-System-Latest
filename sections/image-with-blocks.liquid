@@ -638,40 +638,98 @@
   ],
   "blocks": [
     {
-      "type": "table_row",
-      "name": "Table Row",
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "text_column_A",
-          "default": "<p>Text Column A</p>",
-          "label": "Text Column A"
-        },
-        {
-          "type": "richtext",
-          "id": "text_column_B",
-          "default": "<p>Text Column B</p>",
-          "label": "Text Column B"
-        },       
-        {
-            "type": "select",
-            "id": "columns_desktop",
-            "options": [
-                {
-                "value": "2",
-                "label": "t:sections.multicolumn.settings.columns_mobile.options__2.label"
-                }
-            ],
-            "default": "2",
-            "label": "Number of Desktop Columns"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon_image",
-          "label": "Icon Image for Bullet Point"
-        }                      
-      ]
-    }      
+        "type": "column",
+        "name": "Card",
+        "settings": [
+              {
+                "type": "inline_richtext",
+                "id": "title",
+                "default": "Card",
+                "label": "t:sections.multicolumn.settings.title.label"
+              },
+              {
+                "type": "select",
+                "id": "heading_size",
+                "options": [
+                  {
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__1.label"
+                  },
+                  {
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__2.label"
+                  },
+                  {
+                    "value": "h0",
+                    "label": "t:sections.all.heading_size.options__3.label"
+                  },
+                  {
+                    "value": "hxl",
+                    "label": "t:sections.all.heading_size.options__4.label"
+                  },
+                  {
+                    "value": "hxxl",
+                    "label": "t:sections.all.heading_size.options__5.label"
+                  }
+                ],
+                "default": "h1",
+                "label": "t:sections.all.heading_size.label"
+              },
+              {
+                "type": "select",
+                "id": "heading_size_mobile",
+                "options": [
+                  {
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__1.label"
+                  },
+                  {
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__2.label"
+                  },
+                  {
+                    "value": "h0",
+                    "label": "t:sections.all.heading_size.options__3.label"
+                  },
+                  {
+                    "value": "hxl",
+                    "label": "t:sections.all.heading_size.options__4.label"
+                  },
+                  {
+                    "value": "hxxl",
+                    "label": "t:sections.all.heading_size.options__5.label"
+                  }
+                ],
+                "default": "h1",
+                "label": "Heading Size Mobile"
+              },            
+              {
+                "type": "richtext",
+                "id": "description",
+                "label": "t:sections.featured-collection.settings.description.label"
+              },
+              {
+                "type": "select",
+                "id": "description_style",
+                "label": "t:sections.featured-collection.settings.description_style.label",
+                "options": [
+                  {
+                    "value": "body",
+                    "label": "t:sections.featured-collection.settings.description_style.options__1.label"
+                  },
+                  {
+                    "value": "subtitle",
+                    "label": "t:sections.featured-collection.settings.description_style.options__2.label"
+                  },
+                  {
+                    "value": "uppercase",
+                    "label": "t:sections.featured-collection.settings.description_style.options__3.label"
+                  }
+                ],
+                "default": "body"
+              } 
+        ]
+    }    
   ],
   "presets": [
     {
