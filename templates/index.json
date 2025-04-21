@@ -17,7 +17,7 @@
           "settings": {
             "title": "Card",
             "heading_size": "h1",
-            "heading_size_mobile": "h1",
+            "heading_size_mobile": "h2",
             "description": "",
             "description_style": "body"
           }
@@ -79,6 +79,110 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blocks_with_text_EQxBGT": {
+      "type": "blocks-with-text",
+      "blocks": {
+        "column_3finTW": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "hxl",
+            "heading_size_mobile": "h2",
+            "description": "<p>Description<br/></p>",
+            "description_style": "body"
+          }
+        },
+        "column_ExfrTD": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "hxxl",
+            "heading_size_mobile": "h2",
+            "description": "<p>Description</p>",
+            "description_style": "body"
+          }
+        },
+        "column_cXpQVT": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "<p>Description</p>",
+            "description_style": "body"
+          }
+        },
+        "column_RKtWBP": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h2",
+            "description": "<p>Description</p>",
+            "description_style": "body"
+          }
+        },
+        "heading_gFaJUP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Blocks with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_dtaJRN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/icon-bottle.svg"
+          }
+        },
+        "button_BaPrVg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "no_border_style": false
+          }
+        }
+      },
+      "block_order": [
+        "column_3finTW",
+        "column_ExfrTD",
+        "column_cXpQVT",
+        "column_RKtWBP",
+        "heading_gFaJUP",
+        "text_dtaJRN",
+        "button_BaPrVg"
+      ],
+      "settings": {
+        "layout_page": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "image_behavior": "none",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "column_alignment": "center",
+        "column_background_color": "#000000",
+        "column_font_color": "#ffffff",
+        "column_corner_radius": 11,
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
@@ -802,110 +906,6 @@
         "padding_bottom": 36
       }
     },
-    "blocks_with_text_EQxBGT": {
-      "type": "blocks-with-text",
-      "blocks": {
-        "column_3finTW": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "hxl",
-            "heading_size_mobile": "h2",
-            "description": "<p>Description<br/></p>",
-            "description_style": "body"
-          }
-        },
-        "column_ExfrTD": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "hxxl",
-            "heading_size_mobile": "h2",
-            "description": "<p>Description</p>",
-            "description_style": "body"
-          }
-        },
-        "column_cXpQVT": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "<p>Description</p>",
-            "description_style": "body"
-          }
-        },
-        "column_RKtWBP": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h2",
-            "description": "<p>Description</p>",
-            "description_style": "body"
-          }
-        },
-        "heading_gFaJUP": {
-          "type": "heading",
-          "settings": {
-            "heading": "Blocks with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_dtaJRN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/icon-bottle.svg"
-          }
-        },
-        "button_BaPrVg": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "no_border_style": false
-          }
-        }
-      },
-      "block_order": [
-        "column_3finTW",
-        "column_ExfrTD",
-        "column_cXpQVT",
-        "column_RKtWBP",
-        "heading_gFaJUP",
-        "text_dtaJRN",
-        "button_BaPrVg"
-      ],
-      "settings": {
-        "layout_page": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "mobile_layout": "image_first",
-        "image_behavior": "none",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_button_text": "",
-        "video_button_background": "",
-        "video_button_font": "",
-        "video_button_style_secondary": false,
-        "video_no_border_style": false,
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "column_alignment": "center",
-        "column_background_color": "#000000",
-        "column_font_color": "#ffffff",
-        "column_corner_radius": 11,
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "slideshow_7cWhrY": {
       "type": "slideshow",
       "blocks": {
@@ -1018,6 +1018,7 @@
   },
   "order": [
     "image_with_blocks_GqxVzw",
+    "blocks_with_text_EQxBGT",
     "featured_product_cYrmtf",
     "image_banner_cTFcJk",
     "multicolumn",
@@ -1028,7 +1029,6 @@
     "collapsible_content_qUw7fA",
     "rich_text_gdexpz",
     "featured_collection_khAdtP",
-    "blocks_with_text_EQxBGT",
     "slideshow_7cWhrY",
     "newsletter_nAwejx"
   ]
