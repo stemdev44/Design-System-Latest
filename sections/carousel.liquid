@@ -181,7 +181,7 @@
             >
               {%- if block.settings.link != blank -%}
                 <a href="{{ block.settings.link }}" style="text-decoration: none;">
-                  <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>
+                  <div class="multicolumn-card content-container"  style=" {% if section.settings.background_style == 'primary' %} background:{{ section.settings.column_background_color }}; {% endif %} border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden">
                   
                     {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                       {% assign spaced_image = true %}
@@ -300,7 +300,7 @@
                   </div> 
                 </a>
               {%- else -%}
-                <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>
+                <div class="multicolumn-card content-container"  style=" {% if section.settings.background_style == 'primary' %} background:{{ section.settings.column_background_color }}; {% endif %} border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden">
                   
                   {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                     {% assign spaced_image = true %}
