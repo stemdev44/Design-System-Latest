@@ -137,7 +137,7 @@
             {% endif %}
           >
             {%- if block.settings.link != blank -%}
-              <a href="{{ block.settings.link }}" style="text-decoration: none;">
+              <a href="{{ block.settings.link }}" style="text-decoration: none; {% unless section.settings.background_style == 'primary' %} color: #121212b3 {%- endunless -%}">
                 <div class="multicolumn-card content-container"  style=" {% if section.settings.background_style == 'primary' %} background:{{ section.settings.column_background_color }}; {% endif %} border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden">
              
                   {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
