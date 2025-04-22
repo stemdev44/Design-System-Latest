@@ -67,7 +67,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-            "caption": "",
+            "caption": "caption 1",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
             "title": "Column",
