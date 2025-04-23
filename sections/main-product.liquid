@@ -102,7 +102,7 @@
                         padding-left: 30px; 
                       }
 
-                      .section-{{ section.id }}-padding .product__info-wrapper {{block.id}}-product__text + ul li::before {
+                      .section-{{ section.id }}-padding .product__info-wrapper .{{block.id}}-product__text + ul li::before {
                         content: "";
                         background: url("{{ block.settings.icon_image | img_url:"" }}");
                         background-size: cover;
