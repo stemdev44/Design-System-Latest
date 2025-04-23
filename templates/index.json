@@ -40,7 +40,7 @@
         "text_z77yVB": {
           "type": "text",
           "settings": {
-            "text": "<p>Text block 2</p>",
+            "text": "<ul><li>Text block 2</li></ul>",
             "text_style": "body",
             "icon_image": "shopify://shop_images/MagnifyingGlass.svg"
           }
