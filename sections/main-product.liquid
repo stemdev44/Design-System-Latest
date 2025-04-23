@@ -31,13 +31,6 @@
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
-    .section-{{ section.id }}-padding .global-media-settings{
-      border:0;
-    }
-    .section-{{ section.id }}-padding .global-media-settings img{
-      border-radius:{{section.settings.column_corner_radius}}px;
-    }
-
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
@@ -745,7 +738,7 @@
       "name": "t:sections.main-product.blocks.text.name",
       "settings": [
         {
-          "type": "inline_richtext",
+          "type": "richtext",
           "id": "text",
           "default": "t:sections.main-product.blocks.text.settings.text.default",
           "label": "t:sections.main-product.blocks.text.settings.text.label"
@@ -2232,14 +2225,6 @@
       "default": false,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
     },
-    {
-      "type": "range",
-      "id": "column_corner_radius",
-      "min": 0,
-      "max": 40,
-      "default": 0,
-      "label": "Image Corner Radius"
-    },    
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
