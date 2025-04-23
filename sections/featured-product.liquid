@@ -424,7 +424,7 @@
                     product: product,
                     product_form_id: product_form_id,
                     section_id: section.id,
-                    redirect_instead: section.settings.redirect_instead
+                    redirect_instead: {{section.settings.redirect_instead}}
                   -%}
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
