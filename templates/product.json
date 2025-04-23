@@ -23,7 +23,8 @@
           "type": "text",
           "settings": {
             "text": "<ul><li>My fav product</li></ul>",
-            "text_style": "body"
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/Handbag.svg"
           }
         },
         "title": {
