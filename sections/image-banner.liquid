@@ -168,7 +168,7 @@
           {%- when 'text' -%}
               {%-if block.settings.icon_image != blank -%}
                 <style>
-                  .banner__text ul {
+                  #Banner-{{ section.id }} ul {
                     display: flex;
                     flex-direction: column;
                     align-items: center;                    
@@ -176,12 +176,12 @@
                     padding-left: 0; 
                   }
 
-                  .banner__text ul li {
+                  #Banner-{{ section.id }} ul li {
                     position: relative;
                     padding-left: 30px; 
                   }
 
-                  .banner__text ul li::before {
+                  #Banner-{{ section.id }} ul li::before {
                     content: "";
                     background: url("{{ block.settings.icon_image | img_url:"" }}");
                     background-size: cover;
