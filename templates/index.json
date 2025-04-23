@@ -37,6 +37,14 @@
             "icon_image": "shopify://shop_images/Handbag.svg"
           }
         },
+        "text_z77yVB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Text block 2</p>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/MagnifyingGlass.svg"
+          }
+        },
         "variant_picker_zwwpDw": {
           "type": "variant_picker",
           "settings": {
@@ -67,6 +75,7 @@
         "title_cRErnr",
         "price_rVMVCp",
         "text_da4MLJ",
+        "text_z77yVB",
         "variant_picker_zwwpDw",
         "quantity_selector_BYyxxe",
         "buy_buttons_6t3mQD",
