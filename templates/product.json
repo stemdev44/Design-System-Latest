@@ -30,7 +30,7 @@
         "text_X9Tfid": {
           "type": "text",
           "settings": {
-            "text": "<p>My fav prod 2</p>",
+            "text": "<ul><li>My fav prod 2</li></ul>",
             "text_style": "body",
             "icon_image": "shopify://shop_images/icon-bottle.svg"
           }
