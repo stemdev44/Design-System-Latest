@@ -27,6 +27,14 @@
             "icon_image": "shopify://shop_images/Handbag.svg"
           }
         },
+        "text_X9Tfid": {
+          "type": "text",
+          "settings": {
+            "text": "<p>My fav prod 2</p>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/icon-bottle.svg"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -110,6 +118,7 @@
       "block_order": [
         "vendor",
         "text_bLXREG",
+        "text_X9Tfid",
         "title",
         "caption",
         "price",
