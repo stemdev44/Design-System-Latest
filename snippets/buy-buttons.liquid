@@ -94,7 +94,7 @@
             {%- render 'loading-spinner' -%}
           </button>
           {% comment %} /////////////////// {% endcomment %}
-            <a
+            <a class="button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
               {% if product == blank %}
                 role="link" aria-disabled="true"
               {% else %}
@@ -102,9 +102,7 @@
               {% endif %}
               
             >
-              <button  class="button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}">
-                View Now
-              </button>            
+                View Now        
             </a>                    
           {% comment %} ///////////////////// {% endcomment %}
           {%- if show_dynamic_checkout -%}
