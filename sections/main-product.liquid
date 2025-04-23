@@ -92,17 +92,17 @@
               {%- when 'text' -%}
                 {%-if block.settings.icon_image != blank -%}
                     <style>
-                      .section-{{ section.id }}-padding .product__info-wrapper ul {
+                      .section-{{ section.id }}-padding .product__info-wrapper ul:not(.product__description ul) {
                         list-style: none;
                         padding-left: 0; 
                       }
 
-                      .section-{{ section.id }}-padding .product__info-wrapper ul li {
+                      .section-{{ section.id }}-padding .product__info-wrapper ul:not(.product__description ul) li {
                         position: relative;
                         padding-left: 30px; 
                       }
 
-                      .section-{{ section.id }}-padding .product__info-wrapper ul li::before {
+                      .section-{{ section.id }}-padding .product__info-wrapper ul:not(.product__description ul) li::before {
                         content: "";
                         background: url("{{ block.settings.icon_image | img_url:"" }}");
                         background-size: cover;
