@@ -9,6 +9,68 @@
  */
 {
   "sections": {
+    "image_with_table_fE4tBh": {
+      "type": "image-with-table",
+      "blocks": {
+        "table_row_QdEEcb": {
+          "type": "table_row",
+          "settings": {
+            "text_column_A": "<ul><li><strong>this is test of all time </strong></li><li><strong>this is test of all time </strong></li></ul>",
+            "text_column_B": "<ul><li><strong>This is test b of all time</strong></li><li><strong>This is test b of all time</strong></li></ul>",
+            "columns_desktop": "2",
+            "icon_image": "shopify://shop_images/Handbag.svg"
+          }
+        },
+        "table_row_9fNx47": {
+          "type": "table_row",
+          "settings": {
+            "text_column_A": "<ul><li>Text Column A</li></ul>",
+            "text_column_B": "<ul><li>Text Column B</li></ul>",
+            "columns_desktop": "2",
+            "icon_image": "shopify://shop_images/icon-bottle.svg"
+          }
+        },
+        "table_row_NtfnjQ": {
+          "type": "table_row",
+          "settings": {
+            "text_column_A": "<p>Text Column A</p>",
+            "text_column_B": "<p>Text Column B</p>",
+            "columns_desktop": "2"
+          }
+        }
+      },
+      "block_order": [
+        "table_row_QdEEcb",
+        "table_row_9fNx47",
+        "table_row_NtfnjQ"
+      ],
+      "settings": {
+        "title": "Image with Table",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "mobile_description_alignment": "center",
+        "layout_page": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 0,
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video_url": "",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_dJfY7c": {
       "type": "image-with-text",
       "blocks": {
@@ -652,67 +714,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_table_fE4tBh": {
-      "type": "image-with-table",
-      "blocks": {
-        "table_row_QdEEcb": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<ul><li><strong>this is test of all time </strong></li><li><strong>this is test of all time </strong></li></ul>",
-            "text_column_B": "<ul><li><strong>This is test b of all time</strong></li><li><strong>This is test b of all time</strong></li></ul>",
-            "columns_desktop": "2",
-            "icon_image": "shopify://shop_images/Handbag.svg"
-          }
-        },
-        "table_row_9fNx47": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<p>Text Column A</p>",
-            "text_column_B": "<p>Text Column B</p>",
-            "columns_desktop": "2"
-          }
-        },
-        "table_row_NtfnjQ": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<p>Text Column A</p>",
-            "text_column_B": "<p>Text Column B</p>",
-            "columns_desktop": "2"
-          }
-        }
-      },
-      "block_order": [
-        "table_row_QdEEcb",
-        "table_row_9fNx47",
-        "table_row_NtfnjQ"
-      ],
-      "settings": {
-        "title": "Image with Table",
-        "heading_size": "h2",
-        "heading_alignment": "left",
-        "mobile_description_alignment": "center",
-        "layout_page": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "column_corner_radius": 0,
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video_url": "",
-        "video_button_text": "",
-        "video_button_background": "",
-        "video_button_font": "",
-        "video_button_style_secondary": false,
-        "video_no_border_style": false,
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -1030,6 +1031,7 @@
     }
   },
   "order": [
+    "image_with_table_fE4tBh",
     "image_with_text_dJfY7c",
     "image_banner_cTFcJk",
     "featured_product_cYrmtf",
@@ -1037,7 +1039,6 @@
     "multicolumn",
     "image_with_blocks_GqxVzw",
     "blocks_with_text_EQxBGT",
-    "image_with_table_fE4tBh",
     "collage",
     "collapsible_content_qUw7fA",
     "rich_text_gdexpz",
