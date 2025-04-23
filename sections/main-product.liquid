@@ -102,7 +102,7 @@
                         padding-left: 30px; 
                       }
 
-                      .section-{{ section.id }}-padding .product__info-wrapper ul:not(.product__description ul) li::before {
+                      .section-{{ section.id }}-padding .product__info-wrapper {{block.id}}-product__text + ul:not(.product__description ul) li::before {
                         content: "";
                         background: url("{{ block.settings.icon_image | img_url:"" }}");
                         background-size: cover;
@@ -118,7 +118,7 @@
                     </style>                    
                 {%-endif -%}              
                 <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                  class="{{block.id}}-product__text product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
