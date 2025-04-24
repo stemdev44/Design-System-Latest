@@ -88,6 +88,23 @@
                                             </p>
                                         </div>
                                     {%- endif -%}
+
+                                    {%- if block.settings.text_column_C != blank -%}
+                                        <div class="table-cell">
+                                            <p class="image-with-text__heading inline-richtext" style="margin-top:0">
+                                                {{ block.settings.text_column_C }}
+                                            </p>
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if block.settings.text_column_D != blank -%}
+                                        <div class="table-cell">
+                                            <p class="image-with-text__heading inline-richtext" style="margin-top:0">
+                                                {{ block.settings.text_column_D }}
+                                            </p>
+                                        </div>
+                                    {%- endif -%}
+
+
                                     </div>
                             {% endcase %}
                         {% endfor %}
