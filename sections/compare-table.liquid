@@ -105,7 +105,10 @@
                 color :{{block.settings.column_font_color}};
               }
             {%- endif -%}
-            
+
+            .{{block.id}}-table-style .table-row:last-child{
+              border-bottom: none;
+            }
           </style>
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
