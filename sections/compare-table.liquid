@@ -99,6 +99,13 @@
                 text-align :center;
               }
             {%- endif -%}
+
+            {%- if block.settings.background_style == 'primary' -%}
+              .{{block.id}}-table-style .table-cell{
+                color :{{block.settings.column_font_color}};
+              }
+            {%- endif -%}
+            
           </style>
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
