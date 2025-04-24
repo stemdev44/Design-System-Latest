@@ -43,7 +43,10 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "<p>Text Row T</p>",
-            "column_alignment": "left"
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "#121212",
+            "column_font_color": "#ffffff"
           }
         },
         "column_cdw6GA": {
@@ -69,7 +72,10 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "",
-            "column_alignment": "center"
+            "column_alignment": "center",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": ""
           }
         },
         "column_9QEtmc": {
@@ -95,7 +101,10 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "",
-            "column_alignment": "left"
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": ""
           }
         },
         "column_GJTQwY": {
@@ -121,7 +130,10 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "",
-            "column_alignment": "left"
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": ""
           }
         },
         "column_hiJw6P": {
@@ -147,7 +159,10 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "",
-            "column_alignment": "left"
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": ""
           }
         }
       },
@@ -171,9 +186,6 @@
         "description_style": "body",
         "layout": "grid",
         "columns_desktop": 5,
-        "background_style": "primary",
-        "column_background_color": "",
-        "column_font_color": "",
         "column_corner_radius": 26,
         "color_scheme": "",
         "columns_mobile": "1",
