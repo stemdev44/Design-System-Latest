@@ -9,33 +9,6 @@
  */
 {
   "sections": {
-    "compare_table_pJDCbB": {
-      "type": "compare-table",
-      "settings": {
-        "caption": "Compare Caption",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "title": "Compare Table",
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
-        "description": "",
-        "description_style": "body",
-        "layout": "none",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "column_background_color": "",
-        "column_font_color": "",
-        "column_corner_radius": 0,
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "slider_visual": "counter",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -1099,7 +1072,6 @@
     }
   },
   "order": [
-    "compare_table_pJDCbB",
     "multicolumn",
     "collapsible_content_qUw7fA",
     "featured_product_cYrmtf",
