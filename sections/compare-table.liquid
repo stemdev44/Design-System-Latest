@@ -88,23 +88,6 @@
                                             </p>
                                         </div>
                                     {%- endif -%}
-
-                                    {%- if block.settings.text_column_C != blank -%}
-                                        <div class="table-cell">
-                                            <p class="image-with-text__heading inline-richtext" style="margin-top:0">
-                                                {{ block.settings.text_column_C }}
-                                            </p>
-                                        </div>
-                                    {%- endif -%}
-                                    {%- if block.settings.text_column_D != blank -%}
-                                        <div class="table-cell">
-                                            <p class="image-with-text__heading inline-richtext" style="margin-top:0">
-                                                {{ block.settings.text_column_D }}
-                                            </p>
-                                        </div>
-                                    {%- endif -%}
-
-
                                     </div>
                             {% endcase %}
                         {% endfor %}
@@ -512,18 +495,7 @@
           "default": "<p>Text Column B</p>",
           "label": "Text Column B"
         },
-        {
-           "type": "richtext",
-           "id": "text_column_C",
-           "default": "<p>Text Column C</p>",
-           "label": "Text Column C"
-        },
-        {
-            "type": "richtext",
-            "id": "text_column_D",
-            "default": "<p>Text Column D</p>",
-            "label": "Text Column D"
-        },        
+        
         {
           "type": "image_picker",
           "id": "icon_image",
