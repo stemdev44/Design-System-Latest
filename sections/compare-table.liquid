@@ -19,28 +19,6 @@
     }
   }
 
-  .section-{{ section.id }}-padding .custom-table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .section-{{ section.id }}-padding .table-row {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .section-{{ section.id }}-padding .table-cell {
-    flex: 1;
-    padding: 10px;
-    text-align: left;
-  }
-
-  .section-{{ section.id }}-padding .table-row:last-child {
-    border-bottom: none;
-  }  
 
 {%- endstyle -%}
 
@@ -92,45 +70,13 @@
               }
           }
         </style>
-        {% comment %} ///////////////// Adding Compare Table Starts ///////////// {% endcomment %}
-            <div class="collapsible-content-wrapper-narrow">
-                {% comment %} <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {% endcomment %}
-                <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                {% comment %} <div class="grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {% endcomment %}
-                    <div class="grid__item">
-                        <div class="custom-table">
-                            {% for block in section.blocks %}
-                                {% case block.type %}
-                                    {%- when 'table_row' -%}                     
-                                        <div class="table-row">
-                                        {%- if block.settings.text_column_A != blank -%}
-                                            <div class="table-cell">
-                                                <p class="image-with-text__heading inline-richtext" style="margin-top:0">
-                                                    {{ block.settings.text_column_A }}
-                                                </p>
-                                            </div>
-                                        {%- endif -%}
-                                        {%- if block.settings.text_column_B != blank -%}
-                                            <div class="table-cell">
-                                                <p class="image-with-text__heading inline-richtext" style="margin-top:0">
-                                                    {{ block.settings.text_column_B }}
-                                                </p>
-                                            </div>
-                                        {%- endif -%}
-                                        </div>
-                                {% endcase %}
-                            {% endfor %}
-                        </div>                    
-                    </div>
-                </div>
-            </div>        
-        {% comment %} ///////////////// Adding Compare Table Ends ///////////// {% endcomment %}
-    {% comment %} <slider-component class="slider-mobile-gutter">
+    <slider-component class="slider-mobile-gutter">
       <ul
         class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
+
         {%- for block in section.blocks -%}
 
           <li
@@ -142,8 +88,31 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container"  style=" {% if section.settings.background_style == 'primary' %} background:{{ section.settings.column_background_color }}; {% endif %} border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden">
-            </div>
+              <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>
+             
+                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+                  {% assign spaced_image = true %}
+                {% endif %}
+
+                <div class="multicolumn-card__info">
+
+                  {%- if block.settings.text_row_A != blank -%}
+                    <div class="rte">{{ block.settings.text_row_A }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.text_row_B != blank -%}
+                    <div class="rte">{{ block.settings.text_row_B }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.text_row_C != blank -%}
+                    <div class="rte">{{ block.settings.text_row_C }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.text_row_D != blank -%}
+                    <div class="rte">{{ block.settings.text_row_D }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.text_row_E != blank -%}
+                    <div class="rte">{{ block.settings.text_row_E }}</div>
+                  {%- endif -%}                                                        
+                </div>
+              </div>
 
           </li>
         {%- endfor -%}
@@ -194,7 +163,7 @@
           </button>
         </div>
       {%- endif -%}
-    </slider-component>    {% endcomment %}
+    </slider-component>
   </div>
 </div>
 
@@ -509,27 +478,39 @@
   ],
   "blocks": [
     {
-      "type": "table_row",
-      "name": "Table Row",
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
       "settings": [
         {
           "type": "richtext",
-          "id": "text_column_A",
-          "default": "<p>Text Column A</p>",
-          "label": "Text Column A"
+          "id": "text_row_A",
+          "default": "<p>Text Row A</p>",
+          "label": "Text Row A"
         },
         {
           "type": "richtext",
-          "id": "text_column_B",
-          "default": "<p>Text Column B</p>",
-          "label": "Text Column B"
+          "id": "text_row_B",
+          "default": "<p>Text Row B</p>",
+          "label": "Text Row B"
         },
-        
         {
-          "type": "image_picker",
-          "id": "icon_image",
-          "label": "Icon Image for Bullet Point"
-        }                      
+          "type": "richtext",
+          "id": "text_row_C",
+          "default": "<p>Text Row C</p>",
+          "label": "Text Row C"
+        },        
+        {
+          "type": "richtext",
+          "id": "text_row_D",
+          "default": "<p>Text Row D</p>",
+          "label": "Text Row D"
+        },          
+        {
+          "type": "richtext",
+          "id": "text_row_E",
+          "default": "<p>Text Row E</p>",
+          "label": "Text Row E"
+        },                          
       ]
     }      
   ],  
