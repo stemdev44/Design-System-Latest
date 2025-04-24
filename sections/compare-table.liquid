@@ -65,7 +65,38 @@
               }
           }
         </style>
-    <slider-component class="slider-mobile-gutter">
+        {% comment %} ///////////////// Adding Compare Table Starts ///////////// {% endcomment %}
+            <div class="collapsible-content-wrapper-narrow">
+                <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">          
+                <div class="grid__item">
+                    <div class="custom-table">
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {%- when 'table_row' -%}                     
+                                    <div class="table-row">
+                                    {%- if block.settings.text_column_A != blank -%}
+                                        <div class="table-cell">
+                                            <p class="image-with-text__heading inline-richtext" style="margin-top:0">
+                                                {{ block.settings.text_column_A }}
+                                            </p>
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if block.settings.text_column_B != blank -%}
+                                        <div class="table-cell">
+                                            <p class="image-with-text__heading inline-richtext" style="margin-top:0">
+                                                {{ block.settings.text_column_B }}
+                                            </p>
+                                        </div>
+                                    {%- endif -%}
+                                    </div>
+                            {% endcase %}
+                        {% endfor %}
+                    </div>                    
+                </div>
+            </div>
+            </div>        
+        {% comment %} ///////////////// Adding Compare Table Ends ///////////// {% endcomment %}
+    {% comment %} <slider-component class="slider-mobile-gutter">
       <ul
         class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
@@ -134,7 +165,7 @@
           </button>
         </div>
       {%- endif -%}
-    </slider-component>   
+    </slider-component>    {% endcomment %}
   </div>
 </div>
 
