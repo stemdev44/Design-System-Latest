@@ -9,6 +9,126 @@
  */
 {
   "sections": {
+    "compare_table_6LEtkr": {
+      "type": "compare-table",
+      "blocks": {
+        "column_Lx6T3n": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>",
+            "text_row_F": "<p>Text Row F</p>",
+            "text_row_G": "<p>Text Row G</p>",
+            "text_row_H": "<p>Text Row H</p>",
+            "text_row_I": "<p>Text Row I</p>",
+            "text_row_J": "<p>Text Row J</p>",
+            "text_row_K": "<p>Text Row K</p>",
+            "text_row_L": "<p>Text Row L</p>",
+            "text_row_M": "<p>Text Row M</p>",
+            "text_row_N": "<p>Text Row N</p>",
+            "text_row_O": "<p>Text Row O</p>",
+            "text_row_P": "<p>Text Row P</p>",
+            "text_row_Q": "<p>Text Row Q</p>",
+            "text_row_R": "<p>Text Row R</p>",
+            "text_row_S": "<p>Text Row S</p>",
+            "text_row_T": "<p>Text Row T</p>",
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0
+          }
+        },
+        "column_mytqW6": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>",
+            "text_row_F": "<p>Text Row F</p>",
+            "text_row_G": "<p>Text Row G</p>",
+            "text_row_H": "<p>Text Row H</p>",
+            "text_row_I": "<p>Text Row I</p>",
+            "text_row_J": "<p>Text Row J</p>",
+            "text_row_K": "<p>Text Row K</p>",
+            "text_row_L": "<p>Text Row L</p>",
+            "text_row_M": "<p>Text Row M</p>",
+            "text_row_N": "<p>Text Row N</p>",
+            "text_row_O": "<p>Text Row O</p>",
+            "text_row_P": "<p>Text Row P</p>",
+            "text_row_Q": "<p>Text Row Q</p>",
+            "text_row_R": "<p>Text Row R</p>",
+            "text_row_S": "<p>Text Row S</p>",
+            "text_row_T": "<p>Text Row T</p>",
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0
+          }
+        },
+        "column_ejdUci": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>",
+            "text_row_F": "<p>Text Row F</p>",
+            "text_row_G": "<p>Text Row G</p>",
+            "text_row_H": "<p>Text Row H</p>",
+            "text_row_I": "<p>Text Row I</p>",
+            "text_row_J": "<p>Text Row J</p>",
+            "text_row_K": "<p>Text Row K</p>",
+            "text_row_L": "<p>Text Row L</p>",
+            "text_row_M": "<p>Text Row M</p>",
+            "text_row_N": "<p>Text Row N</p>",
+            "text_row_O": "<p>Text Row O</p>",
+            "text_row_P": "<p>Text Row P</p>",
+            "text_row_Q": "<p>Text Row Q</p>",
+            "text_row_R": "<p>Text Row R</p>",
+            "text_row_S": "<p>Text Row S</p>",
+            "text_row_T": "<p>Text Row T</p>",
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0
+          }
+        }
+      },
+      "block_order": [
+        "column_Lx6T3n",
+        "column_mytqW6",
+        "column_ejdUci"
+      ],
+      "name": "Compare Table",
+      "settings": {
+        "caption": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Compare Table",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "description": "",
+        "description_style": "body",
+        "layout": "grid",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -1072,6 +1192,7 @@
     }
   },
   "order": [
+    "compare_table_6LEtkr",
     "multicolumn",
     "collapsible_content_qUw7fA",
     "featured_product_cYrmtf",
