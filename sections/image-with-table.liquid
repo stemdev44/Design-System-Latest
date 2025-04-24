@@ -15,26 +15,26 @@
     }
   }
 
-  .custom-table {
+  .section-{{ section.id }}-padding .custom-table {
     display: flex;
     flex-direction: column;
     width: 100%;
     border-collapse: collapse;
   }
 
-  .table-row {
+  .section-{{ section.id }}-padding .table-row {
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #ddd;
   }
 
-  .table-cell {
+  .section-{{ section.id }}-padding .table-cell {
     flex: 1;
     padding: 10px;
     text-align: left;
   }
 
-  .table-row:last-child {
+  .section-{{ section.id }}-padding .table-row:last-child {
     border-bottom: none;
   }
 
@@ -226,7 +226,7 @@
                                 padding-left: 30px; 
                               }
 
-                              .section-{{ section.id }}-padding .{{block.id}}-table-row ul li::before {
+                              .section-{{ section.id }}-padding ul li::before {
                                 content: "";
                                 background: url("{{ block.settings.icon_image | img_url:"" }}");
                                 background-size: cover;
@@ -241,7 +241,7 @@
                               }
                             </style>                    
                         {%-endif -%}                      
-                        <div class="{{block.id}}-table-row table-row">
+                        <div class="table-row">
                           {%- if block.settings.text_column_A != blank -%}
                               <div class="table-cell">
                                   <p class="image-with-text__heading inline-richtext" style="margin-top:0">
