@@ -109,7 +109,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-              <div class="multicolumn-card content-container" {% if section.settings.background_style == 'primary' %} style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>             
+              <div class="multicolumn-card content-container" {% if block.settings.background_style == 'primary' %} style="background:{{ block.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius}}px; overflow:hidden" {% endif %}>             
                 <div class="multicolumn-card__info table-style {{block.id}}-table-style">
                   {% if block.settings.text_row_A != blank %}
                     <div class="table-row"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
