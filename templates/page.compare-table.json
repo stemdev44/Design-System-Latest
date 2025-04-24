@@ -173,7 +173,7 @@
         "column_corner_radius": 26,
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "slider_visual": "counter",
         "padding_top": 36,
         "padding_bottom": 36
