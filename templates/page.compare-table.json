@@ -42,7 +42,8 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": "<p>Text Row T</p>"
+            "text_row_T": "<p>Text Row T</p>",
+            "column_alignment": "left"
           }
         },
         "column_cdw6GA": {
@@ -67,7 +68,8 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": ""
+            "text_row_T": "",
+            "column_alignment": "center"
           }
         },
         "column_9QEtmc": {
@@ -92,7 +94,8 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": ""
+            "text_row_T": "",
+            "column_alignment": "left"
           }
         },
         "column_GJTQwY": {
@@ -117,7 +120,8 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": ""
+            "text_row_T": "",
+            "column_alignment": "left"
           }
         },
         "column_hiJw6P": {
@@ -142,7 +146,8 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": ""
+            "text_row_T": "",
+            "column_alignment": "left"
           }
         }
       },
@@ -166,7 +171,6 @@
         "description_style": "body",
         "layout": "grid",
         "columns_desktop": 5,
-        "column_alignment": "left",
         "background_style": "primary",
         "column_background_color": "",
         "column_font_color": "",
