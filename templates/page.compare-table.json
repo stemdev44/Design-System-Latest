@@ -38,7 +38,7 @@
             "text_row_M": "<p>Text Row M</p>",
             "text_row_N": "<p>Text Row N</p>",
             "text_row_O": "<p>Text Row O</p>",
-            "text_row_P": "<p>Text Row P</p>",
+            "text_row_P": "",
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
@@ -67,7 +67,7 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": "<p>Text Row T</p>"
+            "text_row_T": ""
           }
         },
         "column_9QEtmc": {
@@ -92,7 +92,7 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": "<p>Text Row T</p>"
+            "text_row_T": ""
           }
         },
         "column_GJTQwY": {
@@ -117,7 +117,7 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": "<p>Text Row T</p>"
+            "text_row_T": ""
           }
         },
         "column_hiJw6P": {
@@ -142,7 +142,7 @@
             "text_row_Q": "<p>Text Row Q</p>",
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
-            "text_row_T": "<p>Text Row T</p>"
+            "text_row_T": ""
           }
         }
       },
