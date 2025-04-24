@@ -1,10 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "main-404"
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
+    },
+    "compare_table_Ad9MPL": {
+      "type": "compare-table",
+      "blocks": {
+        "column_tmNXMG": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>"
+          }
+        },
+        "column_zpXRix": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>"
+          }
+        },
+        "column_xAVU7r": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_tmNXMG",
+        "column_zpXRix",
+        "column_xAVU7r"
+      ],
+      "name": "Compare Table",
+      "settings": {
+        "caption": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Compare Table",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "description": "",
+        "description_style": "body",
+        "layout": "grid",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "column_background_color": "",
+        "column_font_color": "",
+        "column_corner_radius": 0,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "compare_table_Ad9MPL"
   ]
 }
