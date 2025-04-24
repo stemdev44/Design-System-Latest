@@ -11,26 +11,6 @@
   "sections": {
     "compare_table_pJDCbB": {
       "type": "compare-table",
-      "blocks": {
-        "table_row_KpEPmr": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<p>Text Column A</p>",
-            "text_column_B": "<p>Text Column B</p>"
-          }
-        },
-        "table_row_Arf6kC": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<p>Text Column A</p>",
-            "text_column_B": "<p>Text Column B</p>"
-          }
-        }
-      },
-      "block_order": [
-        "table_row_KpEPmr",
-        "table_row_Arf6kC"
-      ],
       "settings": {
         "caption": "Compare Caption",
         "text_style": "caption-with-letter-spacing",
@@ -282,7 +262,8 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
-            "redirect_instead": true
+            "redirect_instead": true,
+            "redirect_button_text": "Learn More"
           }
         },
         "share_DVRDjT": {
