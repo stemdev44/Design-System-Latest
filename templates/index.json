@@ -9,6 +9,180 @@
  */
 {
   "sections": {
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wTBa4j": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "Go High",
+            "link": "shopify://collections/frontpage"
+          }
+        },
+        "column_dFHaQB": {
+          "type": "column",
+          "settings": {
+            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fbadpH": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rTq6tM": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Handbag.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wTBa4j",
+        "column_dFHaQB",
+        "column_fbadpH",
+        "column_rTq6tM"
+      ],
+      "settings": {
+        "caption": "Mutlicolumn Caption",
+        "text_style": "subtitle",
+        "text_size": "medium",
+        "title": "Multicolumn Section",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "right",
+        "description": "<p>Description</p>",
+        "description_style": "uppercase",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button",
+        "button_link": "#",
+        "button_style_secondary": true,
+        "layout": "grid",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "column_background_color": "#242833",
+        "column_font_color": "#ffffff",
+        "column_corner_radius": 40,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_qUw7fA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Fd3yMf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "custom",
+            "custom_image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_etFKTN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "custom",
+            "custom_image": "shopify://shop_images/CalendarCheck.png",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_LMVPQn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_WfrzNc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>this is test and what is test</p>",
+            "page": ""
+          }
+        },
+        "text_TC8TRc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "content_alignment": "left",
+            "mobile_content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Fd3yMf",
+        "collapsible_row_etFKTN",
+        "collapsible_row_LMVPQn",
+        "collapsible_row_WfrzNc",
+        "text_TC8TRc"
+      ],
+      "settings": {
+        "caption": "Collapsible Caption",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_cYrmtf": {
       "type": "featured-product",
       "blocks": {
@@ -466,108 +640,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_wTBa4j": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "Go High",
-            "link": "shopify://collections/frontpage"
-          }
-        },
-        "column_dFHaQB": {
-          "type": "column",
-          "settings": {
-            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_fbadpH": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rTq6tM": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Handbag.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_wTBa4j",
-        "column_dFHaQB",
-        "column_fbadpH",
-        "column_rTq6tM"
-      ],
-      "settings": {
-        "caption": "Mutlicolumn Caption",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "title": "Multicolumn Section",
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "right",
-        "description": "<p>Description</p>",
-        "description_style": "uppercase",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button",
-        "button_link": "#",
-        "button_style_secondary": true,
-        "layout": "grid",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "column_background_color": "#242833",
-        "column_font_color": "#ffffff",
-        "column_corner_radius": 40,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "slider_visual": "dots",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_blocks_GqxVzw": {
       "type": "image-with-blocks",
       "blocks": {
@@ -815,78 +887,6 @@
         "padding_bottom": 36
       }
     },
-    "collapsible_content_qUw7fA": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_Fd3yMf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "custom_image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_etFKTN": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "custom_image": "shopify://shop_images/CalendarCheck.png",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_LMVPQn": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_WfrzNc": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>this is test and what is test</p>",
-            "page": ""
-          }
-        },
-        "text_TC8TRc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "content_alignment": "left",
-            "mobile_content_alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_Fd3yMf",
-        "collapsible_row_etFKTN",
-        "collapsible_row_LMVPQn",
-        "collapsible_row_WfrzNc",
-        "text_TC8TRc"
-      ],
-      "settings": {
-        "caption": "Collapsible Caption",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_gdexpz": {
       "type": "rich-text",
       "blocks": {
@@ -1072,6 +1072,7 @@
   },
   "order": [
     "multicolumn",
+    "collapsible_content_qUw7fA",
     "featured_product_cYrmtf",
     "featured_collection_K8EbeM",
     "image_with_table_fE4tBh",
@@ -1081,7 +1082,6 @@
     "image_with_blocks_GqxVzw",
     "blocks_with_text_EQxBGT",
     "collage",
-    "collapsible_content_qUw7fA",
     "rich_text_gdexpz",
     "featured_collection_khAdtP",
     "slideshow_7cWhrY",
