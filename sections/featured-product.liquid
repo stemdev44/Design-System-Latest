@@ -425,6 +425,7 @@
                     product_form_id: product_form_id,
                     section_id: section.id,
                     redirect_instead: block.settings.redirect_instead
+                    redirect_button_text: block.settings.redirect_button_text
                   -%}
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
@@ -710,6 +711,12 @@
           "id": "redirect_instead",
           "default": false,
           "label": "Redirect instead",
+        },
+        {
+          "type": "text",
+          "id": "redirect_button_text",
+          "label": "Redirect Button Text",
+          "default": "Learn More"
         }
       ]
     },
