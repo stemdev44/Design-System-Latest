@@ -9,58 +9,6 @@
  */
 {
   "sections": {
-    "image_with_table_kLkrPQ": {
-      "type": "image-with-table",
-      "blocks": {
-        "table_row_APTHyN": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<ul><li>Text Column A</li></ul>",
-            "text_column_B": "<ul><li>Text Column B</li></ul>",
-            "columns_desktop": "2",
-            "icon_image": "shopify://shop_images/Handbag.svg"
-          }
-        },
-        "table_row_hiK9aG": {
-          "type": "table_row",
-          "settings": {
-            "text_column_A": "<ul><li>Text Column A</li></ul>",
-            "text_column_B": "<ul><li>Text Column B</li></ul>",
-            "columns_desktop": "2",
-            "icon_image": "shopify://shop_images/icon-bottle.svg"
-          }
-        }
-      },
-      "block_order": [
-        "table_row_APTHyN",
-        "table_row_hiK9aG"
-      ],
-      "settings": {
-        "title": "Image with Table",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
-        "layout_page": "full_bleed",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "column_corner_radius": 0,
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video_button_text": "",
-        "video_button_background": "",
-        "video_button_font": "",
-        "video_button_style_secondary": false,
-        "video_no_border_style": false,
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -1124,7 +1072,6 @@
     }
   },
   "order": [
-    "image_with_table_kLkrPQ",
     "multicolumn",
     "collapsible_content_qUw7fA",
     "featured_product_cYrmtf",
