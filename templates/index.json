@@ -11,6 +11,18 @@
   "sections": {
     "compare_table_pJDCbB": {
       "type": "compare-table",
+      "blocks": {
+        "table_row_Arf6kC": {
+          "type": "table_row",
+          "settings": {
+            "text_column_A": "<p>Text Column A</p>",
+            "text_column_B": "<p>Text Column B</p>"
+          }
+        }
+      },
+      "block_order": [
+        "table_row_Arf6kC"
+      ],
       "settings": {
         "caption": "Compare Caption",
         "text_style": "caption-with-letter-spacing",
