@@ -68,8 +68,8 @@
         {% comment %} ///////////////// Adding Compare Table Starts ///////////// {% endcomment %}
             <div class="collapsible-content-wrapper-narrow">
                 {% comment %} <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {% endcomment %}
-                {% comment %} <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {% endcomment %}
-                <div class="grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                {% comment %} <div class="grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {% endcomment %}
                     <div class="grid__item">
                         <div class="custom-table">
                             {% for block in section.blocks %}
