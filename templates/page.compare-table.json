@@ -46,7 +46,8 @@
             "column_alignment": "left",
             "background_style": "primary",
             "column_background_color": "#242833",
-            "column_font_color": "#ffffff"
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 40
           }
         },
         "column_cdw6GA": {
@@ -75,7 +76,8 @@
             "column_alignment": "center",
             "background_style": "primary",
             "column_background_color": "#000000",
-            "column_font_color": "#ffffff"
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 14
           }
         },
         "column_9QEtmc": {
@@ -104,7 +106,8 @@
             "column_alignment": "left",
             "background_style": "primary",
             "column_background_color": "#334fb4",
-            "column_font_color": "#ffffff"
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 31
           }
         },
         "column_GJTQwY": {
@@ -131,9 +134,10 @@
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "",
             "column_alignment": "left",
-            "background_style": "primary",
+            "background_style": "none",
             "column_background_color": "",
-            "column_font_color": ""
+            "column_font_color": "",
+            "column_corner_radius": 20
           }
         },
         "column_hiJw6P": {
@@ -162,7 +166,8 @@
             "column_alignment": "left",
             "background_style": "primary",
             "column_background_color": "",
-            "column_font_color": ""
+            "column_font_color": "",
+            "column_corner_radius": 0
           }
         }
       },
@@ -186,7 +191,6 @@
         "description_style": "body",
         "layout": "grid",
         "columns_desktop": 5,
-        "column_corner_radius": 26,
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
