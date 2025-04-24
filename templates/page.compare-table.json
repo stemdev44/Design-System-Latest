@@ -45,7 +45,7 @@
             "text_row_T": "<p>Text Row T</p>",
             "column_alignment": "left",
             "background_style": "primary",
-            "column_background_color": "#121212",
+            "column_background_color": "#242833",
             "column_font_color": "#ffffff"
           }
         },
@@ -74,8 +74,8 @@
             "text_row_T": "",
             "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "",
-            "column_font_color": ""
+            "column_background_color": "#000000",
+            "column_font_color": "#ffffff"
           }
         },
         "column_9QEtmc": {
@@ -103,8 +103,8 @@
             "text_row_T": "",
             "column_alignment": "left",
             "background_style": "primary",
-            "column_background_color": "",
-            "column_font_color": ""
+            "column_background_color": "#334fb4",
+            "column_font_color": "#ffffff"
           }
         },
         "column_GJTQwY": {
