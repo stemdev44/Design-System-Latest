@@ -12,6 +12,13 @@
     "compare_table_pJDCbB": {
       "type": "compare-table",
       "blocks": {
+        "table_row_KpEPmr": {
+          "type": "table_row",
+          "settings": {
+            "text_column_A": "<p>Text Column A</p>",
+            "text_column_B": "<p>Text Column B</p>"
+          }
+        },
         "table_row_Arf6kC": {
           "type": "table_row",
           "settings": {
@@ -21,6 +28,7 @@
         }
       },
       "block_order": [
+        "table_row_KpEPmr",
         "table_row_Arf6kC"
       ],
       "settings": {
