@@ -289,9 +289,9 @@
                       }
                     {%- endif -%}
 
-                    {%- if section.settings.no_border_style == true -%}
+                    {%- if block.settings.no_border_style == true -%}
                       .{{block.id}}-button.button:after{
-                        box-shadow: none;
+                        box-shadow: none !important;
                       }
                     {%- endif -%}
 
