@@ -955,34 +955,16 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collapsible_row_yF4RdF": {
-          "type": "collapsible_row",
+        "image_7hhWyx": {
+          "type": "image",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "custom_image": "shopify://shop_images/Product4_home2_466c4dc0-5595-4d23-a8f4-119f091dbd1b.png",
-            "row_content": "<p>Row des 1</p>",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "primary",
-            "column_background_color": "#121212",
-            "column_font_color": "#f3f3f3",
-            "column_corner_radius": 0
+            "image": "shopify://shop_images/Product5_home2.png"
           }
         },
-        "collapsible_row_DKF3XV": {
-          "type": "collapsible_row",
+        "image_e3jJF3": {
+          "type": "image",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "custom_image": "shopify://shop_images/CalendarCheck.png",
-            "row_content": "",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "primary",
-            "column_background_color": "#121212",
-            "column_font_color": "#ffffff",
-            "column_corner_radius": 0
+            "image": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png"
           }
         },
         "product_Pwwjgb": {
@@ -994,14 +976,14 @@
         }
       },
       "block_order": [
-        "collapsible_row_yF4RdF",
-        "collapsible_row_DKF3XV",
+        "image_7hhWyx",
+        "image_e3jJF3",
         "product_Pwwjgb"
       ],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
-        "desktop_layout": "right",
+        "desktop_layout": "left",
         "desktop_image_width": "medium",
         "desktop_layout_2": "collage",
         "mobile_layout": "column",
