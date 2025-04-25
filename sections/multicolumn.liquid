@@ -109,10 +109,14 @@
             width: 90%;
         }
 
-        {%- if section.settings.remove_inner_padding == true -%}
-          .section-{{ section.id }}-padding .multicolumn-list__item:not(:last-child) .multicolumn-card__info {
+        {%- if section.settings.remove_inner_padding == true -%}        
+          .section-{{ section.id }}-padding .multicolumn-card__info {
             padding-left: 0 !important;
             padding-right: 0 !important;
+          }
+          
+          .section-{{ section.id }}-padding .multicolumn-list__item:last-child .multicolumn-card__info {
+            padding-right: 1.5rem !important; 
           }        
         {%- endif -%}
 
