@@ -342,17 +342,19 @@
                     {%- endif -%}
 
                 {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
-
-                  <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
-                    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
-                      <h2
-                        class="banner__heading inline-richtext {{ block.settings.heading_size }}"
-                        {{ block.shopify_attributes }}
-                      >
-                        {{ block.settings.heading }}
-                      </h2> 
-                    </div>
-                  </div>                        
+                  {%- unless block.settings.heading != blank  -%}
+                    <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
+                      <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+                        <h2
+                          class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+                          {{ block.shopify_attributes }}
+                        >
+                          {{ block.settings.heading }}
+                        </h2> 
+                      </div>
+                    </div>                  
+                  {%- endunless -%}
+                 
                 {% comment %} ////////////////////////// Image Heading Ends  /////////////// {% endcomment %}      
 
                   </div>
@@ -795,7 +797,7 @@
     {
       "type": "inline_richtext",
       "id": "heading",
-      "default": "t:sections.collage.settings.heading.default",
+      "default": "Product Heading",
       "label": "t:sections.collage.settings.heading.label"
     },
     {
