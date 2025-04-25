@@ -38,9 +38,9 @@
             "column_alignment": "center",
             "background_style": "primary",
             "column_background_color": "#242833",
-            "column_font_color": "#ffffff",
+            "column_font_color": "#334fb4",
             "column_corner_radius": 40,
-            "no_border_style": true
+            "border_style": true
           }
         },
         "column_nF6tXD": {
@@ -71,7 +71,7 @@
             "column_background_color": "#f3f3f3",
             "column_font_color": "#000000",
             "column_corner_radius": 40,
-            "no_border_style": false
+            "border_style": true
           }
         },
         "column_fda4J4": {
@@ -102,7 +102,7 @@
             "column_background_color": "#000000",
             "column_font_color": "#ffffff",
             "column_corner_radius": 40,
-            "no_border_style": false
+            "border_style": true
           }
         }
       },
