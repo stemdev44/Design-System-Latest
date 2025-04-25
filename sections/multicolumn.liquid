@@ -40,7 +40,7 @@
     {% endif %}
   >
     {%- if section.settings.caption != blank -%}
-      <div class = "{{section.id}}-caption-container" style="display:flex;">
+      <div class = "{{section.id}}-caption-container" style="display:flex; justify-content:center;">
         <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" style="text-align: {{ section.settings.heading_alignment }}; width:max-content;">
           {{ section.settings.caption | escape }}
         </p>      
@@ -72,6 +72,30 @@
             .section-{{ section.id }}-padding .multicolumn__title .title{
                 text-align: {{ section.settings.mobile_description_alignment }} !important;
               }
+
+            .{{section.id}}-caption-container {
+              {%- if section.settings.mobile_description_alignment == 'left' -%}
+                justify-content: flex-start !important;
+              {%- endif -%}
+
+              {%- if section.settings.mobile_description_alignment == 'right' -%}
+                justify-content: flex-end !important;
+              {%- endif -%}
+
+              {%- if section.settings.mobile_description_alignment == 'center' -%}
+                justify-content: center !important;
+              {%- endif -%}              
+            }              
+          }
+
+          .{{section.id}}-caption-container {
+            {%- if section.settings.heading_alignment == 'left' -%}
+              justify-content: flex-start;
+            {%- endif -%}
+
+            {%- if section.settings.heading_alignment == 'right' -%}
+              justify-content: flex-end;
+            {%- endif -%}
           }
 
         .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Tenth-width {
