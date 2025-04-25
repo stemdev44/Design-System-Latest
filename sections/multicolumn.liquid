@@ -107,7 +107,15 @@
         
         .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--Nine-Tenth-width {
             width: 90%;
-        }          
+        }
+
+        {%- if section.settings.remove_inner_padding == true -%}
+          .section-{{ section.id }}-padding .multicolumn-card__info:not(:last-child){
+            padding-left:0;
+            padding-right:0;
+          }        
+        {%- endif -%}
+
         </style>
     <slider-component class="slider-mobile-gutter">
       <ul
@@ -878,7 +886,13 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_inner_padding",
+      "default": false,
+      "label": "Remove Inner Padding"
+    }    
   ],
   "blocks": [
     {
