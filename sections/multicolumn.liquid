@@ -15,6 +15,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {%- if section.settings.no_border_style == true -%}
+    .section-{{ section.id }}-padding .button:after{
+      box-shadow: none;
+    }
+  {%- endif -%}
+
 {%- endstyle -%}
 
 {%- liquid
@@ -697,6 +704,12 @@
       "default": false,
       "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
     },
+    {
+      "type": "checkbox",
+      "id": "no_border_style",
+      "default": false,
+      "label": "No Border Style"
+    },    
     {
       "type":"color",
       "id":"video_button_background",
