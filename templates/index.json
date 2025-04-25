@@ -35,11 +35,11 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "<p>Text Row T</p>",
-            "column_alignment": "left",
+            "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "",
-            "column_font_color": "",
-            "column_corner_radius": 0
+            "column_background_color": "#242833",
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 40
           }
         },
         "column_mytqW6": {
@@ -65,11 +65,11 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "<p>Text Row T</p>",
-            "column_alignment": "left",
+            "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "",
-            "column_font_color": "",
-            "column_corner_radius": 0
+            "column_background_color": "#ffffff",
+            "column_font_color": "#334fb4",
+            "column_corner_radius": 40
           }
         },
         "column_ejdUci": {
@@ -95,11 +95,11 @@
             "text_row_R": "<p>Text Row R</p>",
             "text_row_S": "<p>Text Row S</p>",
             "text_row_T": "<p>Text Row T</p>",
-            "column_alignment": "left",
+            "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "",
-            "column_font_color": "",
-            "column_corner_radius": 0
+            "column_background_color": "#000000",
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 40
           }
         }
       },
@@ -121,7 +121,7 @@
         "description_style": "body",
         "layout": "grid",
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "slider_visual": "dots",
