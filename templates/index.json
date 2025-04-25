@@ -274,7 +274,7 @@
         "title": "Multicolumn Section",
         "heading_size": "h2",
         "heading_alignment": "center",
-        "mobile_description_alignment": "center",
+        "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
         "image_width": "half",
