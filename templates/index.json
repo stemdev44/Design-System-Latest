@@ -172,7 +172,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Product5_home2.png",
-            "desktop_content_position": "bottom-right"
+            "desktop_content_position": "middle-center"
           }
         },
         "image_e3jJF3": {
