@@ -96,7 +96,7 @@
         "button_label": "Button",
         "button_link": "#",
         "button_style_secondary": true,
-        "video_button_background": "#242833",
+        "video_button_background": "rgba(0,0,0,0)",
         "video_button_font": "#ffffff",
         "layout": "grid",
         "columns_desktop": 4,
@@ -313,7 +313,7 @@
             "button_label": "Demo",
             "button_link": "#",
             "button_style_secondary": true,
-            "no_border_style": false,
+            "no_border_style": true,
             "video_button_background": "#334fb4",
             "video_button_font": "#f3f3f3"
           }
