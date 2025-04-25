@@ -437,6 +437,7 @@
           {% else %}
             href="{{ section.settings.button_link }}"
           {% endif %}
+          style="color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
         >
           {{ section.settings.button_label | escape }}
         </a>
