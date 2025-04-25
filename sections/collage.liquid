@@ -352,8 +352,7 @@
                   {%- if block.settings.heading != blank or block.settings.button_label != blank  -%}
                     <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
                       <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
-                        <h2
-                          class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+                        <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" style="text-align: {{block.settings.heading_alignment}}"
                           {{ block.shopify_attributes }}
                         >
                           {{ block.settings.heading }}
@@ -1067,8 +1066,28 @@
             }
           ],
           "default": "h1",
-          "label": "Desktop Heading size"
-        }, 
+          "label": "Heading size"
+        },
+        {
+          "type": "select",
+          "id": "heading_alignment",
+          "label": "Heading Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+            }
+          ],
+          "default": "center"
+        },         
         {
           "type": "text",
           "id": "button_label",
