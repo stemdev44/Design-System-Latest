@@ -350,7 +350,24 @@
                           {{ block.shopify_attributes }}
                         >
                           {{ block.settings.heading }}
-                        </h2> 
+                        </h2>
+
+                        <div class="center">
+                          {%- if block.settings.button_label != blank -%}
+                            <a
+                              class="button {% if block.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
+                              {% if block.settings.button_link == blank %}
+                                role="link" aria-disabled="true"
+                              {% else %}
+                                href="{{ block.settings.button_link }}"
+                              {% endif %}
+                              style="color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
+                            >
+                              {{ block.settings.button_label | escape }}
+                            </a>
+                          {%- endif -%}
+                        </div>
+
                       </div>
                     </div>                  
                   {%- endif -%}
@@ -1044,7 +1061,42 @@
           ],
           "default": "h1",
           "label": "Desktop Heading size"
-        },                
+        }, 
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.multicolumn.settings.button_label.default",
+          "label": "t:sections.multicolumn.settings.button_label.label", 
+          "info": "t:sections.multicolumn.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.multicolumn.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "no_border_style",
+          "default": false,
+          "label": "No Border Style"
+        },    
+        {
+          "type":"color",
+          "id":"video_button_background",
+          "label":"Button Color"
+        },
+        {
+          "type":"color",
+          "id":"video_button_font",
+          "label":"Font Color"
+        },           
+
       ]
     },
     {
