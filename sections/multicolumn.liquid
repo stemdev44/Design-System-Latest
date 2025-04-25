@@ -110,9 +110,9 @@
         }
 
         {%- if section.settings.remove_inner_padding == true -%}
-          .section-{{ section.id }}-padding .multicolumn-card__info{
-            padding-left:0;
-            padding-right:0;
+          .section-{{ section.id }}-padding .multicolumn-card__info:not(:last-child){
+            padding-left:0 !important;
+            padding-right:0 !important;
           }        
         {%- endif -%}
 
