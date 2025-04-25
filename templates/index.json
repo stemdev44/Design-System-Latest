@@ -39,7 +39,8 @@
             "background_style": "primary",
             "column_background_color": "#242833",
             "column_font_color": "#ffffff",
-            "column_corner_radius": 40
+            "column_corner_radius": 40,
+            "no_border_style": true
           }
         },
         "column_nF6tXD": {
@@ -69,7 +70,8 @@
             "background_style": "primary",
             "column_background_color": "#f3f3f3",
             "column_font_color": "#000000",
-            "column_corner_radius": 40
+            "column_corner_radius": 40,
+            "no_border_style": false
           }
         },
         "column_fda4J4": {
@@ -99,7 +101,8 @@
             "background_style": "primary",
             "column_background_color": "#000000",
             "column_font_color": "#ffffff",
-            "column_corner_radius": 40
+            "column_corner_radius": 40,
+            "no_border_style": false
           }
         }
       },
