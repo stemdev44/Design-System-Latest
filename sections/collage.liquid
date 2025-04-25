@@ -450,6 +450,7 @@
                             {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                           {%- endif -%}
                         </div>
+                        
                       </button>
                     </div>
                   </modal-opener>
@@ -577,6 +578,32 @@
                   {% endif %}
                 >
                     {%- if block.type == 'image'-%}
+                        <style>
+                          {%- if block.settings.desktop_content_position == 'top' -%}
+                            .{{ block.id }}-banner__content.banner__content {
+                              align-items: flex-start;
+                            }
+                          {%- endif -%}
+
+                          {%- if block.settings.desktop_content_position == 'middle' -%}
+                            .{{ block.id }}-banner__content.banner__content {
+                              align-items: center;
+                            }
+                          {%- endif -%}
+
+                          {%- if block.settings.desktop_content_position == 'bottom' -%}
+                            .{{ block.id }}-banner__content.banner__content {
+                              align-items: flex-end;
+                            }
+                          {%- endif -%}
+
+                          {%- if block.settings.no_border_style == true -%}
+                            .{{block.id}}-button.button:after{
+                              box-shadow: none !important;
+                            }
+                          {%- endif -%}
+
+                        </style>              
                       <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
                         <div
                           class="media media--transparent ratio"
@@ -586,6 +613,7 @@
                             style="--ratio-percent: 100%"
                           {% endif %}
                         >
+
                           {%- if block.settings.image != blank -%}
                             {%- liquid
                               if section.settings.desktop_layout == 'left'
@@ -627,8 +655,42 @@
                           {%- else -%}
                             {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                           {%- endif -%}
+
+                      {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
+                        {%- if block.settings.heading != blank or block.settings.button_label != blank  -%}
+                          <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
+                            <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+                              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" style="text-align: {{block.settings.heading_alignment}}"
+                                {{ block.shopify_attributes }}
+                              >
+                                {{ block.settings.heading }}
+                              </h2>
+
+                              <div class="center">
+                                {%- if block.settings.button_label != blank -%}
+                                  <a
+                                    class="{{block.id}}-button button {% if block.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
+                                    {% if block.settings.button_link == blank %}
+                                      role="link" aria-disabled="true"
+                                    {% else %}
+                                      href="{{ block.settings.button_link }}"
+                                    {% endif %}
+                                    style="color: {{block.settings.video_button_font}}; background-color: {{block.settings.video_button_background}};" 
+                                  >
+                                    {{ block.settings.button_label | escape }}
+                                  </a>
+                                {%- endif -%}
+                              </div>
+
+                            </div>
+                          </div>                  
+                        {%- endif -%}
+                      
+                      {% comment %} ////////////////////////// Image Heading Ends  /////////////// {% endcomment %}      
+
                         </div>
-                      </div>                
+                  
+                      </div>               
                     {%- endif -%}
 
                     {%- if block.type == 'product'-%}
