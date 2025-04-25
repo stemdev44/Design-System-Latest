@@ -40,7 +40,7 @@
             "column_background_color": "#242833",
             "column_font_color": "#334fb4",
             "column_corner_radius": 40,
-            "border_style": true
+            "border_style": false
           }
         },
         "column_nF6tXD": {
@@ -71,7 +71,7 @@
             "column_background_color": "#f3f3f3",
             "column_font_color": "#000000",
             "column_corner_radius": 40,
-            "border_style": true
+            "border_style": false
           }
         },
         "column_fda4J4": {
