@@ -323,23 +323,25 @@
                     {%- endif -%}
 
                 {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
-                  <style>
+                  {% comment %} <style>
                     {%- if block.settings.desktop_content_position == 'top' -%}
                        .{{block.id}}-banner__content{
                          align-items:"flex-start"
                        }                  
                     {%- endif -%}
+
                     {%- if block.settings.desktop_content_position == 'middle' -%}
                        .{{block.id}}-banner__content{
                          align-items:"center"
                        }                  
                     {%- endif -%}
+                    
                     {%- if block.settings.desktop_content_position == 'bottom' -%}
                        .{{block.id}}-banner__content{
                          align-items:"flex-end"
                        }                  
                     {%- endif -%}                                        
-                  </style>
+                  </style> {% endcomment %}
                   <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
                     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
                         <h3>Image Heading goes</h3>
