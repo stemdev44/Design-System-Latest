@@ -182,7 +182,7 @@
           "settings": {
             "image": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png",
             "desktop_content_position": "bottom",
-            "heading": "Image banner",
+            "heading": "",
             "heading_size": "h1"
           }
         },
