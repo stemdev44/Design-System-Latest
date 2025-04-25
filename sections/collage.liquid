@@ -342,7 +342,7 @@
                     {%- endif -%}
 
                 {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
-                  {%- unless block.settings.heading != blank  -%}
+                  {%- unless block.settings.heading == blank  -%}
                     <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
                       <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
                         <h2
