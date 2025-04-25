@@ -287,7 +287,7 @@
         "layout": "grid",
         "columns_desktop": 4,
         "column_alignment": "center",
-        "background_style": "none",
+        "background_style": "primary",
         "column_background_color": "#242833",
         "column_font_color": "#ffffff",
         "column_corner_radius": 40,
