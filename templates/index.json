@@ -295,7 +295,8 @@
         "swipe_on_mobile": true,
         "slider_visual": "dots",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "remove_inner_padding": true
       }
     },
     "image_banner_cTFcJk": {
