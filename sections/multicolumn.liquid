@@ -40,7 +40,7 @@
     {% endif %}
   >
     {%- if section.settings.caption != blank -%}
-      <div class = "{{section.id}}-caption-container" style="display:flex; justify-content:center;">
+      <div class = "{{section.id}}-caption-container" style="display:flex;">
         <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" style="text-align: {{ section.settings.heading_alignment }}; width:max-content;">
           {{ section.settings.caption | escape }}
         </p>      
@@ -96,6 +96,10 @@
             {%- if section.settings.heading_alignment == 'right' -%}
               justify-content: flex-end;
             {%- endif -%}
+
+            {%- if section.settings.heading_alignment == 'center' -%}
+              justify-content: center;
+            {%- endif -%}            
           }
 
         .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Tenth-width {
