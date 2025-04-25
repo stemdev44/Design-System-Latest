@@ -277,6 +277,7 @@
                       style="--ratio-percent: 100%"
                     {% endif %}
                   >
+
                     {%- if block.settings.image != blank -%}
                       {%- liquid
                         if section.settings.desktop_layout == 'left'
@@ -318,14 +319,17 @@
                     {%- else -%}
                       {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                     {%- endif -%}
-                  </div>
+
                 {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
                   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
                         <h3>Image Heading goes</h3>
                     </div>
                   </div>                        
-                {% comment %} ////////////////////////// Image Heading Ends  /////////////// {% endcomment %}                  
+                {% comment %} ////////////////////////// Image Heading Ends  /////////////// {% endcomment %}      
+
+                  </div>
+            
                 </div>
               {%- when 'product' -%}
                 {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
