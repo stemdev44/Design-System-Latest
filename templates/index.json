@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/Product5_home2.png",
             "heading": "Product Heading",
             "desktop_content_position": "middle",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "heading_alignment": "center",
             "button_label": "Button",
             "button_link": "shopify://products/one-shoulder-bow-to",
