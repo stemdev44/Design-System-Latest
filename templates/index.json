@@ -129,6 +129,125 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_dJfY7c": {
+      "type": "image-with-text",
+      "blocks": {
+        "collapsible_row_xFKmn8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "custom",
+            "row_content": "",
+            "page": "",
+            "open_first_collapsible_row": false,
+            "background_style": "none",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 23
+          }
+        },
+        "collapsible_row_9RwW6U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>test row content</p>",
+            "page": "",
+            "open_first_collapsible_row": false,
+            "background_style": "primary",
+            "column_background_color": "#000000",
+            "column_font_color": "#ffffff",
+            "column_corner_radius": 18
+          }
+        },
+        "collapsible_row_MXawYe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>This is test 2</p>",
+            "page": "",
+            "open_first_collapsible_row": true,
+            "background_style": "primary",
+            "column_background_color": "#000000",
+            "column_font_color": "#f3f3f3",
+            "column_corner_radius": 0
+          }
+        },
+        "image_picker_nP6yjb": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/bg_image.png"
+          }
+        },
+        "caption_8kY69t": {
+          "type": "caption",
+          "settings": {
+            "caption": "Image with text caption",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        },
+        "heading_LCFf44": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_GCPqjX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/checkmark.png"
+          }
+        },
+        "button_UaqwYV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Demo",
+            "button_link": "#",
+            "button_style_secondary": true,
+            "no_border_style": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_xFKmn8",
+        "collapsible_row_9RwW6U",
+        "collapsible_row_MXawYe",
+        "image_picker_nP6yjb",
+        "caption_8kY69t",
+        "heading_LCFf44",
+        "text_GCPqjX",
+        "button_UaqwYV"
+      ],
+      "settings": {
+        "layout_page": "grid",
+        "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 24,
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video_url": "https://vimeo.com/1075236679",
+        "cover_image": "shopify://shop_images/bg_image.png",
+        "video_button_text": "See how this work",
+        "video_button_background": "rgba(0,0,0,0)",
+        "video_button_font": "#000000",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -215,7 +334,7 @@
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
-        "button_style_secondary": true,
+        "button_style_secondary": false,
         "layout": "grid",
         "columns_desktop": 4,
         "column_alignment": "center",
@@ -476,125 +595,6 @@
         "video_button_font": "",
         "video_button_style_secondary": false,
         "video_no_border_style": false,
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_dJfY7c": {
-      "type": "image-with-text",
-      "blocks": {
-        "collapsible_row_xFKmn8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "row_content": "",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "none",
-            "column_background_color": "",
-            "column_font_color": "",
-            "column_corner_radius": 23
-          }
-        },
-        "collapsible_row_9RwW6U": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>test row content</p>",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "primary",
-            "column_background_color": "#000000",
-            "column_font_color": "#ffffff",
-            "column_corner_radius": 18
-          }
-        },
-        "collapsible_row_MXawYe": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>This is test 2</p>",
-            "page": "",
-            "open_first_collapsible_row": true,
-            "background_style": "primary",
-            "column_background_color": "#000000",
-            "column_font_color": "#f3f3f3",
-            "column_corner_radius": 0
-          }
-        },
-        "image_picker_nP6yjb": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/bg_image.png"
-          }
-        },
-        "caption_8kY69t": {
-          "type": "caption",
-          "settings": {
-            "caption": "Image with text caption",
-            "text_style": "subtitle",
-            "text_size": "small"
-          }
-        },
-        "heading_LCFf44": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_GCPqjX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/checkmark.png"
-          }
-        },
-        "button_UaqwYV": {
-          "type": "button",
-          "settings": {
-            "button_label": "Demo",
-            "button_link": "#",
-            "button_style_secondary": true,
-            "no_border_style": false
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_xFKmn8",
-        "collapsible_row_9RwW6U",
-        "collapsible_row_MXawYe",
-        "image_picker_nP6yjb",
-        "caption_8kY69t",
-        "heading_LCFf44",
-        "text_GCPqjX",
-        "button_UaqwYV"
-      ],
-      "settings": {
-        "layout_page": "grid",
-        "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "column_corner_radius": 24,
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video_url": "https://vimeo.com/1075236679",
-        "cover_image": "shopify://shop_images/bg_image.png",
-        "video_button_text": "See how this work",
-        "video_button_background": "#334fb4",
-        "video_button_font": "#ffffff",
-        "video_button_style_secondary": false,
-        "video_no_border_style": true,
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -1193,12 +1193,12 @@
   },
   "order": [
     "compare_table_4zE6WA",
+    "image_with_text_dJfY7c",
     "multicolumn",
     "collapsible_content_qUw7fA",
     "featured_product_cYrmtf",
     "featured_collection_K8EbeM",
     "image_with_table_fE4tBh",
-    "image_with_text_dJfY7c",
     "image_banner_cTFcJk",
     "carousel_mVMEgi",
     "image_with_blocks_GqxVzw",
