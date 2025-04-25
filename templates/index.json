@@ -168,18 +168,18 @@
     "collage": {
       "type": "collage",
       "blocks": {
+        "image_PTGAJA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Product1_home2_9d8515e7-36d7-43de-910c-7ce92bf1337d.png",
+            "desktop_content_position": "top"
+          }
+        },
         "image_7hhWyx": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Product5_home2.png",
-            "desktop_content_position": "top"
-          }
-        },
-        "image_e3jJF3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png",
-            "desktop_content_position": "bottom-right"
+            "desktop_content_position": "bottom"
           }
         },
         "product_Pwwjgb": {
@@ -191,8 +191,8 @@
         }
       },
       "block_order": [
+        "image_PTGAJA",
         "image_7hhWyx",
-        "image_e3jJF3",
         "product_Pwwjgb"
       ],
       "settings": {
