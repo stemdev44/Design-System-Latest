@@ -270,6 +270,25 @@
             {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
             {%- case block.type -%}
               {%- when 'image' -%}
+                  <style>
+                    {%- if block.settings.desktop_content_position == 'top' -%}
+                      .{{ block.id }}-banner__content.banner__content {
+                        align-items: flex-start;
+                      }
+                    {%- endif -%}
+
+                    {%- if block.settings.desktop_content_position == 'middle' -%}
+                      .{{ block.id }}-banner__content.banner__content {
+                        align-items: center;
+                      }
+                    {%- endif -%}
+
+                    {%- if block.settings.desktop_content_position == 'bottom' -%}
+                      .{{ block.id }}-banner__content.banner__content {
+                        align-items: flex-end;
+                      }
+                    {%- endif -%}
+                  </style>              
                 <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
                   <div
                     class="media media--transparent ratio"
@@ -323,25 +342,7 @@
                     {%- endif -%}
 
                 {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
-                  <style>
-                    {%- if block.settings.desktop_content_position == 'top' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: flex-start;
-                      }
-                    {%- endif -%}
 
-                    {%- if block.settings.desktop_content_position == 'middle' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: center;
-                      }
-                    {%- endif -%}
-
-                    {%- if block.settings.desktop_content_position == 'bottom' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: flex-end;
-                      }
-                    {%- endif -%}
-                  </style>
                   <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
                     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
                         <h3>Image Heading goes</h3>
