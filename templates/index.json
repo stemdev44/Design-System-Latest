@@ -101,7 +101,7 @@
             "background_style": "primary",
             "column_background_color": "#000000",
             "column_font_color": "#ffffff",
-            "column_corner_radius": 40,
+            "column_corner_radius": 0,
             "border_style": true
           }
         }
