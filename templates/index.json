@@ -102,7 +102,7 @@
             "column_background_color": "#000000",
             "column_font_color": "#ffffff",
             "column_corner_radius": 0,
-            "border_style": true
+            "border_style": false
           }
         }
       },
