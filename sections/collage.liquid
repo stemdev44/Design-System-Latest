@@ -271,24 +271,6 @@
             {%- case block.type -%}
               {%- when 'image' -%}
                   <style>
-                    {%- if block.settings.desktop_content_position == 'top' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: flex-start;
-                      }
-                    {%- endif -%}
-
-                    {%- if block.settings.desktop_content_position == 'middle' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: center;
-                      }
-                    {%- endif -%}
-
-                    {%- if block.settings.desktop_content_position == 'bottom' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: flex-end;
-                      }
-                    {%- endif -%}
-
                     {%- if block.settings.no_border_style == true -%}
                       .{{block.id}}-button.button:after{
                         box-shadow: none !important;
