@@ -270,32 +270,7 @@
             {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
             {%- case block.type -%}
               {%- when 'image' -%}
-                  <style>
-                    {%- if block.settings.desktop_content_position == 'top' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: flex-start;
-                      }
-                    {%- endif -%}
-
-                    {%- if block.settings.desktop_content_position == 'middle' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: center;
-                      }
-                    {%- endif -%}
-
-                    {%- if block.settings.desktop_content_position == 'bottom' -%}
-                      .{{ block.id }}-banner__content.banner__content {
-                        align-items: flex-end;
-                      }
-                    {%- endif -%}
-
-                    {%- if block.settings.no_border_style == true -%}
-                      .{{block.id}}-button.button:after{
-                        box-shadow: none !important;
-                      }
-                    {%- endif -%}
-
-                  </style>              
+              
                 <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
                   <div
                     class="media media--transparent ratio"
@@ -349,8 +324,9 @@
                     {%- endif -%}
 
                 {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
+                  <style>
                   {%- if block.settings.heading != blank or block.settings.button_label != blank  -%}
-                    <div class="{{block.id}}-banner__content banner__content" style="display:flex;justify-content:center">
+                    <div class="{{block.id}}-banner__content banner__content banner__content--{{ block.settings.desktop_content_position }}" style="display:flex;">
                       <div>
                         <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" style="text-align: {{block.settings.heading_alignment}}"
                           {{ block.shopify_attributes }}
@@ -1087,19 +1063,43 @@
           "id": "desktop_content_position",
           "options": [
             {
-              "value": "top",
-              "label": "Top"
+              "value": "top-left",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
             },
             {
-              "value": "middle",
-              "label": "Middle"
+              "value": "top-center",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
             },
             {
-              "value": "bottom",
-              "label": "Bottom"
+              "value": "top-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+            },
+            {
+              "value": "middle-left",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+            },
+            {
+              "value": "middle-center",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+            },
+            {
+              "value": "middle-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+            },
+            {
+              "value": "bottom-left",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+            },
+            {
+              "value": "bottom-center",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+            },
+            {
+              "value": "bottom-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
             }
           ],
-          "default": "middle",
+          "default": "middle-center",
           "label": "Heading Position"
         },        
         {
