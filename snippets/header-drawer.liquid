@@ -134,9 +134,7 @@
                 </li>
               {%- endfor -%}
             </ul>
-          </nav>
-          {% comment %} /////////////// Secondary Menu Start/////////////////// {% endcomment %}
-            <nav class="menu-drawer__navigation secondary__menu">
+            {% comment %} //////////////////////// Secondary Menu Start ////////////////// {% endcomment %}
               <ul class="menu-drawer__menu has-submenu list-menu" role="list">
                 {%- for link in secondary_menu.links -%}
                   <li>
@@ -250,9 +248,9 @@
                     {%- endif -%}
                   </li>
                 {%- endfor -%}
-              </ul>
-            </nav>          
-          {% comment %} /////////////// Secondary Menu End/////////////////// {% endcomment %}
+              </ul>            
+            {% comment %} //////////////////////// Secondary Menu Ends  ///////////////////{% endcomment %}
+          </nav>
           <div class="menu-drawer__utility-links">
             {%- if shop.customer_accounts_enabled -%}
               <a
