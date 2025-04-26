@@ -99,10 +99,13 @@
     {% endif %}
   >
     {%- if section.settings.caption != blank -%}
-      <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" style="text-align: {{ section.settings.heading_alignment }};">
-        {{ section.settings.caption | escape }}
-      </p>
-    {% endif %}  
+      <div class = "{{section.id}}-caption-container" style="display:flex;">
+        <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" 
+            style="text-align: {{ section.settings.heading_alignment }}; width:max-content; background:{{section.settings.caption_background_color}}; color:{{section.settings.caption_font_color}}; padding:5px; border-radius:10px; ">
+          {{ section.settings.caption | escape }}
+        </p>      
+      </div>
+    {% endif %} 
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
         <h2 class="title inline-richtext {{ section.settings.heading_size }}" style="width:100%; text-align:{{section.settings.heading_alignment}};">
@@ -125,6 +128,7 @@
         <style>
           @media screen and (max-width: 749px) {
              .section-{{ section.id }}-padding .{{ section.settings.description_style }},
+             .{{section.id}}-caption-container,
              .section-{{ section.id }}-padding .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
               {
                 text-align:{{section.settings.mobile_description_alignment}} !important;  
@@ -134,7 +138,35 @@
             .section-{{ section.id }}-padding .multicolumn__title .title{
                 text-align: {{ section.settings.mobile_description_alignment }} !important;
               }
+            .{{section.id}}-caption-container {
+              {%- if section.settings.mobile_description_alignment == 'left' -%}
+                justify-content: flex-start !important;
+              {%- endif -%}
+
+              {%- if section.settings.mobile_description_alignment == 'right' -%}
+                justify-content: flex-end !important;
+              {%- endif -%}
+
+              {%- if section.settings.mobile_description_alignment == 'center' -%}
+                justify-content: center !important;
+              {%- endif -%}              
+            }
           }
+
+          .{{section.id}}-caption-container {
+            {%- if section.settings.heading_alignment == 'left' -%}
+              justify-content: flex-start;
+            {%- endif -%}
+
+            {%- if section.settings.heading_alignment == 'right' -%}
+              justify-content: flex-end;
+            {%- endif -%}
+
+            {%- if section.settings.heading_alignment == 'center' -%}
+              justify-content: center;
+            {%- endif -%}            
+          }
+
             {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
             @media screen and (min-width: 990px) {
                 .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
