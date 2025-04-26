@@ -7,12 +7,6 @@
 
 {% assign allMenu = section.settings.menu %}
 
-{% if secondary_menu != blank %}
-  {% capture allMenu %}{{ allMenu }},{{ secondary_menu }}{% endcapture %}
-{% endif %}
-
-{% assign menu_array = allMenu | split: ',' %}
-
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
@@ -29,7 +23,7 @@
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
-              {%- for link in menu_array.links -%}
+              {%- for link in allMenu.links -%}
                 <li>
                   {%- if link.links != blank -%}
                     <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
