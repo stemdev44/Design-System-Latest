@@ -218,10 +218,15 @@
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       {% comment %} //////////////Adding Secondary menu start /////////////// {% endcomment %}
-      {% assign secondary_menu = section.blocks[0].settings.secondary_menu %}
-      {%- if section.settings.logo_position == 'middle-center' and  secondary_menu != blank-%}
-        {% render 'secondary-header-dropdown-menu', secondary_menu: secondary_menu %}
-      {%- endif -%}
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'secondary_menu' -%}
+              {% assign secondary_menu = block.settings.secondary_menu %}
+              {%- if section.settings.logo_position == 'middle-center' and  secondary_menu != blank-%}
+                {% render 'secondary-header-dropdown-menu', secondary_menu: secondary_menu %}
+              {%- endif -%}                  
+          {%- endcase -%}
+        {%- endfor -%}
       {% comment %} //////////////Adding Secondary menu end /////////////// {% endcomment %}
           
       <div class="desktop-localization-wrapper">
