@@ -39,17 +39,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "secondary_menu_eQzbxR": {
-          "type": "secondary_menu",
-          "settings": {
-            "secondary_menu": "main-menu"
-          }
-        }
-      },
-      "block_order": [
-        "secondary_menu_eQzbxR"
-      ],
       "settings": {
         "logo_position": "middle-center",
         "mobile_logo_position": "center",
