@@ -39,6 +39,17 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "secondary_menu_GNXh37": {
+          "type": "secondary_menu",
+          "settings": {
+            "secondary_menu": "secondary-menu"
+          }
+        }
+      },
+      "block_order": [
+        "secondary_menu_GNXh37"
+      ],
       "settings": {
         "logo_position": "middle-center",
         "mobile_logo_position": "center",
