@@ -68,7 +68,7 @@
             "text_row_T": "",
             "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "#334fb4",
+            "column_background_color": "#f3f3f3",
             "column_font_color": "#000000",
             "column_corner_radius": 19,
             "border_style": true
@@ -99,8 +99,8 @@
             "text_row_T": "",
             "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "#000000",
-            "column_font_color": "#f3f3f3",
+            "column_background_color": "#f3f3f3",
+            "column_font_color": "#334fb4",
             "column_corner_radius": 0,
             "border_style": false
           }
@@ -124,7 +124,7 @@
         "description_style": "body",
         "layout": "grid",
         "columns_desktop": 3,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "slider_visual": "dots",
