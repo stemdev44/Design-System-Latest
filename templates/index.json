@@ -70,7 +70,7 @@
             "background_style": "primary",
             "column_background_color": "#334fb4",
             "column_font_color": "#000000",
-            "column_corner_radius": 23,
+            "column_corner_radius": 19,
             "border_style": true
           }
         },
@@ -101,7 +101,7 @@
             "background_style": "primary",
             "column_background_color": "#000000",
             "column_font_color": "#f3f3f3",
-            "column_corner_radius": 26,
+            "column_corner_radius": 40,
             "border_style": false
           }
         }
