@@ -137,17 +137,7 @@
         }
 
         {%- if section.settings.remove_inner_padding == true -%}        
-          {% comment %} .section-{{ section.id }}-padding .multicolumn-card__info {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-          }
-          
-          .section-{{ section.id }}-padding .multicolumn-list__item:first-child .multicolumn-card__info {
-            padding-left: 1.5rem !important; 
-          }          
-          .section-{{ section.id }}-padding .multicolumn-list__item:last-child .multicolumn-card__info {
-            padding-right: 1.5rem !important; 
-          }         {% endcomment %}
+
           .section-{{ section.id }}-padding .multicolumn-list.grid {
              column-gap:0 !important;
              row-gap:0 !important;
