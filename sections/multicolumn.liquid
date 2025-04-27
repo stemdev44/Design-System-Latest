@@ -157,11 +157,15 @@
             border-radius: 0px !important;
           }
 
-          .multicolumn-list__item:first-child .multicolumn-card,
-          .multicolumn-list__item:last-child .multicolumn-card {
+          .multicolumn-list__item:first-child .multicolumn-card {
             border-top-left-radius: {{ section.settings.column_corner_radius }}px !important;
             border-bottom-left-radius: {{ section.settings.column_corner_radius }}px !important;
           }
+          
+          .multicolumn-list__item:last-child .multicolumn-card {
+            border-top-right-radius: {{ section.settings.column_corner_radius }}px !important;
+            border-bottom-right-radius: {{ section.settings.column_corner_radius }}px !important;
+          }          
         {%- endif -%}
 
         </style>
