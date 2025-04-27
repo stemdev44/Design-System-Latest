@@ -124,7 +124,7 @@
         "description_style": "body",
         "layout": "grid",
         "columns_desktop": 3,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-4",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "slider_visual": "dots",
