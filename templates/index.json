@@ -12,6 +12,37 @@
     "compare_table_4zE6WA": {
       "type": "compare-table",
       "blocks": {
+        "column_4ayimq": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "",
+            "text_row_E": "",
+            "text_row_F": "",
+            "text_row_G": "",
+            "text_row_H": "",
+            "text_row_I": "",
+            "text_row_J": "",
+            "text_row_K": "",
+            "text_row_L": "",
+            "text_row_M": "",
+            "text_row_N": "",
+            "text_row_O": "",
+            "text_row_P": "",
+            "text_row_Q": "",
+            "text_row_R": "",
+            "text_row_S": "",
+            "text_row_T": "",
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0,
+            "border_style": true
+          }
+        },
         "column_yJxRCR": {
           "type": "column",
           "settings": {
@@ -166,46 +197,15 @@
             "column_corner_radius": 0,
             "border_style": true
           }
-        },
-        "column_fda4J4": {
-          "type": "column",
-          "settings": {
-            "text_row_A": "<p>Text Row A</p>",
-            "text_row_B": "<p>Text Row B</p>",
-            "text_row_C": "<p>Text Row C</p>",
-            "text_row_D": "<p>Text Row D</p>",
-            "text_row_E": "<p>Text Row E</p>",
-            "text_row_F": "",
-            "text_row_G": "",
-            "text_row_H": "",
-            "text_row_I": "<p>Text Row I</p>",
-            "text_row_J": "",
-            "text_row_K": "",
-            "text_row_L": "",
-            "text_row_M": "",
-            "text_row_N": "",
-            "text_row_O": "",
-            "text_row_P": "",
-            "text_row_Q": "",
-            "text_row_R": "",
-            "text_row_S": "",
-            "text_row_T": "",
-            "column_alignment": "center",
-            "background_style": "none",
-            "column_background_color": "#f3f3f3",
-            "column_font_color": "#334fb4",
-            "column_corner_radius": 7,
-            "border_style": true
-          }
         }
       },
       "block_order": [
+        "column_4ayimq",
         "column_yJxRCR",
         "column_qzjq89",
         "column_nF6tXD",
         "column_rhctqM",
-        "column_KPTMkz",
-        "column_fda4J4"
+        "column_KPTMkz"
       ],
       "name": "Compare Table",
       "settings": {
