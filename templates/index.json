@@ -105,7 +105,7 @@
         "background_style": "primary",
         "column_background_color": "#242833",
         "column_font_color": "#ffffff",
-        "column_corner_radius": 22,
+        "column_corner_radius": 16,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
