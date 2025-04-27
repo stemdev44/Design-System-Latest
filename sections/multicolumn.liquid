@@ -144,7 +144,9 @@
           }
 
           .section-{{ section.id }}-padding .multicolumn-list__item  {
-            flex: 1 0 0%; /* allow it to grow and fill */
+            flex-grow: 1;
+            flex-basis: 0;
+            max-width: 100%;            
           }
           .section-{{ section.id }}-padding .multicolumn-list__item .multicolumn-card {
             border-radius: 0px !important;
