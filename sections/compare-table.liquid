@@ -116,7 +116,7 @@
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
-              style="--animation-order: {{ forloop.index }};{% if block.settings.border_style == true %} border:1px solid {{block.settings.column_font_color}}; {% endif %} border-radius:{{block.settings.column_corner_radius}}px; overflow:hidden;"
+              style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
               <div class="multicolumn-card content-container" style="{% if block.settings.background_style == 'primary' %} background:{{ block.settings.column_background_color }}; {% endif %}">
