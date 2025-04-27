@@ -9,6 +9,235 @@
  */
 {
   "sections": {
+    "compare_table_4zE6WA": {
+      "type": "compare-table",
+      "blocks": {
+        "column_qzjq89": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>",
+            "text_row_F": "",
+            "text_row_G": "",
+            "text_row_H": "",
+            "text_row_I": "<p>Text Row I</p>",
+            "text_row_J": "",
+            "text_row_K": "",
+            "text_row_L": "",
+            "text_row_M": "",
+            "text_row_N": "",
+            "text_row_O": "",
+            "text_row_P": "",
+            "text_row_Q": "",
+            "text_row_R": "",
+            "text_row_S": "",
+            "text_row_T": "",
+            "column_alignment": "center",
+            "background_style": "primary",
+            "column_background_color": "#ffffff",
+            "column_font_color": "#000000",
+            "column_corner_radius": 0,
+            "border_style": false
+          }
+        },
+        "column_nF6tXD": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>",
+            "text_row_F": "",
+            "text_row_G": "",
+            "text_row_H": "",
+            "text_row_I": "<p>Text Row I</p>",
+            "text_row_J": "",
+            "text_row_K": "",
+            "text_row_L": "",
+            "text_row_M": "",
+            "text_row_N": "",
+            "text_row_O": "",
+            "text_row_P": "",
+            "text_row_Q": "",
+            "text_row_R": "",
+            "text_row_S": "",
+            "text_row_T": "",
+            "column_alignment": "center",
+            "background_style": "primary",
+            "column_background_color": "#334fb4",
+            "column_font_color": "#000000",
+            "column_corner_radius": 23,
+            "border_style": true
+          }
+        },
+        "column_fda4J4": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "<p>Text Row D</p>",
+            "text_row_E": "<p>Text Row E</p>",
+            "text_row_F": "",
+            "text_row_G": "",
+            "text_row_H": "",
+            "text_row_I": "<p>Text Row I</p>",
+            "text_row_J": "",
+            "text_row_K": "",
+            "text_row_L": "",
+            "text_row_M": "",
+            "text_row_N": "",
+            "text_row_O": "",
+            "text_row_P": "",
+            "text_row_Q": "",
+            "text_row_R": "",
+            "text_row_S": "",
+            "text_row_T": "",
+            "column_alignment": "center",
+            "background_style": "primary",
+            "column_background_color": "#000000",
+            "column_font_color": "#f3f3f3",
+            "column_corner_radius": 26,
+            "border_style": false
+          }
+        }
+      },
+      "block_order": [
+        "column_qzjq89",
+        "column_nF6tXD",
+        "column_fda4J4"
+      ],
+      "name": "Compare Table",
+      "settings": {
+        "caption": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Compare Table",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "description": "",
+        "description_style": "body",
+        "layout": "grid",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wTBa4j": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dFHaQB": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fbadpH": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rTq6tM": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Handbag.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wTBa4j",
+        "column_dFHaQB",
+        "column_fbadpH",
+        "column_rTq6tM"
+      ],
+      "settings": {
+        "caption": "Mutlicolumn Caption",
+        "text_style": "subtitle",
+        "text_size": "medium",
+        "caption_background_color": "#121212",
+        "caption_font_color": "#f3f3f3",
+        "title": "Multicolumn Section",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "left",
+        "description": "<p>Description</p>",
+        "description_style": "uppercase",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "Button",
+        "button_link": "#",
+        "button_style_secondary": true,
+        "no_border_style": true,
+        "video_button_background": "#000000",
+        "video_button_font": "#f3f3f3",
+        "layout": "grid",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "column_background_color": "#242833",
+        "column_font_color": "#ffffff",
+        "column_corner_radius": 16,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "remove_inner_padding": false
+      }
+    },
     "image_with_text_dJfY7c": {
       "type": "image-with-text",
       "blocks": {
@@ -239,129 +468,6 @@
         "padding_bottom": 36
       }
     },
-    "compare_table_4zE6WA": {
-      "type": "compare-table",
-      "blocks": {
-        "column_qzjq89": {
-          "type": "column",
-          "settings": {
-            "text_row_A": "<p>Text Row A</p>",
-            "text_row_B": "<p>Text Row B</p>",
-            "text_row_C": "<p>Text Row C</p>",
-            "text_row_D": "<p>Text Row D</p>",
-            "text_row_E": "<p>Text Row E</p>",
-            "text_row_F": "",
-            "text_row_G": "",
-            "text_row_H": "",
-            "text_row_I": "<p>Text Row I</p>",
-            "text_row_J": "",
-            "text_row_K": "",
-            "text_row_L": "",
-            "text_row_M": "",
-            "text_row_N": "",
-            "text_row_O": "",
-            "text_row_P": "",
-            "text_row_Q": "",
-            "text_row_R": "",
-            "text_row_S": "",
-            "text_row_T": "",
-            "column_alignment": "center",
-            "background_style": "primary",
-            "column_background_color": "#ffffff",
-            "column_font_color": "#000000",
-            "column_corner_radius": 0,
-            "border_style": false
-          }
-        },
-        "column_nF6tXD": {
-          "type": "column",
-          "settings": {
-            "text_row_A": "<p>Text Row A</p>",
-            "text_row_B": "<p>Text Row B</p>",
-            "text_row_C": "<p>Text Row C</p>",
-            "text_row_D": "<p>Text Row D</p>",
-            "text_row_E": "<p>Text Row E</p>",
-            "text_row_F": "",
-            "text_row_G": "",
-            "text_row_H": "",
-            "text_row_I": "<p>Text Row I</p>",
-            "text_row_J": "",
-            "text_row_K": "",
-            "text_row_L": "",
-            "text_row_M": "",
-            "text_row_N": "",
-            "text_row_O": "",
-            "text_row_P": "",
-            "text_row_Q": "",
-            "text_row_R": "",
-            "text_row_S": "",
-            "text_row_T": "",
-            "column_alignment": "center",
-            "background_style": "primary",
-            "column_background_color": "#334fb4",
-            "column_font_color": "#000000",
-            "column_corner_radius": 23,
-            "border_style": true
-          }
-        },
-        "column_fda4J4": {
-          "type": "column",
-          "settings": {
-            "text_row_A": "<p>Text Row A</p>",
-            "text_row_B": "<p>Text Row B</p>",
-            "text_row_C": "<p>Text Row C</p>",
-            "text_row_D": "<p>Text Row D</p>",
-            "text_row_E": "<p>Text Row E</p>",
-            "text_row_F": "",
-            "text_row_G": "",
-            "text_row_H": "",
-            "text_row_I": "<p>Text Row I</p>",
-            "text_row_J": "",
-            "text_row_K": "",
-            "text_row_L": "",
-            "text_row_M": "",
-            "text_row_N": "",
-            "text_row_O": "",
-            "text_row_P": "",
-            "text_row_Q": "",
-            "text_row_R": "",
-            "text_row_S": "",
-            "text_row_T": "",
-            "column_alignment": "center",
-            "background_style": "primary",
-            "column_background_color": "#000000",
-            "column_font_color": "#f3f3f3",
-            "column_corner_radius": 26,
-            "border_style": false
-          }
-        }
-      },
-      "block_order": [
-        "column_qzjq89",
-        "column_nF6tXD",
-        "column_fda4J4"
-      ],
-      "name": "Compare Table",
-      "settings": {
-        "caption": "",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "title": "Compare Table",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
-        "description": "",
-        "description_style": "body",
-        "layout": "grid",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "slider_visual": "dots",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -424,112 +530,6 @@
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_wTBa4j": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_dFHaQB": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_fbadpH": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rTq6tM": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Handbag.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_wTBa4j",
-        "column_dFHaQB",
-        "column_fbadpH",
-        "column_rTq6tM"
-      ],
-      "settings": {
-        "caption": "Mutlicolumn Caption",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "caption_background_color": "#121212",
-        "caption_font_color": "#f3f3f3",
-        "title": "Multicolumn Section",
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "left",
-        "description": "<p>Description</p>",
-        "description_style": "uppercase",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "button_label": "Button",
-        "button_link": "#",
-        "button_style_secondary": true,
-        "no_border_style": true,
-        "video_button_background": "#000000",
-        "video_button_font": "#f3f3f3",
-        "layout": "grid",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "column_background_color": "#242833",
-        "column_font_color": "#ffffff",
-        "column_corner_radius": 16,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "slider_visual": "dots",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "remove_inner_padding": true
       }
     },
     "carousel_mVMEgi": {
@@ -1171,12 +1171,12 @@
     }
   },
   "order": [
+    "compare_table_4zE6WA",
+    "multicolumn",
     "image_with_text_dJfY7c",
     "image_with_blocks_GqxVzw",
     "image_with_table_fE4tBh",
-    "compare_table_4zE6WA",
     "collage",
-    "multicolumn",
     "carousel_mVMEgi",
     "image_banner_cTFcJk",
     "collapsible_content_qUw7fA",
