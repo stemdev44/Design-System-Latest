@@ -68,7 +68,7 @@
             "text_row_T": "",
             "column_alignment": "center",
             "background_style": "primary",
-            "column_background_color": "#f3f3f3",
+            "column_background_color": "#ffffff",
             "column_font_color": "#000000",
             "column_corner_radius": 16,
             "border_style": true
