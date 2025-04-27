@@ -191,7 +191,7 @@
             "text_row_S": "",
             "text_row_T": "",
             "column_alignment": "left",
-            "background_style": "primary",
+            "background_style": "none",
             "column_background_color": "",
             "column_font_color": "",
             "column_corner_radius": 0,
