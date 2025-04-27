@@ -12,6 +12,37 @@
     "compare_table_4zE6WA": {
       "type": "compare-table",
       "blocks": {
+        "column_yJxRCR": {
+          "type": "column",
+          "settings": {
+            "text_row_A": "<p>Text Row A</p>",
+            "text_row_B": "<p>Text Row B</p>",
+            "text_row_C": "<p>Text Row C</p>",
+            "text_row_D": "",
+            "text_row_E": "",
+            "text_row_F": "",
+            "text_row_G": "",
+            "text_row_H": "",
+            "text_row_I": "",
+            "text_row_J": "",
+            "text_row_K": "",
+            "text_row_L": "",
+            "text_row_M": "",
+            "text_row_N": "",
+            "text_row_O": "",
+            "text_row_P": "",
+            "text_row_Q": "",
+            "text_row_R": "",
+            "text_row_S": "",
+            "text_row_T": "",
+            "column_alignment": "left",
+            "background_style": "primary",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0,
+            "border_style": true
+          }
+        },
         "column_qzjq89": {
           "type": "column",
           "settings": {
@@ -36,11 +67,11 @@
             "text_row_S": "",
             "text_row_T": "",
             "column_alignment": "center",
-            "background_style": "none",
-            "column_background_color": "#f6f3eb",
+            "background_style": "primary",
+            "column_background_color": "#242833",
             "column_font_color": "#000000",
-            "column_corner_radius": 0,
-            "border_style": false
+            "column_corner_radius": 6,
+            "border_style": true
           }
         },
         "column_nF6tXD": {
@@ -164,11 +195,12 @@
             "column_background_color": "#f3f3f3",
             "column_font_color": "#334fb4",
             "column_corner_radius": 0,
-            "border_style": false
+            "border_style": true
           }
         }
       },
       "block_order": [
+        "column_yJxRCR",
         "column_qzjq89",
         "column_nF6tXD",
         "column_rhctqM",
@@ -187,7 +219,7 @@
         "description": "",
         "description_style": "body",
         "layout": "grid",
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "color_scheme": "scheme-4",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
