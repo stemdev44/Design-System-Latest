@@ -277,7 +277,8 @@
                       }                      
                     {%- endif -%}
 
-                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .media img{
+                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .media img,
+                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .media svg{
                       opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }} !important;
                     }
 
