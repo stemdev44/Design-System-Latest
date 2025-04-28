@@ -8,7 +8,7 @@
   {% render 'header-search', input_id: 'My-Id'%}
 {% endcomment %}
 
-<details-modal class="header__search">
+<details-modal class="header__search {% if mobile_search_icon_position == 'left' %} small-hide {% endif %}">
   <details>
     <summary
       class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
@@ -16,7 +16,7 @@
       aria-label="{{ 'general.search.search' | t }}"
     >
       <span>
-        <span class="svg-wrapper {% if mobile_search_icon_position == 'left' %} small-hide {% endif %}">
+        <span class="svg-wrapper">
           {%- if icon_for_search != blank -%}
             <img src="{{ icon_for_search | img_url:"" }}" class="icon">
           {%- else -%}
