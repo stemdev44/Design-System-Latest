@@ -15,7 +15,7 @@
         "image_LiKHBf": {
           "type": "image",
           "settings": {
-            "image_overlay_opacity": 20,
+            "image_overlay_opacity": 100,
             "image_column_corner_radius": 17,
             "heading": "Product Heading testing 1",
             "desktop_content_position": "middle-center",
