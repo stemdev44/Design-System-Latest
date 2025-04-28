@@ -585,6 +585,12 @@
                               box-shadow: none !important;
                             }
                           {%- endif -%}
+
+                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .media img,
+                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .media svg{
+                            opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }} !important;
+                          }                          
+
                           .section-{{ section.id }}-padding .collage-item-{{ forloop.index }}{
                             border-radius: {{ block.settings. image_column_corner_radius}}px !important;
                           }
