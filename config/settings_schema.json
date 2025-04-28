@@ -1451,5 +1451,23 @@
         "default": "scheme-1"
       }
     ]
-  }
+  },
+  {
+    "name": "Imran Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header For H1"
+      },
+      {
+        "type": "range",
+        "id": "h1_heading_size",
+        "step": 1,
+        "min": 1,
+        "max": 10,
+        "label": "Heading Size For h1 (rem)",
+        "default": 3
+      }
+    ]
+  } 
 ]
