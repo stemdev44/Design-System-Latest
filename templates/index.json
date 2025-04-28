@@ -15,6 +15,7 @@
         "image_LiKHBf": {
           "type": "image",
           "settings": {
+            "image_column_corner_radius": 17,
             "heading": "Product Heading testing 1",
             "desktop_content_position": "middle-center",
             "heading_size": "h2",
@@ -32,6 +33,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png",
+            "image_column_corner_radius": 14,
             "heading": "Product heading Testing 2",
             "desktop_content_position": "bottom-right",
             "heading_size": "h2",
