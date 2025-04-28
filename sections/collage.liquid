@@ -277,7 +277,7 @@
                       }                      
                     {%- endif -%}
 
-                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} ::after {
+                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }}{
                       opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                     }
 
