@@ -277,6 +277,10 @@
                       }                      
                     {%- endif -%}
 
+                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} ::after {
+                      opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+                    }
+
                     .section-{{ section.id }}-padding .collage-item-{{ forloop.index }}{
                       border-radius: {{ block.settings. image_column_corner_radius}}px !important;
                     }
@@ -1066,6 +1070,16 @@
           "id": "image",
           "label": "t:sections.collage.blocks.image.settings.image.label"
         },
+        {
+          "type": "range",
+          "id": "image_overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+          "default": 0
+        },        
         {
           "type": "range",
           "id": "image_column_corner_radius",
