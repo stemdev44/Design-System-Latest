@@ -12,30 +12,12 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "image_LiKHBf": {
-          "type": "image",
-          "settings": {
-            "image_overlay_opacity": 100,
-            "image_column_corner_radius": 17,
-            "heading": "Product Heading testing 1",
-            "desktop_content_position": "middle-center",
-            "heading_size": "h2",
-            "heading_alignment": "center",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": true,
-            "no_border_style": true,
-            "video_button_background": "",
-            "video_button_font": "",
-            "button_position": "center"
-          }
-        },
-        "image_XdkL67": {
+        "image_wzNPng": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
-            "image_overlay_opacity": 40,
-            "image_column_corner_radius": 40,
+            "image_overlay_opacity": 100,
+            "image_column_corner_radius": 35,
             "heading": "Product Heading",
             "desktop_content_position": "middle-center",
             "heading_size": "h1",
@@ -44,6 +26,24 @@
             "button_link": "",
             "button_style_secondary": false,
             "no_border_style": false,
+            "video_button_background": "",
+            "video_button_font": "",
+            "button_position": "center"
+          }
+        },
+        "image_LiKHBf": {
+          "type": "image",
+          "settings": {
+            "image_overlay_opacity": 100,
+            "image_column_corner_radius": 0,
+            "heading": "Product Heading testing 1",
+            "desktop_content_position": "middle-center",
+            "heading_size": "h2",
+            "heading_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": true,
+            "no_border_style": true,
             "video_button_background": "",
             "video_button_font": "",
             "button_position": "center"
@@ -58,8 +58,8 @@
         }
       },
       "block_order": [
+        "image_wzNPng",
         "image_LiKHBf",
-        "image_XdkL67",
         "product_Pwwjgb"
       ],
       "settings": {
