@@ -151,7 +151,7 @@
         "max": 10,
         "step": 0.1,
         "label": "REM Input for Heading H1",
-        "default": 4.1
+        "default": 4
       }      
     ]
   },
