@@ -149,19 +149,17 @@
               max-width: 100%;            
             }
             .section-{{ section.id }}-padding .multicolumn-list__item .multicolumn-card {
-              border-radius: 0px !important;
-            } 
+              border-radius: 0px ;
+            }
 
-            @media screen and (min-width: 750) {
-              .section-{{ section.id }}-padding .multicolumn-list__item:first-child .multicolumn-card {
-                border-top-left-radius: {{ section.settings.column_corner_radius }}px !important;
-                border-bottom-left-radius: {{ section.settings.column_corner_radius }}px !important;
-              }
-              
-              .section-{{ section.id }}-padding .multicolumn-list__item:last-child .multicolumn-card {
-                border-top-right-radius: {{ section.settings.column_corner_radius }}px !important;
-                border-bottom-right-radius: {{ section.settings.column_corner_radius }}px !important;
-              }               
+            .section-{{ section.id }}-padding .multicolumn-list__item:first-child .multicolumn-card {
+              border-top-left-radius: {{ section.settings.column_corner_radius }}px;
+              border-bottom-left-radius: {{ section.settings.column_corner_radius }}px;
+            }
+            
+            .section-{{ section.id }}-padding .multicolumn-list__item:last-child .multicolumn-card {
+              border-top-right-radius: {{ section.settings.column_corner_radius }}px;
+              border-bottom-right-radius: {{ section.settings.column_corner_radius }}px;
             }            
             
             {%- if section.settings.swipe_on_mobile == false-%}
