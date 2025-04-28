@@ -288,8 +288,11 @@
 
                     .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card{
                       border-radius: {{ block.settings. image_column_corner_radius}}px !important;
+                      overflow: hidden;
                     }
-
+                    .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card:after {
+                      background: #000;
+                    }
                     .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card .media{
                       border-radius: {{ block.settings. image_column_corner_radius}}px !important;
                     }                    
