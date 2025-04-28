@@ -580,7 +580,17 @@
                               box-shadow: none !important;
                             }
                           {%- endif -%}
-
+                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }}{
+                            border-radius: {{ block.settings. image_column_corner_radius}}px !important;
+                          }
+                          
+                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card{
+                            border-radius: {{ block.settings. image_column_corner_radius}}px !important;
+                          }
+                          
+                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card .media{
+                            border-radius: {{ block.settings. image_column_corner_radius}}px !important;
+                          } 
                         </style>              
                         <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
                         <div
