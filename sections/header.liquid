@@ -143,6 +143,13 @@
         {% render 'header-drawer', secondary_menu: secondary_menu  %}
       {%- endif -%}
       {%- if section.settings.logo_position == 'middle-center' and section.settings.mobile_search_icon_position == 'left'-%}
+        <style>
+          @media screen and (max-width: 749px) {
+            .header__icons .header__search {
+              display: none;
+            }
+          }          
+        </style>
         <div class="large-up-hide medium-hide">        
           {%- render 'header-search', input_id: 'Search-In-Modal-1', icon_for_search: section.settings.icon_for_search -%}
         </div>
