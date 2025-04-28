@@ -278,9 +278,15 @@
                   </div>              
                   <div class="multicolumn-card__info">
                     {%- if block.settings.caption != blank -%}
-                      <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }}; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %} ">
+                      {% comment %} <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" style="text-align: {{ block.settings.heading_alignment }}; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %} ">
                           {{ block.settings.caption | escape }}
-                      </p>
+                      </p> {% endcomment %}
+                      <div class = "{{block.id}}-caption-container" style="display:flex;">
+                        <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" 
+                            style="width:max-content; background:{{block.settings.caption_background_color}}; color:{{block.settings.caption_font_color}}; padding:5px; border-radius:10px; ">
+                          {{ block.settings.caption | escape }}
+                        </p>      
+                      </div>                      
                     {%- endif -%}              
                     {%- if block.settings.title != blank -%}
                       {%- if block.settings.heading_icon_image != blank -%}
