@@ -22,7 +22,7 @@
             "caption_background_color": "#242833",
             "caption_font_color": "#f3f3f3",
             "title": "Column",
-            "heading_size": "large",
+            "heading_size": "small",
             "heading_size_mobile": "h2",
             "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
