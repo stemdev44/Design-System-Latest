@@ -101,7 +101,7 @@
     {%- if section.settings.caption != blank -%}
       <div class = "{{section.id}}-caption-container" style="display:flex;">
         <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" 
-            style="text-align: {{ section.settings.heading_alignment }}; width:max-content; background:{{section.settings.caption_background_color}}; color:{{section.settings.caption_font_color}}; padding:5px; border-radius:10px; ">
+            style="text-align: {{ section.settings.heading_alignment }}; width:max-content; background:{{section.settings.caption_background_color}}; color:{{section.settings.caption_font_color}}; padding:5px; ">
           {{ section.settings.caption | escape }}
         </p>      
       </div>
@@ -290,7 +290,7 @@
                                       {% endif %}"
                         >
                           <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" 
-                              style="width:max-content; background:{{block.settings.caption_background_color}}; color:{{block.settings.caption_font_color}}; padding:5px; border-radius:10px; ">
+                              style="width:max-content; background:{{block.settings.caption_background_color}}; color:{{block.settings.caption_font_color}}; padding:5px; ">
                             {{ block.settings.caption | escape }}
                           </p>      
                         </div>                    
@@ -443,7 +443,7 @@
                                     {% endif %}"
                       >
                         <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" 
-                            style="width:max-content; background:{{block.settings.caption_background_color}}; color:{{block.settings.caption_font_color}}; padding:5px; border-radius:10px; ">
+                            style="width:max-content; background:{{block.settings.caption_background_color}}; color:{{block.settings.caption_font_color}}; padding:5px; ">
                           {{ block.settings.caption | escape }}
                         </p>      
                       </div>                    
