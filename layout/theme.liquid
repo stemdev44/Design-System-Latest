@@ -227,6 +227,8 @@
           --h4_heading_size:{{settings.h4_heading_size}}rem;
           --h5_heading_size:{{settings.h5_heading_size}}rem;
           --h6_heading_size:{{settings.h6_heading_size}}rem;
+
+          --body_font_size:{{settings.body_font_size}}rem;
         }
   
         *,
@@ -247,7 +249,7 @@
           grid-template-columns: 100%;
           min-height: 100%;
           margin: 0;
-          font-size: 1.5rem;
+          font-size: var(--body_font_size);
           letter-spacing: 0.06rem;
           line-height: calc(1 + 0.8 / var(--font-body-scale));
           font-family: var(--font-body-family);
@@ -257,7 +259,7 @@
   
         @media screen and (min-width: 750px) {
           body {
-            font-size: 1.6rem;
+            font-size: var(--body_font_size);
           }
         }
       {% endstyle %}

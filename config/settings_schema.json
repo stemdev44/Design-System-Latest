@@ -197,7 +197,16 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
-      }      
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "label": "REM Input for Body (p,a,ul,li)....",
+        "default": 1.5
+      },            
     ]
   },
   {
