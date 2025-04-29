@@ -113,7 +113,7 @@
         "column_font_color": "#ffffff",
         "column_corner_radius": 16,
         "color_scheme": "scheme-1",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "slider_visual": "dots",
         "padding_top": 36,
