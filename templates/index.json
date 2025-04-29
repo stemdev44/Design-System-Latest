@@ -9,6 +9,74 @@
  */
 {
   "sections": {
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "image_irwUf6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+            "image_overlay_opacity": 0,
+            "image_column_corner_radius": 40,
+            "heading": "Product Heading 123",
+            "desktop_content_position": "middle-center",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "#",
+            "button_style_secondary": true,
+            "no_border_style": true,
+            "video_button_background": "#242833",
+            "video_button_font": "#f3f3f3",
+            "button_position": "bottom"
+          }
+        },
+        "image_JabmNe": {
+          "type": "image",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "image_column_corner_radius": 18,
+            "heading": "Product Heading",
+            "desktop_content_position": "middle-center",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "no_border_style": false,
+            "video_button_background": "",
+            "video_button_font": "",
+            "button_position": "center"
+          }
+        },
+        "product_Pwwjgb": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_irwUf6",
+        "image_JabmNe",
+        "product_Pwwjgb"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "desktop_image_width": "medium",
+        "desktop_layout_2": "collage",
+        "mobile_layout": "column",
+        "mobile_block_order": "image_first",
+        "columns_mobile": "1",
+        "card_styles": "none",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -194,74 +262,6 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "image_irwUf6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-            "image_overlay_opacity": 0,
-            "image_column_corner_radius": 40,
-            "heading": "Product Heading 123",
-            "desktop_content_position": "middle-center",
-            "heading_size": "h1",
-            "heading_alignment": "center",
-            "button_label": "Button label",
-            "button_link": "#",
-            "button_style_secondary": true,
-            "no_border_style": true,
-            "video_button_background": "#242833",
-            "video_button_font": "#f3f3f3",
-            "button_position": "bottom"
-          }
-        },
-        "image_JabmNe": {
-          "type": "image",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "image_column_corner_radius": 18,
-            "heading": "Product Heading",
-            "desktop_content_position": "middle-center",
-            "heading_size": "h1",
-            "heading_alignment": "center",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "no_border_style": false,
-            "video_button_background": "",
-            "video_button_font": "",
-            "button_position": "center"
-          }
-        },
-        "product_Pwwjgb": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        }
-      },
-      "block_order": [
-        "image_irwUf6",
-        "image_JabmNe",
-        "product_Pwwjgb"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "desktop_image_width": "medium",
-        "desktop_layout_2": "collage",
-        "mobile_layout": "column",
-        "mobile_block_order": "image_first",
-        "columns_mobile": "1",
-        "card_styles": "none",
-        "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1286,9 +1286,9 @@
     }
   },
   "order": [
+    "collage",
     "multicolumn",
     "image_with_text_dJfY7c",
-    "collage",
     "compare_table_4zE6WA",
     "image_banner_cTFcJk",
     "carousel_mVMEgi",
