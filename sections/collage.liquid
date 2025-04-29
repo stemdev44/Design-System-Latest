@@ -279,7 +279,8 @@
 
                     .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card:after {
                       background: #000;
-                      opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }} !important;                      
+                      opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }} !important;
+                      z-index:1;
                     }
 
                   </style>              
