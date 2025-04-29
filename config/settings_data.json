@@ -11,6 +11,7 @@
   "current": {
     "logo_width": 110,
     "type_header_font": "assistant_n4",
+    "custom_heading_font": "HKGrotesk-Regular",
     "heading_scale": 110,
     "h1_heading_size": 2.5,
     "h2_heading_size": 2.8,
