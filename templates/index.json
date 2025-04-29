@@ -18,17 +18,17 @@
             "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
             "image_overlay_opacity": 0,
             "image_column_corner_radius": 15,
-            "heading": "Product Heading",
+            "heading": "Product Heading 123",
             "desktop_content_position": "middle-center",
             "heading_size": "h1",
             "heading_alignment": "center",
             "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "no_border_style": false,
-            "video_button_background": "",
-            "video_button_font": "",
-            "button_position": "center"
+            "button_link": "#",
+            "button_style_secondary": true,
+            "no_border_style": true,
+            "video_button_background": "#242833",
+            "video_button_font": "#f3f3f3",
+            "button_position": "bottom"
           }
         },
         "image_JabmNe": {
