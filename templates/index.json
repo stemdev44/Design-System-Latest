@@ -173,7 +173,7 @@
         "button_UaqwYV"
       ],
       "settings": {
-        "layout_page": "grid",
+        "layout_page": "full_bleed",
         "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -205,8 +205,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-            "image_overlay_opacity": 0,
-            "image_column_corner_radius": 15,
+            "image_overlay_opacity": 20,
+            "image_column_corner_radius": 16,
             "heading": "Product Heading 123",
             "desktop_content_position": "middle-center",
             "heading_size": "h1",
@@ -218,6 +218,24 @@
             "video_button_background": "#242833",
             "video_button_font": "#f3f3f3",
             "button_position": "bottom"
+          }
+        },
+        "image_76j3rC": {
+          "type": "image",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "image_column_corner_radius": 16,
+            "heading": "Product Heading",
+            "desktop_content_position": "middle-center",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "no_border_style": false,
+            "video_button_background": "",
+            "video_button_font": "",
+            "button_position": "center"
           }
         },
         "image_JabmNe": {
@@ -237,26 +255,19 @@
             "video_button_font": "",
             "button_position": "center"
           }
-        },
-        "product_Pwwjgb": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
         }
       },
       "block_order": [
         "image_irwUf6",
-        "image_JabmNe",
-        "product_Pwwjgb"
+        "image_76j3rC",
+        "image_JabmNe"
       ],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
         "desktop_layout": "left",
         "desktop_image_width": "medium",
-        "desktop_layout_2": "collage",
+        "desktop_layout_2": "column",
         "mobile_layout": "column",
         "mobile_block_order": "image_first",
         "columns_mobile": "1",
