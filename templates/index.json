@@ -16,8 +16,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-            "image_overlay_opacity": 0,
-            "image_column_corner_radius": 0,
+            "image_overlay_opacity": 10,
+            "image_column_corner_radius": 11,
             "heading": "Product Heading",
             "desktop_content_position": "middle-center",
             "heading_size": "h1",
