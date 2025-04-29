@@ -9,118 +9,6 @@
  */
 {
   "sections": {
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_wTBa4j": {
-          "type": "column",
-          "settings": {
-            "caption": "Caption 1",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "#121212",
-            "caption_font_color": "#f3f3f3",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "shopify://products/blaze-2"
-          }
-        },
-        "column_dFHaQB": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_fbadpH": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rTq6tM": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "heading_icon_image": "shopify://shop_images/Handbag.svg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_wTBa4j",
-        "column_dFHaQB",
-        "column_fbadpH",
-        "column_rTq6tM"
-      ],
-      "settings": {
-        "caption": "Mutlicolumn Caption",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "title": "Multicolumn Section",
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "left",
-        "description": "<p>Description</p>",
-        "description_style": "uppercase",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "button_label": "Button",
-        "button_link": "#",
-        "button_style_secondary": true,
-        "no_border_style": true,
-        "video_button_background": "#000000",
-        "video_button_font": "#f3f3f3",
-        "layout": "grid",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "column_background_color": "#242833",
-        "column_font_color": "#ffffff",
-        "column_corner_radius": 16,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "slider_visual": "dots",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "remove_inner_padding": true
-      }
-    },
     "compare_table_4zE6WA": {
       "type": "compare-table",
       "blocks": {
@@ -334,10 +222,123 @@
         "columns_desktop": 6,
         "color_scheme": "scheme-4",
         "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "remove_inner_padding": true
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wTBa4j": {
+          "type": "column",
+          "settings": {
+            "caption": "Caption 1",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "caption_background_color": "#121212",
+            "caption_font_color": "#f3f3f3",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "shopify://products/blaze-2"
+          }
+        },
+        "column_dFHaQB": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "caption_background_color": "",
+            "caption_font_color": "",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fbadpH": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "caption_background_color": "",
+            "caption_font_color": "",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Prohibit.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rTq6tM": {
+          "type": "column",
+          "settings": {
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "caption_background_color": "",
+            "caption_font_color": "",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "heading_icon_image": "shopify://shop_images/Handbag.svg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wTBa4j",
+        "column_dFHaQB",
+        "column_fbadpH",
+        "column_rTq6tM"
+      ],
+      "settings": {
+        "caption": "Mutlicolumn Caption",
+        "text_style": "subtitle",
+        "text_size": "medium",
+        "title": "Multicolumn Section",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "left",
+        "description": "<p>Description</p>",
+        "description_style": "uppercase",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "button_label": "Button",
+        "button_link": "#",
+        "button_style_secondary": true,
+        "no_border_style": true,
+        "video_button_background": "#000000",
+        "video_button_font": "#f3f3f3",
+        "layout": "grid",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "column_background_color": "#242833",
+        "column_font_color": "#ffffff",
+        "column_corner_radius": 16,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "slider_visual": "dots",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "remove_inner_padding": true
       }
     },
     "collage": {
@@ -1283,8 +1284,8 @@
     }
   },
   "order": [
-    "multicolumn",
     "compare_table_4zE6WA",
+    "multicolumn",
     "collage",
     "image_banner_cTFcJk",
     "carousel_mVMEgi",
