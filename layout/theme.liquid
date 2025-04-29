@@ -250,6 +250,7 @@
           min-height: 100%;
           margin: 0;
           font-size: var(--body_font_size);
+          font-size: calc(var(--font-body-scale) * var(--body_font_size));
           letter-spacing: 0.06rem;
           line-height: calc(1 + 0.8 / var(--font-body-scale));
           font-family: var(--font-body-family);
@@ -259,7 +260,7 @@
   
         @media screen and (min-width: 750px) {
           body {
-            font-size: var(--body_font_size);
+            font-size: calc(var(--font-body-scale) * var(--body_font_size));
           }
         }
       {% endstyle %}
