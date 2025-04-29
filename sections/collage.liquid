@@ -564,7 +564,7 @@
 
                 <li
                   id="Slide-{{ section.id }}-{{ forloop.index }}"
-                  class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  class="multicolumn_collage-item-{{ forloop.index }} multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {{ block.shopify_attributes }}
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
@@ -580,13 +580,13 @@
                             }
                           {%- endif -%}
 
-                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card:after {
+                          .section-{{ section.id }}-padding .multicolumn_collage-item-{{ forloop.index }} .collage-card:after {
                             background: #000;
                             opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }} !important;
                             z-index:1;
                           }
                         
-                          .section-{{ section.id }}-padding .collage-item-{{ forloop.index }} .collage-card {
+                          .section-{{ section.id }}-padding .multicolumn_collage-item-{{ forloop.index }} .collage-card {
                             border-radius: {{ block.settings. image_column_corner_radius}}px;
                             overflow: hidden;
                           }
