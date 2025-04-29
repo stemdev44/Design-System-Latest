@@ -159,7 +159,6 @@
                                   ></iframe>
                                 {%- endif -%}
                               {%- else -%}
-                              {% assign poster_url = section.settings.cover_image | image_url: width: 1100 %}
                                 {{
                                   section.settings.video
                                   | video_tag:
@@ -167,8 +166,7 @@
                                     autoplay: true,
                                     loop: section.settings.enable_video_looping,
                                     controls: true,
-                                    muted: false,
-                                    poster: poster_url
+                                    muted: false
                                 }}
                               {%- endif -%}
                             </template>
