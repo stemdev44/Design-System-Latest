@@ -181,6 +181,14 @@
                   border-bottom-left-radius: 0px !important;
                 }
                 
+                .section-{{ section.id }}-padding .multicolumn-list__item:nth-child(2) .multicolumn-card {
+                  border-top-right-radius: {{ section.settings.column_corner_radius }}px !important;                  
+                }
+
+                .section-{{ section.id }}-padding .multicolumn-list__item:nth-last-child(2) .multicolumn-card {
+                  border-bottom-left-radius: {{ section.settings.column_corner_radius }}px !important;
+                }
+
                 .section-{{ section.id }}-padding .multicolumn-list__item:last-child .multicolumn-card {
                   border-top-right-radius: 0px !important;
                   border-bottom-right-radius: {{ section.settings.column_corner_radius }}px !important;
