@@ -247,15 +247,7 @@
           -%}
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
-            {% comment %} <style>
-              @media screen and (max-width: 749px) {
-                {%- if block.settings.hide_image_video_mobile == true and  section.settings.swipe_on_mobile == false -%}
-                  .multicolumn-card__image-wrapper-{{block.id}} {
-                    display:none;
-                  }
-                {%- endif -%}
-              }
-            </style>    {% endcomment %}
+
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -272,7 +264,7 @@
                   {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                     {% assign spaced_image = true %}
                   {% endif %}
-                  <div class="multicolumn-card__image-wrapper-{{block.id}}  {% unless section.settings.image_width== 'full' %} multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {%endunless%}">
+                  <div class="{% if section.settings.swipe_on_mobile == false and block.settings.hide_image_video_mobile == true%} small-hide {% endif %} {% unless section.settings.image_width== 'full' %}multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {%endunless%}">
                       
                     {%- if block.settings.video == null -%}
                       {%- if block.settings.image != blank-%}
@@ -424,7 +416,7 @@
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__image-wrapper-{{block.id}} {% unless section.settings.image_width== 'full' %} multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {%endunless%}">
+                <div class="{% if section.settings.swipe_on_mobile == false and block.settings.hide_image_video_mobile == true%} small-hide {% endif %} multicolumn-card__image-wrapper-{{block.id}} {% unless section.settings.image_width== 'full' %} multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}  {%endunless%}">
                     
                   {%- if block.settings.video == null -%}
                     {%- if block.settings.image != blank-%}
