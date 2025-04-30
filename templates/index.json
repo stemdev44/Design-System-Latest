@@ -27,8 +27,9 @@
             "heading_size_mobile": "large",
             "heading_icon_image": "shopify://shop_images/Prohibit.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "shopify://products/blaze-2"
+            "link_label": "Get it",
+            "link": "shopify://products/blaze-2",
+            "button_style_secondary": true
           }
         },
         "column_dFHaQB": {
@@ -47,7 +48,8 @@
             "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "button_style_secondary": false
           }
         },
         "column_fbadpH": {
@@ -65,7 +67,8 @@
             "heading_icon_image": "shopify://shop_images/Prohibit.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "button_style_secondary": false
           }
         },
         "column_rTq6tM": {
@@ -83,7 +86,8 @@
             "heading_icon_image": "shopify://shop_images/Handbag.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "button_style_secondary": false
           }
         }
       },
@@ -115,8 +119,8 @@
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
-        "column_background_color": "#242833",
-        "column_font_color": "#ffffff",
+        "column_background_color": "#ffffff",
+        "column_font_color": "#121212",
         "column_corner_radius": 16,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
