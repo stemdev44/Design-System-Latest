@@ -17,7 +17,7 @@
   }
 
   {%- if section.settings.no_border_style == true -%}
-    .section-{{ section.id }}-padding .button:after{
+    .section-{{ section.id }}-padding :not(.multicolumn-card__info) .button::after {
       box-shadow: none;
     }
   {%- endif -%}
