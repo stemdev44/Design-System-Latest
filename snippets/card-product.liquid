@@ -369,7 +369,8 @@
                   >
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
+                        {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
+                        {{ settings.custom_quick_add_button_label}}
                       {%- else -%}
                         {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
