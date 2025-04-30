@@ -153,10 +153,10 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'caption' -%}
-           {%- if section.settings.caption != blank -%}
-             <div class = "{{section.id}}-caption-container" style="display:flex;">
-               <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}">
-                {{ section.settings.caption | escape }}
+           {%- if block.settings.caption != blank -%}
+             <div class = "{{block.id}}-caption-container" style="display:flex;">
+               <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}">
+                {{ block.settings.caption | escape }}
                </p>      
              </div>
            {% endif %}          
