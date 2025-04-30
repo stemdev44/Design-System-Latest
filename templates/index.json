@@ -16,6 +16,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+            "hide_image_video_mobile": true,
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -34,6 +35,7 @@
           "type": "column",
           "settings": {
             "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
+            "hide_image_video_mobile": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -51,6 +53,7 @@
         "column_fbadpH": {
           "type": "column",
           "settings": {
+            "hide_image_video_mobile": false,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -68,6 +71,7 @@
         "column_rTq6tM": {
           "type": "column",
           "settings": {
+            "hide_image_video_mobile": false,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -115,7 +119,7 @@
         "column_font_color": "#ffffff",
         "column_corner_radius": 16,
         "color_scheme": "scheme-1",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "slider_visual": "dots",
         "padding_top": 36,
