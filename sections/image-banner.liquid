@@ -152,6 +152,15 @@
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
+          {%- when 'caption' -%}
+           {%- if section.settings.caption != blank -%}
+             <div class = "{{section.id}}-caption-container" style="display:flex;">
+               <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}">
+                {{ section.settings.caption | escape }}
+               </p>      
+             </div>
+           {% endif %}          
+
           {%- when 'heading' -%}
             <h2
               class="small-hide medium-hide banner__heading inline-richtext {{ block.settings.heading_size }}"
