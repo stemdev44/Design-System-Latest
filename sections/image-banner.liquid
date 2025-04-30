@@ -154,7 +154,7 @@
         {%- case block.type -%}
           {%- when 'caption' -%}
            {%- if block.settings.caption != blank -%}
-            <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}">
+            <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_size }}">
               {{ block.settings.caption | escape }}
              </p> 
            {% endif %}          
