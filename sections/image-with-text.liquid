@@ -30,7 +30,7 @@
   endif
 
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
-  assign poster = section.settings.video.preview_image | default: section.settings.cover_image
+  assign poster = section.settings.cover_image
   if section.settings.video != null
     assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
     if ratio_diff < 0.01 and ratio_diff > 0
@@ -237,29 +237,20 @@
 
                   </div>
                 {%- when 'button' -%}
-                  <style>
-                    {%- if block.settings.no_border_style == true -%}
-                      .{{block.id}}-button.button:after{
-                        box-shadow: none;
-                      }
-                    {%- endif -%}
-                  </style>
                   {%- if block.settings.button_label != blank -%}
                     <a
-                      {% unless block.settings.no_border_style %}
-                        class="{{block.id}}-button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                        style="color: {{block.settings.video_button_font}}; background-color: {{block.settings.video_button_background}};" 
-                      {% endunless %}                     
-                      {% if block.settings.no_border_style %}
-                        style="text-decoration: none; color: #000;"
-                      {% endif %}                      
                       {% if block.settings.button_link == blank %}
                         role="link" aria-disabled="true"
                       {% else %}
                         href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      {% unless block.settings.no_border_style %}
+                        class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      {% endunless %}
+                      {% if block.settings.no_border_style %}
+                        style="text-decoration: none; color: #000;"
                       {% endif %}                               
                       {{ block.shopify_attributes }}
-                      
                     >
                       {{ block.settings.button_label | escape }}
                     </a>
@@ -772,17 +763,7 @@
           "id": "no_border_style",
           "default": false,
           "label": "No Border Style"
-        },
-        {
-            "type":"color",
-            "id":"video_button_background",
-            "label":"Button Color"
-        },
-        {
-            "type":"color",
-            "id":"video_button_font",
-            "label":"Font Color"
-        },                
+        }        
       ]
     },
     {
