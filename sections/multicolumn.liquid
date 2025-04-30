@@ -247,7 +247,7 @@
           -%}
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
-            <style>
+            {% comment %} <style>
               @media screen and (max-width: 749px) {
                 {%- if block.settings.hide_image_video_mobile == true and  section.settings.swipe_on_mobile == false -%}
                   .multicolumn-card__image-wrapper-{{block.id}} {
@@ -255,7 +255,7 @@
                   }
                 {%- endif -%}
               }
-            </style>   
+            </style>    {% endcomment %}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
