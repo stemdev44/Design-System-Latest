@@ -54,7 +54,7 @@
               
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
 
-            {%- if section.settings.video == null and section.settings.video_url == null and section.settings.mobile_video == null  -%}
+            {%- if section.settings.video == null and section.settings.video_url == null   -%}
               <style>
               .section-{{ section.id }}-padding .global-media-settings{
                 border:0;
@@ -94,8 +94,8 @@
               </div>                 
             {%- endif -%} 
 
-            {%- if section.settings.video != null or section.settings.video_url != null or section.settings.mobile_video !=null -%}
-                  <div class="small-hide">
+            {%- if section.settings.video != null or section.settings.video_url != null  -%}
+                  <div >
                     <div>
                       <deferred-media
                         class="video-section__media deferred-media"
@@ -180,95 +180,7 @@
                         </template>
                       </deferred-media>
                     </div>
-                  </div>  
-                  {% comment %} //////////////Adding Mobile video Start ///////////////{% endcomment %}
-                  <div class="medium-hide large-up-hide">
-                    <div>
-                      <deferred-media
-                        class="video-section__media deferred-media"
-                        data-media-id="{{ mobile_video_id }}"                            
-                        style="border-radius:{{section.settings.column_corner_radius}}px; {% if poster != null %} --ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;{% endif %}"
-                      >
-                        <button
-                          id="Deferred-Poster-Modal-{{ mobile_video_id }}"
-                          class="video-section__poster media deferred-media__poster media--landscape"
-                          type="button"
-                          aria-label="{{ alt }}"
-                        >
-                          {%- if poster != null -%}
-                            {{
-                              poster
-                              | image_url: width: 3840
-                              | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-                            }}
-                          {%- else -%}
-                            {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                          {%- endif -%}
-                          <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
-                            <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
-                              {%- if section.settings.video_button_text == blank -%}
-                                {{- 'icon-play.svg' | inline_asset_content -}}
-                              {%- endif -%}                                                                    
-
-                                {%- if section.settings.video_button_text != blank -%}
-                                  {%- if section.settings.video_no_border_style -%}
-                                      <style>
-                                        .section-{{ section.id }}-padding .svg-wrapper .button:after{
-                                            box-shadow: none;
-                                          }                                        
-                                      </style>  
-                                    {%- endif -%}
-                                  <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                                      style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
-                                  >
-                                    {{ section.settings.video_button_text | escape }}
-                                  </a>
-                                {%- endif -%}
-                            </span>
-                          </span>
-
-                        </button>
-                        <template>
-                          {%- if section.settings.mobile_video == null and section.settings.video_url != null -%}
-                            {%- liquid
-                              assign loop = ''
-                              if section.settings.enable_video_looping
-                                assign loop = '&loop=1&playlist=' | append: video_id
-                              endif
-                            -%}
-                            {%- if section.settings.video_url.type == 'youtube' -%}
-                              <iframe
-                                src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
-                                class="js-youtube"
-                                allow="autoplay; encrypted-media"
-                                allowfullscreen
-                                title="{{ section.settings.description | escape }}"
-                              ></iframe>
-                            {%- else -%}
-                              <iframe
-                                src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
-                                class="js-vimeo"
-                                allow="autoplay; encrypted-media"
-                                allowfullscreen
-                                title="{{ section.settings.description | escape }}"
-                              ></iframe>
-                            {%- endif -%}
-                          {%- else -%}
-                            {{
-                              section.settings.mobile_video
-                              | video_tag:
-                                image_size: '1100x',
-                                autoplay: true,
-                                loop: section.settings.enable_video_looping,
-                                controls: true,
-                                muted: false
-                            }}
-                          {%- endif -%}
-                        </template>
-                      </deferred-media>
-                    </div>
-                  </div>                  
-                  {% comment %} ///////////////////Adding Mobile video ends///////////////////////// {% endcomment %}
+                  </div>
             {%- endif -%}
 
         </div>                
