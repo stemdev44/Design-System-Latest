@@ -167,7 +167,8 @@
                               ></iframe>
                             {%- endif -%}
                           {%- else -%}
-                            {{
+                            <div>
+                              {{
                               section.settings.video
                               | video_tag:
                                 image_size: '1100x',
@@ -175,7 +176,8 @@
                                 loop: section.settings.enable_video_looping,
                                 controls: true,
                                 muted: false
-                            }}
+                              }}
+                            </div>
                           {%- endif -%}
                         </template>
                       </deferred-media>
