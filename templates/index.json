@@ -47,9 +47,7 @@
             "button_label": "Demo",
             "button_link": "#",
             "button_style_secondary": true,
-            "no_border_style": true,
-            "video_button_background": "#334fb4",
-            "video_button_font": "#f3f3f3"
+            "no_border_style": true
           }
         }
       },
@@ -68,9 +66,7 @@
         "column_corner_radius": 24,
         "layout": "image_first",
         "image_behavior": "none",
-        "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-        "video_url": "",
-        "cover_image": "shopify://shop_images/bg_image.png",
+        "video_url": "https://vimeo.com/1069728452",
         "video_button_text": "See how this work",
         "video_button_background": "#334fb4",
         "video_button_font": "#000000",
