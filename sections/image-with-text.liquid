@@ -30,6 +30,7 @@
   endif
   
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
+  assign mobile_video_id = section.settings.video.id | default: section.settings.video_url.id
   
   if section.settings.video != null
     assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
@@ -95,7 +96,7 @@
 
             {%- if section.settings.video != null or section.settings.video_url != null -%}
                   <div>
-                    <div>
+                    <div class="small-hide">
                       <deferred-media
                         class="video-section__media deferred-media"
                         data-media-id="{{ video_id }}"                            
@@ -180,14 +181,14 @@
                       </deferred-media>
                     </div>
                     {% comment %} ///////////////////// Adding Mobile Video Starts /////////////// {% endcomment %}
-                      <div>
+                      <div class="medium-hide large-up-hide">
                         <deferred-media
                           class="video-section__media deferred-media"
-                          data-media-id="{{ video_id }}"                            
+                          data-media-id="{{ mobile_video_id }}"                            
                           style="border-radius:{{section.settings.column_corner_radius}}px; {% if poster != null %} --ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;{% endif %}"                            
                         >
                           <button
-                            id="Deferred-Poster-Modal-{{ video_id }}"
+                            id="Deferred-Poster-Modal-{{ mobile_video_id }}"
                             class="video-section__poster media deferred-media__poster media--landscape"
                             type="button"
                             aria-label="{{ alt }}"
@@ -226,7 +227,7 @@
 
                           </button>
                           <template>
-                            {%- if section.settings.video == null and section.settings.video_url != null -%}
+                            {%- if section.settings.mobile_video_id == null and section.settings.video_url != null -%}
                               {%- liquid
                                 assign loop = ''
                                 if section.settings.enable_video_looping
@@ -235,7 +236,7 @@
                               -%}
                               {%- if section.settings.video_url.type == 'youtube' -%}
                                 <iframe
-                                  src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                                  src="https://www.youtube.com/embed/{{ mobile_video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
                                   class="js-youtube"
                                   allow="autoplay; encrypted-media"
                                   allowfullscreen
@@ -243,7 +244,7 @@
                                 ></iframe>
                               {%- else -%}
                                 <iframe
-                                  src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                                  src="https://player.vimeo.com/video/{{ mobile_video_id }}?autoplay=1{{ loop }}"
                                   class="js-vimeo"
                                   allow="autoplay; encrypted-media"
                                   allowfullscreen
@@ -252,7 +253,7 @@
                               {%- endif -%}
                             {%- else -%}
                               {{
-                                section.settings.video
+                                section.settings.mobile_video_id
                                 | video_tag:
                                   image_size: '1100x',
                                   autoplay: true,
