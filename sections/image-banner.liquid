@@ -154,11 +154,9 @@
         {%- case block.type -%}
           {%- when 'caption' -%}
            {%- if block.settings.caption != blank -%}
-             <div class = "{{block.id}}-caption-container" style="display:flex;">
-               <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}">
-                {{ block.settings.caption | escape }}
-               </p>      
-             </div>
+            <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}">
+              {{ block.settings.caption | escape }}
+             </p> 
            {% endif %}          
 
           {%- when 'heading' -%}
