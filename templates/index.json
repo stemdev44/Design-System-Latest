@@ -16,7 +16,7 @@
           "type": "caption",
           "settings": {
             "caption": "Banner Caption",
-            "text_style": "caption-with-letter-spacing",
+            "text_style": "subtitle",
             "text_size": "caption_extra_small"
           }
         },
