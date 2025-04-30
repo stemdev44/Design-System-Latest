@@ -54,7 +54,7 @@
               
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
 
-            {%- if section.settings.video == null and section.settings.video_url == null -%}
+            {%- if section.settings.video == null and section.settings.video_url == null and section.settings.mobile_video == null  -%}
               <style>
               .section-{{ section.id }}-padding .global-media-settings{
                 border:0;
