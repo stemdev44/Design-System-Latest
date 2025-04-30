@@ -30,7 +30,7 @@
   endif
 
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
-  assign poster = section.settings.cover_image
+  
   if section.settings.video != null
     assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
     if ratio_diff < 0.01 and ratio_diff > 0
@@ -38,6 +38,13 @@
     endif
   endif  
 -%}
+
+{% if section.settings.cover_image != blank %}
+  {% comment %} assign poster = section.settings.video.preview_image | default: section.settings.cover_image {% endcomment %}
+  {% assign poster = section.settings.cover_image %}
+{% else %}
+  {% assign poster = section.settings.video.preview_image %}
+{% endif %}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="{% if section.settings.layout_page == 'grid' %} page-width{% endif %} ">
