@@ -117,7 +117,7 @@
       {
         "type": "text",
         "id": "custom_heading_font",
-        "label": "Custom Heading Font (overwrite)"
+        "label": "Font Files Upload Overwrite"
       },      
       {
         "type": "range",
