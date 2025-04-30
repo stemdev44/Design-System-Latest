@@ -579,7 +579,8 @@
       {
         "type": "text",
         "id": "custom_quick_add_button_label",
-        "label": "Quick Add Standard Button Label"
+        "label": "Quick Add Standard Button Label",
+        "default":"Quick Add"
       },      
       {
         "type": "range",
