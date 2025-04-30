@@ -194,6 +194,11 @@
         "label": "t:settings_schema.typography.settings.type_body_font.label"
       },
       {
+        "type": "text",
+        "id": "custom_body_font",
+        "label": "Font Files Upload Overwrite"
+      },      
+      {
         "type": "range",
         "id": "body_scale",
         "min": 100,
