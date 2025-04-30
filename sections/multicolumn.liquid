@@ -393,7 +393,7 @@
                     {%- endif -%}
                     {%- if block.settings.link_label != blank -%}
                       <a
-                        class="{% if block.settings.button_style_secondary %} button  button--secondary {%else%} link animate-arrow {% endif %}"
+                        class="{% if block.settings.button_style_secondary %} button  button--primary {%else%} link animate-arrow {% endif %}"
                         {% if block.settings.link == blank %}
                           role="link" aria-disabled="true"
                         {% else %}
