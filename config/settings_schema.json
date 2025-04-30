@@ -577,6 +577,11 @@
         "label": "t:settings_schema.cards.settings.style.label"
       },
       {
+        "type": "text",
+        "id": "custom_quick_add_button_label",
+        "label": "Quick Add Standard Button Label"
+      },      
+      {
         "type": "range",
         "id": "card_image_padding",
         "min": 0,
