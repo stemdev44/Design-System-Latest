@@ -47,9 +47,9 @@
             "heading_size_mobile": "large",
             "heading_icon_image": "shopify://shop_images/icon-bottle.svg",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
+            "link_label": "Test now",
             "link": "",
-            "button_style_secondary": false
+            "button_style_secondary": true
           }
         },
         "column_fbadpH": {
@@ -169,7 +169,7 @@
             "button_label": "Demo",
             "button_link": "#",
             "button_style_secondary": true,
-            "no_border_style": true
+            "no_border_style": false
           }
         }
       },
