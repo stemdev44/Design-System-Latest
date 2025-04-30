@@ -399,7 +399,7 @@
                         {% else %}
                           href="{{ block.settings.link }}"
                         {% endif %}
-                        {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}
+                        {% if section.settings.background_style == 'primary' and block.settings.button_style_secondary == false %} style="color:{{ section.settings.column_font_color }}" {% endif %}
                       >
                         {{- block.settings.link_label | escape -}}
                         <span class="svg-wrapper"
