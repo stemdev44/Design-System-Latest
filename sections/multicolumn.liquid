@@ -17,10 +17,15 @@
   }
 
   {%- if section.settings.no_border_style == true -%}
-    .section-{{ section.id }}-padding :not(.multicolumn-card__info) .button:after {
+    .section-{{ section.id }}-padding .button:after{
       box-shadow: none;
     }
   {%- endif -%}
+
+    .section-{{ section.id }}-padding .multicolumn-card__info .button:after{
+      box-shadow:0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text),var(--border-opacity)),0 0 0 var(--buttons-border-width) rgba(var(--color-button),var(--alpha-button-background))
+    }
+
 
 {%- endstyle -%}
 
