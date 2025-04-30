@@ -402,9 +402,11 @@
                         {% if section.settings.background_style == 'primary' and block.settings.button_style_secondary == false %} style="color:{{ section.settings.column_font_color }}" {% endif %}
                       >
                         {{- block.settings.link_label | escape -}}
-                        <span class="svg-wrapper"
-                          ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
-                        >
+                        {% if block.settings.button_style_secondary == false %} 
+                          <span class="svg-wrapper"
+                            ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                          >                        
+                        {%- endif -%}
                       </a>
                     {%- endif -%}
                   </div>
