@@ -12,6 +12,14 @@
     "image_banner_cTFcJk": {
       "type": "image-banner",
       "blocks": {
+        "caption_BNRdVb": {
+          "type": "caption",
+          "settings": {
+            "caption": "Banner Caption",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "heading_B7bUM3": {
           "type": "heading",
           "settings": {
@@ -41,6 +49,7 @@
         }
       },
       "block_order": [
+        "caption_BNRdVb",
         "heading_B7bUM3",
         "text_4Ce7TC",
         "buttons_h8Jd4b"
