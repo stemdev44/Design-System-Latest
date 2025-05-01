@@ -520,7 +520,7 @@
                         <img src="{{ block.settings.heading_icon_image | img_url: 'small' }}" alt="" style="width:20px"/> 
                         {{ block.settings.title }}
                       </h3>
-                      <h3 class="large-up-hide inline-richtext heading_icon_image {% unless block.settings.heading_size_mobile == 'large' %} {% if block.settings.heading_size_mobile == 'h2' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %} {% endunless %}"  
+                      <h3 class="large-up-hide inline-richtext heading_icon_image {% if block.settings.heading_size_mobile == 'h2' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %}"  
                           style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
                           {% if section.settings.column_alignment == 'center'%}
                             justify-content:center;
