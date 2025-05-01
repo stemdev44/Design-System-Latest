@@ -76,7 +76,7 @@
           "settings": {
             "hide_image_video_mobile": false,
             "caption": "",
-            "text_style": "caption-with-letter-spacing",
+            "text_style": "subtitle",
             "text_size": "medium",
             "caption_background_color": "",
             "caption_font_color": "",
@@ -99,7 +99,7 @@
       ],
       "settings": {
         "caption": "Mutlicolumn Caption",
-        "text_style": "caption-with-letter-spacing",
+        "text_style": "subtitle",
         "text_size": "medium",
         "title": "Multicolumn Section",
         "heading_size": "hxxl",
