@@ -30,7 +30,7 @@
   endif
   
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
-  assign mobile_video_id = section.settings.video.id | default: section.settings.video_url.id
+  assign mobile_video_id = section.settings.mobile_video.id | default: section.settings.video_url.id
   
   if section.settings.video != null
     assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
