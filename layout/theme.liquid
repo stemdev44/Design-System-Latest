@@ -48,7 +48,20 @@
       %}
   
       {% style %}
-      
+
+        @font-face {
+          font-family: "Moderat-Thin";
+          src: url("{{ 'Moderat-Thin.woff' | asset_url }}") format("woff");
+          src:
+            local(""),
+            local(""),
+            url("{{ 'Moderat-Thin.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+            url("{{ 'Moderat-ThinModerat-Thin.woff' | asset_url }}") format("woff"),
+            url("{{ 'Moderat-Thin.woff2' | asset_url }}") format("woff2"),
+            url("{{ 'Moderat-Thin.ttf' | asset_url }}") format("truetype"),
+            url("{{ 'Moderat-Thin.svg' | asset_url }}#Moderat-Thin") format("svg");
+          font-style: normal;
+        }      
         {{ settings.type_body_font | font_face: font_display: 'swap' }}
         {{ body_font_bold | font_face: font_display: 'swap' }}
         {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -103,7 +116,7 @@
         :root {
           /* --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }}; */
           --font-body-family: {% if settings.custom_body_font != blank %}
-            {{ settings.custom_body_font }}
+            {{ settings.custom_body_font }}, {{ settings.type_body_font.fallback_families }}
           {% else %}
             {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }}
           {% endif %};          
