@@ -102,7 +102,7 @@
         "text_style": "subtitle",
         "text_size": "large",
         "title": "Multicolumn Section",
-        "heading_size": "hxl",
+        "heading_size": "hxxl",
         "heading_alignment": "center",
         "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
