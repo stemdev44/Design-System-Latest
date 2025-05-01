@@ -47,13 +47,6 @@
   {% assign poster = section.settings.video.preview_image %}
 {% endif %}
 
-{% if section.settings.mobile_cover_image != blank %}
-  {% comment %} assign poster = section.settings.video.preview_image | default: section.settings.cover_image {% endcomment %}
-  {% assign mobile_poster = section.settings.mobile_cover_image %}
-{% else %}
-  {% assign mobile_poster = section.settings.mobile_video.preview_image %}
-{% endif %}
-
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="{% if section.settings.layout_page == 'grid' %} page-width{% endif %} ">
     <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -247,33 +240,33 @@
                           type="button"
                           aria-label="{{ alt }}"
                         >
-                          {%- if mobile_poster != null -%}
+                          {%- if poster != null -%}
                             {{
-                              mobile_poster
+                              poster
                               | image_url: width: 3840
                               | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
                             }}
                           {%- else -%}
                             {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                           {%- endif -%}
-                          <span class="deferred-media__poster-button motion-reduce" {% if section.settings.mobile_video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
-                            <span class="svg-wrapper" {% if section.settings.mobile_video_button_text != blank %} style="width:100%" {% endif %}>
-                              {%- if section.settings.mobile_video_button_text == blank -%}
+                          <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
+                            <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
+                              {%- if section.settings.video_button_text == blank -%}
                                 {{- 'icon-play.svg' | inline_asset_content -}}
                               {%- endif -%}                                                                    
 
-                                {%- if section.settings.mobile_video_button_text != blank -%}
-                                  {%- if section.settings.mobile_video_no_border_style -%}
+                                {%- if section.settings.video_button_text != blank -%}
+                                  {%- if section.settings.video_no_border_style -%}
                                       <style>
                                         .section-{{ section.id }}-padding .svg-wrapper .button:after{
                                             box-shadow: none;
                                           }                                        
                                       </style>  
                                     {%- endif -%}
-                                  <a class="button{% if section.settings.mobile_video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                                      style="cursor: pointer; color: {{section.settings.mobile_video_button_font}}; background-color: {{section.settings.mobile_video_button_background}};" 
+                                  <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                                      style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
                                   >
-                                    {{ section.settings.mobile_video_button_text | escape }}
+                                    {{ section.settings.video_button_text | escape }}
                                   </a>
                                 {%- endif -%}
                             </span>
@@ -596,38 +589,6 @@
       "type": "video",
       "id": "mobile_video",
       "label": "t:sections.video.settings.video.label"
-    },
-    {
-      "type": "image_picker",
-      "id": "mobile_cover_image",
-      "label": "t:sections.video.settings.cover_image.label"
-    },
-    {
-      "type": "text",
-      "id": "mobile_video_button_text",
-      "label": "Video Button Text"
-    },
-    {
-      "type":"color",
-      "id":"mobile_video_button_background",
-      "label":"Button Color"
-    },
-    {
-      "type":"color",
-      "id":"mobile_video_button_font",
-      "label":"Font Color"
-    },
-    {
-      "type": "checkbox",
-      "id": "mobile_video_button_style_secondary",
-      "default": false,
-      "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
-    },    
-    {
-      "type": "checkbox",
-      "id": "mobile_video_no_border_style",
-      "default": false,
-      "label": "No Border Style"
     },          
     {
       "type": "header",
