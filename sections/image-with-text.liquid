@@ -49,9 +49,9 @@
 
 {% if section.settings.mobile_cover_image != blank %}
   {% comment %} assign poster = section.settings.video.preview_image | default: section.settings.cover_image {% endcomment %}
-  {% assign mobile_poster = section.settings.mobile_cover_image %}
+  {% assign mobile_poster = section.settings.cover_image %}
 {% else %}
-  {% assign mobile_poster = section.settings.mobile_video.preview_image %}
+  {% assign mobile_poster = section.settings.video.preview_image %}
 {% endif %}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
