@@ -125,7 +125,7 @@
   
           {% comment %} --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}; {% endcomment %}
           --font-heading-family: {% if settings.custom_heading_font != blank %}
-            {{ settings.custom_heading_font }}
+            {{ settings.custom_heading_font }}, {{ settings.type_header_font.fallback_families }}
           {% else %}
             {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}
           {% endif %};          
