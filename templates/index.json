@@ -100,7 +100,7 @@
       "settings": {
         "caption": "Mutlicolumn Caption",
         "text_style": "caption-with-letter-spacing",
-        "text_size": "small",
+        "text_size": "medium",
         "title": "Multicolumn Section",
         "heading_size": "hxxl",
         "heading_alignment": "center",
