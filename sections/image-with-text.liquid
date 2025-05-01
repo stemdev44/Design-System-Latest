@@ -106,7 +106,7 @@
                       <deferred-media
                         class="video-section__media deferred-media"
                         data-media-id="{{ video_id }}"                            
-                        style="border-radius:{{section.settings.column_corner_radius}}px; {% if poster != null %} --ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;{% endif %}"                            
+                        style="border-radius:{{section.settings.column_corner_radius}}px; {% if poster != null %} --ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;{% endif %}"
                       >
                         <button
                           id="Deferred-Poster-Modal-{{ video_id }}"
@@ -239,7 +239,7 @@
                       <deferred-media
                         class="video-section__media deferred-media"
                         data-media-id="{{ mobile_video_id }}"                            
-                        style="border-radius:{{section.settings.column_corner_radius}}px; {% if poster != null %} --ratio-percent: {{ 1 | divided_by: mobile_poster.aspect_ratio | times: 100 }}%;{% endif %}"
+                        style="border-radius:{{section.settings.column_corner_radius}}px; {% if mobile_poster != null %} --ratio-percent: {{ 1 | divided_by: mobile_poster.aspect_ratio | times: 100 }}%;{% endif %}"
                       >
                         <button
                           id="Deferred-Poster-Modal-{{ mobile_video_id }}"
