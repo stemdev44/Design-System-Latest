@@ -215,7 +215,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "mobile_heading_size": "h1"
           }
         },
@@ -1327,9 +1327,9 @@
     }
   },
   "order": [
+    "image_banner_cTFcJk",
     "multicolumn",
     "image_with_text_dJfY7c",
-    "image_banner_cTFcJk",
     "featured_collection_yKANgB",
     "collage",
     "compare_table_4zE6WA",
