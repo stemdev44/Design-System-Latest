@@ -270,10 +270,10 @@
                                           }                                        
                                       </style>  
                                     {%- endif -%}
-                                  <a class="button{% if section.settings.mobile_video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                                      style="cursor: pointer; color: {{section.settings.mobile_video_button_font}}; background-color: {{section.settings.mobile_video_button_background}};" 
+                                  <a class="button{% if section.settings.video_button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                                      style="cursor: pointer; color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
                                   >
-                                    {{ section.settings.mobile_video_button_text | escape }}
+                                    {{ section.settings.video_button_text | escape }}
                                   </a>
                                 {%- endif -%}
                             </span>
