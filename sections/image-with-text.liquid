@@ -256,14 +256,14 @@
                           {%- else -%}
                             {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                           {%- endif -%}
-                          <span class="deferred-media__poster-button motion-reduce" {% if section.settings.mobile_video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
-                            <span class="svg-wrapper" {% if section.settings.mobile_video_button_text != blank %} style="width:100%" {% endif %}>
-                              {%- if section.settings.mobile_video_button_text == blank -%}
+                          <span class="deferred-media__poster-button motion-reduce" {% if section.settings.video_button_text != blank %} style="background-color: transparent; border: none; width:100%" {% endif %}>
+                            <span class="svg-wrapper" {% if section.settings.video_button_text != blank %} style="width:100%" {% endif %}>
+                              {%- if section.settings.video_button_text == blank -%}
                                 {{- 'icon-play.svg' | inline_asset_content -}}
                               {%- endif -%}                                                                    
 
-                                {%- if section.settings.mobile_video_button_text != blank -%}
-                                  {%- if section.settings.mobile_video_no_border_style -%}
+                                {%- if section.settings.video_button_text != blank -%}
+                                  {%- if section.settings.video_no_border_style -%}
                                       <style>
                                         .section-{{ section.id }}-padding .svg-wrapper .button:after{
                                             box-shadow: none;
