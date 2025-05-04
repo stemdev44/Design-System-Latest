@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image_overlay_opacity": 0,
-            "image_column_corner_radius": 32,
+            "image_column_corner_radius": 14,
             "heading": "Product Heading",
             "desktop_content_position": "middle-center",
             "heading_size": "h1",
@@ -34,7 +34,7 @@
           "type": "image",
           "settings": {
             "image_overlay_opacity": 0,
-            "image_column_corner_radius": 27,
+            "image_column_corner_radius": 0,
             "heading": "Product Heading",
             "desktop_content_position": "middle-center",
             "heading_size": "h1",
