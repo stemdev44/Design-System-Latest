@@ -638,6 +638,21 @@
           {{ section.settings.button_label | escape }}
         </a>
       {%- endif -%}
+
+      {%- if section.settings.button_label_2 != blank -%}
+        <a
+          class="button {% if section.settings.button_style_secondary_2 %} button--secondary {%else%} button--primary {% endif %} "
+          {% if section.settings.button_link_2 == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link_2 }}"
+          {% endif %}
+          style="color: {{section.settings.video_button_font_2}}; background-color: {{section.settings.video_button_background_2}};" 
+        >
+          {{ section.settings.button_label_2 | escape }}
+        </a>
+      {%- endif -%}      
+
     </div>    
   </div>
 </div>
