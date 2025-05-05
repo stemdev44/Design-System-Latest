@@ -76,6 +76,7 @@
   .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
   }
+
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -93,19 +94,7 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
-  @media screen and (max-width: 750px) {
-    {%- if section.settings.logo_position == 'middle-center' and section.settings.mobile_search_icon_position == 'left'-%}
-      .header__icons{
-        width: 100%;
-        justify-content: flex-end !important;
-        padding-right: 0 !important;
-        max-width: 100%;
-        flex-wrap: wrap    
-      }
-    {%- endif -%}    
-  }
-
+  
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -149,7 +138,12 @@
 
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 
-    <div style="width: 100%; display: flex; justify-self: start; max-width: 100%;flex-wrap: wrap">
+    <div style="width: 100%;
+      display: flex;
+      justify-self: start;
+      max-width: 100%;
+      border: 1px solid;
+      flex-wrap: wrap">
       {%- if section.settings.menu != blank -%}
         {% render 'header-drawer', secondary_menu: secondary_menu  %}
       {%- endif -%}
@@ -235,7 +229,15 @@
       {%- endif -%}
     {%- endif -%}
 
-    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}"
+    style="width: 100%;
+       display: flex; 
+     grid-area: icons; 
+    justify-content: flex-end !important;
+    padding-right: 0 !important;
+    max-width: 100%;
+    border: 1px solid;
+    flex-wrap: wrap">
       {% comment %} //////////////Adding Secondary menu start /////////////// {% endcomment %}
         {%- if section.settings.logo_position == 'middle-center' and  secondary_menu != blank-%}
           {% render 'secondary-header-dropdown-menu', secondary_menu: secondary_menu %}
