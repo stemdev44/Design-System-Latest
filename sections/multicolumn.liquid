@@ -511,11 +511,14 @@
                           gap: 2px;
                         }
                       </style>
-                      <h3 class="small-hide medium-hide inline-richtext heading_icon_image {% if block.settings.heading_size == 'extra_large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %}"  
+                      <h3 class="small-hide medium-hide inline-richtext heading_icon_image subtitle--{{ block.settings.heading_size }}"  
                           style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
                                   {% if section.settings.column_alignment == 'center'%}
                                     justify-content:center;
-                                  {% endif %}"                          
+                                  {% endif %}"
+                                  {% if block.settings.heading_size == 'extra_large'%}
+                                    font-size:2rem !important;
+                                  {% endif %}"                                  
                       >
                         <img src="{{ block.settings.heading_icon_image | img_url: 'small' }}" alt="" style="width:20px"/> 
                         {{ block.settings.title }}
