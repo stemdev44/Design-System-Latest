@@ -222,7 +222,7 @@
     {
       "type": "text",
       "id": "custom_heading_font_extra_large",
-      "label": "Font Files Upload Overwrite"
+      "label": "New Font Asset for Heading Extra-Large"
     },        
     {
         "type": "range",
