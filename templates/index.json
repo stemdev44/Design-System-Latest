@@ -58,22 +58,6 @@
             "caption_background_color": "",
             "caption_font_color": "",
             "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_DXw7RP": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
             "heading_size": "h2",
             "heading_size_mobile": "h2",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -85,8 +69,7 @@
       "block_order": [
         "column_YTwwpC",
         "column_xdbqn4",
-        "column_mj9zba",
-        "column_DXw7RP"
+        "column_mj9zba"
       ],
       "settings": {
         "caption": "Carousel Caption",
