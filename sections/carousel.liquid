@@ -306,6 +306,7 @@
                               gap: 2px;
                             }
                           </style>
+                          <p>{{block.settings.heading_size}}</p>
                           <h3 class="small-hide medium-hide inline-richtext heading_icon_image {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} "  
                               style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
                                       {% if section.settings.column_alignment == 'center'%}
@@ -325,6 +326,7 @@
                             {{ block.settings.title }}
                           </h3>
                         {%- else -%}
+                        <p>{{block.settings.heading_size}}</p>
                           <h3 class="small-hide medium-hide inline-richtext {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} " 
                             style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
                             {% if section.settings.column_alignment == 'center'%}
@@ -459,6 +461,7 @@
                             gap: 2px;
                           }
                         </style>
+                        <p>{{block.settings.heading_size}}</p>
                         <h3 class="small-hide medium-hide inline-richtext heading_icon_image {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} "  
                             style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
                                     {% if section.settings.column_alignment == 'center'%}
@@ -478,6 +481,7 @@
                           {{ block.settings.title }}
                         </h3>
                       {%- else -%}
+                      <p>{{block.settings.heading_size}}</p>
                         <h3 class="small-hide medium-hide inline-richtext {% unless block.settings.heading_size == 'large' %} {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} {% endunless %} " 
                           style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
                           {% if section.settings.column_alignment == 'center'%}
