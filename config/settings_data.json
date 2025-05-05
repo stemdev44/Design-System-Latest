@@ -13,9 +13,6 @@
     "type_header_font": "assistant_n4",
     "custom_heading_font": "",
     "heading_scale": 110,
-    "h1_heading_size": 2.3,
-    "h2_heading_size": 2.2,
-    "h4_heading_size": 4.1,
     "custom_heading_font_extra_large": "Moderat-Thin",
     "type_body_font": "assistant_n4",
     "custom_body_font": "Moderat-Thin",
@@ -134,6 +131,9 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "h1_heading_size": 2.3,
+    "h2_heading_size": 2.2,
+    "h4_heading_size": 4.1,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
