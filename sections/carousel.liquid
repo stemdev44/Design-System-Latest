@@ -671,8 +671,7 @@
 
       {%- endif -%}
     </slider-component>
-
-    {% comment %} <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    <div style="display: flex; justify-content: center; align-items: center;gap: 1rem;">
       {%- if section.settings.button_label != blank -%}
         <a
           class="button {% if section.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
@@ -681,26 +680,27 @@
           {% else %}
             href="{{ section.settings.button_link }}"
           {% endif %}
+          style="color: {{section.settings.video_button_font}}; background-color: {{section.settings.video_button_background}};" 
         >
           {{ section.settings.button_label | escape }}
         </a>
       {%- endif -%}
-    </div> {% endcomment %}
 
-    <div class="center">
-      {%- if section.settings.button_label != blank -%}
+      {%- if section.settings.button_label_2 != blank -%}
         <a
-          class="button {% if section.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
-          {% if section.settings.button_link == blank %}
+          class="button {% if section.settings.button_style_secondary_2 %} button--secondary {%else%} button--primary {% endif %} "
+          {% if section.settings.button_link_2 == blank %}
             role="link" aria-disabled="true"
           {% else %}
-            href="{{ section.settings.button_link }}"
+            href="{{ section.settings.button_link_2 }}"
           {% endif %}
+          style="color: {{section.settings.video_button_font_2}}; background-color: {{section.settings.video_button_background_2}};" 
         >
-          {{ section.settings.button_label | escape }}
+          {{ section.settings.button_label_2 | escape }}
         </a>
-      {%- endif -%}
-    </div>
+      {%- endif -%}      
+
+    </div> 
 
   </div>
 </div>
@@ -957,6 +957,22 @@
         "default": false,
         "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
     },
+    {
+      "type": "checkbox",
+      "id": "no_border_style",
+      "default": false,
+      "label": "No Border Style"
+    },    
+    {
+      "type":"color",
+      "id":"video_button_background",
+      "label":"Button Color"
+    },
+    {
+      "type":"color",
+      "id":"video_button_font",
+      "label":"Font Color"
+    },    
     {
       "type": "header",
       "content": "Button 2"
