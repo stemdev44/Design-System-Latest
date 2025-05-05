@@ -128,7 +128,17 @@
             {{ settings.custom_heading_font }}, {{ settings.type_header_font.fallback_families }}
           {% else %}
             {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}
+          {% endif %};
+          
+          --font-heading-family-extra-large: 
+          {% if settings.custom_heading_font_extra_large != blank %}
+            {{ settings.custom_heading_font_extra_large }}, {{ settings.type_header_font.fallback_families }}
+          {% elsif settings.custom_heading_font_extra_large == blank and settings.custom_heading_font != blank %}
+            {{ settings.custom_heading_font }}, {{ settings.type_header_font.fallback_families }}
+          {% else %}
+            {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }} 
           {% endif %};          
+          
           --font-heading-style: {{ settings.type_header_font.style }};
           --font-heading-weight: {{ settings.type_header_font.weight }};
   
