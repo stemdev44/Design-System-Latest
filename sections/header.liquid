@@ -141,7 +141,8 @@
     <div style="width: 100%;
       display: flex;
       justify-self: start;
-      max-width: 100%;">
+      max-width: 100%;
+      border:1px solid;">
       {%- if section.settings.menu != blank -%}
         {% render 'header-drawer', secondary_menu: secondary_menu  %}
       {%- endif -%}
@@ -227,7 +228,14 @@
       {%- endif -%}
     {%- endif -%}
 
-    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}"
+    style="width: 100%;
+       display: flex; 
+     grid-area: icons; 
+    justify-content: flex-end !important;
+    padding-right: .8rem;
+    max-width: 100%;
+    border: 1px solid;">
       {% comment %} //////////////Adding Secondary menu start /////////////// {% endcomment %}
         {%- if section.settings.logo_position == 'middle-center' and  secondary_menu != blank-%}
           {% render 'secondary-header-dropdown-menu', secondary_menu: secondary_menu %}
