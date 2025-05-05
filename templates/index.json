@@ -65,7 +65,7 @@
             "link": ""
           }
         },
-        "column_jRqgFp": {
+        "column_DXw7RP": {
           "type": "column",
           "settings": {
             "caption": "",
@@ -74,8 +74,8 @@
             "caption_background_color": "",
             "caption_font_color": "",
             "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
+            "heading_size": "h2",
+            "heading_size_mobile": "h2",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
@@ -86,7 +86,7 @@
         "column_YTwwpC",
         "column_xdbqn4",
         "column_mj9zba",
-        "column_jRqgFp"
+        "column_DXw7RP"
       ],
       "settings": {
         "caption": "Carousel Caption",
