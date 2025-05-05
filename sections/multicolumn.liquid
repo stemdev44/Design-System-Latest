@@ -15,12 +15,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
+/* 
   {%- if section.settings.no_border_style == true -%}
     .section-{{ section.id }}-padding .button:after{
       box-shadow: none;
     }
-  {%- endif -%}
+  {%- endif -%} */
 
     .section-{{ section.id }}-padding .multicolumn-card__info .button:after{
       box-shadow:0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text),var(--border-opacity)),0 0 0 var(--buttons-border-width) rgba(var(--color-button),var(--alpha-button-background))
@@ -909,12 +909,6 @@
       "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
     },
     {
-      "type": "checkbox",
-      "id": "no_border_style",
-      "default": false,
-      "label": "No Border Style"
-    },    
-    {
       "type":"color",
       "id":"video_button_background",
       "label":"Button Color"
@@ -946,12 +940,6 @@
       "default": false,
       "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
     },
-    {
-      "type": "checkbox",
-      "id": "no_border_style_2",
-      "default": false,
-      "label": "No Border Style"
-    },    
     {
       "type":"color",
       "id":"video_button_background_2",
