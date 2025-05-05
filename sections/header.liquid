@@ -142,7 +142,6 @@
       display: flex;
       justify-self: start;
       max-width: 100%;
-      border: 1px solid;
       flex-wrap: wrap">
       {%- if section.settings.menu != blank -%}
         {% render 'header-drawer', secondary_menu: secondary_menu  %}
@@ -236,7 +235,6 @@
     justify-content: flex-end !important;
     padding-right: 0 !important;
     max-width: 100%;
-    border: 1px solid;
     flex-wrap: wrap">
       {% comment %} //////////////Adding Secondary menu start /////////////// {% endcomment %}
         {%- if section.settings.logo_position == 'middle-center' and  secondary_menu != blank-%}
