@@ -118,7 +118,7 @@
         "type": "text",
         "id": "custom_heading_font",
         "label": "Font Files Upload Overwrite"
-      },      
+      },    
       {
         "type": "range",
         "id": "heading_scale",
@@ -219,6 +219,11 @@
         "label": "REM Input for Heading  Extra large",
         "default": 5
     },
+    {
+      "type": "text",
+      "id": "custom_heading_font_extra_large",
+      "label": "Font Files Upload Overwrite"
+    },        
     {
         "type": "range",
         "id": "extra_extra_large_heading_size",
