@@ -102,7 +102,7 @@
         "text_style": "subtitle",
         "text_size": "large",
         "title": "Multicolumn Section",
-        "heading_size": "hxxl",
+        "heading_size": "hxl",
         "heading_alignment": "center",
         "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
@@ -192,7 +192,7 @@
       ],
       "settings": {
         "heading": "Multimedia collage",
-        "heading_size": "h2",
+        "heading_size": "h0",
         "desktop_layout": "left",
         "desktop_image_width": "medium",
         "desktop_layout_2": "collage",
