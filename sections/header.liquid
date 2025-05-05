@@ -138,13 +138,16 @@
 
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 
-    <div style="display: flex;
-          padding-right: .8rem;">
+    <div style="display: flex;">
       {%- if section.settings.menu != blank -%}
         {% render 'header-drawer', secondary_menu: secondary_menu  %}
       {%- endif -%}
       {%- if section.settings.logo_position == 'middle-center' and section.settings.mobile_search_icon_position == 'left'-%}
-        <div class="large-up-hide medium-hide">        
+        <div style="
+          {% unless section.settings.mobile_search_icon_position == 'left' %}
+            visibility:hidden;
+          {% endunless %}
+          ">        
           {%- render 'header-search', input_id: 'Search-In-Modal-1', icon_for_search: section.settings.icon_for_search -%}
         </div>
       {%- endif -%}
