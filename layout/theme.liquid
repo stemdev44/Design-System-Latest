@@ -79,6 +79,21 @@
         }
       {%-endif-%}
 
+      {%-if settings.custom_body_font !=blank-%}
+        @font-face {
+          font-family: "{{settings.custom_body_font}}";
+          src: url("{{ '{{settings.custom_body_font}}.woff' | asset_url }}") format("woff");
+          src:
+            local(""),
+            local(""),
+            url("{{ '{{settings.custom_body_font}}.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+            url("{{ '{{settings.custom_body_font}}.woff2' | asset_url }}") format("woff2"),
+            url("{{ '{{settings.custom_body_font}}.ttf' | asset_url }}") format("truetype"),
+            url("{{ '{{settings.custom_body_font}}.svg' | asset_url }}#Moderat-Thin") format("svg");
+          font-style: normal;
+        }
+      {%-endif-%}
+
         {{ settings.type_body_font | font_face: font_display: 'swap' }}
         {{ body_font_bold | font_face: font_display: 'swap' }}
         {{ body_font_italic | font_face: font_display: 'swap' }}
