@@ -632,9 +632,7 @@
         flex-direction:column;
         padding: 0 3.5rem;
       }
-      .section-{{ section.id }}-padding .multicol-buttons a{
-        width:100%
-      }      
+
       @media screen and (min-width: 520px) {
         .section-{{ section.id }}-padding .multicol-buttons{
           flex-direction:row;
@@ -642,6 +640,11 @@
           padding: 0;
         }
       }
+      @media screen and (max-width: 519px) {
+        .section-{{ section.id }}-padding .multicol-buttons a{
+          width:100%
+        }
+      }      
     </style>
     <div class="multicol-buttons">
       {%- if section.settings.button_label != blank -%}
