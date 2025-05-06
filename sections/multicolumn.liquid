@@ -624,7 +624,22 @@
         </div>
       {%- endif -%}
     </slider-component>
-    <div style="display: flex; justify-content: center; align-items: center;gap: 1rem;">
+    <style>
+      .section-{{ section.id }}-padding .multicol-buttons{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        flex-direction:column;
+        padding: 4rem 3.5rem;
+      }
+      @media screen and (min-width: 520px) {
+        .section-{{ section.id }}-padding .multicol-buttons{
+          flex-direction:row;
+          padding: 0;
+        }
+      }      
+    </style>
+    <div class="multicol-buttons">
       {%- if section.settings.button_label != blank -%}
         <a
           class="button {% if section.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
