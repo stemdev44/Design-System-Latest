@@ -75,6 +75,26 @@
     }         
   {%- endif -%}
 
+
+  .section-{{ section.id }}-padding .multicol-buttons{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap:1rem;
+  }
+
+  @media screen and (max-width: 519px) {            
+    .section-{{ section.id }}-padding .multicol-buttons{
+      flex-direction:column;
+      padding: 0 3.5rem;
+      gap:0;
+    }
+
+    .section-{{ section.id }}-padding .multicol-buttons a{
+        width:100%
+      }
+  }
+
 {%- endstyle -%}
 
 {%- liquid
@@ -671,7 +691,7 @@
 
       {%- endif -%}
     </slider-component>
-    <div style="display: flex; justify-content: center; align-items: center;gap: 1rem;">
+    <div class="multicol-buttons">
       {%- if section.settings.button_label != blank -%}
         <a
           class="button {% if section.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
