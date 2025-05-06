@@ -49,7 +49,7 @@
   
       {% style %}
 
-      {%if settings.custom_heading_font !=blank %}
+      {%-if settings.custom_heading_font !=blank %}
         @font-face {
           font-family: "{{settings.custom_heading_font}}";
           src: url("{{ '{{settings.custom_heading_font}}.woff' | asset_url }}") format("woff");
@@ -62,9 +62,9 @@
             url("{{ '{{settings.custom_heading_font}}.svg' | asset_url }}#Moderat-Thin") format("svg");
           font-style: normal;
         }
-      {% endif %}
+      {% endif -%}
 
-      {% if settings.custom_heading_font_extra_large !=blank %}
+      {%- if settings.custom_heading_font_extra_large !=blank %}
         @font-face {
           font-family: "{{settings.custom_heading_font_extra_large}}";
           src: url("{{ '{{settings.custom_heading_font_extra_large}}.woff' | asset_url }}") format("woff");
@@ -77,9 +77,9 @@
             url("{{ '{{settings.custom_heading_font_extra_large}}.svg' | asset_url }}#Moderat-Thin") format("svg");
           font-style: normal;
         }
-      {% endif %}
+      {% endif -%}
 
-      {% if settings.custom_body_font !=blank %}
+      {%- if settings.custom_body_font !=blank %}
         @font-face {
           font-family: "{{settings.custom_body_font}}";
           src: url("{{ '{{settings.custom_body_font}}.woff' | asset_url }}") format("woff");
@@ -92,7 +92,7 @@
             url("{{ '{{settings.custom_body_font}}.svg' | asset_url }}#Moderat-Thin") format("svg");
           font-style: normal;
         }
-      {% endif %}
+      {% endif -%}
 
         {{ settings.type_body_font | font_face: font_display: 'swap' }}
         {{ body_font_bold | font_face: font_display: 'swap' }}
