@@ -99,7 +99,7 @@
     {% endif %}
   >
     {%- if section.settings.caption != blank -%}
-      <div class = "{{section.id}}-caption-container" style="display:flex;">
+      <div class = "{{section.id}}-caption-container" style="display:flex; margin-top:1rem;">
         <p class="{{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}" 
             style="text-align: {{ section.settings.heading_alignment }}; width:max-content; background:{{section.settings.caption_background_color}}; color:{{section.settings.caption_font_color}}; padding:5px; ">
           {{ section.settings.caption | escape }}
@@ -284,7 +284,7 @@
                             {{ block.settings.caption | escape }}
                         </p> {% endcomment %}
                         <div class = "{{block.id}}-caption-container" 
-                              style="display:flex;                                   
+                              style="display:flex; margin-top: 1rem;                 
                                       {% if section.settings.column_alignment == 'center'%}
                                         justify-content:center;
                                       {% endif %}"
@@ -437,7 +437,7 @@
                           {{ block.settings.caption | escape }}
                       </p> {% endcomment %}
                       <div class = "{{block.id}}-caption-container" 
-                            style="display:flex;                                   
+                            style="display:flex; margin-top:1rem;                 
                                     {% if section.settings.column_alignment == 'center'%}
                                       justify-content:center;
                                     {% endif %}"
