@@ -629,21 +629,19 @@
         display: flex; 
         justify-content: center; 
         align-items: center;
-        flex-direction:column;
-        padding: 0 3.5rem;
+        gap:1rem;
       }
 
-      @media screen and (min-width: 520px) {
+      @media screen and (max-width: 519px) {            
         .section-{{ section.id }}-padding .multicol-buttons{
-          flex-direction:row;
-          gap:1rem;
-          padding: 0;
+          flex-direction:column;
+          padding: 0 3.5rem;
+          gap:0;
         }
-      }
-      @media screen and (max-width: 519px) {
+
         .section-{{ section.id }}-padding .multicol-buttons a{
-          width:100%
-        }
+            width:100%
+          }
       }      
     </style>
     <div class="multicol-buttons">
