@@ -135,7 +135,7 @@
         "min": 1,
         "max": 10,
         "step": 0.1,
-        "label": "REM Input for Heading Small",
+        "label": "REM for Heading Small",
         "default": 2
     },
     {
@@ -144,7 +144,7 @@
         "min": 1,
         "max": 10,
         "step": 0.1,
-        "label": "REM Input for Heading Medium",
+        "label": "REM for Heading Medium",
         "default": 3
     },
     {
@@ -153,7 +153,7 @@
         "min": 1,
         "max": 10,
         "step": 0.1,
-        "label": "REM Input for Heading Large",
+        "label": "REM for Heading Large",
         "default": 4
     },
     {
@@ -162,7 +162,7 @@
         "min": 1,
         "max": 10,
         "step": 0.1,
-        "label": "REM Input for Heading  Extra large",
+        "label": "REM for Heading  Extra large",
         "default": 5
     },
     {
@@ -176,7 +176,7 @@
         "min": 1,
         "max": 10,
         "step": 0.1,
-        "label": "REM Input for Heading Extra extra large",
+        "label": "REM for Heading Extra extra large",
         "default": 7.2
     },                                                
       {
@@ -210,7 +210,7 @@
         "min": 1,
         "max": 10,
         "step": 0.1,
-        "label": "REM Input for Body (p,a,ul,li)....",
+        "label": "REM for Body (p,a,ul,li)....",
         "default": 1.5
       },            
     ]
