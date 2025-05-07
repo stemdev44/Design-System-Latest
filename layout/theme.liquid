@@ -56,7 +56,7 @@
         {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       {% comment %} {%-if settings.custom_heading_font !=blank %} {% endcomment %}
-      {%-if settings.custom_heading_font !=blank or settings.custom_body_font !=blank -%}
+
         @font-face {
           font-family: "Moderat-Thin";
           src: url("{{ 'Moderat-Thin.woff' | asset_url }}") format("woff");
@@ -71,9 +71,8 @@
           font-weight: 400;
           font-style: normal;
         }     
-       {%- endif -%} 
 
-       {%-if settings.custom_heading_font_extra_large !=blank -%}
+
         @font-face {
           font-family: "EightiesComeback-Light";
           src: url("{{ 'EightiesComeback-Light.woff' | asset_url }}") format("woff");
@@ -88,7 +87,7 @@
           font-weight: 400;
           font-style: normal;
         }     
-       {%- endif -%} 
+
         
 
         /* @font-face {
