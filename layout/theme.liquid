@@ -59,15 +59,15 @@
 
         @font-face {
           font-family: "Moderat-Thin";
-          src: url("{{ 'Moderat-Thin.woff' | file_url }}") format("woff");
+          src: url("{{ 'Moderat-Thin.woff' | asset_url  }}") format("woff");
           src:
             local("Moderat-Thin"),
             local("Moderat-Thin"),
-            url("{{ 'Moderat-Thin.eot' | file_url }}?#iefix") format("embedded-opentype"),
-            url("{{ 'Moderat-Thin.woff' | file_url }}") format("woff"),
-            url("{{ 'Moderat-Thin.woff2' | file_url }}") format("woff2"),
-            url("{{ 'Moderat-Thin.ttf' | file_url }}") format("truetype"),
-            url("{{ 'Moderat-Thin.svg' | file_url }}") format("svg");
+            url("{{ 'Moderat-Thin.eot' | asset_url  }}?#iefix") format("embedded-opentype"),
+            url("{{ 'Moderat-Thin.woff' | asset_url  }}") format("woff"),
+            url("{{ 'Moderat-Thin.woff2' | asset_url  }}") format("woff2"),
+            url("{{ 'Moderat-Thin.ttf' | asset_url  }}") format("truetype"),
+            url("{{ 'Moderat-Thin.svg' | asset_url  }}") format("svg");
           font-weight: 400;
           font-style: normal;
         }     
