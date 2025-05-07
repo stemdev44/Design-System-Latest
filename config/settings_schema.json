@@ -587,7 +587,13 @@
         "type":"color",
         "id":"quick_add_button_font",
         "label":"Quick Add Button font Color"
-      },         
+      },  
+      {
+        "type": "checkbox",
+        "id": "ratings_before_title",
+        "default": false,
+        "label": "Ratings Before Title"
+      },              
       {
         "type": "range",
         "id": "card_image_padding",

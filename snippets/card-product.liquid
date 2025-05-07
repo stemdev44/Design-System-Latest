@@ -145,6 +145,45 @@
       </div>
       <div class="card__content">
         <div class="card__information">
+          {% comment %} //////////Showing Products Ratings Starts/////////// {% endcomment %}
+            <div class="card-information">
+              {%- if show_rating and settings.ratings_before_title -%}
+                {% liquid
+                  assign rating_decimal = 0
+                  assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1
+                  if decimal >= 0.3 and decimal <= 0.7
+                    assign rating_decimal = 0.5
+                  elsif decimal > 0.7
+                    assign rating_decimal = 1
+                  endif
+                %}
+                <div
+                  class="rating"
+                  role="img"
+                  aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="rating-star"
+                    style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+                  ></span>
+                </div>
+                <p class="rating-text caption">
+                  <span aria-hidden="true">
+                    {{- card_product.metafields.reviews.rating.value }} /
+                    {{ card_product.metafields.reviews.rating.value.scale_max -}}
+                  </span>
+                </p>
+                <p class="rating-count caption">
+                  <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
+                  <span class="visually-hidden">
+                    {{- card_product.metafields.reviews.rating_count }}
+                    {{ 'accessibility.total_reviews' | t -}}
+                  </span>
+                </p>
+              {%- endif -%}
+            </div>          
+          {% comment %} //////////Showing Products Ratings Ends/////// {% endcomment %}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -168,7 +207,7 @@
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
-            {%- if show_rating -%}
+            {%- if show_rating and settings.ratings_before_title == false -%}
               {% liquid
                 assign rating_decimal = 0
                 assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1
