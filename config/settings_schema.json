@@ -577,7 +577,17 @@
         "id": "custom_quick_add_button_label",
         "label": "Quick Add Standard Button Label",
         "default":"Quick Add"
-      },      
+      },
+      {
+        "type":"color",
+        "id":"quickAdd_button_background",
+        "label":"Quick Add Button Background Color"
+      },
+      {
+        "type":"color",
+        "id":"quickAdd_button_font",
+        "label":"Quick Add Button font Color"
+      },         
       {
         "type": "range",
         "id": "card_image_padding",
