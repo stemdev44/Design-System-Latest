@@ -73,13 +73,15 @@
 
       {% comment %} {%- if settings.custom_heading_font_extra_large !=blank %} {% endcomment %}
         @font-face {
-          font-family: "{{ settings.custom_heading_font_extra_large }}";
+          font-family: "Moderat-Thin";
+          src: url("{{ 'Moderat-Thin.woff' | asset_url }}") format("woff");
           src:
-            url("{{ settings.custom_heading_font_extra_large | append: '.woff2' | asset_url }}") format("woff2"),
-            url("{{ settings.custom_heading_font_extra_large | append: '.woff' | asset_url }}") format("woff"),
-            url("{{ settings.custom_heading_font_extra_large | append: '.eot' | asset_url }}?#iefix") format("embedded-opentype"),
-            url("{{ settings.custom_heading_font_extra_large | append: '.ttf' | asset_url }}") format("truetype"),
-            url("{{ settings.custom_heading_font_extra_large | append: '.svg' | asset_url }}#{{ settings.custom_heading_font_extra_large }}") format("svg");
+            local("Moderat-Thin"),
+            local("Moderat-Thin"),
+            url("{{ 'Moderat-Thin.eot'| asset_url }}?#iefix") format("embedded-opentype"),
+            url("{{'Moderat-Thin.woff2' | asset_url }}") format("woff2"),
+            url("{{ 'Moderat-Thin.ttf'| asset_url }}") format("truetype"),
+            url("{{ 'Moderat-Thin.svg' | asset_url }}#{{ settings.custom_heading_font_extra_large }}") format("svg");
           font-style: normal;
           font-display: swap;
         }
