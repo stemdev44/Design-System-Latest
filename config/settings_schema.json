@@ -580,12 +580,12 @@
       },
       {
         "type":"color",
-        "id":"quickAdd_button_background",
+        "id":"quick_add_button_background",
         "label":"Quick Add Button Background Color"
       },
       {
         "type":"color",
-        "id":"quickAdd_button_font",
+        "id":"quick_add_button_font",
         "label":"Quick Add Button font Color"
       },         
       {
