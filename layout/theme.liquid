@@ -56,7 +56,42 @@
         {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       {% comment %} {%-if settings.custom_heading_font !=blank %} {% endcomment %}
+      {%-if settings.custom_heading_font !=blank or settings.custom_body_font !=blank %}
         @font-face {
+          font-family: "Moderat-Thin";
+          src: url("{{ 'Moderat-Thin.woff' | asset_url }}") format("woff");
+          src:
+            local("Moderat-Thin"),
+            local("Moderat-Thin"),
+            url("{{ 'Moderat-Thin.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+            url("{{ 'Moderat-Thin.woff' | asset_url }}") format("woff"),
+            url("{{ 'Moderat-Thin.woff2' | asset_url }}") format("woff2"),
+            url("{{ 'Moderat-Thin.ttf' | asset_url }}") format("truetype"),
+            url("{{ 'Moderat-Thin.svg' | asset_url }}") format("svg");
+          font-weight: 400;
+          font-style: normal;
+        }     
+       {% endif %} 
+
+       {%-if settings.custom_heading_font !=blank %}
+        @font-face {
+          font-family: "EightiesComeback-Light";
+          src: url("{{ 'EightiesComeback-Light.woff' | asset_url }}") format("woff");
+          src:
+            local("EightiesComeback-Light"),
+            local("EightiesComeback-Light"),
+            url("{{ 'EightiesComeback-Light.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+            url("{{ 'EightiesComeback-Light.woff' | asset_url }}") format("woff"),
+            url("{{ 'EightiesComeback-Light.woff2' | asset_url }}") format("woff2"),
+            url("{{ 'EightiesComeback-Light.ttf' | asset_url }}") format("truetype"),
+            url("{{ 'EightiesComeback-Light.svg' | asset_url }}") format("svg");
+          font-weight: 400;
+          font-style: normal;
+        }     
+       {% endif %} 
+        
+
+        /* @font-face {
           font-family: "{{ settings.custom_heading_font }}";
           src: url("{{ settings.custom_heading_font | append: '.woff' | file_url }}") format("woff");
           src:
@@ -68,11 +103,11 @@
             url("{{ settings.custom_heading_font | append: '.svg' | file_url }}#{{ settings.custom_heading_font }}") format("svg");
           font-style: normal;
           font-display: swap;
-        }
+        } */
       {% comment %} {% endif -%} {% endcomment %}
 
       {% comment %} {%- if settings.custom_heading_font_extra_large !=blank %} {% endcomment %}
-        @font-face {
+        /* @font-face {
           font-family: "{{ settings.custom_heading_font_extra_large }}";
           src:
             url("{{ settings.custom_heading_font_extra_large | append: '.woff2' | file_url }}") format("woff2"),
@@ -82,11 +117,11 @@
             url("{{ settings.custom_heading_font_extra_large | append: '.svg' | file_url }}#{{ settings.custom_heading_font_extra_large }}") format("svg");
           font-style: normal;
           font-display: swap;
-        }
+        } */
       {% comment %} {% endif -%} {% endcomment %}
 
       {% comment %} {%- if settings.custom_body_font !=blank %} {% endcomment %}
-        @font-face {
+        /* @font-face {
           font-family: "{{ settings.custom_body_font }}";
           src: url("{{ settings.custom_body_font | append: '.woff' | file_url }}") format("woff");
           src:
@@ -98,7 +133,7 @@
             url("{{ settings.custom_body_font | append: '.svg' | file_url }}#{{ settings.custom_body_font }}") format("svg");
           font-style: normal;
           font-display: swap;
-        }
+        } */
       {% comment %} {% endif -%} {% endcomment %}
 
         {% for scheme in settings.color_schemes -%}
