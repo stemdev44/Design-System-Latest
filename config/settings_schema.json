@@ -573,6 +573,12 @@
         "label": "t:settings_schema.cards.settings.style.label"
       },
       {
+        "type": "checkbox",
+        "id": "full_width_button",
+        "default": false,
+        "label": "Full Width Button"
+      },      
+      {
         "type": "text",
         "id": "custom_quick_add_button_label",
         "label": "Quick Add Standard Button Label",
