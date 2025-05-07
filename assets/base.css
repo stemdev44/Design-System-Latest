@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "EightiesComeback-Light";
+  src: url("EightiesComeback-Light.woff") format("woff");
+  src:
+    local(""),
+    local(""),
+    url("EightiesComeback-Light.eot?#iefix") format("embedded-opentype"),
+    url("EightiesComeback-Light.woff2") format("woff2"),
+    url("EightiesComeback-Light.ttf") format("truetype"),
+    url("EightiesComeback-Light.svg#EightiesComeback-Light") format("svg");
+  font-style: normal;
+  font-display: swap;
+} 
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
