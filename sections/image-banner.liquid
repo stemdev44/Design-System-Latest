@@ -41,6 +41,14 @@
     .mobile-only { display: none !important; }
   }
 
+  {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
+    #Banner-{{ section.id }} .banner--mobile-bottom .banner__content{ 
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) !important;      
+    } 
+  {%- endif -%} 
+
 {%- endstyle -%}
 
 {%- liquid
@@ -166,7 +174,7 @@
               {{ block.settings.heading }}
             </h2>
             <h2
-              class="large-up-hide {% if section.settings.remove_heading_text_mobile %} small-hide medium-hide {% endif %} banner__heading inline-richtext {{ block.settings.mobile_heading_size }}"
+              class="large-up-hide {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %} small-hide medium-hide {% endif %} banner__heading inline-richtext {{ block.settings.mobile_heading_size }}"
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
@@ -202,7 +210,7 @@
                   }
                 </style>                    
             {%-endif -%}            
-            <div class="banner__text rte {% if section.settings.remove_heading_text_mobile %} small-hide medium-hide {% endif %} {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
+            <div class="banner__text rte {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %} small-hide medium-hide {% endif %} {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
