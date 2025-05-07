@@ -72,7 +72,7 @@
       {% comment %} {% endif -%} {% endcomment %}
 
       {% comment %} {%- if settings.custom_heading_font_extra_large !=blank %} {% endcomment %}
-        @font-face {
+        {% comment %} @font-face {
           font-family: "{{ settings.custom_heading_font_extra_large }}";
           src: url("{{ settings.custom_heading_font_extra_large | append: '.woff' | file_url }}") format("woff");
           src:
@@ -84,7 +84,7 @@
             url("{{ settings.custom_heading_font_extra_large | append: '.svg' | file_url }}#{{ settings.custom_heading_font_extra_large }}") format("svg");
           font-style: normal;
           font-display: swap;
-        }
+        } {% endcomment %}
       {% comment %} {% endif -%} {% endcomment %}
 
       {% comment %} {%- if settings.custom_body_font !=blank %} {% endcomment %}
