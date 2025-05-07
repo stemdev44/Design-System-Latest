@@ -45,7 +45,7 @@
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
-    "card_style": "standard",
+    "card_style": "card",
     "custom_quick_add_button_label": "Buy Now",
     "quick_add_button_background": "#242833",
     "quick_add_button_font": "#334fb4",
