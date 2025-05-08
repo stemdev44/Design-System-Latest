@@ -9,6 +9,79 @@
  */
 {
   "sections": {
+    "collapsible_content_qUw7fA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Fd3yMf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "custom",
+            "custom_image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_etFKTN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "custom",
+            "custom_image": "shopify://shop_images/CalendarCheck.png",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_LMVPQn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_WfrzNc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>this is test and what is test</p>",
+            "page": ""
+          }
+        },
+        "text_TC8TRc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "content_alignment": "left",
+            "mobile_content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Fd3yMf",
+        "collapsible_row_etFKTN",
+        "collapsible_row_LMVPQn",
+        "collapsible_row_WfrzNc",
+        "text_TC8TRc"
+      ],
+      "settings": {
+        "caption": "Collapsible Caption",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "load_more": 2
+      }
+    },
     "featured_collection_yKANgB": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -840,78 +913,6 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collapsible_content_qUw7fA": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_Fd3yMf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "custom_image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_etFKTN": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "custom",
-            "custom_image": "shopify://shop_images/CalendarCheck.png",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_LMVPQn": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_WfrzNc": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>this is test and what is test</p>",
-            "page": ""
-          }
-        },
-        "text_TC8TRc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "content_alignment": "left",
-            "mobile_content_alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_Fd3yMf",
-        "collapsible_row_etFKTN",
-        "collapsible_row_LMVPQn",
-        "collapsible_row_WfrzNc",
-        "text_TC8TRc"
-      ],
-      "settings": {
-        "caption": "Collapsible Caption",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
