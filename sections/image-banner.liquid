@@ -119,6 +119,57 @@
           fetchpriority="{{ fetch_priority }}"
           alt="Desktop Image">
       {%- endif -%}
+        {% comment %} /////////////Heading and text no container starts/////////// {% endcomment %}
+          <div class="large-up-hide medium-hide banner__content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'heading' -%}
+                    <h2
+                      class="large-up-hide banner__heading inline-richtext {{ block.settings.mobile_heading_size }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.heading }}
+                    </h2>            
+                  {%- when 'text' -%}
+                      {%-if block.settings.icon_image != blank -%}
+                        <style>
+                          #Banner-{{ section.id }} ul {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;                    
+                            list-style: none;
+                            padding-left: 0; 
+                          }
+          
+                          #Banner-{{ section.id }} ul li {
+                            position: relative;
+                            padding-left: 24px; 
+                          }
+          
+                          #Banner-{{ section.id }} ul li::before {
+                            content: "";
+                            background: url("{{ block.settings.icon_image | img_url:"" }}");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            transform: translateY(30%);
+                          }
+                        </style>                    
+                    {%-endif -%}            
+                    <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                      <p>{{ block.settings.text }}</p>
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+          </div>      
+      {% comment %} /////////////heading and text no container ends/////////////// {% endcomment %}      
     </div>
 
   {%- elsif section.settings.image_2 == blank -%}
@@ -153,57 +204,6 @@
           widths: widths,
           fetchpriority: fetch_priority
       }}
-      {% comment %} /////////////Heading and text no container starts/////////// {% endcomment %}
-        <div class="large-up-hide medium-hide banner__content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
-            {%- for block in section.blocks -%}
-              {%- case block.type -%}
-                {%- when 'heading' -%}
-                  <h2
-                    class="large-up-hide banner__heading inline-richtext {{ block.settings.mobile_heading_size }}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.heading }}
-                  </h2>            
-                {%- when 'text' -%}
-                    {%-if block.settings.icon_image != blank -%}
-                      <style>
-                        #Banner-{{ section.id }} ul {
-                          display: flex;
-                          flex-direction: column;
-                          align-items: center;                    
-                          list-style: none;
-                          padding-left: 0; 
-                        }
-        
-                        #Banner-{{ section.id }} ul li {
-                          position: relative;
-                          padding-left: 24px; 
-                        }
-        
-                        #Banner-{{ section.id }} ul li::before {
-                          content: "";
-                          background: url("{{ block.settings.icon_image | img_url:"" }}");
-                          background-size: cover;
-                          background-repeat: no-repeat;
-                          background-position: center;
-                          width: 20px;
-                          height: 20px;
-                          position: absolute;
-                          left: 0;
-                          top: 0;
-                          transform: translateY(30%);
-                        }
-                      </style>                    
-                  {%-endif -%}            
-                  <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                    <p>{{ block.settings.text }}</p>
-                  </div>
-              {%- endcase -%}
-            {%- endfor -%}
-          </div>
-        </div>      
-      {% comment %} /////////////heading and text no container ends/////////////// {% endcomment %}
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
