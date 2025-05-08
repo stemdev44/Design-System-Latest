@@ -436,7 +436,7 @@
 
                         {% render 'icon-accordion', icon: block.settings.icon, custom_image: block.settings.custom_image  %}
                         <h3 class="accordion__title inline-richtext h4" {% if block.settings.background_style == 'primary' %} style="color:{{block.settings.column_font_color}}" {% endif %} >
-                          {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          {{ block.settings.heading | default: block.settings.page.title }}
                         </h3>
                         {{- 'icon-caret.svg' | inline_asset_content -}}
                       </summary>
@@ -940,7 +940,7 @@
       "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
       "settings": [
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "heading",
           "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
