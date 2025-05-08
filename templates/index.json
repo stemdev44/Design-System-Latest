@@ -12,11 +12,11 @@
     "image_banner_cTFcJk": {
       "type": "image-banner",
       "blocks": {
-        "heading_B7bUM3": {
+        "heading_GNNekc": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Image Banner</h2>",
-            "heading_size": "h0",
+            "heading": "<p>Image Banner</p>",
+            "heading_size": "h1",
             "mobile_heading_size": "h1"
           }
         },
@@ -41,7 +41,7 @@
         }
       },
       "block_order": [
-        "heading_B7bUM3",
+        "heading_GNNekc",
         "text_4Ce7TC",
         "buttons_h8Jd4b"
       ],
