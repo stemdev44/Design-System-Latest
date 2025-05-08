@@ -43,19 +43,20 @@
       background-color: {{section.settings.video_button_background}} !important;
       color:{{section.settings.video_button_font}} !important;
     }
+
+    {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
+      .banner--mobile-bottom .banner__content{ 
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) !important;      
+      } 
+    {%- endif -%}    
+
   }
   @media screen and (min-width: 750px) {
     .desktop-only { display: block !important; }
     .mobile-only { display: none !important; }
-  }
-
-  {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
-    .banner--mobile-bottom .banner__content{ 
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%) !important;      
-    } 
-  {%- endif -%} 
+  } 
 
 {%- endstyle -%}
 
