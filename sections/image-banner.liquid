@@ -47,8 +47,9 @@
     {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
       .banner--mobile-bottom .banner__content{ 
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%) !important;      
+        bottom:0
+        {% comment %} top: 50%; {% endcomment %}
+        {% comment %} transform: translateY(-50%) !important;       {% endcomment %}
       } 
     {%- endif -%}    
 
