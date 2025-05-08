@@ -54,11 +54,11 @@
         "desktop_content_position": "top-right",
         "desktop_content_alignment": "center",
         "show_text_box": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true,
-        "remove_heading_text_mobile": false
+        "remove_heading_text_mobile": true
       }
     },
     "collage": {
