@@ -70,7 +70,7 @@
             </div>
           {% endif %}
           <div class="grid__item">
-            {%- for block in section.blocks -%}
+            {% comment %} {%- for block in section.blocks -%}
               {% case block.type %}
               
                 {%- when 'collapsible_row' -%}
@@ -148,7 +148,105 @@
                     </div>
                   </div>
               {%- endcase -%}
-            {%- endfor -%}
+            {%- endfor -%} {% endcomment %}
+            {% comment %} //////////////// Load more starts /////////////// {% endcomment %}
+
+                {%- for block in section.blocks -%}
+                  {%- if forloop.index <= visible_count -%}
+                    {%- assign is_visible = true -%}
+                  {%- else -%}
+                    {%- assign is_visible = false -%}
+                  {%- endif -%}
+                  <div class="collapsible-block-wrapper{% unless is_visible %} hidden-block{% endunless %}" data-block-index="{{ forloop.index }}">
+
+                    {% case block.type %}
+                      {% when 'collapsible_row' %}
+                        <div
+                          class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                          {{ block.shopify_attributes }}>
+                          <details
+                            id="Details-{{ block.id }}-{{ section.id }}"
+                            {% if section.settings.open_first_collapsible_row and forloop.first %} open {% endif %}>
+                            <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                              {% render 'icon-accordion', icon: block.settings.icon, custom_image: block.settings.custom_image %}
+                              <h3 class="accordion__title inline-richtext h4">
+                                {{ block.settings.heading | default: block.settings.page.title | escape }}
+                              </h3>
+                              {{ 'icon-caret.svg' | inline_asset_content }}
+                            </summary>
+                            <div
+                              class="accordion__content rte"
+                              id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                              role="region"
+                              aria-labelledby="Summary-{{ block.id }}-{{ section.id }}">
+                              {{ block.settings.row_content }}
+                              {{ block.settings.page.content }}
+                            </div>
+                          </details>
+                        </div>
+
+                      {% when 'text' %}
+                        <style>
+                          @media screen and (max-width: 749px) {
+                            .section-{{ section.id }}-padding .rich-text__wrapper {
+                              width: 100% !important;
+                            }
+                            .section-{{ section.id }}-padding .rich-text__blocks {
+                              text-align: {{ block.settings.mobile_content_alignment }} !important;
+                            }
+                            .section-{{ section.id }}-padding .rich-text__buttons {
+                              justify-content:
+                              {% case block.settings.mobile_content_alignment %}
+                                {% when 'left' %} flex-start !important;
+                                {% when 'center' %} center !important;
+                                {% when 'right' %} flex-end !important;
+                              {% endcase %}
+                            }
+                          }
+                        </style>
+                        <div class="rich-text__wrapper rich-text__wrapper--{{ block.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}" style="padding: 1.5rem 0;">
+                          <div class="rich-text__blocks {{ block.settings.content_alignment }}">
+                            {% if block.settings.text %}
+                              <div class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                {{ block.shopify_attributes }}
+                                {% if settings.animations_reveal_on_scroll %}
+                                  data-cascade
+                                  style="--animation-order: {{ forloop.index }};"
+                                {% endif %}>
+                                {{ block.settings.text }}
+                              </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                    {% endcase %}
+                  </div>
+                {%- endfor -%}
+
+                {%- if section.blocks.size > visible_count -%}
+                  <div class="load-more-wrapper" style="text-align: center; margin-top: 1rem;">
+                    <button id="load-more-button" class="button">→ Load {{ section.blocks.size | minus: visible_count }} More</button>
+                  </div>
+                {%- endif -%} 
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                      const loadMoreBtn = document.getElementById("load-more-button");
+                      if (!loadMoreBtn) return;
+
+                      loadMoreBtn.addEventListener("click", function() {
+                        document.querySelectorAll(".hidden-block").forEach(function(block) {
+                          block.classList.remove("hidden-block");
+                        });
+                        loadMoreBtn.parentElement.remove();
+                      });
+                    });
+                  </script>
+
+                  <style>
+                    .hidden-block {
+                      display: none;
+                    }
+                  </style>                           
+            {% comment %} //////////////////Load More Ends ////////////////  {% endcomment %}
           </div>
         </div>
       </div>
