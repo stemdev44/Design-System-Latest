@@ -15,7 +15,7 @@
         "heading_B7bUM3": {
           "type": "heading",
           "settings": {
-            "heading": "<p>&lt;h1&gt;Hello&lt;/h1&gt;</p>",
+            "heading": "<h2>Image Banner</h2>",
             "heading_size": "h0",
             "mobile_heading_size": "h1"
           }
