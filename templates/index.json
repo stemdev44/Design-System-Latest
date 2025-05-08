@@ -90,9 +90,9 @@
         "mobile_content_alignment": "center",
         "show_text_below": true,
         "remove_heading_text_mobile": true,
-        "video_button_background": "#334fb4",
-        "video_button_font": "#242833",
-        "color_scheme_mobile": ""
+        "video_button_background": "#f6f3eb",
+        "video_button_font": "#000000",
+        "color_scheme_mobile": "scheme-3"
       }
     },
     "collage": {
