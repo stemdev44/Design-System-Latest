@@ -219,15 +219,9 @@
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+    <div class="small-hide banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
-          {% comment %} {%- when 'caption' -%}
-           {%- if block.settings.caption != blank -%}
-            <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_size }}">
-              {{ block.settings.caption | escape }}
-             </p> 
-           {% endif %}           {% endcomment %}
 
           {%- when 'heading' -%}
             <h2
@@ -309,6 +303,92 @@
         {%- endcase -%}
       {%- endfor -%}
     </div>
+
+    <div class="large-up-hide medium-hide banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme_mobile }} gradient">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+          {%- when 'heading' -%}
+            <h2
+              class="small-hide medium-hide banner__heading inline-richtext {{ block.settings.heading_size }}"              
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.heading }}
+            </h2>
+            <h2
+              class="large-up-hide {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %} small-hide {% endif %} banner__heading inline-richtext {{ block.settings.mobile_heading_size }}"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.heading }}
+            </h2>            
+          {%- when 'text' -%}
+              {%-if block.settings.icon_image != blank -%}
+                <style>
+                  #Banner-{{ section.id }} ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;                    
+                    list-style: none;
+                    padding-left: 0; 
+                  }
+
+                  #Banner-{{ section.id }} ul li {
+                    position: relative;
+                    padding-left: 24px; 
+                  }
+
+                  #Banner-{{ section.id }} ul li::before {
+                    content: "";
+                    background: url("{{ block.settings.icon_image | img_url:"" }}");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateY(30%);
+                  }
+                </style>                    
+            {%-endif -%}            
+            <div class="banner__text rte {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %} small-hide {% endif %} {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {%- when 'buttons' -%}
+            <div
+              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.button_label_1 != blank -%}
+                <a
+                  {% if block.settings.button_link_1 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_1 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label_1 | escape -}}
+                </a>
+              {%- endif -%}
+              {%- if block.settings.button_label_2 != blank -%}
+                <a
+                  {% if block.settings.button_link_2 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_2 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label_2 | escape -}}
+                </a>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>    
+
   </div>
 </div>
 
@@ -473,7 +553,7 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
-    },
+    },    
     {
       "type": "header",
       "content": "t:sections.image-banner.settings.mobile.content"
@@ -525,7 +605,13 @@
       "type":"color",
       "id":"video_button_font",
       "label":"Mobile Button Font Color"
-    },    
+    }, 
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_mobile",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }       
   ],
   "blocks": [  
     {
