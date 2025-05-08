@@ -150,7 +150,7 @@
               {%- endcase -%}
             {%- endfor -%} {% endcomment %}
             {% comment %} //////////////// Load more starts /////////////// {% endcomment %}
-
+                {%- assign visible_count = section.settings.load_more-%}
                 {%- for block in section.blocks -%}
                   {%- if forloop.index <= visible_count -%}
                     {%- assign is_visible = true -%}
