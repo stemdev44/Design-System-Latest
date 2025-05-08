@@ -66,10 +66,10 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collapsible_row_MxpBXD": {
+        "collapsible_row_NcqMaK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "<p><em><strong>Collapsible</strong></em></p>",
+            "heading": "<p>Collapsible row</p>",
             "icon": "check_mark",
             "row_content": "",
             "page": "",
@@ -103,7 +103,7 @@
         }
       },
       "block_order": [
-        "collapsible_row_MxpBXD",
+        "collapsible_row_NcqMaK",
         "collapsible_row_NjYYKH",
         "product_U4QC9Q"
       ],
