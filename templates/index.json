@@ -69,7 +69,7 @@
         "collapsible_row_MxpBXD": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "<strong>Collapsible row</strong>",
+            "heading": "<p><em><strong>Collapsible</strong></em></p>",
             "icon": "check_mark",
             "row_content": "",
             "page": "",
@@ -83,7 +83,7 @@
         "collapsible_row_NjYYKH": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "<p>Collapsible row</p>",
             "icon": "check_mark",
             "row_content": "",
             "page": "",
