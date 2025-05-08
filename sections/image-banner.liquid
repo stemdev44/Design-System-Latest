@@ -47,9 +47,9 @@
     {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
       .banner--mobile-bottom .banner__content{ 
         position: absolute;
-        bottom:0
-        {% comment %} top: 50%; {% endcomment %}
-        {% comment %} transform: translateY(-50%) !important;       {% endcomment %}
+        {% comment %} bottom:0 {% endcomment %}
+        top: 50%;
+        transform: translateY(-50%) !important;      
       } 
     {%- endif -%}    
 
@@ -130,7 +130,7 @@
           alt="Desktop Image">
       {%- endif -%}
         {% comment %} /////////////Heading and text no container starts/////////// {% endcomment %}
-          {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %}
+          {% comment %} {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %}
             <div class="large-up-hide medium-hide banner__content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
               <div class="banner__box content-container content-container--full-width-mobile ">
                 {%- for block in section.blocks -%}
@@ -180,8 +180,7 @@
                 {%- endfor -%}
               </div>
             </div>      
-          {% endif  %}
-
+          {% endif  %} {% endcomment %}
       {% comment %} /////////////heading and text no container ends/////////////// {% endcomment %}      
     </div>
 
