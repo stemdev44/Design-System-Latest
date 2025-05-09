@@ -50,7 +50,7 @@
     "custom_quick_add_button_label": "Quick Add",
     "quick_add_button_background": "rgba(0,0,0,0)",
     "quick_add_button_font": "#000000",
-    "quick_add_corner_radius": 10,
+    "quick_add_corner_radius": 0,
     "ratings_before_title": true,
     "card_image_padding": 0,
     "card_text_alignment": "center",
