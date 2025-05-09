@@ -23,9 +23,9 @@
 
 <style>
   {% if settings.full_width_button%}
-    .quick-add__submit{
+    {% comment %} .quick-add__submit{
       border-radius: {{settings.quick_add_corner_radius}}px !important;
-    }
+    } {% endcomment %}
 
     .quick-add__submit:after{
       box-shadow: 
@@ -41,6 +41,9 @@
     }
 
   {% endif %}  
+    .quick-add__submit{
+      border-radius: {{settings.quick_add_corner_radius}}px !important;
+    }  
 </style>
 
 {%- unless skip_styles -%}
