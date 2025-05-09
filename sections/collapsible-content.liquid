@@ -180,7 +180,7 @@
                           <summary id="Summary-{{ block.id }}-{{ section.id }}">
                             {% render 'icon-accordion', icon: block.settings.icon, custom_image: block.settings.custom_image %}
                             <h3 class="accordion__title inline-richtext h4">
-                              {{ block.settings.heading | default: block.settings.page.title | escape }}
+                              {{ block.settings.heading | default: block.settings.page.title  }}
                             </h3>
                             {{ 'icon-caret.svg' | inline_asset_content }}
                           </summary>
