@@ -478,7 +478,8 @@
 
                     const targetIndex = currentIndex + sectionOffset;
 
-                    if (sections[targetIndex]) {
+                    // Prevent scrolling up
+                    if (targetIndex > currentIndex && sections[targetIndex]) {
                       sections[targetIndex].scrollIntoView({ behavior: "smooth" });
                     }
                   });
