@@ -404,10 +404,9 @@
                   {%- endif -%}
                   {% comment %} /////////////// Discover More Button Starts ////////////// {% endcomment %}
                     {% if block.settings.scroll_to_section and block.settings.scroll_to_section > 0 %}
-                        <button class="discover-more-button button" data-target-section="{{ block.settings.scroll_to_section }}">
-                          ↓ DISCOVER MORE
-                        </button>
-                    {% endif %}
+                      <button class="discover-more-button button" data-target-section="{{ block.settings.scroll_to_section }}">
+                        ↓ DISCOVER MORE
+                      </button>
                       <script>
                         document.addEventListener("DOMContentLoaded", function () {
                           const scrollButton = document.querySelector(".discover-more-button");
@@ -430,17 +429,18 @@
                           });
                         });
                       </script>
-                    <style>
-                    .discover-more-button {
-                      background: transparent;
-                      color: black;
-                      padding:0 !important;
-                      margin:0 !important;
-                    }
-                    .discover-more-button:after{
-                      box-shadow:none!important;
-                    }              
-                    </style>            
+                      <style>
+                        .discover-more-button {
+                          background: transparent;
+                          color: black;
+                          padding:0 !important;
+                          margin:0 !important;
+                        }
+                        .discover-more-button:after{
+                          box-shadow:none!important;
+                        }              
+                      </style>                         
+                    {% endif %}           
                   {% comment %} /////////////////////////Discover more Button Ends//////////// {% endcomment %}
                 {%- when 'image_picker' -%}
                   {%- if block.settings.image != blank -%}
