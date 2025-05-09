@@ -162,7 +162,7 @@
         "video_button_style_secondary": true,
         "video_no_border_style": true,
         "video_url": "",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "desktop_content_position": "bottom",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
