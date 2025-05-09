@@ -23,10 +23,6 @@
 
 <style>
   {% if settings.full_width_button%}
-    .quick-add__submit{
-      border-radius: {{settings.quick_add_corner_radius}}px !important;
-    }
-
     .quick-add__submit:after{
       box-shadow: 
       0 calc(-1 * (var(--buttons-border-width) + var(--border-offset))) 0 0 rgba(var(--color-button-text), var(--border-opacity)),
@@ -41,6 +37,10 @@
     }
 
   {% endif %}  
+
+  .quick-add__submit{
+      border-radius: {{settings.quick_add_corner_radius}}px !important;
+  }  
 </style>
 
 {%- unless skip_styles -%}
