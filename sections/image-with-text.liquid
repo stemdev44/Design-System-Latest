@@ -67,7 +67,11 @@
               }
               .section-{{ section.id }}-padding .image-with-text__media img{
                 border-radius:{{section.settings.column_corner_radius}}px;
-              }                  
+              }
+
+              .section-{{ section.id }}-padding .small-hide.image-with-text__media img{
+                border-radius:{{section.settings.column_corner_radius}}px;
+              }                                
               </style>
               <div
                 class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
