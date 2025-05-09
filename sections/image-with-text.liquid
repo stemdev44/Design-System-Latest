@@ -455,6 +455,54 @@
 
               {%- endcase -%}
             {%- endfor -%}
+            {% comment %} /////////////// Discover More Button Starts ////////////// {% endcomment %}
+              {% if section.settings.scroll_to_section and section.settings.scroll_to_section > 0 %}
+                <div class="scroll-button-wrapper" style="text-align: center; margin-top: 2rem;">
+                  <button class="discover-more-button" data-target-section="{{ section.settings.scroll_to_section }}">
+                    <img src="{{ 'c8a4d2a3-2a4a-4ed7-88aa-15d4c9a12df9.png' | file_url }}" alt="Arrow Down" style="vertical-align: middle; margin-right: 8px;">
+                    DISCOVER MORE
+                  </button>
+                </div>
+              {% endif %}
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const scrollButton = document.querySelector(".discover-more-button");
+                  if (!scrollButton) return;
+
+                  scrollButton.addEventListener("click", function () {
+                    const sectionOffset = parseInt(this.getAttribute("data-target-section"));
+                    const sections = Array.from(document.querySelectorAll("section[id^='shopify-section-']"));
+
+                    const currentSection = this.closest("section");
+                    const currentIndex = sections.indexOf(currentSection);
+
+                    const targetIndex = currentIndex + sectionOffset;
+
+                    if (sections[targetIndex]) {
+                      sections[targetIndex].scrollIntoView({ behavior: "smooth" });
+                    }
+                  });
+                });
+              </script>
+              <style>
+              .discover-more-button {
+                background: transparent;
+                border: none;
+                color: #3b3f2a;
+                font-size: 1.2rem;
+                font-weight: bold;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                text-transform: uppercase;
+              }
+
+              .discover-more-button img {
+                width: 16px;
+                height: auto;
+              }
+              </style>            
+            {% comment %} /////////////////////////Discover more Button Ends//////////// {% endcomment %}
           </div>
         </div>
       </div>
@@ -765,7 +813,13 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+    {
+      "type": "number",
+      "id": "scroll_to_section",
+      "label": "Scroll to Section Offset",
+      "default": 1
+    }   
   ],
   "blocks": [
     {
