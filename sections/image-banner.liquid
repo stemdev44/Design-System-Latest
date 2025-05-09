@@ -44,14 +44,14 @@
       color:{{section.settings.video_button_font}} !important;
     }
 
-    {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
+    {% comment %} {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
       .banner--mobile-bottom .banner__content{ 
         position: absolute;
-        {% comment %} bottom:0 {% endcomment %}
+        bottom:0
         top: 50%;
-        {% comment %} transform: translateY(-50%) !important;       {% endcomment %}
+        transform: translateY(-50%) !important;
       } 
-    {%- endif -%}    
+    {%- endif -%}     {% endcomment %}
 
   }
   @media screen and (min-width: 750px) {
