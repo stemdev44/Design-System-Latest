@@ -129,7 +129,7 @@
           "settings": {
             "button_label": "Demo",
             "button_link": "#",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "no_border_style": false,
             "scroll_to_section": 3
           }
