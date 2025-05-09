@@ -15,7 +15,7 @@
         "collapsible_row_Fd3yMf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "<strong>Collapsible row</strong>",
+            "heading": "<em><strong>Collapsible row</strong></em>",
             "icon": "custom",
             "custom_image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
             "row_content": "",
@@ -25,7 +25,7 @@
         "collapsible_row_etFKTN": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "<strong>Collapsible row</strong>",
             "icon": "custom",
             "custom_image": "shopify://shop_images/CalendarCheck.png",
             "row_content": "",
@@ -79,7 +79,7 @@
         "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36,
-        "load_more": 1
+        "load_more": 4
       }
     },
     "featured_collection_yKANgB": {
