@@ -148,7 +148,7 @@
         "layout_page": "grid",
         "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "column_corner_radius": 24,
         "layout": "image_first",
         "image_behavior": "none",
