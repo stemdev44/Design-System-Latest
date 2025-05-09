@@ -403,7 +403,7 @@
                     </a>
                   {%- endif -%}
                   {% comment %} /////////////// Discover More Button Starts ////////////// {% endcomment %}
-                    {% comment %} {% if block.settings.scroll_to_section and block.settings.scroll_to_section > 0 %}
+                    {% if block.settings.scroll_to_section and block.settings.scroll_to_section > 0 %}
                       <button class="discover-more-button button" data-target-section="{{ block.settings.scroll_to_section }}">
                         ↓ DISCOVER MORE
                       </button>
@@ -440,7 +440,7 @@
                           box-shadow:none!important;
                         }              
                       </style>                         
-                    {% endif %}            {% endcomment %}
+                    {% endif %}           
                   {% comment %} /////////////////////////Discover more Button Ends//////////// {% endcomment %}
                 {%- when 'image_picker' -%}
                   {%- if block.settings.image != blank -%}
