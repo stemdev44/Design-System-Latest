@@ -123,7 +123,7 @@
         {% comment %} /////////////Heading and text no container starts/////////// {% endcomment %}
           {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %}
             <div class="large-up-hide medium-hide banner__content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-              <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }}" style="background:transparent!imortant">
+              <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }}">
                 {%- for block in section.blocks -%}
                   {%- case block.type -%}
                     {%- when 'heading' -%}
