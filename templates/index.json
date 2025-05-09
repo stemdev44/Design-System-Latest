@@ -130,7 +130,8 @@
             "button_label": "Demo",
             "button_link": "#",
             "button_style_secondary": true,
-            "no_border_style": false
+            "no_border_style": false,
+            "scroll_to_section": 2
           }
         }
       },
@@ -168,8 +169,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "scroll_to_section": 2
+        "padding_bottom": 36
       }
     },
     "collapsible_content_qUw7fA": {
