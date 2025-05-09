@@ -384,7 +384,7 @@
 
                   </div>
                 {%- when 'button' -%}
-                  {%- if block.settings.button_label != blank -%}
+                  {%- if block.settings.button_label != blank and block.settings.scroll_to_section and block.settings.scroll_to_section < 1-%}
                     <a
                       {% if block.settings.button_link == blank %}
                         role="link" aria-disabled="true"
