@@ -45,12 +45,12 @@
     }
 
     {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
-      .banner--mobile-bottom .banner__content{ 
+      {% comment %} .banner--mobile-bottom .banner__content{ 
         position: absolute;
         {% comment %} bottom:0 {% endcomment %}
         top: 50%;
         transform: translateY(-50%) !important;      
-      } 
+      }  {% endcomment %}
     {%- endif -%}    
 
   }
