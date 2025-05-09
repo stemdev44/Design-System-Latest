@@ -425,11 +425,11 @@
         "video_button_background_2": "#334fb4",
         "video_button_font_2": "",
         "layout": "grid",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "primary",
-        "column_background_color": "#ffffff",
-        "column_font_color": "#121212",
+        "column_background_color": "#242833",
+        "column_font_color": "#ffffff",
         "column_corner_radius": 16,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
@@ -437,7 +437,7 @@
         "slider_visual": "dots",
         "padding_top": 36,
         "padding_bottom": 36,
-        "remove_inner_padding": true
+        "remove_inner_padding": false
       }
     },
     "carousel_mVMEgi": {
