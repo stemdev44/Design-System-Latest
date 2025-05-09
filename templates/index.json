@@ -54,14 +54,14 @@
         "desktop_content_position": "top-right",
         "desktop_content_alignment": "center",
         "show_text_box": true,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": true,
+        "show_text_below": false,
         "remove_heading_text_mobile": true,
         "video_button_background": "#f6f3eb",
         "video_button_font": "#000000",
-        "color_scheme_mobile": "scheme-3"
+        "color_scheme_mobile": "scheme-1"
       }
     },
     "image_with_text_dJfY7c": {
