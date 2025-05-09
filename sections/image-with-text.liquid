@@ -464,27 +464,28 @@
                   </button>
                 </div>
               {% endif %}
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const scrollButton = document.querySelector(".discover-more-button");
-                  if (!scrollButton) return;
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const scrollButton = document.querySelector(".discover-more-button");
+                    if (!scrollButton) return;
 
-                  scrollButton.addEventListener("click", function () {
-                    const sectionOffset = parseInt(this.getAttribute("data-target-section"));
-                    const sections = Array.from(document.querySelectorAll("section[id^='shopify-section-']"));
+                    scrollButton.addEventListener("click", function () {
+                      const sectionOffset = parseInt(this.getAttribute("data-target-section"));
+                      if (isNaN(sectionOffset) || sectionOffset <= 0) return;
 
-                    const currentSection = this.closest("section");
-                    const currentIndex = sections.indexOf(currentSection);
+                      const sections = Array.from(document.querySelectorAll(".shopify-section"));
 
-                    const targetIndex = currentIndex + sectionOffset;
+                      const currentSection = this.closest(".shopify-section");
+                      const currentIndex = sections.indexOf(currentSection);
 
-                    // Prevent scrolling up
-                    if (targetIndex > currentIndex && sections[targetIndex]) {
-                      sections[targetIndex].scrollIntoView({ behavior: "smooth" });
-                    }
+                      const targetIndex = currentIndex + sectionOffset;
+
+                      if (targetIndex < sections.length) {
+                        sections[targetIndex].scrollIntoView({ behavior: "smooth" });
+                      }
+                    });
                   });
-                });
-              </script>
+                </script>
               <style>
               .discover-more-button {
                 background: transparent;
