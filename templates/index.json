@@ -9,6 +9,61 @@
  */
 {
   "sections": {
+    "image_banner_cTFcJk": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_GNNekc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Image Banner</p>",
+            "heading_size": "h1",
+            "mobile_heading_size": "h1"
+          }
+        },
+        "text_4Ce7TC": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/icon-bottle.svg"
+          }
+        },
+        "buttons_h8Jd4b": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label 1",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "#",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GNNekc",
+        "text_4Ce7TC",
+        "buttons_h8Jd4b"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+        "mobile_image": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "top-right",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "remove_heading_text_mobile": true,
+        "video_button_background": "#f6f3eb",
+        "video_button_font": "#000000",
+        "color_scheme_mobile": "scheme-3"
+      }
+    },
     "image_with_text_dJfY7c": {
       "type": "image-with-text",
       "blocks": {
@@ -219,61 +274,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_banner_cTFcJk": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_GNNekc": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Image Banner</p>",
-            "heading_size": "h1",
-            "mobile_heading_size": "h1"
-          }
-        },
-        "text_4Ce7TC": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/icon-bottle.svg"
-          }
-        },
-        "buttons_h8Jd4b": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label 1",
-            "button_link_1": "#",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "#",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_GNNekc",
-        "text_4Ce7TC",
-        "buttons_h8Jd4b"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
-        "mobile_image": "shopify://shop_images/Product6_home1_e00b9aef-b58b-466b-beac-df534e63b80b.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "top-right",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "scheme-2",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true,
-        "remove_heading_text_mobile": true,
-        "video_button_background": "#f6f3eb",
-        "video_button_font": "#000000",
-        "color_scheme_mobile": "scheme-1"
       }
     },
     "collage": {
@@ -1327,10 +1327,10 @@
     }
   },
   "order": [
+    "image_banner_cTFcJk",
     "image_with_text_dJfY7c",
     "collapsible_content_qUw7fA",
     "featured_collection_yKANgB",
-    "image_banner_cTFcJk",
     "collage",
     "multicolumn",
     "carousel_mVMEgi",
