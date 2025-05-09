@@ -45,12 +45,12 @@
     }
 
     {%- if section.settings.show_text_below and section.settings.remove_heading_text_mobile -%}
-      {% comment %} .banner--mobile-bottom .banner__content{ 
+      .banner--mobile-bottom .banner__content{ 
         position: absolute;
         {% comment %} bottom:0 {% endcomment %}
         top: 50%;
         transform: translateY(-50%) !important;      
-      }  {% endcomment %}
+      } 
     {%- endif -%}    
 
   }
@@ -179,44 +179,6 @@
                   {%- endcase -%}
                 {%- endfor -%}
               </div>
-              {% comment %} ///////////////////////////// {% endcomment %}
-              <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme_mobile }} gradient">
-                {%- for block in section.blocks -%}
-                  {%- case block.type -%}
-                    {%- when 'buttons' -%}
-                      <div
-                        class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
-                        {{ block.shopify_attributes }}
-                      >
-                        {%- if block.settings.button_label_1 != blank -%}
-                          <a
-                            {% if block.settings.button_link_1 == blank %}
-                              role="link" aria-disabled="true"
-                            {% else %}
-                              href="{{ block.settings.button_link_1 }}"
-                            {% endif %}
-                            class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
-                          >
-                            {{- block.settings.button_label_1 | escape -}}
-                          </a>
-                        {%- endif -%}
-                        {%- if block.settings.button_label_2 != blank -%}
-                          <a
-                            {% if block.settings.button_link_2 == blank %}
-                              role="link" aria-disabled="true"
-                            {% else %}
-                              href="{{ block.settings.button_link_2 }}"
-                            {% endif %}
-                            class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                          >
-                            {{- block.settings.button_label_2 | escape -}}
-                          </a>
-                        {%- endif -%}
-                      </div>
-                  {%- endcase -%}
-                {%- endfor -%}
-              </div>                 
-              {% comment %} ///////////////////////////// {% endcomment %}
             </div>      
           {% endif  %}
       {% comment %} /////////////heading and text no container ends/////////////// {% endcomment %}      
@@ -341,7 +303,7 @@
         {%- endcase -%}
       {%- endfor -%}
     </div>
-{% comment %} 
+
     <div class="large-up-hide medium-hide banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme_mobile }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -425,7 +387,7 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
-    </div>     {% endcomment %}
+    </div>    
 
   </div>
 </div>
