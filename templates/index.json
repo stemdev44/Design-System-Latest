@@ -9,6 +9,114 @@
  */
 {
   "sections": {
+    "image_with_text_dJfY7c": {
+      "type": "image-with-text",
+      "blocks": {
+        "collapsible_row_NW67n9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "<strong>Collapsible row</strong>",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": "",
+            "open_first_collapsible_row": false,
+            "background_style": "none",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0
+          }
+        },
+        "collapsible_row_wQPEg9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "<em>Collapsible row</em>",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": "",
+            "open_first_collapsible_row": false,
+            "background_style": "none",
+            "column_background_color": "",
+            "column_font_color": "",
+            "column_corner_radius": 0
+          }
+        },
+        "image_picker_nP6yjb": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/bg_image.png"
+          }
+        },
+        "caption_8kY69t": {
+          "type": "caption",
+          "settings": {
+            "caption": "Image with text caption",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        },
+        "heading_LCFf44": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h2"
+          }
+        },
+        "text_GCPqjX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/checkmark.png"
+          }
+        },
+        "button_UaqwYV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Demo",
+            "button_link": "#",
+            "button_style_secondary": true,
+            "no_border_style": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_NW67n9",
+        "collapsible_row_wQPEg9",
+        "image_picker_nP6yjb",
+        "caption_8kY69t",
+        "heading_LCFf44",
+        "text_GCPqjX",
+        "button_UaqwYV"
+      ],
+      "settings": {
+        "layout_page": "grid",
+        "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 24,
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
+        "mobile_video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
+        "cover_image": "shopify://shop_images/Product5_home2.png",
+        "mobile_cover_image": "shopify://shop_images/home-16-slider-1-mb_9015c0cc-6ee9-4ae1-8784-c51232310a97.jpg",
+        "video_button_text": "See how this work",
+        "video_button_background": "#334fb4",
+        "video_button_font": "#000000",
+        "video_button_style_secondary": true,
+        "video_no_border_style": true,
+        "video_url": "",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "scroll_to_section": 6
+      }
+    },
     "collapsible_content_qUw7fA": {
       "type": "collapsible-content",
       "blocks": {
@@ -433,114 +541,6 @@
         "mobile_slider_visual": "numbers",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_with_text_dJfY7c": {
-      "type": "image-with-text",
-      "blocks": {
-        "collapsible_row_NW67n9": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "<strong>Collapsible row</strong>",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "none",
-            "column_background_color": "",
-            "column_font_color": "",
-            "column_corner_radius": 0
-          }
-        },
-        "collapsible_row_wQPEg9": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "<em>Collapsible row</em>",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": "",
-            "open_first_collapsible_row": false,
-            "background_style": "none",
-            "column_background_color": "",
-            "column_font_color": "",
-            "column_corner_radius": 0
-          }
-        },
-        "image_picker_nP6yjb": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/bg_image.png"
-          }
-        },
-        "caption_8kY69t": {
-          "type": "caption",
-          "settings": {
-            "caption": "Image with text caption",
-            "text_style": "subtitle",
-            "text_size": "small"
-          }
-        },
-        "heading_LCFf44": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h2"
-          }
-        },
-        "text_GCPqjX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/checkmark.png"
-          }
-        },
-        "button_UaqwYV": {
-          "type": "button",
-          "settings": {
-            "button_label": "Demo",
-            "button_link": "#",
-            "button_style_secondary": true,
-            "no_border_style": false
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_NW67n9",
-        "collapsible_row_wQPEg9",
-        "image_picker_nP6yjb",
-        "caption_8kY69t",
-        "heading_LCFf44",
-        "text_GCPqjX",
-        "button_UaqwYV"
-      ],
-      "settings": {
-        "layout_page": "grid",
-        "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "column_corner_radius": 24,
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-        "mobile_video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
-        "cover_image": "shopify://shop_images/Product5_home2.png",
-        "mobile_cover_image": "shopify://shop_images/home-16-slider-1-mb_9015c0cc-6ee9-4ae1-8784-c51232310a97.jpg",
-        "video_button_text": "See how this work",
-        "video_button_background": "#334fb4",
-        "video_button_font": "#000000",
-        "video_button_style_secondary": true,
-        "video_no_border_style": true,
-        "video_url": "",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "bottom",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "scroll_to_section": 6
       }
     },
     "compare_table_4zE6WA": {
@@ -1327,13 +1327,13 @@
     }
   },
   "order": [
+    "image_with_text_dJfY7c",
     "collapsible_content_qUw7fA",
     "featured_collection_yKANgB",
     "image_banner_cTFcJk",
     "collage",
     "multicolumn",
     "carousel_mVMEgi",
-    "image_with_text_dJfY7c",
     "compare_table_4zE6WA",
     "image_with_blocks_GqxVzw",
     "image_with_table_fE4tBh",

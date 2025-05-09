@@ -459,7 +459,7 @@
               {% if section.settings.scroll_to_section and section.settings.scroll_to_section > 0 %}
                 <div class="scroll-button-wrapper" style="text-align: center; margin-top: 2rem;">
                   <button class="discover-more-button" data-target-section="{{ section.settings.scroll_to_section }}">
-                    <img src="{{ 'c8a4d2a3-2a4a-4ed7-88aa-15d4c9a12df9.png' | file_url }}" alt="Arrow Down" style="vertical-align: middle; margin-right: 8px;">
+                    {% comment %} <img src="{{ 'c8a4d2a3-2a4a-4ed7-88aa-15d4c9a12df9.png' | file_url }}" alt="Arrow Down" style="vertical-align: middle; margin-right: 8px;"> {% endcomment %}
                     DISCOVER MORE
                   </button>
                 </div>
