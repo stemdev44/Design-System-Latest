@@ -131,7 +131,7 @@
             "button_link": "#",
             "button_style_secondary": true,
             "no_border_style": false,
-            "scroll_to_section": 2
+            "scroll_to_section": 0
           }
         }
       },
