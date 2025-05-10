@@ -262,6 +262,30 @@
         -%}
         {%- for block in section.blocks -%}
           {%- if block.settings.overlap_on_image-%}
+            {%- liquid
+
+              if section.settings.image_width == 'half'
+                assign padding_top = 50
+              elsif section.settings.image_width == 'third'
+                assign padding_top = 33
+              elsif section.settings.image_width == 'One-Tenth'
+                assign padding_top = 10
+              elsif section.settings.image_width == 'Two-Tenth'
+                assign padding_top = 20
+              elsif section.settings.image_width == 'Three-Tenth'
+                assign padding_top = 30                        
+              elsif section.settings.image_width == 'Four-Tenth'
+                assign padding_top = 40
+              elsif section.settings.image_width == 'Six-Tenth'
+                assign padding_top = 60 
+              elsif section.settings.image_width == 'Seven-Tenth'
+                assign padding_top = 70
+              elsif section.settings.image_width == 'Eight-Tenth'
+                assign padding_top = 80
+              elsif section.settings.image_width == 'Nine-Tenth'
+                assign padding_top = 90
+              endif
+            -%}          
             <style>
               .multicolumn--{{block.id}} .multicolumn-card.content-container {
                 overflow: visible!important;
@@ -272,7 +296,7 @@
                 right: 50%;
               }
               .multicolumn--{{block.id}} .multicolumn-card__info {
-                padding-top: {{sections.settings.image_width}}%;
+                padding-top: {{padding_top}}%;
               }
             </style>          
           {%- endif -%}
