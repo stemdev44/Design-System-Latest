@@ -17,7 +17,9 @@
           "settings": {
             "image_row_A": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
             "text_row_A": "",
+            "image_row_B": "shopify://shop_images/720_1096.png",
             "text_row_B": "<p>Text Row B</p>",
+            "image_row_C": "shopify://shop_images/icon-bottle.svg",
             "text_row_C": "<p>Text Row C</p>",
             "text_row_D": "",
             "text_row_E": "",
