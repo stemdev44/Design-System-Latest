@@ -252,9 +252,9 @@
       "settings": {
         "layout_page": "grid",
         "image": "shopify://shop_images/Product6_home1.png",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "medium",
-        "column_corner_radius": 24,
+        "column_corner_radius": 23,
         "layout": "image_first",
         "image_behavior": "none",
         "video_button_text": "",
