@@ -246,9 +246,19 @@
                     <div class="table-row"><div class="table-cell">{{ block.settings.text_row_T }}</div></div>
                   {% endif %}                                                                                                                                                                                                                                                                                                                                                        
                 </div> {% endcomment %}
+                <style>
+                  .{{block.id}}-table-style img {
+                    height: 40px;
+                  }
+                  {%-if blocks[0].settings.image_row_A !=blank-%}
+                      .table-row-A .table-cell{
+                        height: 64px;
+                      }
+                  {%-endif-%}
+                </style>
                 <div class="multicolumn-card__info table-style {{block.id}}-table-style">
                   {% if block.settings.image_row_A != blank %}
-                    <div class="table-row"><div class="table-cell"><img src="{{ block.settings.image_row_A | img_url: 'small' }}" alt="" /> </div></div>
+                    <div class="table-row table-row-A"><div class="table-cell"><img src="{{ block.settings.image_row_A | img_url: 'small' }}" alt="" /> </div></div>
                   {% elsif block.settings.text_row_A != blank %}
                     <div class="table-row"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
                   {% endif %}
