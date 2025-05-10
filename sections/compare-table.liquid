@@ -184,7 +184,7 @@
                           {% endif %} 
                           border-radius:{{block.settings.column_corner_radius}}px;"
               >
-                <div class="multicolumn-card__info table-style {{block.id}}-table-style">
+                {% comment %} <div class="multicolumn-card__info table-style {{block.id}}-table-style">
                   {% if block.settings.text_row_A != blank %}
                     <div class="table-row"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
                   {% endif %}
@@ -245,7 +245,71 @@
                   {% if block.settings.text_row_T != blank %}
                     <div class="table-row"><div class="table-cell">{{ block.settings.text_row_T }}</div></div>
                   {% endif %}                                                                                                                                                                                                                                                                                                                                                        
-                </div>
+                </div> {% endcomment %}
+                <div class="multicolumn-card__info table-style {{block.id}}-table-style">
+                  {% if block.settings.image_row_A != blank %}
+                    <div class="table-row"><div class="table-cell"><img src="{{ block.settings.image_row_A | img_url: 'small' }}" alt="" /> </div></div>
+                  {% elsif block.settings.text_row_A != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
+                  {% endif %}
+                  {% if block.settings.text_row_B != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
+                  {% endif %}
+                  {% if block.settings.text_row_C != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_C }}</div></div>
+                  {% endif %}
+                  {% if block.settings.text_row_D != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_D }}</div></div>
+                  {% endif %}
+                  {% if block.settings.text_row_E != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_E }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_F != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_F }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_G != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_G }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_H != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_H }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_I != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_I }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_J != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_J }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_K != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_K }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_L != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_L }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_M != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_M }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_N != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_N }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_O != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_O }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_P != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_P }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_Q != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_Q }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_R != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_R }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_S != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_S }}</div></div>
+                  {% endif %}                    
+                  {% if block.settings.text_row_T != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_T }}</div></div>
+                  {% endif %}                                                                                                                                                                                                                                                                                                                                                        
+                </div>                
               </div>
 
           </li>
@@ -572,11 +636,21 @@
       "name": "Table Row",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "image_row_A",
+          "label": " Image Row A"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_A",
           "default": "<p>Text Row A</p>",
           "label": "Text Row A"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_B",
+          "label": " Image Row B"
+        },        
         {
           "type": "richtext",
           "id": "text_row_B",
@@ -584,91 +658,181 @@
           "label": "Text Row B"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_C",
+          "label": " Image Row C"
+        },
+        {
           "type": "richtext",
           "id": "text_row_C",
           "default": "<p>Text Row C</p>",
           "label": "Text Row C"
-        },        
+        },
+        {
+          "type": "image_picker",
+          "id": "image_row_D",
+          "label": " Image Row D"
+        },                
         {
           "type": "richtext",
           "id": "text_row_D",
           "label": "Text Row D"
-        },          
+        },
+        {
+          "type": "image_picker",
+          "id": "image_row_E",
+          "label": " Image Row E"
+        },                  
         {
           "type": "richtext",
           "id": "text_row_E",
           "label": "Text Row E"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_F",
+          "label": " Image Row F"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_F",
           "label": "Text Row F"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_G",
+          "label": " Image Row G"
+        },        
         {
           "type": "richtext",
           "id": "text_row_G",
           "label": "Text Row G"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_H",
+          "label": " Image Row H"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_H",
           "label": "Text Row H"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_I",
+          "label": " Image Row I"
+        },        
         {
           "type": "richtext",
           "id": "text_row_I",
           "label": "Text Row I"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_J",
+          "label": " Image Row J"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_J",
           "label": "Text Row J"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_K",
+          "label": " Image Row K"
+        },        
         {
           "type": "richtext",
           "id": "text_row_K",
           "label": "Text Row K"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_L",
+          "label": " Image Row L"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_L",
           "label": "Text Row L"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_M",
+          "label": " Image Row M"
+        },        
         {
           "type": "richtext",
           "id": "text_row_M",
           "label": "Text Row M"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_N",
+          "label": " Image Row N"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_N",
           "label": "Text Row N"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_O",
+          "label": " Image Row O"
+        },        
         {
           "type": "richtext",
           "id": "text_row_O",
           "label": "Text Row O"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_P",
+          "label": " Image Row P"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_P",
           "label": "Text Row P"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_Q",
+          "label": " Image Row Q"
+        },        
         {
           "type": "richtext",
           "id": "text_row_Q",
           "label": "Text Row Q"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_R",
+          "label": " Image Row R"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_R",
           "label": "Text Row R"
         },
         {
+          "type": "image_picker",
+          "id": "image_row_S",
+          "label": " Image Row S"
+        },        
+        {
           "type": "richtext",
           "id": "text_row_S",
           "label": "Text Row S"
         },
+        {
+          "type": "image_picker",
+          "id": "image_row_T",
+          "label": " Image Row T"
+        },        
         {
           "type": "richtext",
           "id": "text_row_T",
