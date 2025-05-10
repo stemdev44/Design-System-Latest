@@ -286,7 +286,7 @@
               endif
             -%}
             {%- liquid
-              assign multiply_value=15
+              assign multiply_value=12
               assign divide_value=50
               if section.settings.image_width == 'half'
                 assign slider_padding_top = 50 | times: multiply_value | divided_by: divide_value
@@ -312,21 +312,24 @@
             -%}            
 
             <style>
-              .multicolumn--{{block.id}} .multicolumn-card.content-container {
-                overflow: visible!important;
-              }
-              .multicolumn-card__image-wrapper-{{block.id}} {
-                position: absolute;
-                transform: translate(50%, -50%);
-                right: 50%;
-              }
-              .multicolumn--{{block.id}} .multicolumn-card__info {
-                padding-top: {{padding_top}}%;
+              @media screen and (min-width:990px){
+                .multicolumn--{{block.id}} .multicolumn-card.content-container {
+                  overflow: visible!important;
+                }
+                .multicolumn-card__image-wrapper-{{block.id}} {
+                  position: absolute;
+                  transform: translate(50%, -50%);
+                  right: 50%;
+                }
+                .multicolumn--{{block.id}} .multicolumn-card__info {
+                  padding-top: {{padding_top}}%;
+                }
+
+                .section-{{ section.id }}-padding slider-component{
+                  padding-top:{{slider_padding_top}}rem; 
+                }
               }
 
-              .section-{{ section.id }}-padding slider-component{
-                 padding-top:{{slider_padding_top}}rem; 
-              }
             </style>          
           {%- endif -%}
 
