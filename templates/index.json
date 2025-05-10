@@ -15,7 +15,8 @@
         "column_WGzJr3": {
           "type": "column",
           "settings": {
-            "text_row_A": "<p>Text Row A</p>",
+            "image_row_A": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+            "text_row_A": "",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
             "text_row_D": "",
