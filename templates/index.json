@@ -15,7 +15,7 @@
         "column_wTBa4j": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+            "image": "shopify://shop_images/720_1096.png",
             "hide_image_video_mobile": true,
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
@@ -36,6 +36,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Product6_home1_4e35a71e-d85b-4926-8546-65abe615a7db.png",
+            "video": "shopify://files/videos/856787-hd_1920_1080_30fps.mp4",
             "hide_image_video_mobile": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
