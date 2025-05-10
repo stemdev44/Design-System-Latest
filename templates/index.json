@@ -17,7 +17,6 @@
           "settings": {
             "image": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
             "hide_image_video_mobile": true,
-            "overlap_on_image": true,
             "caption": "Caption 1",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -38,7 +37,6 @@
           "settings": {
             "image": "shopify://shop_images/Product6_home1_4e35a71e-d85b-4926-8546-65abe615a7db.png",
             "hide_image_video_mobile": true,
-            "overlap_on_image": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -59,7 +57,6 @@
           "settings": {
             "image": "shopify://shop_images/icon-bottle.svg",
             "hide_image_video_mobile": false,
-            "overlap_on_image": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -90,7 +87,7 @@
         "mobile_description_alignment": "left",
         "description": "<p>Description</p>",
         "description_style": "uppercase",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
