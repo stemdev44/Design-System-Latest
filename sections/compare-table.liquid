@@ -251,16 +251,16 @@
                     height: 40px;
                   }
                   {%- if block.settings.image_row_A != blank -%}
-                      .table-cell-A{
+                      .table-row-A .table-cell{
                         height: 64px;
                       }
                   {%-endif-%}
                 </style>
                 <div class="multicolumn-card__info table-style {{block.id}}-table-style">
                   {% if block.settings.image_row_A != blank %}
-                    <div class="table-row table-row-A"><div class="table-cell table-cell-A"><img src="{{ block.settings.image_row_A | img_url: 'small' }}" alt="" /> </div></div>
+                    <div class="table-row table-row-A"><div class="table-cell"><img src="{{ block.settings.image_row_A | img_url: 'small' }}" alt="" /> </div></div>
                   {% elsif block.settings.text_row_A != blank %}
-                    <div class="table-row table-row-A"><div class="table-cell table-cell-A">{{ block.settings.text_row_A }}</div></div>
+                    <div class="table-row table-row-A"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
                   {% endif %}
 
                   {% if block.settings.image_row_B != blank %}
