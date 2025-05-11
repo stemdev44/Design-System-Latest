@@ -12,46 +12,6 @@
     "image_with_blocks_GqxVzw": {
       "type": "image-with-blocks",
       "blocks": {
-        "column_CaBL78": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "",
-            "description_style": "body"
-          }
-        },
-        "column_nggCaa": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "",
-            "description_style": "body"
-          }
-        },
-        "column_tQV94H": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "",
-            "description_style": "body"
-          }
-        },
-        "column_dtTh88": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "",
-            "description_style": "body"
-          }
-        },
         "column_9TAikN": {
           "type": "column",
           "settings": {
@@ -61,25 +21,10 @@
             "description": "<p>This is description </p>",
             "description_style": "body"
           }
-        },
-        "column_bKYH8G": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "",
-            "description_style": "body"
-          }
         }
       },
       "block_order": [
-        "column_CaBL78",
-        "column_nggCaa",
-        "column_tQV94H",
-        "column_dtTh88",
-        "column_9TAikN",
-        "column_bKYH8G"
+        "column_9TAikN"
       ],
       "settings": {
         "title": "Image with Blocks",
@@ -99,7 +44,7 @@
         "video_button_font": "",
         "video_button_style_secondary": false,
         "video_no_border_style": false,
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
