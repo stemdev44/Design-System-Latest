@@ -44,7 +44,7 @@
         "video_button_font": "",
         "video_button_style_secondary": false,
         "video_no_border_style": false,
-        "content_layout": "overlap",
+        "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
