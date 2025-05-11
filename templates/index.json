@@ -414,6 +414,7 @@
         },
         "text_GCPqjX": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
             "text_style": "body",
@@ -444,7 +445,7 @@
         "layout_page": "grid",
         "image": "shopify://shop_images/Product6_home1.png",
         "height": "large",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "large",
         "column_corner_radius": 23,
         "layout": "image_first",
         "image_behavior": "none",
@@ -454,8 +455,8 @@
         "video_button_style_secondary": true,
         "video_no_border_style": true,
         "video_url": "",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "bottom",
+        "content_layout": "overlap",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
