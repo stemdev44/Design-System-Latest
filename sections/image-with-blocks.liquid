@@ -227,12 +227,12 @@
                                     <div class="multicolumn-card content-container" style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius_2}}px;">
                                         <div class="multicolumn-card__info">
                                             {%- if block.settings.title != blank -%}
-                                                <h3 class="small-hide medium-hide inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}; text-align:{{ section.settings.heading_alignment }}">{{ block.settings.title }}</h3>
-                                                <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }} " style="color:{{ section.settings.column_font_color }}; text-align:{{ section.settings.mobile_description_alignment }}">{{ block.settings.title }}</h3>
+                                                <h3 class="small-hide medium-hide inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}; text-align:{{ section.settings.desktop_content_alignment }}">{{ block.settings.title }}</h3>
+                                                <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }} " style="color:{{ section.settings.column_font_color }}; text-align:{{ section.settings.mobile_content_alignment }}">{{ block.settings.title }}</h3>
                                             {%- endif -%}
                                             {%- if block.settings.description != blank -%}
-                                                <div class="small-hide medium-hide rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }};text-align:{{ section.settings.heading_alignment }}">{{ block.settings.description }}</div>
-                                                <div class="large-up-hide rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }};text-align:{{ section.settings.mobile_description_alignment }}">{{ block.settings.description }}</div>
+                                                <div class="small-hide medium-hide rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }};text-align:{{ section.settings.desktop_content_alignment }}">{{ block.settings.description }}</div>
+                                                <div class="large-up-hide rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }};text-align:{{ section.settings.mobile_content_alignment }}">{{ block.settings.description }}</div>
                                             {%- endif -%}
                                         </div>
                                     </div>
