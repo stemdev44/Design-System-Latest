@@ -73,7 +73,7 @@
       "settings": {
         "title": "Image with Blocks",
         "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "mobile_description_alignment": "center",
         "layout_page": "grid",
         "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
