@@ -12,6 +12,46 @@
     "image_with_blocks_GqxVzw": {
       "type": "image-with-blocks",
       "blocks": {
+        "column_CaBL78": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_nggCaa": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_tQV94H": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_dtTh88": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
         "column_9TAikN": {
           "type": "column",
           "settings": {
@@ -34,6 +74,10 @@
         }
       },
       "block_order": [
+        "column_CaBL78",
+        "column_nggCaa",
+        "column_tQV94H",
+        "column_dtTh88",
         "column_9TAikN",
         "column_bKYH8G"
       ],
@@ -45,7 +89,7 @@
         "layout_page": "grid",
         "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
         "height": "adapt",
-        "desktop_image_width": "large",
+        "desktop_image_width": "medium",
         "column_corner_radius": 0,
         "layout": "image_first",
         "image_behavior": "none",
@@ -56,7 +100,7 @@
         "video_button_style_secondary": false,
         "video_no_border_style": false,
         "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "bottom",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
         "column_alignment": "center",
