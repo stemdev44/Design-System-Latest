@@ -126,7 +126,7 @@
         "description": "",
         "description_style": "body",
         "layout": "grid",
-        "columns_desktop": 6,
+        "columns_desktop": 3,
         "color_scheme": "scheme-4",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
