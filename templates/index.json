@@ -455,7 +455,7 @@
         "video_button_style_secondary": true,
         "video_no_border_style": true,
         "video_url": "",
-        "content_layout": "overlap",
+        "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
