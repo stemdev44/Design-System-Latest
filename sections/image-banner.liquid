@@ -295,7 +295,7 @@
       {%- endfor -%}
     </div>
 
-    <div class="large-up-hide medium-hide banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme_mobile }} gradient">
+    <div class="large-up-hide medium-hide banner__box content-container content-container--full-width-mobile {% if sections.settings.show_text_below %} color-{{ section.settings.color_scheme_mobile }} {% else %} color-{{ section.settings.color_scheme }} {% endif %} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
 
