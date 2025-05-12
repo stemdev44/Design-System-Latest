@@ -261,7 +261,7 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
-          {%- if block.settings.overlap_on_image and section.settings.image_width != 'full' -%}
+          {%- if block.settings.overlap_on_image -%}
             {%- liquid
               if section.settings.image_width == 'half'
                 assign padding_top = 50
@@ -283,6 +283,8 @@
                 assign padding_top = 80
               elsif section.settings.image_width == 'Nine-Tenth'
                 assign padding_top = 90
+              elsif section.settings.image_width == 'full'
+                assign padding_top = 100
               endif
             -%}
             {%- liquid
@@ -308,6 +310,8 @@
                 assign slider_padding_top = 80 | times: multiply_value | divided_by: divide_value    
               elsif section.settings.image_width == 'Nine-Tenth'
                 assign slider_padding_top = 90 | times: multiply_value | divided_by: divide_value
+              elsif section.settings.image_width == 'full'
+                assign slider_padding_top = 100 | times: multiply_value | divided_by: divide_value                
               endif
             -%}            
 
@@ -328,6 +332,13 @@
                 .section-{{ section.id }}-padding slider-component{
                   padding-top:{{slider_padding_top}}rem; 
                 }
+                  
+                {%- if section.settings.image_width != 'full' -%}
+                  .multicolumn-card__image-wrapper-{{block.id}} {
+                    height: 100%;
+                    width: 100%;
+                  }                  
+                {%- endif -%}
               }
 
             </style>          
@@ -949,7 +960,7 @@
           "label": "t:sections.multicolumn.settings.image_width.options__3.label"
         }
       ],
-      "default": "full",
+      "default": "half",
       "label": "t:sections.multicolumn.settings.image_width.label"
     },
     {
