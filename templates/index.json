@@ -9,6 +9,66 @@
  */
 {
   "sections": {
+    "image_with_blocks_GqxVzw": {
+      "type": "image-with-blocks",
+      "blocks": {
+        "column_Kfd9cT": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_9TAikN": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h2",
+            "description": "<p>This is description </p>",
+            "description_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "column_Kfd9cT",
+        "column_9TAikN"
+      ],
+      "settings": {
+        "title": "Image with Blocks",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "layout_page": "grid",
+        "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "column_corner_radius": 0,
+        "layout": "image_first",
+        "image_behavior": "none",
+        "video_url": "",
+        "video_button_text": "",
+        "video_button_background": "",
+        "video_button_font": "",
+        "video_button_style_secondary": false,
+        "video_no_border_style": false,
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "column_alignment": "center",
+        "column_background_color": "#121212",
+        "column_font_color": "#f3f3f3",
+        "column_corner_radius_2": 19,
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "compare_table_4zE6WA": {
       "type": "compare-table",
       "blocks": {
@@ -381,55 +441,6 @@
         "show_text_below": true,
         "remove_heading_text_mobile": false,
         "color_scheme_mobile": "scheme-1"
-      }
-    },
-    "image_with_blocks_GqxVzw": {
-      "type": "image-with-blocks",
-      "blocks": {
-        "column_9TAikN": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h2",
-            "description": "<p>This is description </p>",
-            "description_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "column_9TAikN"
-      ],
-      "settings": {
-        "title": "Image with Blocks",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
-        "layout_page": "grid",
-        "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "column_corner_radius": 0,
-        "layout": "image_first",
-        "image_behavior": "none",
-        "video_url": "",
-        "video_button_text": "",
-        "video_button_background": "",
-        "video_button_font": "",
-        "video_button_style_secondary": false,
-        "video_no_border_style": false,
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "column_alignment": "center",
-        "column_background_color": "#121212",
-        "column_font_color": "#f3f3f3",
-        "column_corner_radius_2": 19,
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "image_with_text_dJfY7c": {
@@ -1183,12 +1194,12 @@
     }
   },
   "order": [
+    "image_with_blocks_GqxVzw",
     "compare_table_4zE6WA",
     "collection_list_eDiRjN",
     "rich_text_gdexpz",
     "multicolumn",
     "image_banner_Ub7FA8",
-    "image_with_blocks_GqxVzw",
     "image_with_text_dJfY7c",
     "collapsible_content_qUw7fA",
     "featured_collection_yKANgB",
