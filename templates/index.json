@@ -45,7 +45,7 @@
       ],
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "center",
+        "content_alignment": "right",
         "mobile_content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
