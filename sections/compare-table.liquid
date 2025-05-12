@@ -255,101 +255,7 @@
                         height: 64px;
                       }
                   {%-endif-%}
-                  {%- if block.settings.image_row_B != blank -%}
-                    .section-{{ section.id }}-padding .table-row-B .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_C != blank -%}
-                    .section-{{ section.id }}-padding .table-row-C .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_D != blank -%}
-                    .section-{{ section.id }}-padding .table-row-D .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_E != blank -%}
-                    .section-{{ section.id }}-padding .table-row-E .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_F != blank -%}
-                    .section-{{ section.id }}-padding .table-row-F .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_G != blank -%}
-                    .section-{{ section.id }}-padding .table-row-G .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_H != blank -%}
-                    .section-{{ section.id }}-padding .table-row-H .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_I != blank -%}
-                    .section-{{ section.id }}-padding .table-row-I .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_J != blank -%}
-                    .section-{{ section.id }}-padding .table-row-J .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_K != blank -%}
-                    .section-{{ section.id }}-padding .table-row-K .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_L != blank -%}
-                    .section-{{ section.id }}-padding .table-row-L .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_M != blank -%}
-                    .section-{{ section.id }}-padding .table-row-M .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_N != blank -%}
-                    .section-{{ section.id }}-padding .table-row-N .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_O != blank -%}
-                    .section-{{ section.id }}-padding .table-row-O .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_P != blank -%}
-                    .section-{{ section.id }}-padding .table-row-P .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_Q != blank -%}
-                    .section-{{ section.id }}-padding .table-row-Q .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_R != blank -%}
-                    .section-{{ section.id }}-padding .table-row-R .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_S != blank -%}
-                    .section-{{ section.id }}-padding .table-row-S .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
-                  {%- if block.settings.image_row_T != blank -%}
-                    .section-{{ section.id }}-padding .table-row-T .table-cell{
-                        height: 64px;
-                      }
-                  {%-endif-%}
+
                 </style>
                 <div class="multicolumn-card__info table-style {{block.id}}-table-style">
                   {% if block.settings.image_row_A != blank %}
@@ -358,119 +264,63 @@
                     <div class="table-row table-row-A"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
                   {% endif %}
 
-                  {% if block.settings.image_row_B != blank %}
-                    <div class="table-row table-row-B"><div class="table-cell"><img src="{{ block.settings.image_row_B | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_B != blank %}
-                    <div class="table-row table-row-B"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
+                  {% if block.settings.text_row_B != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
                   {% endif %}
-
-                  {% if block.settings.image_row_C!= blank %}
-                    <div class="table-row table-row-C"><div class="table-cell"><img src="{{ block.settings.image_row_C | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_C != blank %}
-                    <div class="table-row table-row-C"><div class="table-cell">{{ block.settings.text_row_C }}</div></div>
+                  {% if block.settings.text_row_C != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_C }}</div></div>
                   {% endif %}
-
-                  {% if block.settings.image_row_D != blank %}
-                    <div class="table-row table-row-D"><div class="table-cell"><img src="{{ block.settings.image_row_D | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_D != blank %}
-                    <div class="table-row table-row-D"><div class="table-cell">{{ block.settings.text_row_D }}</div></div>
+                  {% if block.settings.text_row_D != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_D }}</div></div>
                   {% endif %}
-
-                  {% if block.settings.image_row_E != blank %}
-                    <div class="table-row table-row-E"><div class="table-cell"><img src="{{ block.settings.image_row_E | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_E != blank %}
-                    <div class="table-row table-row-E"><div class="table-cell">{{ block.settings.text_row_E }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_F != blank %}
-                    <div class="table-row table-row-F"><div class="table-cell"><img src="{{ block.settings.image_row_F | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_F != blank %}
-                    <div class="table-row table-row-F"><div class="table-cell">{{ block.settings.text_row_F }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_G != blank %}
-                    <div class="table-row table-row-G"><div class="table-cell"><img src="{{ block.settings.image_row_G | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_G != blank %}
-                    <div class="table-row table-row-G"><div class="table-cell">{{ block.settings.text_row_G }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_H != blank %}
-                    <div class="table-row table-row-H"><div class="table-cell"><img src="{{ block.settings.image_row_H | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_H != blank %}
-                    <div class="table-row table-row-H"><div class="table-cell">{{ block.settings.text_row_H }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_I != blank %}
-                    <div class="table-row table-row-I"><div class="table-cell"><img src="{{ block.settings.image_row_I | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_I != blank %}
-                    <div class="table-row table-row-I"><div class="table-cell">{{ block.settings.text_row_I }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_J != blank %}
-                    <div class="table-row table-row-J"><div class="table-cell"><img src="{{ block.settings.image_row_J | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_J != blank %}
-                    <div class="table-row table-row-J"><div class="table-cell">{{ block.settings.text_row_J }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_K != blank %}
-                    <div class="table-row table-row-K"><div class="table-cell"><img src="{{ block.settings.image_row_K | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_K != blank %}
-                    <div class="table-row table-row-K"><div class="table-cell">{{ block.settings.text_row_K }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_L != blank %}
-                    <div class="table-row table-row-L"><div class="table-cell"><img src="{{ block.settings.image_row_L | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_L != blank %}
-                    <div class="table-row table-row-L"><div class="table-cell">{{ block.settings.text_row_L }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_M != blank %}
-                    <div class="table-row table-row-M"><div class="table-cell"><img src="{{ block.settings.image_row_M | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_M != blank %}
-                    <div class="table-row table-row-M"><div class="table-cell">{{ block.settings.text_row_M }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_N != blank %}
-                    <div class="table-row table-row-N"><div class="table-cell"><img src="{{ block.settings.image_row_N | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_N != blank %}
-                    <div class="table-row table-row-N"><div class="table-cell">{{ block.settings.text_row_N }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_O != blank %}
-                    <div class="table-row table-row-O"><div class="table-cell"><img src="{{ block.settings.image_row_O | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_O != blank %}
-                    <div class="table-row table-row-O"><div class="table-cell">{{ block.settings.text_row_O }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_P != blank %}
-                    <div class="table-row table-row-P"><div class="table-cell"><img src="{{ block.settings.image_row_P | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_P != blank %}
-                    <div class="table-row table-row-P"><div class="table-cell">{{ block.settings.text_row_P }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_Q != blank %}
-                    <div class="table-row table-row-Q"><div class="table-cell"><img src="{{ block.settings.image_row_Q | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_Q != blank %}
-                    <div class="table-row table-row-Q"><div class="table-cell">{{ block.settings.text_row_Q }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_R != blank %}
-                    <div class="table-row table-row-R"><div class="table-cell"><img src="{{ block.settings.image_row_R | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_R != blank %}
-                    <div class="table-row table-row-R"><div class="table-cell">{{ block.settings.text_row_R }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_S != blank %}
-                    <div class="table-row table-row-S"><div class="table-cell"><img src="{{ block.settings.image_row_S | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_S != blank %}
-                    <div class="table-row table-row-S"><div class="table-cell">{{ block.settings.text_row_S }}</div></div>
-                  {% endif %}
-
-                  {% if block.settings.image_row_T != blank %}
-                    <div class="table-row table-row-T"><div class="table-cell"><img src="{{ block.settings.image_row_T | img_url: 'small' }}" alt="" /> </div></div>
-                  {% elsif block.settings.text_row_T != blank %}
-                    <div class="table-row table-row-T"><div class="table-cell">{{ block.settings.text_row_T }}</div></div>
-                  {% endif %}
+                  {% if block.settings.text_row_E != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_E }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_F != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_F }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_G != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_G }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_H != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_H }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_I != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_I }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_J != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_J }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_K != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_K }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_L != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_L }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_M != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_M }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_N != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_N }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_O != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_O }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_P != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_P }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_Q != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_Q }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_R != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_R }}</div></div>
+                  {% endif %} 
+                  {% if block.settings.text_row_S != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_S }}</div></div>
+                  {% endif %}                    
+                  {% if block.settings.text_row_T != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_T }}</div></div>
+                  {% endif %}  
 
                 </div>                
               </div>
@@ -810,20 +660,10 @@
           "label": "Text Row A"
         },
         {
-          "type": "image_picker",
-          "id": "image_row_B",
-          "label": " Image Row B"
-        },        
-        {
           "type": "richtext",
           "id": "text_row_B",
           "default": "<p>Text Row B</p>",
           "label": "Text Row B"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_C",
-          "label": " Image Row C"
         },
         {
           "type": "richtext",
@@ -832,169 +672,84 @@
           "label": "Text Row C"
         },
         {
-          "type": "image_picker",
-          "id": "image_row_D",
-          "label": " Image Row D"
-        },                
-        {
           "type": "richtext",
           "id": "text_row_D",
           "label": "Text Row D"
         },
-        {
-          "type": "image_picker",
-          "id": "image_row_E",
-          "label": " Image Row E"
-        },                  
         {
           "type": "richtext",
           "id": "text_row_E",
           "label": "Text Row E"
         },
         {
-          "type": "image_picker",
-          "id": "image_row_F",
-          "label": " Image Row F"
-        },        
-        {
           "type": "richtext",
           "id": "text_row_F",
           "label": "Text Row F"
         },
-        {
-          "type": "image_picker",
-          "id": "image_row_G",
-          "label": " Image Row G"
-        },        
         {
           "type": "richtext",
           "id": "text_row_G",
           "label": "Text Row G"
         },
         {
-          "type": "image_picker",
-          "id": "image_row_H",
-          "label": " Image Row H"
-        },        
-        {
           "type": "richtext",
           "id": "text_row_H",
           "label": "Text Row H"
         },
-        {
-          "type": "image_picker",
-          "id": "image_row_I",
-          "label": " Image Row I"
-        },        
         {
           "type": "richtext",
           "id": "text_row_I",
           "label": "Text Row I"
         },
         {
-          "type": "image_picker",
-          "id": "image_row_J",
-          "label": " Image Row J"
-        },        
-        {
           "type": "richtext",
           "id": "text_row_J",
           "label": "Text Row J"
         },
         {
-          "type": "image_picker",
-          "id": "image_row_K",
-          "label": " Image Row K"
-        },        
-        {
           "type": "richtext",
           "id": "text_row_K",
           "label": "Text Row K"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_L",
-          "label": " Image Row L"
         },        
         {
           "type": "richtext",
           "id": "text_row_L",
           "label": "Text Row L"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_M",
-          "label": " Image Row M"
         },        
         {
           "type": "richtext",
           "id": "text_row_M",
           "label": "Text Row M"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_N",
-          "label": " Image Row N"
         },        
         {
           "type": "richtext",
           "id": "text_row_N",
           "label": "Text Row N"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_O",
-          "label": " Image Row O"
         },        
         {
           "type": "richtext",
           "id": "text_row_O",
           "label": "Text Row O"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_P",
-          "label": " Image Row P"
         },        
         {
           "type": "richtext",
           "id": "text_row_P",
           "label": "Text Row P"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_Q",
-          "label": " Image Row Q"
         },        
         {
           "type": "richtext",
           "id": "text_row_Q",
           "label": "Text Row Q"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_R",
-          "label": " Image Row R"
         },        
         {
           "type": "richtext",
           "id": "text_row_R",
           "label": "Text Row R"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_S",
-          "label": " Image Row S"
         },        
         {
           "type": "richtext",
           "id": "text_row_S",
           "label": "Text Row S"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_row_T",
-          "label": " Image Row T"
         },        
         {
           "type": "richtext",
