@@ -333,7 +333,7 @@
                   padding-top:{{slider_padding_top}}rem; 
                 }
                   
-                {%- if section.settings.image_width != 'full' -%}
+                {%- if section.settings.image_width == 'full' -%}
                   .multicolumn-card__image-wrapper-{{block.id}} {
                     height: 100%;
                     width: 100%;
