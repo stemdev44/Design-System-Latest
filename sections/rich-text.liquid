@@ -71,10 +71,10 @@
                     top: 0;
                     transform: translateY(30%);
                   }
-                    @media screen and (max-width: 749px) {
-                      .section-{{ section.id }}-padding .image-with-text__text.rte 
+                    @media screen and (min-width: 990px) {
+                      .section-{{ section.id }}-padding .rich-text__blocks 
                         {
-                          text-align:{{section.settings.mobile_content_alignment}} !important;  
+                          max-width:75rem;
                         }
                     }
                 </style>                    
