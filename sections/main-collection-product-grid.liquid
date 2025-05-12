@@ -34,6 +34,14 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {% if section.settings.hide_product_count %}
+    .facets__form .product-count{
+      display:none ;
+    }
+    .facet-filters {
+      grid-column: 3;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
@@ -381,6 +389,12 @@
       "default": true,
       "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
     },
+    {
+      "type": "checkbox",
+      "id": "hide_product_count",
+      "default": false,
+      "label": "Hide Total Product Count"
+    },    
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
