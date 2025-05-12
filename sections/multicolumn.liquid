@@ -263,28 +263,30 @@
         {%- for block in section.blocks -%}
           {%- if block.settings.overlap_on_image -%}
             {%- liquid
+              assign multiply_value_card=85
+              assign divide_value_card=100
               if section.settings.image_width == 'half'
-                assign padding_top = 50
+                assign padding_top = 50 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'third'
-                assign padding_top = 33
+                assign padding_top = 33 | times: multiply_value_card | divided_by: divide_value_card 
               elsif section.settings.image_width == 'One-Tenth'
-                assign padding_top = 10
+                assign padding_top = 10 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'Two-Tenth'
-                assign padding_top = 20
+                assign padding_top = 20 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'Three-Tenth'
-                assign padding_top = 30                        
+                assign padding_top = 30 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'Four-Tenth'
-                assign padding_top = 40
+                assign padding_top = 40 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'Six-Tenth'
-                assign padding_top = 60 
+                assign padding_top = 60 | times: multiply_value_card | divided_by: divide_value_card 
               elsif section.settings.image_width == 'Seven-Tenth'
-                assign padding_top = 70
+                assign padding_top = 70 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'Eight-Tenth'
-                assign padding_top = 80
+                assign padding_top = 80 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'Nine-Tenth'
-                assign padding_top = 90
+                assign padding_top = 90 | times: multiply_value_card | divided_by: divide_value_card
               elsif section.settings.image_width == 'full'
-                assign padding_top = 100
+                assign padding_top = 100 | times: multiply_value_card | divided_by: divide_value_card
               endif
             -%}
             {%- liquid
