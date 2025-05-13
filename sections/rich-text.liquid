@@ -58,7 +58,7 @@
                     padding-left: 24px; 
                   }
             
-                  .section-{{ section.id }}-padding ul li::before {
+                  .section-{{ section.id }}-padding {{block.id}} ul li::before {
                     content: "";
                     background: url("{{ block.settings.icon_image | img_url:"" }}");
                     background-size: cover;
@@ -80,7 +80,7 @@
                 </style>                    
               {%-endif -%}                
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__text {{block.id}} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
