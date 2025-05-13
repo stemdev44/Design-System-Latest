@@ -235,7 +235,8 @@
               {%- assign total_collapsibles = section.blocks | where: "type", "collapsible_row" | size -%}
               {%- if total_collapsibles > visible_count -%}
                 <div class="load-more-wrapper" style="text-align: center; margin-top: 1rem;">
-                  <button id="load-more-button" class="button">↓ Load {{ total_collapsibles | minus: visible_count }} More</button>
+                  {% comment %} <button id="load-more-button" class="button">↓ Load {{ total_collapsibles | minus: visible_count }} More</button> {% endcomment %}
+                  <button id="load-more-button" class="button">↓ Load {{ visible_count }} More</button>
                 </div>
               {%- endif -%}
 
@@ -255,13 +256,13 @@
               <script>
                 document.addEventListener("DOMContentLoaded", function () {
                   const loadMoreBtn = document.getElementById("load-more-button");
-                  const loadCount = {{ section.settings.load_more}}; // Default to 5 if not set
+                  const loadCount = {{ section.settings.load_more}};
                   const hiddenBlocks = () => document.querySelectorAll(".hidden-block");
               
                   function updateButtonText() {
                     const remaining = hiddenBlocks().length;
                     if (remaining > 0) {
-                      loadMoreBtn.textContent = `↓ Load ${Math.min(remaining, loadCount)} More`;
+                      {% comment %} loadMoreBtn.textContent = `↓ Load ${Math.min(remaining, loadCount)} More`; {% endcomment %}
                     } else {
                       loadMoreBtn.remove();
                     }
