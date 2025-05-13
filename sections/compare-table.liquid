@@ -43,6 +43,7 @@
   if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
     assign show_mobile_slider = true
   endif
+  assign not_overlap_on_image = false 
 -%}
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
@@ -138,7 +139,13 @@
               }              
             {%- endif -%}
           {%- endif -%}          
-
+        @media screen and (min-width:990px){
+            {%- if not_overlap_on_image -%}
+              .table-row-A {
+                    padding-bottom: 46%;                    
+                  } 
+            {%- endif -%}  
+        }
 
         </style>
     <slider-component class="slider-mobile-gutter">
@@ -147,9 +154,8 @@
         id="Slider-{{ section.id }}"
         role="list"
       >
-
         {%- for block in section.blocks -%}
-          {%- assign not_overlap_on_image = false -%}
+
             {%- if block.settings.overlap_on_image == false -%}
               {%- assign not_overlap_on_image = true-%}
             {%- endif -%}            
@@ -182,10 +188,7 @@
                       right: 50% !important;
                   }
                   .{{block.id}}-table-style .table-row-A {
-                    padding-bottom: 30%;
-                    {%- if not_overlap_on_image -%}
-                      padding-bottom: 46%;  
-                    {%- endif -%}                      
+                    padding-bottom: 30%;                    
                   }
 
                   .section-{{ section.id }}-padding slider-component{
