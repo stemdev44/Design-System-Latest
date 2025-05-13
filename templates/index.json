@@ -26,6 +26,13 @@
             "icon_image": "shopify://shop_images/CalendarCheck.png"
           }
         },
+        "text_TgDa3d": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</li><li>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</li></ul>",
+            "icon_image": "shopify://shop_images/CalendarCheck.png"
+          }
+        },
         "button_PcqV6i": {
           "type": "button",
           "settings": {
@@ -41,6 +48,7 @@
       "block_order": [
         "heading_gbNrn7",
         "text_rH7nPp",
+        "text_TgDa3d",
         "button_PcqV6i"
       ],
       "settings": {
