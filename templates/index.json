@@ -12,6 +12,14 @@
     "collapsible_content_qUw7fA": {
       "type": "collapsible-content",
       "blocks": {
+        "text_8nqdAQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "content_alignment": "center",
+            "mobile_content_alignment": "center"
+          }
+        },
         "collapsible_row_QXWdtE": {
           "type": "collapsible_row",
           "settings": {
@@ -133,6 +141,7 @@
         }
       },
       "block_order": [
+        "text_8nqdAQ",
         "collapsible_row_QXWdtE",
         "collapsible_row_Fd3yMf",
         "collapsible_row_etFKTN",
