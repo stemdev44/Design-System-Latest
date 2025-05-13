@@ -212,7 +212,7 @@
           "type": "column",
           "settings": {
             "image_row_A": "shopify://shop_images/icon-bottle.svg",
-            "overlap_on_image": false,
+            "overlap_on_image": true,
             "text_row_A": "<p>Text Row A</p>",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
