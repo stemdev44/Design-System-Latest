@@ -149,7 +149,7 @@
       >
 
         {%- for block in section.blocks -%}
-          {%- assign not_overlap_on_image = block.settings.overlap_on_image -%}
+          {%- assign not_overlap_on_image = false -%}
             {%- if block.settings.overlap_on_image == false -%}
               {%- assign not_overlap_on_image = true-%}
             {%- endif -%}            
