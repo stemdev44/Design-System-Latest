@@ -33,6 +33,13 @@
             "icon_image": "shopify://shop_images/Alt_image-9.svg"
           }
         },
+        "text_W9FYnf": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</li></ul>",
+            "icon_image": "shopify://shop_images/Alt_image-10.svg"
+          }
+        },
         "button_PcqV6i": {
           "type": "button",
           "settings": {
@@ -49,6 +56,7 @@
         "heading_gbNrn7",
         "text_rH7nPp",
         "text_TgDa3d",
+        "text_W9FYnf",
         "button_PcqV6i"
       ],
       "settings": {
