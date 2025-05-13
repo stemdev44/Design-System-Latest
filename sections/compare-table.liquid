@@ -172,7 +172,7 @@
               height: 165px;
               object-fit: contain;
             }
-            {%- if block.settings.overlap_on_image -%}
+            {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}
               @media screen and (min-width:990px){
                   .multicolumn-card__image-wrapper-{{block.id}} {
                       position: absolute;
@@ -181,10 +181,12 @@
                   }
                   .{{block.id}}-table-style .table-row-A {
                     padding-bottom: 30%;
-                    {%- if not_overlap_on_image -%}
-                      padding-bottom: 46% !important;
-                    {%- endif -%}
                   }
+                  {%- if not_overlap_on_image -%}
+                    .table-row-A {
+                      padding-bottom: 46% !important;
+                    }
+                  {%- endif -%}
 
                   .section-{{ section.id }}-padding slider-component{
                       padding-top: 10rem; 
