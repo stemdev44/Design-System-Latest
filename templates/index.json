@@ -25,7 +25,8 @@
           "settings": {
             "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
             "text_style": "body",
-            "icon_image": "shopify://shop_images/CalendarCheck.png"
+            "icon_image": "shopify://shop_images/CalendarCheck.png",
+            "innclude_in_mobile_container": true
           }
         },
         "buttons_4Jkjdy": {
