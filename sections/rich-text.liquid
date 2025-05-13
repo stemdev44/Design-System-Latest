@@ -58,7 +58,7 @@
                     padding-left: 24px; 
                   }
             
-                  .section-{{ section.id }}-padding {{block.id}} ul li::before {
+                  .section-{{ section.id }}-padding .{{block.id}} ul li::before {
                     content: "";
                     background: url("{{ block.settings.icon_image | img_url:"" }}");
                     background-size: cover;
