@@ -150,22 +150,25 @@
               {%- endcase -%}
             {%- endfor -%} {% endcomment %}
             {% comment %} //////////////// Load more starts /////////////// {% endcomment %}
-              {%- assign visible_count = section.settings.load_more -%}
-              {%- assign collapsible_index = 0 -%}
 
-              {%- for block in section.blocks -%}
-                {% assign is_collapsible = false %}
-                {% if block.type == 'collapsible_row' %}
-                  {% assign is_collapsible = true %}
-                {% endif %}
-                {% if is_collapsible %}
-                  {% assign collapsible_index = collapsible_index | plus: 1 %}
-                {% endif %}
+            {%- assign visible_count = section.settings.load_more -%}
+            {%- assign collapsible_index = 0 -%}
+            {%- assign total_collapsibles = 0 -%}
 
-                {%- assign is_visible = true -%}
-                {% if is_collapsible and collapsible_index > visible_count %}
-                  {% assign is_visible = false %}
-                {% endif %}
+            {%- for block in section.blocks -%}
+              {% assign is_collapsible = false %}
+              {% if block.type == 'collapsible_row' %}
+                {% assign is_collapsible = true %}
+                {% assign total_collapsibles = total_collapsibles | plus: 1 %}
+              {% endif %}
+              {% if is_collapsible %}
+                {% assign collapsible_index = collapsible_index | plus: 1 %}
+              {% endif %}
+
+              {%- assign is_visible = true -%}
+              {% if is_collapsible and collapsible_index > visible_count %}
+                {% assign is_visible = false %}
+              {% endif %}
 
                 <div class="collapsible-block-wrapper{% unless is_visible %} hidden-block{% endunless %}" data-block-index="{{ forloop.index }}">
 
@@ -232,11 +235,14 @@
                 </div>
               {%- endfor -%}
 
-              {%- assign total_collapsibles = section.blocks | where: "type", "collapsible_row" | size -%}
+              {% comment %} {%- assign total_collapsibles = section.blocks | where: "type", "collapsible_row" | size -%} {% endcomment %}
               {%- if total_collapsibles > visible_count -%}
                 <div class="load-more-wrapper" style="text-align: center; margin-top: 1rem;">
                   {% comment %} <button id="load-more-button" class="button">↓ Load {{ total_collapsibles | minus: visible_count }} More</button> {% endcomment %}
-                  <button id="load-more-button" class="button">↓ Load {{ visible_count }} More</button>
+                  {% comment %} <button id="load-more-button" class="button">↓ Load {{ visible_count }} More</button> {% endcomment %}
+                  <button id="load-more-button" class="button" data-load-count="{{ visible_count }}">
+                    ↓ Load More
+                  </button>                  
                 </div>
               {%- endif -%}
 
@@ -253,7 +259,7 @@
                   });
                 });
               </script> {% endcomment %}
-              <script>
+              {% comment %} <script>
                 document.addEventListener("DOMContentLoaded", function () {
                   const loadMoreBtn = document.getElementById("load-more-button");
                   const loadCount = {{ section.settings.load_more}};
@@ -269,6 +275,36 @@
                   }
               
                   if (!loadMoreBtn) return;
+                  updateButtonText();
+              
+                  loadMoreBtn.addEventListener("click", function () {
+                    const blocks = hiddenBlocks();
+                    const toShow = Array.from(blocks).slice(0, loadCount);
+                    toShow.forEach(block => block.classList.remove("hidden-block"));
+              
+                    updateButtonText();
+                  });
+                });
+              </script>               {% endcomment %}
+
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const loadMoreBtn = document.getElementById("load-more-button");
+                  if (!loadMoreBtn) return;
+              
+                  const loadCount = parseInt(loadMoreBtn.dataset.loadCount);
+                  const hiddenBlocks = () => document.querySelectorAll(".hidden-block");
+              
+                  function updateButtonText() {
+                    const remaining = hiddenBlocks().length;
+                    if (remaining > 0) {
+                      const toLoad = Math.min(loadCount, remaining);
+                      loadMoreBtn.textContent = `↓ Load ${toLoad} More`;
+                    } else {
+                      loadMoreBtn.remove();
+                    }
+                  }
+              
                   updateButtonText();
               
                   loadMoreBtn.addEventListener("click", function () {
