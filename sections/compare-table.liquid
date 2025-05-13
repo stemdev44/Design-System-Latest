@@ -184,68 +184,6 @@
                           {% endif %} 
                           border-radius:{{block.settings.column_corner_radius}}px;"
               >
-                {% comment %} <div class="multicolumn-card__info table-style {{block.id}}-table-style">
-                  {% if block.settings.text_row_A != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
-                  {% endif %}
-                  {% if block.settings.text_row_B != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
-                  {% endif %}
-                  {% if block.settings.text_row_C != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_C }}</div></div>
-                  {% endif %}
-                  {% if block.settings.text_row_D != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_D }}</div></div>
-                  {% endif %}
-                  {% if block.settings.text_row_E != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_E }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_F != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_F }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_G != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_G }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_H != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_H }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_I != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_I }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_J != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_J }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_K != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_K }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_L != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_L }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_M != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_M }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_N != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_N }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_O != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_O }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_P != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_P }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_Q != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_Q }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_R != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_R }}</div></div>
-                  {% endif %} 
-                  {% if block.settings.text_row_S != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_S }}</div></div>
-                  {% endif %}                    
-                  {% if block.settings.text_row_T != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_T }}</div></div>
-                  {% endif %}                                                                                                                                                                                                                                                                                                                                                        
-                </div> {% endcomment %}
                 <style>
                   .{{block.id}}-table-style img {
                     width: 50%;
@@ -319,13 +257,13 @@
 
                       <style>
                           @media screen and (min-width:990px){
-                              .multicolumn--{{block.id}} .multicolumn-card.content-container {
-                                  overflow: visible!important;
-                              }
                               .multicolumn-card__image-wrapper-{{block.id}} {
                                   position: absolute;
-                                  transform: translate(50%, -50%);
-                                  right: 50%;
+                                  transform: translate(50%, -50%) !important;
+                                  right: 50% !important;
+                              }
+                              .{{block.id}}-table-style .table-row-A {
+                                  padding-bottom: {{padding_top}}%;
                               }
 
                               .section-{{ section.id }}-padding slider-component{
