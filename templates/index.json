@@ -282,11 +282,11 @@
       ],
       "name": "Compare Table",
       "settings": {
-        "caption": "",
+        "caption": "Compare table Caption",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "title": "Compare Table",
-        "heading_size": "h1",
+        "heading_size": "hxl",
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
         "description": "",
