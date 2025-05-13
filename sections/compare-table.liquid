@@ -268,7 +268,7 @@
                             {%- liquid
                               assign highest_ratio = 0
                               for block in section.blocks
-                                if block.settings.image.aspect_ratio > highest_ratio
+                                if block.settings.image_row_A.aspect_ratio > highest_ratio
                                   assign highest_ratio = block.settings.image.aspect_ratio
                                 endif
                               endfor
