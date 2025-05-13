@@ -184,7 +184,13 @@
                           {% endif %} 
                           border-radius:{{block.settings.column_corner_radius}}px;"
               >
-
+                <style>
+                  .{{block.id}}-table-style img {
+                    width: 50%;
+                    height: 165px;
+                    object-fit: contain;
+                  }
+                </style>
                 <div class="multicolumn-card__info table-style {{block.id}}-table-style">
                   {% if block.settings.image_row_A != blank %}
 
