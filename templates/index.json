@@ -295,7 +295,6 @@
         "column_hFt64y": {
           "type": "column",
           "settings": {
-            "image_row_A": "shopify://shop_images/icon-bottle.svg",
             "text_row_A": "<p>Text Row A</p>",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
