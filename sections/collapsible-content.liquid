@@ -245,48 +245,6 @@
                   </button>                  
                 </div>
               {%- endif -%}
-
-              {% comment %} <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                  const loadMoreBtn = document.getElementById("load-more-button");
-                  if (!loadMoreBtn) return;
-
-                  loadMoreBtn.addEventListener("click", function() {
-                    document.querySelectorAll(".hidden-block").forEach(function(block) {
-                      block.classList.remove("hidden-block");
-                    });
-                    loadMoreBtn.parentElement.remove();
-                  });
-                });
-              </script> {% endcomment %}
-              {% comment %} <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const loadMoreBtn = document.getElementById("load-more-button");
-                  const loadCount = {{ section.settings.load_more}};
-                  const hiddenBlocks = () => document.querySelectorAll(".hidden-block");
-              
-                  function updateButtonText() {
-                    const remaining = hiddenBlocks().length;
-                    if (remaining > 0) {
-                      {% comment %} loadMoreBtn.textContent = `↓ Load ${Math.min(remaining, loadCount)} More`; {% endcomment %}
-                    } else {
-                      loadMoreBtn.remove();
-                    }
-                  }
-              
-                  if (!loadMoreBtn) return;
-                  updateButtonText();
-              
-                  loadMoreBtn.addEventListener("click", function () {
-                    const blocks = hiddenBlocks();
-                    const toShow = Array.from(blocks).slice(0, loadCount);
-                    toShow.forEach(block => block.classList.remove("hidden-block"));
-              
-                    updateButtonText();
-                  });
-                });
-              </script>               {% endcomment %}
-
               <script>
                 document.addEventListener("DOMContentLoaded", function () {
                   const loadMoreBtn = document.getElementById("load-more-button");
