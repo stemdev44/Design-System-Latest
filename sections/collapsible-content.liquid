@@ -255,7 +255,7 @@
               <script>
                 document.addEventListener("DOMContentLoaded", function () {
                   const loadMoreBtn = document.getElementById("load-more-button");
-                  const loadCount = {{ section.settings.load_more | default: 5 }}; // Default to 5 if not set
+                  const loadCount = {{ section.settings.load_more}}; // Default to 5 if not set
                   const hiddenBlocks = () => document.querySelectorAll(".hidden-block");
               
                   function updateButtonText() {
