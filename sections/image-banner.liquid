@@ -381,11 +381,11 @@
               {%- case block.type -%}           
                 {%- when 'text' -%}
                   {%- if block.settings.innclude_in_mobile_container -%}
-
+                    <div class="banner__text rte {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
+                      <p>{{ block.settings.text }}</p>
+                    </div>
                   {%- endif -%}
-                  <div class="banner__text rte {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
-                    <p>{{ block.settings.text }}</p>
-                  </div>
+
               {%- endcase -%}
             {%- endfor -%}            
             {% comment %} ///////////get the Text Below button Ends////////// {% endcomment %}
