@@ -163,10 +163,12 @@
                               transform: translateY(30%);
                             }
                           </style>                    
-                      {%-endif -%}            
-                      <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                        <p>{{ block.settings.text }}</p>
-                      </div>
+                      {%-endif -%}
+                      {%- if block.settings.innclude_in_mobile_container == false -%}
+                        <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                          <p>{{ block.settings.text }}</p>
+                        </div>
+                      {%- endif -%}
                   {%- endcase -%}
                 {%- endfor -%}
               </div>
