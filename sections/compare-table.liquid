@@ -248,13 +248,14 @@
                 </div> {% endcomment %}
                 <style>
                   .{{block.id}}-table-style img {
-                    height: 40px;
+                    width: 50%;
+                    height: auto;
                   }
-                  {%- if block.settings.image_row_A != blank -%}
+                  {% comment %} {%- if block.settings.image_row_A != blank -%}
                     .section-{{ section.id }}-padding .table-row-A .table-cell{
                         height: 64px;
                       }
-                  {%-endif-%}
+                  {%-endif-%} {% endcomment %}
 
                 </style>
                 <div class="multicolumn-card__info table-style {{block.id}}-table-style">
