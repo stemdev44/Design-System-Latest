@@ -380,7 +380,7 @@
             {%- for block in section.blocks -%}
               {%- case block.type -%}           
                 {%- when 'text' -%}
-                  {%- if block.settings.innclude_in_mobile_container -%}
+                  {%- if block.settings.innclude_in_mobile_container and block.settings.show_text_below -%}
                     <div class="banner__text rte {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
                       <p>{{ block.settings.text }}</p>
                     </div>
