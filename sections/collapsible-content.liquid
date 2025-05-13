@@ -235,11 +235,8 @@
                 </div>
               {%- endfor -%}
 
-              {% comment %} {%- assign total_collapsibles = section.blocks | where: "type", "collapsible_row" | size -%} {% endcomment %}
               {%- if total_collapsibles > visible_count -%}
                 <div class="load-more-wrapper" style="text-align: center; margin-top: 1rem;">
-                  {% comment %} <button id="load-more-button" class="button">↓ Load {{ total_collapsibles | minus: visible_count }} More</button> {% endcomment %}
-                  {% comment %} <button id="load-more-button" class="button">↓ Load {{ visible_count }} More</button> {% endcomment %}
                   <button id="load-more-button" class="button" data-load-count="{{ visible_count }}">
                     ↓ Load More
                   </button>                  
