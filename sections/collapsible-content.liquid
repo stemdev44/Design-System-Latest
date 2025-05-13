@@ -239,7 +239,7 @@
                 </div>
               {%- endif -%}
 
-              <script>
+              {% comment %} <script>
                 document.addEventListener("DOMContentLoaded", function() {
                   const loadMoreBtn = document.getElementById("load-more-button");
                   if (!loadMoreBtn) return;
@@ -251,7 +251,34 @@
                     loadMoreBtn.parentElement.remove();
                   });
                 });
-              </script>
+              </script> {% endcomment %}
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const loadMoreBtn = document.getElementById("load-more-button");
+                  const loadCount = {{ section.settings.load_more | default: 5 }}; // Default to 5 if not set
+                  const hiddenBlocks = () => document.querySelectorAll(".hidden-block");
+              
+                  function updateButtonText() {
+                    const remaining = hiddenBlocks().length;
+                    if (remaining > 0) {
+                      loadMoreBtn.textContent = `↓ Load ${Math.min(remaining, loadCount)} More`;
+                    } else {
+                      loadMoreBtn.remove();
+                    }
+                  }
+              
+                  if (!loadMoreBtn) return;
+                  updateButtonText();
+              
+                  loadMoreBtn.addEventListener("click", function () {
+                    const blocks = hiddenBlocks();
+                    const toShow = Array.from(blocks).slice(0, loadCount);
+                    toShow.forEach(block => block.classList.remove("hidden-block"));
+              
+                    updateButtonText();
+                  });
+                });
+              </script>              
 
               <style>
                   .hidden-block {
