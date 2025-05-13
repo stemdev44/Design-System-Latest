@@ -274,7 +274,6 @@
                   loadMoreBtn.addEventListener("click", function () {
                     const blocks = hiddenBlocks();
                     const toShow = Array.from(blocks).slice(0, loadCount);
-                    console.log(toShow)
                     toShow.forEach(block => block.classList.remove("hidden-block"));
               
                     updateButtonText();
