@@ -263,7 +263,7 @@
         "column_WGzJr3": {
           "type": "column",
           "settings": {
-            "image_row_A": "shopify://shop_images/CalendarCheck.png",
+            "image_row_A": "shopify://shop_images/Alt_image-8.svg",
             "text_row_A": "",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
@@ -295,7 +295,7 @@
         "column_hFt64y": {
           "type": "column",
           "settings": {
-            "image_row_A": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
+            "image_row_A": "shopify://shop_images/icon-bottle.svg",
             "text_row_A": "<p>Text Row A</p>",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
@@ -327,7 +327,7 @@
         "column_4ayimq": {
           "type": "column",
           "settings": {
-            "image_row_A": "shopify://shop_images/Alt_image-8.svg",
+            "image_row_A": "shopify://shop_images/Product4_home2_f793edf6-1a33-4947-8297-40a5460c5af6.png",
             "text_row_A": "<p>Text Row A</p>",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
