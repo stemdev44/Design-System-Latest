@@ -264,7 +264,13 @@
                     <div class="table-row table-row-A">
                       <div class="table-cell">
                         {% comment %} <img src="{{ block.settings.image_row_A | img_url: 'small' }}" alt="" />  {% endcomment %}
-                          <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--half-width">
+                          <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--half-width"
+                          style="
+                           {% if block.settings.column_alignment == "center" %}
+                             transform: translateX(50%);
+                           {% endif %}
+                          "
+                          >
                             {%- liquid
                               assign highest_ratio = 0
                               for block in section.blocks
