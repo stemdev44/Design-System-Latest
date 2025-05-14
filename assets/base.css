@@ -517,6 +517,7 @@ h6:empty {
 
 ul li::before{
   transform: translateY(5px) !important;
+  background-size: contain !important;
 }
 
 .link,
