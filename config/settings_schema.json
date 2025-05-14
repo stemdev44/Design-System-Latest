@@ -217,12 +217,12 @@
         "type": "range",
         "id": "desktop_menu_nav_links_scale",
         "min": 100,
-        "max": 150,
+        "max": 130,
         "step": 5,
         "unit": "%",
         "label": "Desktop Menu Nav Links Scale",
         "default": 100
-      }      
+      }     
     ]
   },
   {
