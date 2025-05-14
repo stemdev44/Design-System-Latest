@@ -179,7 +179,6 @@
           "type": "column",
           "settings": {
             "image_row_A": "shopify://shop_images/Alt_image-8.svg",
-            "overlap_on_image": true,
             "text_row_A": "",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
@@ -212,7 +211,6 @@
           "type": "column",
           "settings": {
             "image_row_A": "shopify://shop_images/icon-bottle.svg",
-            "overlap_on_image": true,
             "text_row_A": "<p>Text Row A</p>",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
@@ -245,7 +243,6 @@
           "type": "column",
           "settings": {
             "image_row_A": "shopify://shop_images/720_1096.png",
-            "overlap_on_image": true,
             "text_row_A": "<p>Text Row A</p>",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
@@ -282,11 +279,11 @@
       ],
       "name": "Compare Table",
       "settings": {
-        "caption": "Compare table Caption",
+        "caption": "",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "title": "Compare Table",
-        "heading_size": "hxl",
+        "heading_size": "h1",
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
         "description": "",
@@ -299,7 +296,7 @@
         "slider_visual": "dots",
         "padding_top": 36,
         "padding_bottom": 36,
-        "remove_inner_padding": false
+        "remove_inner_padding": true
       }
     },
     "image_banner_Ub7FA8": {
@@ -681,7 +678,6 @@
         },
         "text_GCPqjX": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
             "text_style": "body",
