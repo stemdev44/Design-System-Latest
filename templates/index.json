@@ -12,6 +12,26 @@
     "blocks_with_text_EQxBGT": {
       "type": "blocks-with-text",
       "blocks": {
+        "column_LTgjn8": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
+        "column_TJ9MiQ": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "heading_size": "h1",
+            "heading_size_mobile": "h1",
+            "description": "",
+            "description_style": "body"
+          }
+        },
         "column_3finTW": {
           "type": "column",
           "settings": {
@@ -26,7 +46,7 @@
           "type": "column",
           "settings": {
             "title": "Card",
-            "heading_size": "hxxl",
+            "heading_size": "hxl",
             "heading_size_mobile": "h2",
             "description": "<p>Description</p>",
             "description_style": "body"
@@ -61,9 +81,8 @@
         },
         "text_dtaJRN": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li><li>Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic, Zero Single-Use Plastic</li></ul>",
+            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li></ul>",
             "text_style": "body",
             "icon_image": "shopify://shop_images/icon-bottle.svg"
           }
@@ -79,6 +98,8 @@
         }
       },
       "block_order": [
+        "column_LTgjn8",
+        "column_TJ9MiQ",
         "column_3finTW",
         "column_ExfrTD",
         "column_cXpQVT",
@@ -101,8 +122,8 @@
         "video_button_style_secondary": false,
         "video_no_border_style": false,
         "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "center",
         "mobile_content_alignment": "left",
         "column_alignment": "center",
         "column_background_color": "#000000",
