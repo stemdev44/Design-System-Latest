@@ -203,9 +203,9 @@
                     </li>
                 {%- when 'image_picker' -%}
                     {%- if block.settings.image != blank -%}
-                        <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
+                        <div class="image-with-text__media-item image-with-text__media-item--{{ block.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
                             <div
-                            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+                            class="image-with-text__media image-with-text__media--{{ block.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
                             {% if block.settings.height == 'adapt' and block.settings.image != blank %}
                                 style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
                             {% endif %}
@@ -663,7 +663,51 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
-            }
+            },
+            {
+            "type": "select",
+            "id": "height",
+            "options": [
+                {
+                "value": "adapt",
+                "label": "t:sections.image-with-text.settings.height.options__1.label"
+                },
+                {
+                "value": "small",
+                "label": "t:sections.image-with-text.settings.height.options__2.label"
+                },
+                {
+                "value": "medium",
+                "label": "t:sections.image-with-text.settings.height.options__3.label"
+                },
+                {
+                "value": "large",
+                "label": "t:sections.image-with-text.settings.height.options__4.label"
+                }
+            ],
+            "default": "adapt",
+            "label": "t:sections.image-with-text.settings.height.label"
+            },
+            {
+            "type": "select",
+            "id": "desktop_image_width",
+            "options": [
+                {
+                "value": "small",
+                "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
+                },
+                {
+                "value": "medium",
+                "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
+                },
+                {
+                "value": "large",
+                "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
+                }
+            ],
+            "default": "medium",
+            "label": "t:sections.image-with-text.settings.desktop_image_width.label"
+            }            
         ]
     }    
   ],
