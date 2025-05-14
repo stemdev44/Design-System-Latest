@@ -18,6 +18,7 @@
     "custom_body_font": "",
     "body_scale": 100,
     "body_font_size": 1.5,
+    "desktop_menu_nav_links_scale": 120,
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
