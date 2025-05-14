@@ -161,7 +161,7 @@
         "video_button_style_secondary": false,
         "video_no_border_style": false,
         "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
         "column_alignment": "center",
