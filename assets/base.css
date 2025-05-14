@@ -515,6 +515,10 @@ h6:empty {
   display: none;
 }
 
+ul li::before{
+  transform: translateY(5px) !important;
+}
+
 .link,
 .customer a {
   cursor: pointer;
