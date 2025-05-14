@@ -32,7 +32,7 @@
     }
   {%- endif -%}
 
-  @media screen and (min-width: 990px) {
+  {% comment %} @media screen and (min-width: 990px) {
     .list-menu__item {
       line-height: calc(1 + 0.3 / var(--desktop-menu-nav-links-scale)) !important;
       font-size: calc(var(--desktop-menu-nav-links-scale) * var(--body_font_size)) !important;
@@ -42,7 +42,7 @@
       line-height: calc(1 + 0.8 / var(--desktop-menu-nav-links-scale)) !important;
       font-size: calc(var(--desktop-menu-nav-links-scale) * var(--body_font_size)) !important;
     }
-  }
+  } {% endcomment %}
 
   .menu-drawer-container {
     display: flex;
