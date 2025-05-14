@@ -29,7 +29,9 @@
         "image_picker_3C449g": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify://shop_images/test-1.png"
+            "image": "shopify://shop_images/test-1.png",
+            "height": "large",
+            "desktop_image_width": "small"
           }
         },
         "column_yFtbd4": {
