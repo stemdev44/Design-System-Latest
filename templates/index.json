@@ -31,8 +31,7 @@
           "type": "image_picker",
           "settings": {
             "image": "shopify://shop_images/test-1.png",
-            "height": "large",
-            "desktop_image_width": "medium"
+            "height": "large"
           }
         },
         "column_6jVbPD": {
@@ -392,46 +391,6 @@
             "description_style": "body"
           }
         },
-        "column_3finTW": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "hxl",
-            "heading_size_mobile": "h2",
-            "description": "<p>Description<br/></p>",
-            "description_style": "body"
-          }
-        },
-        "column_ExfrTD": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "hxl",
-            "heading_size_mobile": "h2",
-            "description": "<p>Description</p>",
-            "description_style": "body"
-          }
-        },
-        "column_cXpQVT": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h1",
-            "description": "<p>Description</p>",
-            "description_style": "body"
-          }
-        },
-        "column_RKtWBP": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "heading_size": "h1",
-            "heading_size_mobile": "h2",
-            "description": "<p>Description</p>",
-            "description_style": "body"
-          }
-        },
         "heading_gFaJUP": {
           "type": "heading",
           "settings": {
@@ -463,10 +422,6 @@
         "column_XFrtzk",
         "column_LTgjn8",
         "column_TJ9MiQ",
-        "column_3finTW",
-        "column_ExfrTD",
-        "column_cXpQVT",
-        "column_RKtWBP",
         "heading_gFaJUP",
         "text_dtaJRN",
         "button_BaPrVg"
@@ -485,7 +440,7 @@
         "video_button_style_secondary": false,
         "video_no_border_style": false,
         "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "bottom",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "left",
         "column_alignment": "center",
