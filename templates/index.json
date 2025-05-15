@@ -252,7 +252,7 @@
           "settings": {
             "image": "shopify://shop_images/Alt_image-10.svg",
             "hide_image_video_mobile": false,
-            "overlap_on_image": true,
+            "overlap_on_image": false,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -309,7 +309,7 @@
         "slider_visual": "counter",
         "padding_top": 36,
         "padding_bottom": 36,
-        "remove_inner_padding": true
+        "remove_inner_padding": false
       }
     },
     "compare_table_4zE6WA": {
