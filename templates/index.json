@@ -401,7 +401,7 @@
         "text_dtaJRN": {
           "type": "text",
           "settings": {
-            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li></ul>",
+            "text": "<p>Testing</p><ul><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li>Purifies Water Instantly</li><li>Retains Essential Minerals</li><li>Zero Single-Use Plastic</li><li></li></ul>",
             "text_style": "body",
             "icon_image": "shopify://shop_images/icon-bottle.svg"
           }
