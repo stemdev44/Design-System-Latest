@@ -32,7 +32,7 @@
           "settings": {
             "image": "shopify://shop_images/test-1.png",
             "height": "large",
-            "desktop_image_width": "large"
+            "desktop_image_width": "medium"
           }
         },
         "column_6jVbPD": {
