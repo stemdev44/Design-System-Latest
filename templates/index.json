@@ -30,8 +30,8 @@
           "type": "image_picker",
           "settings": {
             "image": "shopify://shop_images/test-1.png",
-            "height": "adapt",
-            "desktop_image_width": "medium"
+            "height": "large",
+            "desktop_image_width": "large"
           }
         },
         "column_6jVbPD": {
