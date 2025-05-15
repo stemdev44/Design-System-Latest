@@ -122,15 +122,23 @@
                                 >
                                     <div class="multicolumn-card content-container" style="background:{{ section.settings.column_background_color }}; border-radius:{{section.settings.column_corner_radius_2}}px;">
                                         <div class="multicolumn-card__info">
-                                            {%- if block.settings.title != blank -%}
-                                                <h3 class="small-hide medium-hide inline-richtext {{ block.settings.heading_size }} " style="color:{{ section.settings.column_font_color }}; text-align:{{ section.settings.desktop_content_alignment }}">{{ block.settings.title }}</h3>
-                                                <h3 class="large-up-hide inline-richtext {{ block.settings.heading_size_mobile }} " style="color:{{ section.settings.column_font_color }}; text-align:{{ section.settings.mobile_content_alignment }}">{{ block.settings.title }}</h3>
+                                            {%- if block.settings.caption != blank -%}
+                                              <div class = "{{block.id}}-caption-container"
+                                                    style="display:flex;                                   
+                                                    {% if section.settings.column_alignment == 'center'%}
+                                                      justify-content:center;
+                                                    {% endif %}"
+                                              >
+                                                <p class="{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}" 
+                                                    style="width:max-content; background:{{block.settings.caption_background_color}}; color:{{block.settings.caption_font_color}}; padding:5px;  ">
+                                                  {{ block.settings.caption | escape }}
+                                                </p>      
+                                              </div>                      
                                             {%- endif -%}
-                                            {%- if block.settings.description != blank -%}
-                                                <div class="small-hide medium-hide rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }};text-align:{{ section.settings.desktop_content_alignment }}">{{ block.settings.description }}</div>
-                                                <div class="large-up-hide rte {{ block.settings.description_style }}" style="color:{{ section.settings.column_font_color }};text-align:{{ section.settings.mobile_content_alignment }}">{{ block.settings.description }}</div>
+                                            {%- if block.settings.text != blank -%}
+                                              <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.text }}</div>
                                             {%- endif -%}
-                                        </div>
+                                          </div>
                                     </div>
                                 </li>            
                         {%-endcase-%}
