@@ -140,6 +140,53 @@
                                                 </p>      
                                               </div>                      
                                             {%- endif -%}
+                                            {%- if block.settings.title != blank -%}
+                                                {%- if block.settings.heading_icon_image != blank -%}
+                                                  <style>
+                                                    .heading_icon_image{
+                                                      display: flex; 
+                                                      justify-content:{{section.settings.column_alignment}}; 
+                                                      align-items: center; 
+                                                      gap: 2px;
+                                                    }
+                                                  </style>
+                                                  <h3 class="small-hide medium-hide inline-richtext heading_icon_image {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %}"  
+                                                      style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
+                                                              {% if section.settings.column_alignment == 'center'%}
+                                                                justify-content:center;
+                                                              {% endif %}"                          
+                                                  >
+                                                    <img src="{{ block.settings.heading_icon_image | img_url: 'small' }}" alt="" style="width:20px"/> 
+                                                    {{ block.settings.title }}
+                                                  </h3>
+                                                  <h3 class="large-up-hide inline-richtext heading_icon_image {% if block.settings.heading_size_mobile == 'body_font_extra_Large' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %}"  
+                                                      style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
+                                                      {% if section.settings.column_alignment == 'center'%}
+                                                        justify-content:center;
+                                                      {% endif %}"
+                                                  >
+                                                    <img src="{{ block.settings.heading_icon_image | img_url: 'small' }}" alt="" style="width:20px"/> 
+                                                    {{ block.settings.title }}
+                                                  </h3>
+                                                {%- else -%}
+                                                  <h3 class="small-hide medium-hide inline-richtext  {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} " 
+                                                    style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
+                                                    {% if section.settings.column_alignment == 'center'%}
+                                                      justify-content:center;
+                                                    {% endif %}"                        
+                                                  >
+                                                    {{ block.settings.title }}
+                                                  </h3>                        
+                                                  <h3 class="large-up-hide inline-richtext {% if block.settings.heading_size_mobile == 'body_font_extra_Large' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %}"
+                                                    style="display:flex; justify-content:flex-start; {% if section.settings.background_style == 'primary' %} color:{{ section.settings.column_font_color }}; {% endif %}
+                                                    {% if section.settings.column_alignment == 'center'%}
+                                                      justify-content:center;
+                                                    {% endif %}"                      
+                                                  >
+                                                    {{ block.settings.title }}
+                                                  </h3>
+                                                {%- endif -%}
+                                            {%- endif -%}                                             
                                             {%- if block.settings.text != blank -%}
                                               <div class="rte" {% if section.settings.background_style == 'primary' %} style="color:{{ section.settings.column_font_color }}" {% endif %}>{{ block.settings.text }}</div>
                                             {%- endif -%}
