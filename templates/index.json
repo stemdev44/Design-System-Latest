@@ -16,7 +16,7 @@
           "type": "column",
           "settings": {
             "heading": "<strong>Allergen</strong>",
-            "page": "",
+            "page": "allergens",
             "description": ""
           }
         },
@@ -25,7 +25,7 @@
           "settings": {
             "heading": "Faq",
             "page": "",
-            "description": ""
+            "description": "<p>This is test FAQ</p>"
           }
         },
         "column_f44r3H": {
