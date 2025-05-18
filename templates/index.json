@@ -57,7 +57,7 @@
       ],
       "name": "Tab",
       "settings": {
-        "title": "Tab Section",
+        "title": "Tabs Section",
         "heading_size": "h1",
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
