@@ -13,7 +13,7 @@
       "type": "page",
       "name": "t:sections.page.presets.name",
       "settings": {
-        "page": "",
+        "page": "test-page",
         "heading_size": "h1",
         "color_scheme": "",
         "padding_top": 36,
