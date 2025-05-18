@@ -122,6 +122,7 @@
                         {%- assign page = pages[block.settings.page] -%}
                     {%- endif -%} {% endcomment %}
                     <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                        {{ block.settings.description }}
                         {%- if block.settings.description != blank -%}                            
                             {{ block.settings.description }}
                         {%- else -%}
