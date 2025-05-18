@@ -69,48 +69,50 @@
       </div>     
     {%- endunless -%}
 
-    {% comment %} <slider-component class="slider-mobile-gutter">
+    <div class="tabs-wrapper">
+        <!-- Tab Buttons -->
+        <ul class="tab-buttons">
+          {%- for block in section.blocks -%}
+            <li>
+              <button
+                type="button"
+                class="tab-button {% if forloop.first %}active{% endif %}"
+                data-tab-target="Slide-{{ section.id }}-{{ forloop.index }}"
+              >
+                {{ block.settings.page.title | default: 'Tab ' | append: forloop.index }}
+              </button>
+            </li>
+          {%- endfor -%}
+        </ul>    
+
+    <slider-component class="slider-mobile-gutter">
       <ul
         class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
-        {%- liquid
-          assign highest_ratio = 0
-          for block in section.blocks
-            if block.settings.image.aspect_ratio > highest_ratio
-              assign highest_ratio = block.settings.image.aspect_ratio
-            endif
-          endfor
-        -%}
         {%- for block in section.blocks -%}
-
-          {%- assign empty_column = '' -%}
-          {%- if block.settings.image == blank
-            and block.settings.title == blank
-            and block.settings.text == blank
-            and block.settings.link_label == blank
-            and block.settings.video == null
-          -%}
-            {%- assign empty_column = ' multicolumn-list__item--empty' -%}
-          {%- endif -%}
-
-          <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn--{{block.id}} multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-
-          </li>
-        {%- endfor -%}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="tab-content multicolumn--{{block.id}} multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% unless forloop.first %} hidden{% endunless %}"
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {%- if block.settings.page != blank -%}
+                {%- assign page = pages[block.settings.page] -%}
+                <h2 class="{{ block.settings.heading_size }}">{{ page.title }}</h2>
+                <div>{{ block.settings.description }}</div>
+                <div>{{ page.content }}</div>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
       </ul>
 
-    </slider-component>    {% endcomment %}
-    <div class="tabs-nav" role="tablist">
+    </slider-component>
+    {% comment %} <div class="tabs-nav" role="tablist">
         {% for block in section.blocks %}
           <button
             class="tab-button{% if forloop.first %} active{% endif %}"
@@ -142,7 +144,7 @@
   
       </div>
     {% endfor %}
-  </div>  
+  </div>   {% endcomment %}
 </div>
 
 <script>
