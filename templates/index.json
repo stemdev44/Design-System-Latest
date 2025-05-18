@@ -16,7 +16,7 @@
           "type": "column",
           "settings": {
             "page": "",
-            "description": "<p>test</p>",
+            "description": "<p>adasdasd</p>",
             "heading_size": "h1"
           }
         },
@@ -49,17 +49,6 @@
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
         "layout": "grid",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "page_BXbwq9": {
-      "type": "page",
-      "name": "t:sections.page.presets.name",
-      "settings": {
-        "page": "test-page",
-        "heading_size": "h2",
-        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1555,7 +1544,6 @@
   },
   "order": [
     "tabs_3tf8V7",
-    "page_BXbwq9",
     "featured_image_with_text_frDRYY",
     "featured_image_with_text_PhXwV9",
     "multicolumn_CxDDe3",
