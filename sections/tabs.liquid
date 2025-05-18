@@ -100,12 +100,12 @@
                 style="--animation-order: {{ forloop.index }};"
               {% endif %}
             >
-              {%- if block.settings.page != blank -%}
-                {%- assign page = pages[block.settings.page] -%}
-                <h2 class="{{ block.settings.heading_size }}">{{ page.title }}</h2>
+              {% comment %} {%- if block.settings.page != blank -%} {% endcomment %}
+                {% comment %} {%- assign page = pages[block.settings.page] -%} {% endcomment %}
+                {% comment %} <h2 class="{{ block.settings.heading_size }}">{{ page.title }}</h2> {% endcomment %}
                 <div>{{ block.settings.description }}</div>
                 <div>{{ page.content }}</div>
-              {%- endif -%}
+              {% comment %} {%- endif -%} {% endcomment %}
             </li>
           {%- endfor -%}
       </ul>
