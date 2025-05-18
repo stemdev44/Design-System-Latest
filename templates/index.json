@@ -24,7 +24,7 @@
           "type": "column",
           "settings": {
             "page": "",
-            "description": "",
+            "description": "<p>This is tab 2</p>",
             "heading_size": "h1"
           }
         },
