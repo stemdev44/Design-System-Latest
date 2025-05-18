@@ -39,7 +39,7 @@
           "type": "custom_email_form",
           "settings": {
             "heading": "Subscribe to our emails",
-            "heading_size": "h1",
+            "heading_size": "hxl",
             "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
           }
         }
