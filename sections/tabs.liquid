@@ -24,7 +24,7 @@
     .tab-buttons {
     display: flex;
     gap: 2rem;
-    padding: 1rem 0 0.5rem;
+    padding: 1rem 0 0;
     margin: 0;
     list-style: none;
     border-bottom: 1px solid #d6bfae;
@@ -120,15 +120,12 @@
                 >
                     {% comment %} {%- if block.settings.page != blank -%}
                         {%- assign page = pages[block.settings.page] -%}
-                        <h2 class="{{ block.settings.heading_size }}">{{ page.title }}</h2>
-                        <div>{{ block.settings.description }}</div>
-                        <div>{{ page.content }}</div>
                     {%- endif -%} {% endcomment %}
                     <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                        {%- if block.settings.page.content != blank -%}
-                            {{ block.settings.page.content }}
-                        {%- else -%}
+                        {%- if block.settings.description != blank -%}                            
                             {{ block.settings.description }}
+                        {%- else -%}
+                            {{ block.settings.page.content }}
                         {%- endif -%}
                     </div>                
                 </li>
