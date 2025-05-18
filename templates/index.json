@@ -15,6 +15,7 @@
         "column_HHULVy": {
           "type": "column",
           "settings": {
+            "heading": "<strong>Allergen</strong>",
             "page": "",
             "description": ""
           }
@@ -22,6 +23,7 @@
         "column_LraYWT": {
           "type": "column",
           "settings": {
+            "heading": "Faq",
             "page": "",
             "description": ""
           }
@@ -29,7 +31,8 @@
         "column_f44r3H": {
           "type": "column",
           "settings": {
-            "page": "",
+            "heading": "Shipping",
+            "page": "faq",
             "description": ""
           }
         }
