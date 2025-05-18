@@ -20,19 +20,11 @@
             "heading_size": "h1"
           }
         },
-        "column_Wa7Vka": {
-          "type": "column",
-          "settings": {
-            "page": "faq",
-            "description": "",
-            "heading_size": "h1"
-          }
-        },
         "column_BRJyqD": {
           "type": "column",
           "settings": {
             "page": "ingriedents",
-            "description": "",
+            "description": "<p>Test Ingiredents</p>",
             "heading_size": "h1"
           }
         },
@@ -55,7 +47,6 @@
       },
       "block_order": [
         "column_rpCgJY",
-        "column_Wa7Vka",
         "column_BRJyqD",
         "column_qkCDed",
         "column_YBBDUV"
