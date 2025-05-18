@@ -9,6 +9,51 @@
  */
 {
   "sections": {
+    "tabs_XCdmCF": {
+      "type": "tabs",
+      "blocks": {
+        "column_4rCrxG": {
+          "type": "column",
+          "settings": {
+            "heading": "Tab",
+            "page": "",
+            "description": ""
+          }
+        },
+        "column_QThT7q": {
+          "type": "column",
+          "settings": {
+            "heading": "Tab",
+            "page": "",
+            "description": ""
+          }
+        },
+        "column_JVXJG3": {
+          "type": "column",
+          "settings": {
+            "heading": "Tab",
+            "page": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4rCrxG",
+        "column_QThT7q",
+        "column_JVXJG3"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "title": "Tabs Section",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "mobile_description_alignment": "center",
+        "layout": "grid",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_Ub7FA8": {
       "type": "image-banner",
       "blocks": {
@@ -513,6 +558,7 @@
     }
   },
   "order": [
+    "tabs_XCdmCF",
     "image_banner_Ub7FA8",
     "compare_table_4zE6WA",
     "featured_image_with_text_PhXwV9",

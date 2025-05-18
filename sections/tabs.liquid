@@ -300,26 +300,74 @@
     ],
     "blocks": [
         {
-        "type": "column",
-        "name": "Tab",
-        "settings": [
-            {
-            "type": "inline_richtext",
-            "id": "heading",
-            "default": "Tab",
-            "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
-            },          
-            {
-                "type": "page",
-                "id": "page",
-                "label": "t:sections.page.settings.page.label"
-            },
-            {
-                "type": "richtext",
-                "id": "description",
-                "label": "t:sections.featured-collection.settings.description.label"
-            }             
-        ]
+            "type": "column",
+            "name": "Tab",
+            "settings": [
+                {
+                "type": "inline_richtext",
+                "id": "heading",
+                "default": "Tab",
+                "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
+                },
+                {
+                    "type": "select",
+                    "id": "heading_size",
+                    "options": [
+                        {
+                        "value": "small",
+                        "label": "t:sections.all.heading_size.options__1.label"
+                        },
+                        {
+                        "value": "medium",
+                        "label": "t:sections.all.heading_size.options__2.label"
+                        },
+                        {
+                        "value": "large",
+                        "label": "t:sections.all.heading_size.options__3.label"
+                        },
+                        {
+                        "value": "body_font_extra_Large",
+                        "label": "t:sections.all.heading_size.options__4.label"
+                        },
+                    ],
+                    "default": "large",
+                    "label": "Heading Desktop Size"
+                },
+                {
+                    "type": "select",
+                    "id": "heading_size_mobile",
+                    "options": [
+                        {
+                        "value": "small",
+                        "label": "t:sections.all.heading_size.options__1.label"
+                        },
+                        {
+                        "value": "medium",
+                        "label": "t:sections.all.heading_size.options__2.label"
+                        },
+                        {
+                        "value": "large",
+                        "label": "t:sections.all.heading_size.options__3.label"
+                        },
+                        {
+                        "value": "body_font_extra_Large",
+                        "label": "t:sections.all.heading_size.options__4.label"
+                        },
+                    ],
+                    "default": "large",
+                    "label": "Heading Mobile Size"
+                },                           
+                {
+                    "type": "page",
+                    "id": "page",
+                    "label": "t:sections.page.settings.page.label"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "t:sections.featured-collection.settings.description.label"
+                }             
+            ]
         }
     ],
     "presets": [
