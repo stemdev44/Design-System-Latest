@@ -16,7 +16,7 @@
           "type": "column",
           "settings": {
             "heading": "Tab",
-            "heading_size": "body_font_extra_Large",
+            "heading_size": "large",
             "heading_size_mobile": "small",
             "page": "",
             "description": ""
@@ -27,7 +27,7 @@
           "settings": {
             "heading": "Tab",
             "heading_size": "large",
-            "heading_size_mobile": "large",
+            "heading_size_mobile": "small",
             "page": "",
             "description": ""
           }
@@ -37,7 +37,7 @@
           "settings": {
             "heading": "Tab",
             "heading_size": "large",
-            "heading_size_mobile": "large",
+            "heading_size_mobile": "small",
             "page": "",
             "description": ""
           }
