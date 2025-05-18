@@ -146,7 +146,7 @@
   </div>   {% endcomment %}
 </div>
 
-<script>
+{% comment %} <script>
     document.addEventListener("DOMContentLoaded", function () {
       const buttons = document.querySelectorAll(".tab-button");
       const panels = document.querySelectorAll(".tab-panel");
@@ -164,8 +164,30 @@
         });
       });
     });
-  </script>
-
+</script> {% endcomment %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+  
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetId = button.dataset.tabTarget;
+  
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+  
+          tabContents.forEach(content => {
+            if (content.id === targetId) {
+              content.classList.remove('hidden');
+            } else {
+              content.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+</script>
 {% schema %}
 {
   "name": "Tab",
