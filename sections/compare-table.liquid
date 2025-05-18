@@ -249,44 +249,38 @@
                   {% elsif block.settings.text_row_A != blank %}
                     <div class="table-row table-row-A"><div class="table-cell">{{ block.settings.text_row_A }}</div></div>
                   {% endif %}
-
-                  {% comment %} {% if block.settings.text_row_B != blank %}
-                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
-                  {% endif %} {% endcomment %}
-                  {% comment %} ///////////////////// {% endcomment %}
-                    {% if block.settings.image_row_B != blank %}                     
-                      <div class="table-row">
-                        <div class="table-cell">
-                            <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper-{{block.id}} multicolumn-card__image-wrapper--half-width"
-                            style="transform: translateX(50%);"
+                  {% if block.settings.image_row_B != blank %}                     
+                    <div class="table-row">
+                      <div class="table-cell">
+                          <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper-{{block.id}} multicolumn-card__image-wrapper--half-width"
+                          style="transform: translateX(50%);"
+                          >
+                            {%- liquid
+                              assign highest_ratio = 0
+                              for block in section.blocks
+                                if block.settings.image_row_B.aspect_ratio > highest_ratio
+                                  assign highest_ratio = block.settings.image_row_B.aspect_ratio
+                                endif
+                              endfor
+                            -%}                      
+                            <div
+                              class="media media--transparent media--adapt"
+                                style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                             >
-                              {%- liquid
-                                assign highest_ratio = 0
-                                for block in section.blocks
-                                  if block.settings.image_row_B.aspect_ratio > highest_ratio
-                                    assign highest_ratio = block.settings.image_row_B.aspect_ratio
-                                  endif
-                                endfor
-                              -%}                      
-                              <div
-                                class="media media--transparent media--adapt"
-                                  style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                              >
-                                {{
-                                  block.settings.image_row_B
-                                  | image_url: width: 3200
-                                  | image_tag:
-                                    widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200'
-                                    
-                                }}
-                              </div>
-                            </div>                         
-                        </div>
+                              {{
+                                block.settings.image_row_B
+                                | image_url: width: 3200
+                                | image_tag:
+                                  widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200'
+                                  
+                              }}
+                            </div>
+                          </div>                         
                       </div>
-                    {% elsif block.settings.text_row_B != blank %}
-                      <div class="table-row"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
-                    {% endif %}                  
-                  {% comment %} /////////////////////// {% endcomment %}
+                    </div>
+                  {% elsif block.settings.text_row_B != blank %}
+                    <div class="table-row"><div class="table-cell">{{ block.settings.text_row_B }}</div></div>
+                  {% endif %}
                   {% if block.settings.text_row_C != blank %}
                     <div class="table-row"><div class="table-cell">{{ block.settings.text_row_C }}</div></div>
                   {% endif %}
