@@ -47,8 +47,8 @@
         "column_YBBDUV": {
           "type": "column",
           "settings": {
-            "page": "faq",
-            "description": "<p>Testing FAQ</p>",
+            "page": "shipping",
+            "description": "<p>Testing Shipping</p>",
             "heading_size": "h1"
           }
         }
