@@ -12,80 +12,53 @@
     "tabs_3tf8V7": {
       "type": "tabs",
       "blocks": {
-        "column_3xQMNb": {
+        "column_rpCgJY": {
           "type": "column",
           "settings": {
-            "page": "test-page",
+            "page": "allergens",
             "description": "",
             "heading_size": "h1"
           }
         },
-        "column_VqYnRj": {
+        "column_Wa7Vka": {
           "type": "column",
           "settings": {
-            "page": "test-page",
+            "page": "faq",
             "description": "",
             "heading_size": "h1"
           }
         },
-        "column_WtgkBC": {
+        "column_BRJyqD": {
           "type": "column",
           "settings": {
-            "page": "",
+            "page": "ingriedents",
             "description": "",
             "heading_size": "h1"
           }
         },
-        "column_FbHyxg": {
+        "column_qkCDed": {
           "type": "column",
           "settings": {
-            "page": "",
+            "page": "recipes",
             "description": "",
             "heading_size": "h1"
           }
         },
-        "column_wk39fQ": {
+        "column_YBBDUV": {
           "type": "column",
           "settings": {
-            "page": "",
-            "description": "",
-            "heading_size": "h1"
-          }
-        },
-        "column_zzKU74": {
-          "type": "column",
-          "settings": {
-            "page": "test-page",
-            "description": "<p>adasdasd</p>",
-            "heading_size": "h1"
-          }
-        },
-        "column_7xjaHz": {
-          "type": "column",
-          "settings": {
-            "page": "",
-            "description": "<p>This is tab 2</p>",
-            "heading_size": "h1"
-          }
-        },
-        "column_MJjYpa": {
-          "type": "column",
-          "settings": {
-            "page": "",
+            "page": "shipping",
             "description": "",
             "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "column_3xQMNb",
-        "column_VqYnRj",
-        "column_WtgkBC",
-        "column_FbHyxg",
-        "column_wk39fQ",
-        "column_zzKU74",
-        "column_7xjaHz",
-        "column_MJjYpa"
+        "column_rpCgJY",
+        "column_Wa7Vka",
+        "column_BRJyqD",
+        "column_qkCDed",
+        "column_YBBDUV"
       ],
       "name": "Tab",
       "settings": {
