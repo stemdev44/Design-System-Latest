@@ -43,13 +43,22 @@
             "description": "<p>Testing Shipping</p>",
             "heading_size": "h1"
           }
+        },
+        "column_QiPCgW": {
+          "type": "column",
+          "settings": {
+            "page": "",
+            "description": "<p>This is testing tab</p>",
+            "heading_size": "h2"
+          }
         }
       },
       "block_order": [
         "column_rpCgJY",
         "column_BRJyqD",
         "column_qkCDed",
-        "column_YBBDUV"
+        "column_YBBDUV",
+        "column_QiPCgW"
       ],
       "name": "Tab",
       "settings": {
