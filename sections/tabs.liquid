@@ -100,12 +100,15 @@
                     class="tab-button {% if forloop.first %}active{% endif %}"
                     data-tab-target="Slide-{{ section.id }}-{{ forloop.index }}"
                 >
-                    {% comment %} {%- if block.settings.page.title != blank -%}
-                        {{ block.settings.page.title }}
-                    {%- else -%}
-                        {{ block.settings.page.title | default: 'Tab ' | append: forloop.index }}
-                    {%- endif -%}                 {% endcomment %}
-                    {{ block.settings.heading | default: block.settings.page.title  }}                
+                    {% comment %} {{ block.settings.heading | default: block.settings.page.title  }} {% endcomment %}
+                    {% comment %} ///////////////////     {% endcomment %}
+                    <h3 class="small-hide medium-hide inline-richtext  {% if block.settings.heading_size == 'body_font_extra_Large' %} {{ block.settings.heading_size }} {% else %} subtitle--{{ block.settings.heading_size }} {% endif %} ">
+                        {{ block.settings.heading | default: block.settings.page.title  }}
+                    </h3>                        
+                    <h3 class="large-up-hide inline-richtext {% if block.settings.heading_size_mobile == 'body_font_extra_Large' %} {{ block.settings.heading_size_mobile }} {% else %} subtitle--{{ block.settings.heading_size_mobile }} {% endif %}">
+                        {{ block.settings.heading | default: block.settings.page.title  }}
+                    </h3>                     
+                    {% comment %} ////////////////////// {% endcomment %}
                 </button>
                 </li>
             {%- endfor -%}
