@@ -48,7 +48,7 @@
           "type": "column",
           "settings": {
             "page": "shipping",
-            "description": "",
+            "description": "<p>Testing FAQ</p>",
             "heading_size": "h1"
           }
         }
