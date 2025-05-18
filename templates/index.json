@@ -9,55 +9,6 @@
  */
 {
   "sections": {
-    "tabs_XbTeQf": {
-      "type": "tabs",
-      "blocks": {
-        "column_fPa4eA": {
-          "type": "column",
-          "settings": {
-            "page": "",
-            "heading_size": "h1"
-          }
-        },
-        "column_BNy3eP": {
-          "type": "column",
-          "settings": {
-            "page": "",
-            "heading_size": "h1"
-          }
-        },
-        "column_kYjqPp": {
-          "type": "column",
-          "settings": {
-            "page": "",
-            "heading_size": "h1"
-          }
-        },
-        "column_NbHtKr": {
-          "type": "column",
-          "settings": {
-            "page": "",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "column_fPa4eA",
-        "column_BNy3eP",
-        "column_kYjqPp",
-        "column_NbHtKr"
-      ],
-      "name": "Tab",
-      "settings": {
-        "title": "Tab Section",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
-        "layout": "grid",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "page_BXbwq9": {
       "type": "page",
       "name": "t:sections.page.presets.name",
@@ -1559,7 +1510,6 @@
     }
   },
   "order": [
-    "tabs_XbTeQf",
     "page_BXbwq9",
     "featured_image_with_text_frDRYY",
     "featured_image_with_text_PhXwV9",
