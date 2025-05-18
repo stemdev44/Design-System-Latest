@@ -92,7 +92,11 @@
                 class="tab-button {% if forloop.first %}active{% endif %}"
                 data-tab-target="Slide-{{ section.id }}-{{ forloop.index }}"
               >
-                {{ block.settings.page.title | default: 'Tab ' | append: forloop.index }}
+                {%- if block.settings.page.title != blank -%}
+                    {{ block.settings.page.title }}
+                {%- else -%}
+                    {{ block.settings.page.title | default: 'Tab ' | append: forloop.index }}
+                {%- endif -%}                
               </button>
             </li>
           {%- endfor -%}
