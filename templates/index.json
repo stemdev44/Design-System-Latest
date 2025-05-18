@@ -9,53 +9,37 @@
  */
 {
   "sections": {
-    "tabs_3tf8V7": {
+    "tabs_FK73tF": {
       "type": "tabs",
       "blocks": {
-        "column_rpCgJY": {
-          "type": "column",
-          "settings": {
-            "page": "allergens",
-            "description": ""
-          }
-        },
-        "column_BRJyqD": {
-          "type": "column",
-          "settings": {
-            "page": "ingriedents",
-            "description": "<p>Test Ingiredents</p>"
-          }
-        },
-        "column_qkCDed": {
-          "type": "column",
-          "settings": {
-            "page": "recipes",
-            "description": ""
-          }
-        },
-        "column_YBBDUV": {
-          "type": "column",
-          "settings": {
-            "page": "shipping",
-            "description": "<p>Testing Shipping</p>"
-          }
-        },
-        "column_QiPCgW": {
+        "column_HHULVy": {
           "type": "column",
           "settings": {
             "page": "",
-            "description": "<p>This is testing tab</p>"
+            "description": ""
+          }
+        },
+        "column_LraYWT": {
+          "type": "column",
+          "settings": {
+            "page": "",
+            "description": ""
+          }
+        },
+        "column_f44r3H": {
+          "type": "column",
+          "settings": {
+            "page": "",
+            "description": ""
           }
         }
       },
       "block_order": [
-        "column_rpCgJY",
-        "column_BRJyqD",
-        "column_qkCDed",
-        "column_YBBDUV",
-        "column_QiPCgW"
+        "column_HHULVy",
+        "column_LraYWT",
+        "column_f44r3H"
       ],
-      "name": "Tab",
+      "name": "Tabs",
       "settings": {
         "title": "Tabs Section",
         "heading_size": "h1",
@@ -1435,7 +1419,7 @@
     }
   },
   "order": [
-    "tabs_3tf8V7",
+    "tabs_FK73tF",
     "compare_table_4zE6WA",
     "featured_image_with_text_PhXwV9",
     "multicolumn_CxDDe3",
