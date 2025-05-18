@@ -264,7 +264,8 @@
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
-            {%- if block.settings.desktop_content_position == section.settings.desktop_content_position -%}
+          
+            {% comment %} {%- if block.settings.desktop_content_position == section.settings.desktop_content_position  -%} {% endcomment %}
               <div
                 class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
                 {{ block.shopify_attributes }}
@@ -294,7 +295,7 @@
                   </a>
                 {%- endif -%}
               </div>            
-            {%- endif -%}
+            {% comment %} {%- endif -%} {% endcomment %}
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -399,7 +400,7 @@
 
   </div>
   {% comment %} //////////////// Button Outside Container Start //////////////////////// {% endcomment %}
-      {%- for block in section.blocks -%}
+      {% comment %} {%- for block in section.blocks -%}
           {%- case block.type -%}
               {%- when 'buttons' -%}
                   {%- if block.settings.desktop_content_position != section.settings.desktop_content_position -%}
@@ -439,7 +440,7 @@
                       </div>            
                   {%- endif -%}
           {%- endcase -%}
-      {%- endfor -%}  
+      {%- endfor -%}   {% endcomment %}
   {% comment %} //////////////Button Outside Container Ends///////////// {% endcomment %}
 </div>
 
