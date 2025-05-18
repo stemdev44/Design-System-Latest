@@ -269,7 +269,8 @@ h5,
   word-break: break-word;
 }
 
-.hxl{
+.hxl,
+.body_font_extra_Large{
   font-family: var(--font-heading-family-extra-large);
 }
 
