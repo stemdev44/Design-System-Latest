@@ -16,40 +16,35 @@
           "type": "column",
           "settings": {
             "page": "allergens",
-            "description": "",
-            "heading_size": "h1"
+            "description": ""
           }
         },
         "column_BRJyqD": {
           "type": "column",
           "settings": {
             "page": "ingriedents",
-            "description": "<p>Test Ingiredents</p>",
-            "heading_size": "h1"
+            "description": "<p>Test Ingiredents</p>"
           }
         },
         "column_qkCDed": {
           "type": "column",
           "settings": {
             "page": "recipes",
-            "description": "",
-            "heading_size": "h1"
+            "description": ""
           }
         },
         "column_YBBDUV": {
           "type": "column",
           "settings": {
             "page": "shipping",
-            "description": "<p>Testing Shipping</p>",
-            "heading_size": "h1"
+            "description": "<p>Testing Shipping</p>"
           }
         },
         "column_QiPCgW": {
           "type": "column",
           "settings": {
             "page": "",
-            "description": "<p>This is testing tab</p>",
-            "heading_size": "h2"
+            "description": "<p>This is testing tab</p>"
           }
         }
       },
@@ -67,101 +62,6 @@
         "heading_alignment": "center",
         "mobile_description_alignment": "center",
         "layout": "grid",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_image_with_text_frDRYY": {
-      "type": "featured-image-with-text",
-      "blocks": {
-        "column_iRKRwm": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-          }
-        },
-        "column_Qrc4cM": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-          }
-        },
-        "image_picker_QWtd4M": {
-          "type": "image_picker",
-          "settings": {
-            "height": "adapt"
-          }
-        },
-        "column_DXJUcX": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-          }
-        },
-        "column_CcFPXw": {
-          "type": "column",
-          "settings": {
-            "caption": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "caption_background_color": "",
-            "caption_font_color": "",
-            "title": "Column",
-            "heading_size": "large",
-            "heading_size_mobile": "large",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_iRKRwm",
-        "column_Qrc4cM",
-        "image_picker_QWtd4M",
-        "column_DXJUcX",
-        "column_CcFPXw"
-      ],
-      "name": "Featured Image with Text",
-      "settings": {
-        "caption": "",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "title": "Featured Image with Text",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "mobile_description_alignment": "center",
-        "description": "",
-        "description_style": "body",
-        "layout": "grid",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "column_background_color": "",
-        "column_font_color": "",
-        "column_corner_radius": 0,
-        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1561,11 +1461,10 @@
     }
   },
   "order": [
+    "compare_table_4zE6WA",
     "tabs_3tf8V7",
-    "featured_image_with_text_frDRYY",
     "featured_image_with_text_PhXwV9",
     "multicolumn_CxDDe3",
-    "compare_table_4zE6WA",
     "blocks_with_text_EQxBGT",
     "image_with_blocks_GqxVzw",
     "collapsible_content_qUw7fA",
