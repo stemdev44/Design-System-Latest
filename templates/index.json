@@ -541,17 +541,12 @@
           "settings": {
             "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
           }
-        },
-        "email_form_44zDDH": {
-          "type": "email_form",
-          "settings": {}
         }
       },
       "block_order": [
         "email_form_VBKA7z",
         "heading_TREpa6",
-        "paragraph_tXrknb",
-        "email_form_44zDDH"
+        "paragraph_tXrknb"
       ],
       "settings": {
         "color_scheme": "",
