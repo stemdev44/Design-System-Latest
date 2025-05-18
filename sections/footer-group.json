@@ -35,20 +35,25 @@
             "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
           }
         },
-        "email_form_imbzFa": {
-          "type": "email_form",
-          "settings": {}
+        "custom_email_form_EFqPzV": {
+          "type": "custom_email_form",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "full_width": true,
+            "padding_top": 40,
+            "padding_bottom": 52
+          }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
         "footer-2",
-        "email_form_imbzFa"
+        "custom_email_form_EFqPzV"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
