@@ -15,7 +15,7 @@
         "column_zzKU74": {
           "type": "column",
           "settings": {
-            "page": "",
+            "page": "test-page",
             "description": "<p>adasdasd</p>",
             "heading_size": "h1"
           }

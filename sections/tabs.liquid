@@ -118,12 +118,19 @@
                     style="--animation-order: {{ forloop.index }};"
                 {% endif %}
                 >
-                {% comment %} {%- if block.settings.page != blank -%} {% endcomment %}
-                    {% comment %} {%- assign page = pages[block.settings.page] -%} {% endcomment %}
-                    {% comment %} <h2 class="{{ block.settings.heading_size }}">{{ page.title }}</h2> {% endcomment %}
-                    <div>{{ block.settings.description }}</div>
-                    <div>{{ page.content }}</div>
-                {% comment %} {%- endif -%} {% endcomment %}
+                    {% comment %} {%- if block.settings.page != blank -%}
+                        {%- assign page = pages[block.settings.page] -%}
+                        <h2 class="{{ block.settings.heading_size }}">{{ page.title }}</h2>
+                        <div>{{ block.settings.description }}</div>
+                        <div>{{ page.content }}</div>
+                    {%- endif -%} {% endcomment %}
+                    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                        {%- if block.settings.page.content != blank -%}
+                            {{ block.settings.page.content }}
+                        {%- else -%}
+                            {{ block.settings.description }}
+                        {%- endif -%}
+                    </div>                
                 </li>
             {%- endfor -%}
         </ul>
