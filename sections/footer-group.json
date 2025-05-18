@@ -38,6 +38,9 @@
         "custom_email_form_EFqPzV": {
           "type": "custom_email_form",
           "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h0",
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
             "color_scheme": "scheme-1",
             "full_width": true,
             "padding_top": 40,
