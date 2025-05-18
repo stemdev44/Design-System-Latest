@@ -16,6 +16,8 @@
           "type": "column",
           "settings": {
             "heading": "Tab",
+            "heading_size": "body_font_extra_Large",
+            "heading_size_mobile": "small",
             "page": "",
             "description": ""
           }
@@ -24,6 +26,8 @@
           "type": "column",
           "settings": {
             "heading": "Tab",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
             "page": "",
             "description": ""
           }
@@ -32,6 +36,8 @@
           "type": "column",
           "settings": {
             "heading": "Tab",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
             "page": "",
             "description": ""
           }
