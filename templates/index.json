@@ -221,7 +221,7 @@
         "slider_visual": "dots",
         "padding_top": 36,
         "padding_bottom": 36,
-        "remove_inner_padding": true
+        "remove_inner_padding": false
       }
     },
     "featured_image_with_text_PhXwV9": {
