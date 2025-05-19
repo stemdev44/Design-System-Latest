@@ -173,7 +173,7 @@
               object-fit: contain;
             }
             {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}
-              {% comment %} @media screen and (min-width:990px){ {% endcomment %}
+              @media screen and (min-width:990px){
                 .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
                       position: absolute;
                       transform: translate(50%, -60%) !important;
@@ -186,7 +186,7 @@
                   .section-{{ section.id }}-padding slider-component{
                       padding-top: 10rem; 
                   }
-              {% comment %} }    {% endcomment %}
+               }
             {%- endif -%}
           </style>
           <li
