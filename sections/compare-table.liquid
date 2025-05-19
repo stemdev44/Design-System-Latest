@@ -453,16 +453,16 @@
                           style="transform: translateX(50%);"
                           >
                             {%- liquid
-                              assign highest_ratio = 0
+                              assign highest_ratio_B = 0
                               for block in section.blocks
-                                if block.settings.image_row_B.aspect_ratio > highest_ratio
-                                  assign highest_ratio = block.settings.image_row_B.aspect_ratio
+                                if block.settings.image_row_B.aspect_ratio > highest_ratio_B
+                                  assign highest_ratio_B = block.settings.image_row_B.aspect_ratio
                                 endif
                               endfor
                             -%}                      
                             <div
                               class="media media--transparent media--adapt"
-                                style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                                style="padding-bottom: {{ 1 | divided_by: highest_ratio_B | times: 100 }}%;"
                             >
                               {{
                                 block.settings.image_row_B
