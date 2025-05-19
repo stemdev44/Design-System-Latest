@@ -470,7 +470,7 @@
           "settings": {
             "heading": "<strong>Collapsible row</strong>",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Test going</p>",
             "page": "",
             "open_first_collapsible_row": false,
             "background_style": "none",
