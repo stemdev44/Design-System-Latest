@@ -469,7 +469,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "<strong>Collapsible row</strong>",
-            "icon": "check_mark",
+            "icon": "custom",
             "custom_image": "shopify://shop_images/Alt_image-11.svg",
             "row_content": "<p>Test going</p>",
             "page": "",
