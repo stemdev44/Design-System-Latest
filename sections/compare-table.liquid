@@ -201,7 +201,7 @@
                 }               
             {%- endif -%}
             {%-if block.settings.icon_image != blank -%}
-                .section-{{ section.id }}-padding ul {
+                .section-{{ section.id }}-padding .{{block.id}}-table-style ul {
                   display: flex;
                   flex-direction: column;
                   align-items: center;                    
@@ -209,7 +209,7 @@
                   padding-left: 0; 
                 }
           
-                .section-{{ section.id }}-padding ul li {
+                .section-{{ section.id }}-padding .{{block.id}}-table-style ul li {
                   position: relative;
                   padding-left: 24px; 
                 }
