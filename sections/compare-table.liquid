@@ -173,7 +173,7 @@
               object-fit: contain;
             }
             {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}
-              {% comment %} @media screen and (min-width:990px){ {% endcomment %}
+              @media screen and (min-width:990px){
                 .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
                       position: absolute;
                       transform: translate(50%, -60%) !important;
@@ -183,10 +183,24 @@
                     display: flex;
                     padding-bottom: 30%;
                   }                  
-                  .section-{{ section.id }}-padding slider-component{
+                  .section-{{ section.id }}-padding slider-component ul{
                       padding-top: 10rem; 
                   }
-               {% comment %} } {% endcomment %}
+               }
+               @media screen and (max-width:749px){
+                .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
+                      position: absolute;
+                      transform: translate(50%, -60%) !important;
+                      right: 50% !important;
+                  }
+                  .{{block.id}}-table-style .table-row-A {
+                    display: flex;
+                    padding-bottom: 30%;
+                  }                  
+                  .section-{{ section.id }}-padding slider-component ul{
+                      padding-top: 10rem; 
+                  }
+               }               
             {%- endif -%}
           </style>
           <li
