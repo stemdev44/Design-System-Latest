@@ -35,6 +35,139 @@
     vertical-align: top;
   }
 
+{% comment %} ////////////////////////// {% endcomment %}
+  {%- for block in section.blocks -%}
+    {%- if block.settings.column_alignment == 'center' -%}
+      .{{block.id}}-table-style .table-cell{
+        text-align :center;
+      }
+    {%- endif -%}
+
+    {%- if block.settings.background_style == 'primary' -%}
+      .{{block.id}}-table-style .table-cell{
+        color :{{block.settings.column_font_color}};
+      }
+    {%- endif -%}
+
+    .{{block.id}}-table-style .table-row:last-child{
+      border-bottom: none;
+    }
+    .{{block.id}}-table-style img {
+      width: 50%;
+      height: 165px;
+      object-fit: contain;
+    }
+    {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}               
+      @media screen and (min-width:990px){                
+          .section-{{ section.id }}-padding slider-component ul{
+              padding-top: 10rem !important; 
+          }
+          .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
+              position: absolute;
+              transform: translate(50%, -60%) !important;
+              right: 50% !important;
+            }
+          .{{block.id}}-table-style .table-row-A {
+            display: flex;
+            padding-bottom: 30%;
+            }                   
+        }
+        @media screen and (max-width:749px){
+          {%- if section.settings.swipe_on_mobile -%}
+            .section-{{ section.id }}-padding slider-component ul{
+                padding-top: 10rem; 
+            }
+            .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
+              position: absolute;
+              transform: translate(50%, -60%) !important;
+              right: 50% !important;
+            }
+            .{{block.id}}-table-style .table-row-A {
+              display: flex;
+              padding-bottom: 30%;
+            }                  
+          {%- endif -%}                  
+        }               
+    {%- endif -%}
+    .section-{{ section.id }}-padding .{{block.id}}-table-style ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;                    
+      list-style: none;
+      padding-left: 0; 
+    }
+
+    .section-{{ section.id }}-padding .{{block.id}}-table-style ul li {
+      position: relative;
+      padding-left: 24px; 
+    }
+    .section-{{ section.id }}-padding .{{block.id}}-table-style ul li::before {
+      content: "";
+      background: url("{{ block.settings.icon_image | img_url:"" }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(30%);
+    }    
+    {%-if block.settings.icon_image_A != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-A ul li::before {       
+        background: url("{{ block.settings.icon_image_A | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_B != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-B ul li::before {       
+        background: url("{{ block.settings.icon_image_B | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_C != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-C ul li::before {       
+        background: url("{{ block.settings.icon_image_C | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_D != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-D ul li::before {       
+        background: url("{{ block.settings.icon_image_D | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_E != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-E ul li::before {       
+        background: url("{{ block.settings.icon_image_E | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_F != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-F ul li::before {       
+        background: url("{{ block.settings.icon_image_F | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_G != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-G ul li::before {       
+        background: url("{{ block.settings.icon_image_G | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_H != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-H ul li::before {       
+        background: url("{{ block.settings.icon_image_H | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_I != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-I ul li::before {       
+        background: url("{{ block.settings.icon_image_I | img_url:"" }}");
+      }
+    {%-endif -%}
+    {%-if block.settings.icon_image_J != blank -%}
+      .section-{{ section.id }}-padding .{{block.id}}-table-style .table-row-J ul li::before {       
+        background: url("{{ block.settings.icon_image_J | img_url:"" }}");
+      }
+    {%-endif -%}    
+  {%-endfor-%}
+{% comment %} ////////////////////////// {% endcomment %}
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -146,89 +279,7 @@
         id="Slider-{{ section.id }}"
         role="list"
       >
-        {%- for block in section.blocks -%}           
-          <style>
-            {%- if block.settings.column_alignment == 'center' -%}
-              .{{block.id}}-table-style .table-cell{
-                text-align :center;
-              }
-            {%- endif -%}
-
-            {%- if block.settings.background_style == 'primary' -%}
-              .{{block.id}}-table-style .table-cell{
-                color :{{block.settings.column_font_color}};
-              }
-            {%- endif -%}
-
-            .{{block.id}}-table-style .table-row:last-child{
-              border-bottom: none;
-            }
-            .{{block.id}}-table-style img {
-              width: 50%;
-              height: 165px;
-              object-fit: contain;
-            }
-            {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}               
-              @media screen and (min-width:990px){                
-                  .section-{{ section.id }}-padding slider-component ul{
-                      padding-top: 10rem !important; 
-                  }
-                  .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
-                      position: absolute;
-                      transform: translate(50%, -60%) !important;
-                      right: 50% !important;
-                    }
-                  .{{block.id}}-table-style .table-row-A {
-                    display: flex;
-                    padding-bottom: 30%;
-                    }                   
-                }
-                @media screen and (max-width:749px){
-                  {%- if section.settings.swipe_on_mobile -%}
-                    .section-{{ section.id }}-padding slider-component ul{
-                        padding-top: 10rem; 
-                    }
-                    .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
-                      position: absolute;
-                      transform: translate(50%, -60%) !important;
-                      right: 50% !important;
-                    }
-                    .{{block.id}}-table-style .table-row-A {
-                      display: flex;
-                      padding-bottom: 30%;
-                    }                  
-                  {%- endif -%}                  
-                }               
-            {%- endif -%}
-            {%-if block.settings.icon_image != blank -%}
-                .section-{{ section.id }}-padding .{{block.id}}-table-style ul {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;                    
-                  list-style: none;
-                  padding-left: 0; 
-                }
-          
-                .section-{{ section.id }}-padding .{{block.id}}-table-style ul li {
-                  position: relative;
-                  padding-left: 24px; 
-                }
-          
-                .section-{{ section.id }}-padding .{{block.id}}-table-style ul li::before {
-                  content: "";
-                  background: url("{{ block.settings.icon_image | img_url:"" }}");
-                  background-size: cover;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  width: 20px;
-                  height: 20px;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  transform: translateY(30%);
-                }             
-            {%-endif -%}             
-          </style>
+        {%- for block in section.blocks -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
