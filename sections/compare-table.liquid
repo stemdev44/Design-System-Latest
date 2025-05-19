@@ -200,6 +200,34 @@
                   {%- endif -%}                  
                 }               
             {%- endif -%}
+            {%-if block.settings.icon_image != blank -%}
+                .section-{{ section.id }}-padding ul {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;                    
+                  list-style: none;
+                  padding-left: 0; 
+                }
+          
+                .section-{{ section.id }}-padding ul li {
+                  position: relative;
+                  padding-left: 24px; 
+                }
+          
+                .section-{{ section.id }}-padding .{{block.id}}-table-style ul li::before {
+                  content: "";
+                  background: url("{{ block.settings.icon_image | img_url:"" }}");
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  width: 20px;
+                  height: 20px;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  transform: translateY(30%);
+                }             
+            {%-endif -%}             
           </style>
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
