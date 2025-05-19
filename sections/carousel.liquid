@@ -95,6 +95,56 @@
       }
   }
 
+
+  @media screen and (max-width: 749px) {
+      .section-{{ section.id }}-padding .{{ section.settings.description_style }},
+      .{{section.id}}-caption-container,
+      .section-{{ section.id }}-padding .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
+      {
+        text-align:{{section.settings.mobile_description_alignment}} !important;  
+        padding-left: 1.5rem;              
+        padding-right: 1.5rem;
+      }
+    .section-{{ section.id }}-padding .multicolumn__title .title{
+        text-align: {{ section.settings.mobile_description_alignment }} !important;
+      }
+    .{{section.id}}-caption-container {
+      {%- if section.settings.mobile_description_alignment == 'left' -%}
+        justify-content: flex-start !important;
+      {%- endif -%}
+
+      {%- if section.settings.mobile_description_alignment == 'right' -%}
+        justify-content: flex-end !important;
+      {%- endif -%}
+
+      {%- if section.settings.mobile_description_alignment == 'center' -%}
+        justify-content: center !important;
+      {%- endif -%}              
+    }
+  }
+
+  .{{section.id}}-caption-container {
+    {%- if section.settings.heading_alignment == 'left' -%}
+      justify-content: flex-start;
+    {%- endif -%}
+
+    {%- if section.settings.heading_alignment == 'right' -%}
+      justify-content: flex-end;
+    {%- endif -%}
+
+    {%- if section.settings.heading_alignment == 'center' -%}
+      justify-content: center;
+    {%- endif -%}            
+  }
+
+    {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
+    @media screen and (min-width: 990px) {
+        .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
+            margin-left: 0 !important;
+        }
+    {%- endif -%}          
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -144,56 +194,6 @@
             {{ section.settings.description }}
         </div>
       {%- endif -%}
-
-        <style>
-          @media screen and (max-width: 749px) {
-             .section-{{ section.id }}-padding .{{ section.settings.description_style }},
-             .{{section.id}}-caption-container,
-             .section-{{ section.id }}-padding .{{ section.settings.text_style }}.{{ section.settings.text_style }}--{{ section.settings.text_size }}
-              {
-                text-align:{{section.settings.mobile_description_alignment}} !important;  
-                padding-left: 1.5rem;              
-                padding-right: 1.5rem;
-              }
-            .section-{{ section.id }}-padding .multicolumn__title .title{
-                text-align: {{ section.settings.mobile_description_alignment }} !important;
-              }
-            .{{section.id}}-caption-container {
-              {%- if section.settings.mobile_description_alignment == 'left' -%}
-                justify-content: flex-start !important;
-              {%- endif -%}
-
-              {%- if section.settings.mobile_description_alignment == 'right' -%}
-                justify-content: flex-end !important;
-              {%- endif -%}
-
-              {%- if section.settings.mobile_description_alignment == 'center' -%}
-                justify-content: center !important;
-              {%- endif -%}              
-            }
-          }
-
-          .{{section.id}}-caption-container {
-            {%- if section.settings.heading_alignment == 'left' -%}
-              justify-content: flex-start;
-            {%- endif -%}
-
-            {%- if section.settings.heading_alignment == 'right' -%}
-              justify-content: flex-end;
-            {%- endif -%}
-
-            {%- if section.settings.heading_alignment == 'center' -%}
-              justify-content: center;
-            {%- endif -%}            
-          }
-
-            {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
-            @media screen and (min-width: 990px) {
-                .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
-                    margin-left: 0 !important;
-                }
-            {%- endif -%}          
-        </style>
 
     <slider-component class="slider-mobile-gutter{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
