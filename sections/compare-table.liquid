@@ -183,17 +183,23 @@
                     display: flex;
                     padding-bottom: 30%;
                   }                  
-                  .section-{{ section.id }}-padding slider-component{
+                  .section-{{ section.id }}-padding slider-component ul{
                       padding-top: 10rem; 
                   }
                }
-               @media screen and (max-width:749px){                 
-                  .section-{{ section.id }}-padding slider-component{
-                      padding-top: 0; 
+               @media screen and (max-width:749px){
+                .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
+                      position: absolute;
+                      transform: translate(50%, -60%) !important;
+                      right: 50% !important;
                   }
-                  .section-{{ section.id }}-padding slider-component ul{
-                    padding-top: 15rem; 
+                  .{{block.id}}-table-style .table-row-A {
+                    display: flex;
+                    padding-bottom: 30%;
                   }                  
+                  .section-{{ section.id }}-padding slider-component ul{
+                      padding-top: 10rem; 
+                  }
                }               
             {%- endif -%}
           </style>
