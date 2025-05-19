@@ -179,15 +179,13 @@
                       transform: translate(50%, -60%) !important;
                       right: 50% !important;
                   }
-                  .{{block.id}}-table-style .table-row-A {
+                  {% comment %} .{{block.id}}-table-style .table-row-A {
                     padding-bottom: 30%;
-                  }
-                  {%- if not_overlap_on_image -%}
-                    .{{block.id}}-table-style .table-row-A {
-                      padding-bottom: 46% !important;
-                    }                    
-                  {%- endif -%}
-
+                  } {% endcomment %}
+                  .table-row-A {
+                    display:flex;
+                    padding-bottom: 30%;
+                  }                  
                   .section-{{ section.id }}-padding slider-component{
                       padding-top: 10rem; 
                   }
