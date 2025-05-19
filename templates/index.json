@@ -171,6 +171,7 @@
             "image_row_A": "shopify://shop_images/test-1.png",
             "overlap_on_image": true,
             "text_row_A": "",
+            "image_row_B": "shopify://shop_images/Alt_image-10.svg",
             "text_row_B": "<p>Text Row B</p>",
             "text_row_C": "<p>Text Row C</p>",
             "text_row_D": "",
