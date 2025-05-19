@@ -174,7 +174,7 @@
             }
             {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}
               @media screen and (min-width:990px){
-                  .multicolumn-card__image-wrapper-{{block.id}} {
+                .{{block.id}}-table-style .multicolumn-card__image-wrapper-{{block.id}} {
                       position: absolute;
                       transform: translate(50%, -60%) !important;
                       right: 50% !important;
