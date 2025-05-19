@@ -211,7 +211,7 @@
         "layout": "grid",
         "columns_desktop": 3,
         "color_scheme": "scheme-4",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "slider_visual": "dots",
         "padding_top": 36,
