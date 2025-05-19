@@ -124,12 +124,13 @@
           "settings": {
             "image_row_A": "shopify://shop_images/Alt_image-8.svg",
             "overlap_on_image": true,
-            "icon_image": "shopify://shop_images/Handbag.svg",
             "text_row_A": "",
             "image_row_B": "shopify://shop_images/Alt_image-8.svg",
             "text_row_B": "<p>Text Row B</p>",
-            "text_row_C": "<ul><li>Text Row C</li></ul>",
-            "text_row_D": "",
+            "text_row_C": "<ul><li>Text Row C</li><li>Text Row C</li><li>Text Row C</li></ul>",
+            "icon_image_C": "shopify://shop_images/Alt_image-9.svg",
+            "text_row_D": "<ul><li>Text Row D</li></ul>",
+            "icon_image_D": "shopify://shop_images/Alt_image-11.svg",
             "text_row_E": "",
             "text_row_F": "",
             "text_row_G": "",
@@ -149,7 +150,6 @@
           "settings": {
             "image_row_A": "shopify://shop_images/Product5_home2_89d72a22-12cc-4b84-bee3-d8a4f1b03c3f.png",
             "overlap_on_image": true,
-            "icon_image": "shopify://shop_images/icon-bottle.svg",
             "text_row_A": "",
             "image_row_B": "shopify://shop_images/Alt_image-8.svg",
             "text_row_B": "<p>Text Row B</p>",
@@ -174,7 +174,6 @@
           "settings": {
             "image_row_A": "shopify://shop_images/test-1.png",
             "overlap_on_image": true,
-            "icon_image": "shopify://shop_images/Alt_image-8.svg",
             "text_row_A": "",
             "text_row_B": "<ul><li>Text Row B</li></ul>",
             "text_row_C": "<ul><li>Text Row C</li></ul>",
