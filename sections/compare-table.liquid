@@ -172,25 +172,36 @@
               height: 165px;
               object-fit: contain;
             }
-            {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}
-              .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
-                  position: absolute;
-                  transform: translate(50%, -60%) !important;
-                  right: 50% !important;
-                }
-              .{{block.id}}-table-style .table-row-A {
-                display: flex;
-                padding-bottom: 30%;
-                }                
+            {%- if block.settings.image_row_A != blank and block.settings.overlap_on_image  -%}               
               @media screen and (min-width:990px){                
                   .section-{{ section.id }}-padding slider-component ul{
                       padding-top: 10rem !important; 
                   }
+                  .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
+                      position: absolute;
+                      transform: translate(50%, -60%) !important;
+                      right: 50% !important;
+                    }
+                  .{{block.id}}-table-style .table-row-A {
+                    display: flex;
+                    padding-bottom: 30%;
+                    }                   
                 }
-               @media screen and (max-width:749px){               
-                  .section-{{ section.id }}-padding slider-component ul{
-                      padding-top: 10rem; 
-                  }
+                @media screen and (max-width:749px){
+                  {%- if section.settings.swipe_on_mobile -%}
+                    .section-{{ section.id }}-padding slider-component ul{
+                        padding-top: 10rem; 
+                    }
+                    .{{block.id}}-table-style .table-row-A .multicolumn-card__image-wrapper-{{block.id}} {
+                      position: absolute;
+                      transform: translate(50%, -60%) !important;
+                      right: 50% !important;
+                    }
+                    .{{block.id}}-table-style .table-row-A {
+                      display: flex;
+                      padding-bottom: 30%;
+                    }                  
+                  {%- endif -%}                  
                 }               
             {%- endif -%}
           </style>
