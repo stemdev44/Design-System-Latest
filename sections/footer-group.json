@@ -14,6 +14,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Our mission",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+          }
+        },
         "link_list_mzEKVA": {
           "type": "link_list",
           "settings": {
@@ -35,13 +42,6 @@
             "menu": "footer"
           }
         },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
-        },
         "custom_email_form_EFqPzV": {
           "type": "custom_email_form",
           "settings": {
@@ -52,10 +52,10 @@
         }
       },
       "block_order": [
+        "footer-2",
         "link_list_mzEKVA",
         "footer-0",
         "footer-1",
-        "footer-2",
         "custom_email_form_EFqPzV"
       ],
       "settings": {
