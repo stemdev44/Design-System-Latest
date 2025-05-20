@@ -644,9 +644,9 @@
 
                           {% comment %} /////////////////////////// Image heading Starts ///////////// {% endcomment %}
                             {%- if block.settings.heading != blank or block.settings.button_label != blank  -%}
-                              <div class="{{block.id}}-banner__content banner__content banner__content--{{ block.settings.desktop_content_position }}" style="display:flex">
+                              <div class="{{block.id}}-banner__content banner__content banner__content--{{ block.settings.desktop_content_position }}" style="display:flex; padding:3rem;">
                                 <div>
-                                  <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" style="text-align: {{block.settings.heading_alignment}}"
+                                  <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" style="text-align: {{block.settings.heading_alignment}};margin-top:0;"
                                     {{ block.shopify_attributes }}
                                   >
                                     {{ block.settings.heading }}
