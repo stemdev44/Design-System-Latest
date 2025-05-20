@@ -26,10 +26,17 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    
-    .grid--3-col-tablet .grid__item {
+
+    /* .grid--3-col-tablet .grid__item {
         width: calc(19.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-    }    
+    }     */
+    .footer-block{
+      width: 15% !important;
+    }
+    .footer-block:first-child,
+    .footer-block:last-child{
+      width: 25% !important;
+    }
   }
 
 {%- endstyle -%}
