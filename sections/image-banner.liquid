@@ -265,7 +265,7 @@
             </div>
           {%- when 'buttons' -%}
           
-            {% comment %} {%- if block.settings.desktop_content_position == section.settings.desktop_content_position  -%} {% endcomment %}
+            {%- if block.settings.enable_separate_position == false -%}
               <div
                 class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
                 {{ block.shopify_attributes }}
@@ -294,8 +294,8 @@
                     {{- block.settings.button_label_2 | escape -}}
                   </a>
                 {%- endif -%}
-              </div>            
-            {% comment %} {%- endif -%} {% endcomment %}
+              </div>
+            {%-endif-%}                        
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -399,47 +399,47 @@
     </div>    
 
   {% comment %} //////////////// Button Outside Container Start //////////////////////// {% endcomment %}
-      {% comment %} {%- for block in section.blocks -%}
+      {%- for block in section.blocks -%}
           {%- case block.type -%}
               {%- when 'buttons' -%}
+                {%- if block.settings.enable_separate_position -%}
                   {%- if  block.settings.desktop_content_position != section.settings.desktop_content_position -%}
-                      <div class="small-hide banner__content banner__content--{{ block.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                          <div class="small-hide color-{{ section.settings.color_scheme }} gradient">
-                                  <div
-                                  class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
-                                  {{ block.shopify_attributes }}
-                                  >
-                                  {%- if block.settings.button_label_1 != blank -%}
-                                      <a
-                                      {% if block.settings.button_link_1 == blank %}
-                                          role="link" aria-disabled="true"
-                                      {% else %}
-                                          href="{{ block.settings.button_link_1 }}"
-                                      {% endif %}
-                                      class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
-                                      >
-                                      {{- block.settings.button_label_1 | escape -}}
-                                      </a>
-                                  {%- endif -%}
-                                  {%- if block.settings.button_label_2 != blank -%}
-                                      <a
-                                      {% if block.settings.button_link_2 == blank %}
-                                          role="link" aria-disabled="true"
-                                      {% else %}
-                                          href="{{ block.settings.button_link_2 }}"
-                                      {% endif %}
-                                      class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                                      >
-                                      {{- block.settings.button_label_2 | escape -}}
-                                      </a>
-                                  {%- endif -%}
-                                  </div>
-                          </div> 
-                      
-                      </div>            
+                    <div class="small-hide button_content_position banner__box content-container content-container--full-width-mobile color-scheme-1 gradient" style="background: transparent;">
+                      <div
+                        class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                          {%- if block.settings.button_label_1 != blank -%}
+                            <a
+                              {% if block.settings.button_link_1 == blank %}
+                                role="link" aria-disabled="true"
+                              {% else %}
+                                href="{{ block.settings.button_link_1 }}"
+                              {% endif %}
+                              class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                            >
+                              {{- block.settings.button_label_1 | escape -}}
+                            </a>
+                          {%- endif -%}
+                          {%- if block.settings.button_label_2 != blank -%}
+                            <a
+                              {% if block.settings.button_link_2 == blank %}
+                                role="link" aria-disabled="true"
+                              {% else %}
+                                href="{{ block.settings.button_link_2 }}"
+                              {% endif %}
+                              class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                            >
+                              {{- block.settings.button_label_2 | escape -}}
+                            </a>
+                          {%- endif -%}
+                      </div>             
+                    </div>          
                   {%- endif -%}
+                {%- endif -%}
+
           {%- endcase -%}
-      {%- endfor -%}   {% endcomment %}
+      {%- endfor -%}
   {% comment %} //////////////Button Outside Container Ends///////////// {% endcomment %}    
 
   </div>
