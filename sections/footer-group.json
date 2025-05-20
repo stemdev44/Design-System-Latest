@@ -14,11 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-2": {
-          "type": "text",
+        "custom_email_form_EFqPzV": {
+          "type": "custom_email_form",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "heading": "Subscribe to Email",
+            "heading_size": "h2",
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
+            "color_scheme": "scheme-3",
+            "layout": "grid"
           }
         },
         "link_list_mzEKVA": {
@@ -42,23 +45,20 @@
             "menu": "footer"
           }
         },
-        "custom_email_form_EFqPzV": {
-          "type": "custom_email_form",
+        "footer-2": {
+          "type": "text",
           "settings": {
-            "heading": "Subscribe to Email",
-            "heading_size": "h2",
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
-            "color_scheme": "scheme-1",
-            "layout": "grid"
+            "heading": "Our mission",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
           }
         }
       },
       "block_order": [
-        "footer-2",
+        "custom_email_form_EFqPzV",
         "link_list_mzEKVA",
         "footer-0",
         "footer-1",
-        "custom_email_form_EFqPzV"
+        "footer-2"
       ],
       "settings": {
         "color_scheme": "scheme-1",
