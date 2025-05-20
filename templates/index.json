@@ -89,7 +89,7 @@
             "button_label_2": "",
             "button_link_2": "#",
             "button_style_secondary_2": false,
-            "desktop_content_position": "top-right",
+            "desktop_content_position": "bottom-right",
             "enable_separate_position": true
           }
         }
