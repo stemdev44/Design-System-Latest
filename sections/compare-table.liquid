@@ -452,18 +452,10 @@
                       <div class="table-cell">
                           <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper-{{block.id}} multicolumn-card__image-wrapper--half-width"
                           style="transform: translateX(50%);"
-                          >
-                            {%- liquid
-                              assign highest_ratio_B = 0
-                              for block in section.blocks
-                                if block.settings.image_row_B.aspect_ratio > highest_ratio_B
-                                  assign highest_ratio_B = block.settings.image_row_B.aspect_ratio
-                                endif
-                              endfor
-                            -%}                      
+                          >                     
                             <div
                               class="media media--transparent media--adapt"
-                                style="padding-bottom: 70%;"
+                                style="padding-bottom: 15%;"
                             >
                               {{
                                 block.settings.image_row_B
