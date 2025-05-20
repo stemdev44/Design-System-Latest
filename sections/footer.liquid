@@ -113,13 +113,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  {%- if block.type == 'custom_email_form' -%}
-                    <h2 class="inline-richtext {{ block.settings.heading_size }}" style="margin-top:0">
-                      {{ block.settings.heading }}
-                    </h2>
-                  {%- else -%}
-                    <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>                
-                  {%- endif -%}
+                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
                 {%- endif -%}
 
                 {%- if block.settings.text != blank -%}
