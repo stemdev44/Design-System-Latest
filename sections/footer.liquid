@@ -26,7 +26,12 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+    
+    .grid--3-col-tablet .grid__item {
+        width: calc(19.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+    }    
   }
+
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
