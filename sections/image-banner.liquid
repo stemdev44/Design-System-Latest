@@ -398,12 +398,11 @@
       {%- endfor -%}
     </div>    
 
-  </div>
   {% comment %} //////////////// Button Outside Container Start //////////////////////// {% endcomment %}
       {% comment %} {%- for block in section.blocks -%}
           {%- case block.type -%}
               {%- when 'buttons' -%}
-                  {%- if block.settings.desktop_content_position != section.settings.desktop_content_position -%}
+                  {%- if  block.settings.desktop_content_position != section.settings.desktop_content_position -%}
                       <div class="small-hide banner__content banner__content--{{ block.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                           <div class="small-hide color-{{ section.settings.color_scheme }} gradient">
                                   <div
@@ -441,7 +440,10 @@
                   {%- endif -%}
           {%- endcase -%}
       {%- endfor -%}   {% endcomment %}
-  {% comment %} //////////////Button Outside Container Ends///////////// {% endcomment %}
+  {% comment %} //////////////Button Outside Container Ends///////////// {% endcomment %}    
+
+  </div>
+
 </div>
 
 {% schema %}
@@ -861,7 +863,13 @@
           ],
           "default": "middle-center",
           "label": "t:sections.image-banner.settings.desktop_content_position.label"
-        }        
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_separate_position",
+          "default": false,
+          "label": "Enable Separate Position"
+        }                
       ]
     }
   ],
