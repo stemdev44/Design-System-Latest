@@ -24,8 +24,13 @@
         display: block;
       }
       {%- for block in section.blocks -%}
-        {%-if block.settings.enable_separate_position  -%}         
-          {%-if block.settings.desktop_content_position == 'top-left' -%}
+        {%-if block.settings.enable_separate_position  -%}
+          .button_content_position{
+              position:absolute;
+              top:0;
+              left:0;
+            }           
+          /* {%-if block.settings.desktop_content_position == 'top-left' -%}
             .button_content_position{
               position:absolute;
               top:0;
@@ -87,7 +92,7 @@
               bottom:0;
               right:0;
             } 
-          {%-endif-%}
+          {%-endif-%} */
           
         {%-endif-%}
       {%-endfor-%}
