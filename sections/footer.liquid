@@ -44,7 +44,20 @@
 
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+{%- liquid
+  assign email_color_scheme = ''
+  for block in section.blocks
+    if block.settings.email_color_scheme
+      assign email_color_scheme = block.settings.email_color_scheme
+    else 
+      assign email_color_scheme = section.settings.color_scheme
+    endif
+  endfor
+
+-%}
+
+
+<footer class="footer color-{{ email_color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -577,7 +590,13 @@
           "id": "text",
           "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
           "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
-        }              
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        },                      
       ]
     }    
   ],
