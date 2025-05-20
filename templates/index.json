@@ -530,6 +530,25 @@
     "collage": {
       "type": "collage",
       "blocks": {
+        "image_LhVMLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+            "image_overlay_opacity": 40,
+            "image_column_corner_radius": 0,
+            "heading": "Product Heading",
+            "desktop_content_position": "top-center",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "no_border_style": false,
+            "video_button_background": "",
+            "video_button_font": "",
+            "button_position": "center"
+          }
+        },
         "collapsible_row_GemdKM": {
           "type": "collapsible_row",
           "settings": {
@@ -558,36 +577,17 @@
             "column_font_color": "",
             "column_corner_radius": 0
           }
-        },
-        "image_LhVMLH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-            "image_overlay_opacity": 40,
-            "image_column_corner_radius": 0,
-            "heading": "Product Heading",
-            "desktop_content_position": "top-center",
-            "heading_size": "h1",
-            "heading_alignment": "center",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "no_border_style": false,
-            "video_button_background": "",
-            "video_button_font": "",
-            "button_position": "center"
-          }
         }
       },
       "block_order": [
+        "image_LhVMLH",
         "collapsible_row_GemdKM",
-        "collapsible_row_GYmqAH",
-        "image_LhVMLH"
+        "collapsible_row_GYmqAH"
       ],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h0",
-        "desktop_layout": "right",
+        "desktop_layout": "left",
         "desktop_image_width": "medium",
         "desktop_layout_2": "collage",
         "mobile_layout": "column",
