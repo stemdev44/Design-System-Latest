@@ -49,7 +49,7 @@
             "heading_size": "h2",
             "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
             "color_scheme": "scheme-1",
-            "layout": "full_bleed"
+            "layout": "grid"
           }
         }
       },
