@@ -30,13 +30,16 @@
     /* .grid--3-col-tablet .grid__item {
         width: calc(19.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
     }     */
-    .footer-block{
-      width: 15% !important;
-    }
-    .footer-block:first-child,
-    .footer-block:last-child{
-      width: 25% !important;
-    }
+    {%- if section.blocks.size == 5 -%}
+      .footer-block{
+        width: 15% !important;
+      }
+      .footer-block:first-child,
+      .footer-block:last-child{
+        width: 25% !important;
+      }
+    {%- endif -%}
+
   }
 
 {%- endstyle -%}
