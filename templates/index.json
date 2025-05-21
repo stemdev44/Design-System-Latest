@@ -100,7 +100,7 @@
         "column_background_color": "",
         "column_font_color": "",
         "column_corner_radius": 0,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "mobile_slider_visual": "counter",
