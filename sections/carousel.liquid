@@ -571,7 +571,14 @@
                     name="previous"
                     aria-label="{{ 'general.slider.previous_slide' | t }}"
                 >
-                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                    <span class="svg-wrapper">
+                      {%- if section.settings.next_icon !=blank -%}
+                        <img src="{{ section.settings.next_icon | img_url:"" }}" style="width:100%;">
+                      {%- else -%}
+                        {{ 'icon-caret.svg' | inline_asset_content }}
+                      {%- endif -%}                      
+                      
+                    </span>
                 </button>
 
                     <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
@@ -622,7 +629,6 @@
                       {%- else -%}
                         {{ 'icon-caret.svg' | inline_asset_content }}
                       {%- endif -%}
-
                     </span>
                 </button>
 
