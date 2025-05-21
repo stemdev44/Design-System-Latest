@@ -143,7 +143,7 @@
           margin-left: 0 !important;
       }
     {%- endif -%}
-    {%- if section.settings.slider_visual == 'next_prev_arrows' -%}
+    {%- if section.settings.enable_desktop_slider and section.settings.slider_visual == 'next_prev_arrows' -%}
       .section-{{ section.id }}-padding .slider-button--prev{
         margin-right: 1rem; 
         border: 1px solid; 
@@ -160,7 +160,10 @@
       }
       .section-{{ section.id }}-padding .slider-counter{
         display:none !important;
-      }   
+      }
+      .section-{{ section.id }}-padding slider-component{
+        padding-top:15px;
+      }
     {%- endif -%}     
   }  
 
