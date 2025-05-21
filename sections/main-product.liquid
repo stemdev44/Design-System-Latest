@@ -37,6 +37,16 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+
+    {%- for block in section.blocks -%}
+      {%- if block.type== 'title' -%}
+        .product__title h1 {
+            {%- if block.settings.bold_heading -%}font-weight:bold;{%- endif -%}
+            {%- if block.settings.italic_heading -%}font-style: italic;{%- endif -%}        
+          }          
+      {%- endif -%}
+    {%- endfor -%}
+
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -800,7 +810,21 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
-      "limit": 1
+      "limit": 1,
+      "settings":[
+        {
+          "type": "checkbox",
+          "id": "bold_heading",
+          "default": false,
+          "label": "Bold Heading"
+        },
+        {
+          "type": "checkbox",
+          "id": "italic_heading",
+          "default": false,
+          "label": "Italic Heading"
+        }        
+      ]
     },
     {
       "type": "price",
