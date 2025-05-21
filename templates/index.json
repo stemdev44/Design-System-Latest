@@ -94,7 +94,7 @@
         "enable_desktop_slider": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "slider_visual": "counter",
+        "slider_visual": "next_prev_arrows",
         "column_alignment": "left",
         "background_style": "primary",
         "column_background_color": "",
