@@ -44,6 +44,7 @@
       position:absolute !important;
       top:50%;
       left:50%;
+      transform: translateX(-50%);
     } 
     .section-{{ section.id }}-padding .button_content_position_collage-middle-right{
       position:absolute !important;
@@ -398,7 +399,7 @@
                               {{ block.settings.heading }}
                             </h2>
 
-                            <div class="center button_content_position_collage-{{block.settings.button_position}}">
+                            <div class="center button_content_position_collage-{{block.settings.button_position}}" style="padding:4rem;">
                               {%- if block.settings.button_label != blank -%}
                                 <a
                                   class="{{block.id}}-button button {% if block.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
