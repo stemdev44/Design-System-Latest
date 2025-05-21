@@ -67,6 +67,19 @@
     .temp-shift {
       transform: translateX(0px) !important;
     }
+    .section-{{ section.id }}-padding .slider-button--prev{
+      position: absolute;
+      top: 0;
+      transform: translateY(-100%);
+      right: 44px;  
+    }
+
+    .section-{{ section.id }}-padding .slider-button--next{
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(-100%);  
+    }    
   } 
 
   {%-if section.settings.image_width == 'full' -%}
@@ -1084,6 +1097,10 @@
           "value": "numbers",
           "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
         },
+        {
+          "value": "next_prev_arrows",
+          "label": "Next/Prev Arrows"
+        },        
         {
           "value": "none",
           "label": "None"
