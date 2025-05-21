@@ -571,7 +571,7 @@
                     name="previous"
                     aria-label="{{ 'general.slider.previous_slide' | t }}"
                 >
-                  {%- if section.settings.prev_icon !=blank -%}
+                  {%- if section.settings.prev_icon !=blank and section.settings.slider_visual == 'next_prev_arrows'-%}
                     <img src="{{ section.settings.prev_icon | img_url:"" }}" style="width:100%;">
                   {%- else -%}
                     <span class="svg-wrapper"> 
@@ -622,7 +622,7 @@
                     name="next"
                     aria-label="{{ 'general.slider.next_slide' | t }}"
                 >                    
-                  {%- if section.settings.next_icon !=blank -%}
+                  {%- if section.settings.next_icon !=blank and section.settings.slider_visual == 'next_prev_arrows' -%}
                     <img src="{{ section.settings.next_icon | img_url:"" }}" style="width:100%;">
                   {%- else -%}
                     <span class="svg-wrapper">
