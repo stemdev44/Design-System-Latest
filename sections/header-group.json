@@ -40,8 +40,8 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "top-left",
-        "desktop_menu_alignment": "right",
+        "logo_position": "top-center",
+        "desktop_menu_alignment": "left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
