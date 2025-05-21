@@ -18,6 +18,54 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+    .section-{{ section.id }}-padding .button_content_position-top-left{
+      position:absolute !important;
+      top:0;
+      left:0;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-top-center{
+      position:absolute !important;
+      top:0;
+      left:50%;
+      transform:translateX(-50%) !important;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-top-right{
+      position:absolute !important;
+      top:0;
+      right:0;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-middle-left{
+      position:absolute !important;
+      top:50%;
+      left:0;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-middle-center{
+      position:absolute !important;
+      top:50%;
+      left:50%;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-middle-right{
+      position:absolute !important;
+      top:50%;
+      right:0;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-bottom-left{
+      position:absolute !important;
+      bottom:0;
+      left:0;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-bottom-center{
+      position:absolute !important;
+      bottom:0;
+      left:50%;
+      transform: translateX(-50%) !important;
+    } 
+    .section-{{ section.id }}-padding .button_content_position-bottom-right{
+      position:absolute !important;
+      bottom:0;
+      right:0;
+    }  
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient isolate">
@@ -350,10 +398,7 @@
                               {{ block.settings.heading }}
                             </h2>
 
-                            <div class="center" 
-                                  style="position:absolute; left:50%; bottom:50%; transform: translate(-50%,-50%);
-                                  {% if block.settings.button_position == 'bottom' %} bottom:0; transform: translate(-50%, 0%)  {% endif %} "
-                            >
+                            <div class="center button_content_position-{{block.settings.button_position}}">
                               {%- if block.settings.button_label != blank -%}
                                 <a
                                   class="{{block.id}}-button button {% if block.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
@@ -1219,15 +1264,43 @@
           "id": "button_position",
           "options": [
             {
-              "value": "center",
-              "label": "Middle"
+              "value": "top-left",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
             },
             {
-              "value": "bottom",
-              "label": "Bottom"
+              "value": "top-center",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
+            },
+            {
+              "value": "top-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+            },
+            {
+              "value": "middle-left",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+            },
+            {
+              "value": "middle-center",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+            },
+            {
+              "value": "middle-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+            },
+            {
+              "value": "bottom-left",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+            },
+            {
+              "value": "bottom-center",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+            },
+            {
+              "value": "bottom-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
             }
           ],
-          "default": "center",
+          "default": "middle-center",
           "label": "Button Position"
         },                   
 
