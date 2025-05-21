@@ -12,8 +12,8 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "heading_size": "hxl",
-        "heading_alignment": "center",
+        "heading_size": "h1",
+        "heading_alignment": "left",
         "mobile_description_alignment": "center",
         "show_collection_description": true,
         "show_collection_image": false,
