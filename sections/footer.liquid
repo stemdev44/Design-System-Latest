@@ -51,22 +51,7 @@
 {%- endstyle -%}
 
 {%- liquid
-  assign email_color_scheme = section.settings.color_scheme
-  for block in section.blocks
-    if block.type == 'custom_email_form' 
-        assign email_color_scheme = block.settings.color_scheme
-    endif
-  endfor
--%}
-
-{%- liquid
-  for block in section.blocks
-    if block.settings.layout == 'grid'
       assign footer_layout= "page-width"
-    else  
-      assign footer_layout= ""
-    endif  
-  endfor
 -%}
 
 
@@ -569,23 +554,7 @@
           "id": "text",
           "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
           "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
-        },
-        {
-          "type": "select",
-          "id": "layout",
-          "options": [
-            {
-              "value": "full_bleed",
-              "label": "t:sections.slideshow.settings.layout.options__1.label"
-            },
-            {
-              "value": "grid",
-              "label": "t:sections.slideshow.settings.layout.options__2.label"
-            }
-          ],
-          "default": "grid",
-          "label": "Layout"
-        },                              
+        }                              
       ]
     }    
   ],
