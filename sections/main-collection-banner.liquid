@@ -4,7 +4,9 @@
 {%- style -%}
 
   .collection-hero__title {
-      text-align: {{ section.settings.heading_alignment }}
+      text-align: {{ section.settings.heading_alignment }};
+      {%- if section.settings.bold_heading -%}font-weight:bold;{%- endif -%}
+      {%- if section.settings.italic_heading -%}font-style: italic;{%- endif -%}        
     }
   @media screen and (max-width: 749px) {
     .collection-hero--with-image .collection-hero__inner {
@@ -85,6 +87,18 @@
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
     },
+    {
+      "type": "checkbox",
+      "id": "bold_heading",
+      "default": false,
+      "label": "Bold Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "italic_heading",
+      "default": false,
+      "label": "Italic Heading"
+    },        
     {
       "type": "select",
       "id": "heading_alignment",
