@@ -572,8 +572,8 @@
                     aria-label="{{ 'general.slider.previous_slide' | t }}"
                 >
                     <span class="svg-wrapper">
-                      {%- if section.settings.next_icon !=blank -%}
-                        <img src="{{ section.settings.next_icon | img_url:"" }}" style="width:100%;">
+                      {%- if section.settings.prev_icon !=blank -%}
+                        <img src="{{ section.settings.prev_icon | img_url:"" }}" style="width:100%;">
                       {%- else -%}
                         {{ 'icon-caret.svg' | inline_asset_content }}
                       {%- endif -%}                      
