@@ -125,6 +125,14 @@
           justify-content:flex-end;
         }        
       {%- endif -%}      
+    {%- endif -%} 
+
+    {%- if section.settings.logo_position == 'middle-center' -%}
+      {%- if section.settings.desktop_menu_alignment == 'right' -%}
+        .header__inline-menu {
+          grid-area: icons;
+        }        
+      {%- endif -%}      
     {%- endif -%}    
     
   }
