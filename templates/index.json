@@ -48,7 +48,7 @@
             "image_overlay_opacity": 40,
             "image_column_corner_radius": 0,
             "heading": "Product Heading",
-            "desktop_content_position": "bottom-center",
+            "desktop_content_position": "top-center",
             "heading_size": "h1",
             "heading_alignment": "center",
             "button_label": "Button label",
@@ -57,7 +57,7 @@
             "no_border_style": false,
             "video_button_background": "",
             "video_button_font": "",
-            "button_position": "bottom-center"
+            "button_position": "top-right"
           }
         }
       },
