@@ -616,7 +616,14 @@
                     name="next"
                     aria-label="{{ 'general.slider.next_slide' | t }}"
                 >
-                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                    <span class="svg-wrapper">
+                      {%- if section.settings.next_icon !=blank -%}
+                        <img src="{{ section.settings.next_icon | img_url:"" }}" class="icon">
+                      {%- else -%}
+                        {{ 'icon-caret.svg' | inline_asset_content }}
+                      {%- endif -%}
+
+                    </span>
                 </button>
 
                     {%- if section.settings.auto_rotate -%}
