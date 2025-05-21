@@ -399,8 +399,7 @@
                               {{ block.settings.heading }}
                             </h2>
 
-                            <div class="center {% if block.settings.desktop_content_position != block.settings.button_position  %} button_content_position_collage-{{block.settings.button_position}} {% endif %}" 
-                                      {% if block.settings.desktop_content_position != block.settings.button_position  %} button_content_position_collage-{{block.settings.button_position}} style="padding:3rem;" {% endif %}>
+                            <div class="center {% if block.settings.desktop_content_position != block.settings.button_position  %} button_content_position_collage-{{block.settings.button_position}} {% endif %}" style="padding:3rem;">
                               {%- if block.settings.button_label != blank -%}
                                 <a
                                   class="{{block.id}}-button button {% if block.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
