@@ -12,7 +12,9 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "heading_size": "h1",
+        "heading_size": "hxl",
+        "bold_heading": false,
+        "italic_heading": true,
         "heading_alignment": "left",
         "mobile_description_alignment": "center",
         "show_collection_description": true,
