@@ -127,10 +127,14 @@
       {%- endif -%}      
     {%- endif -%} 
 
-    {%- if section.settings.logo_position == 'middle-center' -%}
+    {%- if section.settings.logo_position == 'middle-left' -%}
       {%- if section.settings.desktop_menu_alignment == 'right' -%}
+        .header--middle-left {
+            grid-template-columns: 1fr 1fr auto;
+        }
         .header__inline-menu {
-          grid-area: icons;
+          display: flex;
+          justify-content: flex-end;
         }        
       {%- endif -%}      
     {%- endif -%}    
