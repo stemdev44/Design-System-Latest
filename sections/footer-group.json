@@ -47,7 +47,6 @@
           "settings": {
             "heading": "Subscribe to Email",
             "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
-            "color_scheme": "scheme-3",
             "layout": "grid"
           }
         }
@@ -60,7 +59,7 @@
         "custom_email_form_EFqPzV"
       ],
       "settings": {
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
