@@ -698,10 +698,7 @@
                                     {{ block.settings.heading }}
                                   </h2>
 
-                                  <div class="center" 
-                                        style="position:absolute; left:50%; bottom:50%; transform: translate(-50%,-50%);
-                                        {% if block.settings.button_position == 'bottom' %} bottom:0; transform: translate(-50%, 0%)  {% endif %} "
-                                  >
+                                  <div class="center button_content_position_collage-{{block.settings.button_position}}" style="padding:4rem;">
                                     {%- if block.settings.button_label != blank -%}
                                       <a
                                         class="{{block.id}}-button button {% if block.settings.button_style_secondary %} button--secondary {%else%} button--primary {% endif %} "
