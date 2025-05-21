@@ -40,7 +40,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "middle-center",
+        "logo_position": "middle-left",
         "desktop_menu_alignment": "right",
         "mobile_logo_position": "center",
         "menu": "main-menu",
