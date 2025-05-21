@@ -109,6 +109,21 @@
         }        
       {%- endif -%}      
     {%- endif -%}
+
+    {%- if section.settings.logo_position == 'top-center' -%}
+      {%- if section.settings.desktop_menu_alignment == 'left' -%}
+        .header__inline-menu {
+          display: flex;
+          justify-content:flex-start;
+        }        
+      {%- endif -%}
+      {%- if section.settings.desktop_menu_alignment == 'right' -%}
+        .header__inline-menu {
+          display: flex;
+          justify-content:flex-end;
+        }        
+      {%- endif -%}      
+    {%- endif -%}    
     
   }
 
