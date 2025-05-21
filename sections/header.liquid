@@ -128,6 +128,17 @@
     {%- endif -%} 
 
     {%- if section.settings.logo_position == 'middle-left' -%}
+
+      {%- if section.settings.desktop_menu_alignment == 'center' -%}
+        .header--middle-left {
+            grid-template-columns: 1fr 1fr auto;
+        }
+        .header__inline-menu {
+          display: flex;
+          justify-content: flex-start;
+        }        
+      {%- endif -%}
+
       {%- if section.settings.desktop_menu_alignment == 'right' -%}
         .header--middle-left {
             grid-template-columns: 1fr 1fr auto;
@@ -136,7 +147,7 @@
           display: flex;
           justify-content: flex-end;
         }        
-      {%- endif -%}      
+      {%- endif -%}
     {%- endif -%}    
     
   }
