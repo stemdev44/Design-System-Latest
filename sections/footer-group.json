@@ -21,13 +21,6 @@
             "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
           }
         },
-        "link_list_mzEKVA": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -46,7 +39,6 @@
           "type": "custom_email_form",
           "settings": {
             "heading": "Subscribe to Email",
-            "heading_size": "h2",
             "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
             "color_scheme": "scheme-3",
             "layout": "grid"
@@ -55,7 +47,6 @@
       },
       "block_order": [
         "footer-2",
-        "link_list_mzEKVA",
         "footer-0",
         "footer-1",
         "custom_email_form_EFqPzV"
