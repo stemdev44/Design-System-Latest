@@ -166,7 +166,7 @@
         "enable_desktop_slider": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "slider_visual": "next_prev_arrows",
+        "slider_visual": "dots",
         "next_icon": "shopify://shop_images/Next.png",
         "prev_icon": "shopify://shop_images/Previous.png",
         "column_alignment": "left",
