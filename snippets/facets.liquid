@@ -371,14 +371,13 @@
       <ul class="facets__list--vertical list-unstyled" role="list">
         {% for link in menu.links %}
           {% assign input_id = 'Filter-' | append: link.title | handleize %}
-          {% assign custom_url = '?q=' | append: link.title | url_escape | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by %}
-
+          
           <li class="list-menu__item facets__item">
             <label for="{{ input_id }}" class="facets__label facet-checkbox">
               <input
                 type="checkbox"
                 id="{{ input_id }}"
-                onchange="window.location.href='{{ custom_url }}'"
+                onchange="window.location.href='{{ results_url }}&filter={{ link.title | url_param_escape }}'"
               >
 
               <span class="facet-checkbox__text" aria-hidden="true">
