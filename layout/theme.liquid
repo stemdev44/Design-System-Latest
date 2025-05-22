@@ -60,6 +60,12 @@
             font-weight:bold !important;
           }
         {%- endif -%}
+        {%- if settings.bold_menu_nav_links -%}
+            .list-menu__item,
+            .mega-menu__link{
+                font-weight:bold !important;
+            }
+        {%- endif -%}        
 
       {% comment %} {%-if settings.custom_heading_font !=blank %} {% endcomment %}
         @font-face {
