@@ -336,6 +336,33 @@
             {%- endfor -%}
 
              {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}
+<style>
+.facet-checkbox__button {
+  position: relative;
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem;
+}
+
+.facet-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* Show checkmark when input is checked */
+.facet-checkbox__input:checked + .facet-checkbox__button .svg-wrapper {
+  display: block;
+}
+</style>             
 {% if menu.links.size > 0 %}
   <details class="facets__disclosure js-filter" open>
     <summary class="facets__summary caption-large focus-offset">
