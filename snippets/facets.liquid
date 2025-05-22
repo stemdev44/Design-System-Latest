@@ -347,25 +347,30 @@
     <div class="facets__display-vertical parent-display">
       <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
         <legend class="visually-hidden">Categories</legend>
-        <ul class="facets__list--vertical list-unstyled" role="list">
-          {% for link in menu.links %}
-            <li class="list-menu__item facets__item">
-              <label class="facets__label facet-checkbox">
-                <input
-                  type="checkbox"
-                  name="custom-menu-filter"
-                  value="{{ link.url }}"
-                  onchange="window.location.href=this.value"
-                >
-                {{ 'square.svg' | inline_asset_content }}
-                <div class="svg-wrapper">{{ 'icon-checkmark.svg' | inline_asset_content }}</div>
-                <span class="facet-checkbox__text" aria-hidden="true">
-                  <span class="facet-checkbox__text-label">{{ link.title }}</span>
-                </span>
-              </label>
-            </li>
-          {% endfor %}
-        </ul>
+          <ul class="facets__list--vertical list-unstyled" role="list">
+            {% for link in menu.links %}
+              <li class="list-menu__item facets__item">
+                <label class="facets__label facet-checkbox">
+                  <input
+                    type="checkbox"
+                    name="custom-menu-filter"
+                    value="{{ link.url }}"
+                    class="facet-checkbox__input"
+                    onchange="window.location.href=this.value"
+                  >
+                  <span class="facet-checkbox__button">
+                    {{ 'square.svg' | inline_asset_content }}
+                    <span class="svg-wrapper">
+                      {{ 'icon-checkmark.svg' | inline_asset_content }}
+                    </span>
+                  </span>
+                  <span class="facet-checkbox__text" aria-hidden="true">
+                    <span class="facet-checkbox__text-label">{{ link.title }}</span>
+                  </span>
+                </label>
+              </li>
+            {% endfor %}
+          </ul>
       </fieldset>
     </div>
   </details>
