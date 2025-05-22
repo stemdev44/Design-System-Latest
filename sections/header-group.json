@@ -44,7 +44,7 @@
         "desktop_menu_alignment": "right",
         "mobile_logo_position": "center",
         "menu": "main-menu",
-        "menu_type_desktop": "mega",
+        "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "mobile_search_icon_position": "left",
