@@ -337,6 +337,12 @@
 
              {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}           
 {% if menu.links.size > 0 %}
+  {% if results.url %}
+    {% assign results_url = results.url %}
+  {% else %}
+    {% assign terms = results.terms | escape %}
+    {% assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by %}
+  {% endif %}
 <details
   id="Details-custom-menu-filter-{{ section.id }}"
   class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
@@ -363,22 +369,30 @@
       <legend class="visually-hidden">Custom Menu Filter</legend>
 
       <ul class="facets__list--vertical list-unstyled" role="list">
-        {%- for link in menu.links -%}
-          {% assign term = link.title | handleize %}
-          {% assign input_id = 'Filter-' | append: term %}
+        {% for link in menu.links %}
+          {% assign input_id = 'Filter-' | append: link.title | handleize %}
+          {% assign custom_url = '?q=' | append: link.title | url_escape | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by %}
+
           <li class="list-menu__item facets__item">
             <label for="{{ input_id }}" class="facets__label facet-checkbox">
               <input
                 type="checkbox"
                 id="{{ input_id }}"
-                onchange="window.location.href='?q={{ term }}&options%5Bprefix%5D=last&sort_by={{ request.sort_by | escape }}'"
+                onchange="window.location.href='{{ custom_url }}'"
               >
+
+              {{ 'square.svg' | inline_asset_content }}
+
+              <div class="svg-wrapper">
+                {{ 'icon-checkmark.svg' | inline_asset_content }}
+              </div>
+
               <span class="facet-checkbox__text" aria-hidden="true">
                 <span class="facet-checkbox__text-label">{{ link.title }}</span>
               </span>
             </label>
           </li>
-        {%- endfor -%}
+        {% endfor %}
       </ul>
     </fieldset>
   </div>
