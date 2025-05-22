@@ -335,34 +335,7 @@
               {% endcase %}
             {%- endfor -%}
 
-             {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}
-<style>
-.facet-checkbox__button {
-  position: relative;
-  display: inline-block;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 1rem;
-}
-
-.facet-checkbox__input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.svg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-/* Show checkmark when input is checked */
-.facet-checkbox__input:checked + .facet-checkbox__button .svg-wrapper {
-  display: block;
-}
-</style>             
+             {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}           
 {% if menu.links.size > 0 %}
   <details class="facets__disclosure js-filter" open>
     <summary class="facets__summary caption-large focus-offset">
@@ -375,28 +348,30 @@
       <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
         <legend class="visually-hidden">Categories</legend>
           <ul class="facets__list--vertical list-unstyled" role="list">
-            {% for link in menu.links %}
-              <li class="list-menu__item facets__item">
-                <label class="facets__label facet-checkbox">
-                  <input
-                    type="checkbox"
-                    name="custom-menu-filter"
-                    value="{{ link.url }}"
-                    class="facet-checkbox__input"
-                    onchange="window.location.href=this.value"
-                  >
-                  <span class="facet-checkbox__button">
-                    {{ 'square.svg' | inline_asset_content }}
-                    <span class="svg-wrapper">
-                      {{ 'icon-checkmark.svg' | inline_asset_content }}
-                    </span>
-                  </span>
-                  <span class="facet-checkbox__text" aria-hidden="true">
-                    <span class="facet-checkbox__text-label">{{ link.title }}</span>
-                  </span>
-                </label>
-              </li>
-            {% endfor %}
+        {%- for link in menu.links -%}
+          {% assign input_id = 'Filter-' | append: link.title | handleize %}
+          <li class="list-menu__item facets__item">
+            <label for="{{ input_id }}" class="facets__label facet-checkbox">
+              <input
+                type="checkbox"
+                name="custom-menu-filter"
+                value="{{ link.url }}"
+                id="{{ input_id }}"
+                onchange="window.location.href=this.value"
+              >
+
+              {{ 'square.svg' | inline_asset_content }}
+
+              <div class="svg-wrapper">
+                {{ 'icon-checkmark.svg' | inline_asset_content }}
+              </div>
+
+              <span class="facet-checkbox__text" aria-hidden="true">
+                <span class="facet-checkbox__text-label">{{ link.title }}</span>
+              </span>
+            </label>
+          </li>
+        {%- endfor -%}
           </ul>
       </fieldset>
     </div>
