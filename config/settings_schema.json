@@ -222,7 +222,13 @@
         "unit": "%",
         "label": "Desktop Menu Nav Links Scale",
         "default": 100
-      }     
+      },
+      {
+        "type": "checkbox",
+        "id": "bold_menu_nav_links",
+        "default": false,
+        "label": "Menu Nav Links Bold"
+      }      
     ]
   },
   {
