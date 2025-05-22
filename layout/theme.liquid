@@ -55,7 +55,8 @@
         {{ body_font_bold_italic | font_face: font_display: 'swap' }}
         {{ settings.type_header_font | font_face: font_display: 'swap' }}
         {%- if settings.bold_button_label -%}
-          a.button {
+          a.button,
+          button  {
             font-weight:bold !important;
           }
         {%- endif -%}
