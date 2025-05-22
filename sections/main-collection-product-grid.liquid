@@ -115,12 +115,14 @@
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
+        {% assign menu = linklists[section.settings.filter_menu] %}
           {% render 'facets',
             results: collection,
             enable_filtering: section.settings.enable_filtering,
             enable_sorting: section.settings.enable_sorting,
             filter_type: section.settings.filter_type,
-            paginate: paginate
+            paginate: paginate,
+            menu :menu
           %}
         </aside>
       {%- endif -%}
