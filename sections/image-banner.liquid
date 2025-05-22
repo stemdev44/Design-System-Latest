@@ -39,10 +39,6 @@
     .mobile-only { 
       display: block !important; 
     }
-    /* #Banner-{{ section.id }} .banner__buttons .button{
-      background-color: {{section.settings.video_button_background}} !important;
-      color:{{section.settings.video_button_font}} !important;
-    } */
 
   }
   @media screen and (min-width: 750px) {
@@ -97,7 +93,13 @@
       right:0;
     }           
 
-
+    .mobile-layout{
+      {%- if section.settings.mobile_layout_page == 'grid'-%}
+        padding: 0 1.5rem !important;
+      {%- else -%}
+        padding: 0 !important;
+      {%- endif -%}
+    }
   } 
 
 {%- endstyle -%}
@@ -124,7 +126,7 @@
   endif
 -%}
 
-<div class="{% if section.settings.layout_page == 'grid' %} page-width{% endif %}" >
+<div class="{% if section.settings.layout_page == 'grid' %} page-width{% endif %} mobile-layout" >
   <div
     id="Banner-{{ section.id }}"
     class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -523,6 +525,22 @@
       ],
       "default": "full_bleed",
       "label": "Desktop Layout [Full width/Page]"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout_page",
+      "options": [
+        {
+          "value": "full_bleed",
+          "label": "t:sections.slideshow.settings.layout.options__1.label"
+        },
+        {
+          "value": "grid",
+          "label": "t:sections.slideshow.settings.layout.options__2.label"
+        }
+      ],
+      "default": "full_bleed",
+      "label": "Mobile Layout [Full width/Page]"
     },
     {
       "type": "image_picker",
