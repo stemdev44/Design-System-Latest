@@ -314,6 +314,12 @@
     "name": "t:settings_schema.buttons.name",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "bold_button_label",
+        "default": false,
+        "label": "Bold Button Label"
+      },      
+      {
         "type": "header",
         "content": "t:settings_schema.global.settings.header__border.content"
       },
