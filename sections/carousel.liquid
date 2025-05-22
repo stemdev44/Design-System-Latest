@@ -146,11 +146,15 @@
     {%- if section.settings.enable_desktop_slider and section.settings.slider_visual == 'next_prev_arrows' -%}
       .section-{{ section.id }}-padding .slider-button--prev{
         margin-right: 1rem; 
-        border: 1px solid; 
+        {%- if section.settings.prev_icon == blank -%}
+          border: 1px solid; 
+        {%- endif -%}        
       }
 
       .section-{{ section.id }}-padding .slider-button--next{
-        border: 1px solid;
+        {%- if section.settings.next_icon == blank -%}
+          border: 1px solid; 
+        {%- endif -%}
       }
       .section-{{ section.id }}-padding .slider-buttons{
         right: 0;
