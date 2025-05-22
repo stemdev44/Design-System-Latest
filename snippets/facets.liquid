@@ -336,61 +336,62 @@
             {%- endfor -%}
 
              {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}           
-{% if menu.links.size > 0 %}
-  {% if results.url %}
-    {% assign results_url = results.url %}
-  {% else %}
-    {% assign terms = results.terms | escape %}
-    {% assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by %}
-  {% endif %}
-<details
-  id="Details-custom-menu-filter-{{ section.id }}"
-  class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
-  data-index="{{ forloop.index }}"
-  {% if filter_type == 'vertical' and forloop.index == 1 %}
-    open
-  {% endif %}
->
-  <summary
-    class="facets__summary caption-large focus-offset"
-    aria-label="Custom Menu Filter"
-  >
-    <div>
-      <span class="facets__summary-label">Custom Menu Filter</span>
-      {{ 'icon-caret.svg' | inline_asset_content }}
-    </div>
-  </summary>
+              {% if menu.links.size > 0 %}
+                <p>{{results.url}}</p>
+                {% if results.url %}
+                  {% assign results_url = results.url %}
+                {% else %}
+                  {% assign terms = results.terms | escape %}
+                  {% assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by %}
+                {% endif %}
+                <details
+                  id="Details-custom-menu-filter-{{ section.id }}"
+                  class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
+                  data-index="{{ forloop.index }}"
+                  {% if filter_type == 'vertical' and forloop.index == 1 %}
+                    open
+                  {% endif %}
+                >
+                  <summary
+                    class="facets__summary caption-large focus-offset"
+                    aria-label="Custom Menu Filter"
+                  >
+                    <div>
+                      <span class="facets__summary-label">Custom Menu Filter</span>
+                      {{ 'icon-caret.svg' | inline_asset_content }}
+                    </div>
+                  </summary>
 
-  <div
-    id="Facet-custom-menu-filter-{{ section.id }}"
-    class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %} facets__display-vertical{% endif %}"
-  >
-    <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
-      <legend class="visually-hidden">Custom Menu Filter</legend>
+                  <div
+                    id="Facet-custom-menu-filter-{{ section.id }}"
+                    class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %} facets__display-vertical{% endif %}"
+                  >
+                    <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
+                      <legend class="visually-hidden">Custom Menu Filter</legend>
 
-      <ul class="facets__list--vertical list-unstyled" role="list">
-        {% for link in menu.links %}
-          {% assign input_id = 'Filter-' | append: link.title | handleize %}
+                      <ul class="facets__list--vertical list-unstyled" role="list">
+                        {% for link in menu.links %}
+                          {% assign input_id = 'Filter-' | append: link.title | handleize %}
 
-          <li class="list-menu__item facets__item">
-            <label for="{{ input_id }}" class="facets__label facet-checkbox">
-              <input
-                type="checkbox"
-                id="{{ input_id }}"
-                onchange="window.location.href='{{ link.url }}'"
-              >
+                          <li class="list-menu__item facets__item">
+                            <label for="{{ input_id }}" class="facets__label facet-checkbox">
+                              <input
+                                type="checkbox"
+                                id="{{ input_id }}"
+                                onchange="window.location.href='{{ link.url }}'"
+                              >
 
-              <span class="facet-checkbox__text" aria-hidden="true">
-                <span class="facet-checkbox__text-label">{{ link.title }}</span>
-              </span>
-            </label>
-          </li>
-        {% endfor %}
-      </ul>
-    </fieldset>
-  </div>
-</details>
-{% endif %}             
+                              <span class="facet-checkbox__text" aria-hidden="true">
+                                <span class="facet-checkbox__text-label">{{ link.title }}</span>
+                              </span>
+                            </label>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </fieldset>
+                  </div>
+                </details>
+              {% endif %}             
              {% comment %} /////////////////// Side Menu Filter Ends ////////////////// {% endcomment %}
           </div>
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
