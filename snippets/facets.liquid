@@ -337,7 +337,7 @@
 
              {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}           
               {% if menu.links.size > 0 %}
-                <p>{{results.url}}</p>
+                {{sort_by}}
                 {% if results.url %}
                   {% assign results_url = results.url %}
                 {% else %}
