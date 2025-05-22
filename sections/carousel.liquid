@@ -145,8 +145,8 @@
     {%- endif -%}
     {%- if section.settings.enable_desktop_slider and section.settings.slider_visual == 'next_prev_arrows' -%}
       .section-{{ section.id }}-padding .slider-button--prev{
-        margin-right: 1rem; 
         {%- if section.settings.prev_icon == blank -%}
+          margin-right: 1rem; 
           border: 1px solid; 
         {%- endif -%}        
       }
