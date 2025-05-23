@@ -79,7 +79,7 @@
       display: block !important; 
     }
 
-    .{{section.id}} .banner{
+    #Banner-{{ section.id }} .banner{
       {%- if section.settings.mobile_layout_page == 'grid'-%}
         padding: 0 1.5rem;
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
