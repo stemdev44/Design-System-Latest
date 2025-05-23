@@ -26,6 +26,7 @@
             "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
             "text_style": "body",
             "icon_image": "shopify://shop_images/Alt_image-8.svg",
+            "mobile_icon_image": "shopify://shop_images/Previous.png",
             "innclude_in_mobile_container": false
           }
         },
