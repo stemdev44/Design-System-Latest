@@ -318,7 +318,7 @@
             -%}            
 
             <style>
-              @media screen and (min-width:990px){
+              {% comment %} @media screen and (min-width:990px){ {% endcomment %}
                 .multicolumn--{{block.id}} .multicolumn-card.content-container {
                   overflow: visible!important;
                 }
@@ -340,7 +340,7 @@
                     width: 100%;
                   }                  
                 {%- endif -%}
-              }
+              {% comment %} } {% endcomment %}
 
             </style>          
           {%- endif -%}
