@@ -397,7 +397,7 @@
         "button_style_secondary_2": false,
         "video_button_background_2": "",
         "video_button_font_2": "",
-        "layout": "full_bleed",
+        "layout": "grid",
         "columns_desktop": 4,
         "enable_desktop_slider": true,
         "auto_rotate": false,
