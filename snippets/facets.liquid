@@ -362,7 +362,7 @@
       <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
         <legend class="visually-hidden">Custom Menu Filter</legend>
 
-        <ul class="facets__list--vertical list-unstyled" role="list">
+        <ul class="facets-layout facets-layout-list facets-layout-list--text facets__list--vertical list-unstyled" role="list">
           {% for link in menu.links %}
             {% assign input_id = 'Filter-' | append: link.title | handleize %}
             {% assign current_url = link.url | split: '?' | first %}
