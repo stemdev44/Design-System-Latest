@@ -89,6 +89,7 @@
     }
     #Banner-{{ section.id }}.banner .banner__buttons{
       {%- if section.settings.mobile_layout_page == 'grid'-%}
+        padding-top: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
       {%- endif -%}      
     }
