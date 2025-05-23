@@ -32,42 +32,6 @@
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
 
-  {%- for block in section.blocks -%}
-    {%- case block.type -%}           
-      {%- when 'text' -%}
-          {%-if block.settings.icon_image != blank -%}
-            <style>
-              #Banner-{{ section.id }} ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;                    
-                list-style: none;
-                padding-left: 0; 
-              }
-
-              #Banner-{{ section.id }} ul li {
-                position: relative;
-                padding-left: 24px; 
-              }
-
-              #Banner-{{ section.id }} ul li::before {
-                content: "";
-                background: url("{{ block.settings.icon_image | img_url:"" }}");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 20px;
-                height: 20px;
-                position: absolute;
-                left: 0;
-                top: 0;
-                transform: translateY(30%);
-              }
-            </style>                    
-        {%-endif -%}
-    {%- endcase -%}
-  {%- endfor -%}
-
   @media screen and (max-width: 749px) {
     .desktop-only { 
       display: none !important; 
@@ -225,6 +189,36 @@
                           {{ block.settings.heading }}
                         </h2>            
                       {%- when 'text' -%}
+                          {%-if block.settings.icon_image != blank -%}
+                            <style>
+                              #Banner-{{ section.id }} ul {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;                    
+                                list-style: none;
+                                padding-left: 0; 
+                              }
+              
+                              #Banner-{{ section.id }} ul li {
+                                position: relative;
+                                padding-left: 24px; 
+                              }
+              
+                              #Banner-{{ section.id }} ul li::before {
+                                content: "";
+                                background: url("{{ block.settings.icon_image | img_url:"" }}");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transform: translateY(30%);
+                              }
+                            </style>                    
+                        {%-endif -%}
                         {%- if block.settings.innclude_in_mobile_container == false -%}
                           <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                             <p>{{ block.settings.text }}</p>
@@ -290,7 +284,37 @@
               >
                 {{ block.settings.heading }}
               </h2>            
-            {%- when 'text' -%}           
+            {%- when 'text' -%}
+                {%-if block.settings.icon_image != blank -%}
+                  <style>
+                    #Banner-{{ section.id }} ul {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;                    
+                      list-style: none;
+                      padding-left: 0; 
+                    }
+
+                    #Banner-{{ section.id }} ul li {
+                      position: relative;
+                      padding-left: 24px; 
+                    }
+
+                    #Banner-{{ section.id }} ul li::before {
+                      content: "";
+                      background: url("{{ block.settings.icon_image | img_url:"" }}");
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      width: 20px;
+                      height: 20px;
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      transform: translateY(30%);
+                    }
+                  </style>                    
+              {%-endif -%}            
               <div class="banner__text rte {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %} small-hide {% endif %} {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
                 <p>{{ block.settings.text }}</p>
               </div>
@@ -348,7 +372,37 @@
               >
                 {{ block.settings.heading }}
               </h2>            
-            {%- when 'text' -%}         
+            {%- when 'text' -%}
+                {%-if block.settings.icon_image != blank -%}
+                  <style>
+                    #Banner-{{ section.id }} ul {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;                    
+                      list-style: none;
+                      padding-left: 0; 
+                    }
+
+                    #Banner-{{ section.id }} ul li {
+                      position: relative;
+                      padding-left: 24px; 
+                    }
+
+                    #Banner-{{ section.id }} ul li::before {
+                      content: "";
+                      background: url("{{ block.settings.icon_image | img_url:"" }}");
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      width: 20px;
+                      height: 20px;
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      transform: translateY(30%);
+                    }
+                  </style>                    
+              {%-endif -%}            
               <div class="banner__text rte {% if section.settings.show_text_below and section.settings.remove_heading_text_mobile %} small-hide {% endif %} {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
                 <p>{{ block.settings.text }}</p>
               </div>
