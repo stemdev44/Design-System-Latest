@@ -71,12 +71,33 @@
             "link": "",
             "button_style_secondary": false
           }
+        },
+        "column_mQgWEh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image9xxl-PINK_878c995a-6791-4522-a994-2332580c39b3.webp",
+            "hide_image_video_mobile": false,
+            "overlap_on_image": true,
+            "caption": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "caption_background_color": "",
+            "caption_font_color": "",
+            "title": "Column",
+            "heading_size": "large",
+            "heading_size_mobile": "large",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "column_i98Cet",
         "column_m49qxF",
-        "column_Ciznjy"
+        "column_Ciznjy",
+        "column_mQgWEh"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -102,7 +123,7 @@
         "video_button_background_2": "",
         "video_button_font_2": "",
         "layout": "grid",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
         "column_background_color": "#242833",
