@@ -49,7 +49,7 @@
                 padding-left: 24px; 
               }
 
-              #Banner-{{ section.id }} ul li::before {
+              #Banner-{{ section.id }} .banner__text-{{block.id}} ul li::before {
                 content: "";
                 background: url("{{ block.settings.icon_image | img_url:"" }}");
                 background-size: cover;
