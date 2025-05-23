@@ -20,13 +20,13 @@
     }
   }
 
-  {%- if section.settings.auto_rotate == false and section.settings.layout=='grid' -%}
+  {% comment %} {%- if section.settings.auto_rotate == false and section.settings.layout=='grid' -%}
     @media screen and (min-width: 990px) {
         .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
             margin-left: 0 !important;
         }
     }
-  {%- endif -%}
+  {%- endif -%} {% endcomment %}
 
   .section-{{ section.id }}-padding .multicolumn-card__image-wrapper--One-Tenth-width {
       width: 10%;
