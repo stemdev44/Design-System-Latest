@@ -380,7 +380,11 @@
                   data-url="{{ link.url }}"
                   {% if is_checked %}checked{% endif %}
                 >
+                  {{ 'square.svg' | inline_asset_content }}
 
+                  <div class="svg-wrapper">
+                    {{ 'icon-checkmark.svg' | inline_asset_content }}
+                  </div>
                 <span class="facet-checkbox__text" aria-hidden="true">
                   <span class="facet-checkbox__text-label">{{ link.title }}</span>
                 </span>
