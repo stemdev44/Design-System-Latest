@@ -66,7 +66,7 @@
   @media screen and (max-width: 989px) {
     .temp-shift {
       transform: translateX(0px) !important;
-    }
+    }   
   } 
 
   {%-if section.settings.image_width == 'full' -%}
@@ -136,14 +136,40 @@
       justify-content: center;
     {%- endif -%}            
   }
-
+    
+  @media screen and (min-width: 990px) {
     {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
-    @media screen and (min-width: 990px) {
-        .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
-            margin-left: 0 !important;
-        }
-    {%- endif -%}          
+      .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
+          margin-left: 0 !important;
+      }
+    {%- endif -%}
+    {%- if section.settings.enable_desktop_slider and section.settings.slider_visual == 'next_prev_arrows' -%}
+      .section-{{ section.id }}-padding .slider-button--prev{
+        {%- if section.settings.prev_icon == blank -%}
+          margin-right: 1rem; 
+          border: 1px solid; 
+        {%- endif -%}        
+      }
 
+      .section-{{ section.id }}-padding .slider-button--next{
+        {%- if section.settings.next_icon == blank -%}
+          border: 1px solid; 
+        {%- endif -%}
+      }
+      .section-{{ section.id }}-padding .slider-buttons{
+        right: 0;
+        position: absolute;
+        top: 0 !important;
+        transform: translateY(-100%) !important;  
+      }
+      .section-{{ section.id }}-padding .slider-counter{
+        display:none !important;
+      }
+      .section-{{ section.id }}-padding slider-component{
+        padding-top:15px;
+      }
+    {%- endif -%}     
+  }  
 
 {%- endstyle -%}
 
@@ -243,7 +269,9 @@
                         {%- if block.settings.image != blank-%}
                           <div
                             class="media media--transparent media--{{ section.settings.image_ratio }}"
-                            style="padding-bottom: 132%;"
+                            {% if section.settings.image_ratio == 'adapt' %}
+                              style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                            {% endif %}
                           >
                             {%- liquid
                               assign number_of_columns = section.settings.columns_desktop
@@ -287,8 +315,7 @@
                               | image_tag:
                                 widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
                                 sizes: sizes,
-                                class: 'multicolumn-card__image',
-                                style:"object-fit:contain;"
+                                class: 'multicolumn-card__image'
                             }}
                           </div>
                         {%- endif -%}  
@@ -395,7 +422,9 @@
                       {%- if block.settings.image != blank-%}
                         <div
                           class="media media--transparent media--{{ section.settings.image_ratio }}"
-                          style="padding-bottom: 132%;"
+                          {% if section.settings.image_ratio == 'adapt' %}
+                            style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                          {% endif %}
                         >
                           {%- liquid
                             assign number_of_columns = section.settings.columns_desktop
@@ -439,8 +468,7 @@
                             | image_tag:
                               widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
                               sizes: sizes,
-                              class: 'multicolumn-card__image',
-                              style:"object-fit:contain;"
+                              class: 'multicolumn-card__image'
                           }}
                         </div>
                       {%- endif -%}  
@@ -551,7 +579,13 @@
                     name="previous"
                     aria-label="{{ 'general.slider.previous_slide' | t }}"
                 >
-                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                  {%- if section.settings.prev_icon !=blank and section.settings.slider_visual == 'next_prev_arrows'-%}
+                    <img src="{{ section.settings.prev_icon | img_url:"" }}" style="width:100%;">
+                  {%- else -%}
+                    <span class="svg-wrapper"> 
+                      {{ 'icon-caret.svg' | inline_asset_content }}
+                    </span>
+                  {%- endif -%}                                          
                 </button>
 
                     <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
@@ -595,8 +629,14 @@
                     class="slider-button slider-button--next"
                     name="next"
                     aria-label="{{ 'general.slider.next_slide' | t }}"
-                >
-                    <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                >                    
+                  {%- if section.settings.next_icon !=blank and section.settings.slider_visual == 'next_prev_arrows' -%}
+                    <img src="{{ section.settings.next_icon | img_url:"" }}" style="width:100%;">
+                  {%- else -%}
+                    <span class="svg-wrapper">
+                      {{ 'icon-caret.svg' | inline_asset_content }}
+                    </span>
+                  {%- endif -%}                    
                 </button>
 
                     {%- if section.settings.auto_rotate -%}
@@ -1083,13 +1123,27 @@
           "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
         },
         {
+          "value": "next_prev_arrows",
+          "label": "Next/Prev Arrows"
+        },        
+        {
           "value": "none",
           "label": "None"
         }        
       ],
       "default": "counter",
       "label": "t:sections.slideshow.settings.slider_visual.label"
-    },             
+    },
+    {
+      "type": "image_picker",
+      "id": "next_icon",
+      "label": "Next Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "prev_icon",
+      "label": "Prev Icon"
+    },                 
     {
       "type": "select",
       "id": "column_alignment",
