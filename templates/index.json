@@ -20,6 +20,15 @@
             "mobile_heading_size": "h1"
           }
         },
+        "text_Pr6cF4": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/Alt_image-10.svg",
+            "innclude_in_mobile_container": false
+          }
+        },
         "text_dPp8Rp": {
           "type": "text",
           "settings": {
@@ -45,6 +54,7 @@
       },
       "block_order": [
         "heading_4nKdaf",
+        "text_Pr6cF4",
         "text_dPp8Rp",
         "buttons_4Jkjdy"
       ],
