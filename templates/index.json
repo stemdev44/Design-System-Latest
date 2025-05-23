@@ -27,16 +27,7 @@
             "text_style": "body",
             "icon_image": "shopify://shop_images/Alt_image-8.svg",
             "mobile_icon_image": "shopify://shop_images/Alt_image-10.svg",
-            "innclude_in_mobile_container": false
-          }
-        },
-        "text_Pr6cF4": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/Alt_image-10.svg",
-            "innclude_in_mobile_container": false
+            "innclude_in_mobile_container": true
           }
         },
         "text_dPp8Rp": {
@@ -45,6 +36,7 @@
             "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
             "text_style": "body",
             "icon_image": "shopify://shop_images/CalendarCheck.png",
+            "mobile_icon_image": "shopify://shop_images/Alt_image-9.svg",
             "innclude_in_mobile_container": true
           }
         },
@@ -65,7 +57,6 @@
       "block_order": [
         "heading_4nKdaf",
         "text_bKVgLB",
-        "text_Pr6cF4",
         "text_dPp8Rp",
         "buttons_4Jkjdy"
       ],
@@ -85,7 +76,7 @@
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true,
-        "remove_heading_text_mobile": true,
+        "remove_heading_text_mobile": false,
         "color_scheme_mobile": "scheme-3",
         "padding_top": 32,
         "padding_bottom": 36
