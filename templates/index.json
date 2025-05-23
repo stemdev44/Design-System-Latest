@@ -9,6 +9,65 @@
  */
 {
   "sections": {
+    "image_banner_Ub7FA8": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_4nKdaf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1",
+            "mobile_heading_size": "h1"
+          }
+        },
+        "text_dPp8Rp": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
+            "text_style": "body",
+            "icon_image": "shopify://shop_images/CalendarCheck.png",
+            "innclude_in_mobile_container": true
+          }
+        },
+        "buttons_4Jkjdy": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "#",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "#",
+            "button_style_secondary_2": false,
+            "desktop_content_position": "bottom-center",
+            "enable_separate_position": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_4nKdaf",
+        "text_dPp8Rp",
+        "buttons_4Jkjdy"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "layout_page": "full_bleed",
+        "mobile_layout_page": "grid",
+        "image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
+        "mobile_image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "remove_heading_text_mobile": true,
+        "color_scheme_mobile": "scheme-3"
+      }
+    },
     "multicolumn_CxDDe3": {
       "type": "multicolumn",
       "blocks": {
@@ -403,65 +462,6 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_Ub7FA8": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_4nKdaf": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1",
-            "mobile_heading_size": "h1"
-          }
-        },
-        "text_dPp8Rp": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Give customers details about the banner image(s) or content on the template.</li></ul>",
-            "text_style": "body",
-            "icon_image": "shopify://shop_images/CalendarCheck.png",
-            "innclude_in_mobile_container": true
-          }
-        },
-        "buttons_4Jkjdy": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "#",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "#",
-            "button_style_secondary_2": false,
-            "desktop_content_position": "bottom-center",
-            "enable_separate_position": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_4nKdaf",
-        "text_dPp8Rp",
-        "buttons_4Jkjdy"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "layout_page": "full_bleed",
-        "mobile_layout_page": "grid",
-        "image": "shopify://shop_images/Product5_home2_c4b975bf-5a53-489d-bcc9-050d5cb44156.png",
-        "mobile_image": "shopify://shop_images/Product6_home1_677665eb-4f0b-41d7-adee-86c7264ec439.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "scheme-1",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true,
-        "remove_heading_text_mobile": true,
-        "color_scheme_mobile": "scheme-3"
-      }
-    },
     "compare_table_4zE6WA": {
       "type": "compare-table",
       "blocks": {
@@ -799,12 +799,12 @@
     }
   },
   "order": [
+    "image_banner_Ub7FA8",
     "multicolumn_CxDDe3",
     "collage",
     "carousel_T9Rx9p",
     "collection_list_kWbKPt",
     "tabs_XCdmCF",
-    "image_banner_Ub7FA8",
     "compare_table_4zE6WA",
     "featured_image_with_text_PhXwV9",
     "featured_collection_yKANgB",
