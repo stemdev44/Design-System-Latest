@@ -78,7 +78,6 @@
     .mobile-only { 
       display: block !important; 
     }
-
     #Banner-{{ section.id }}.banner{
       {%- if section.settings.mobile_layout_page == 'grid'-%}
         padding: 0 1.5rem;
@@ -87,8 +86,12 @@
       {%- else -%}
         padding: 0 !important;
       {%- endif -%}
-    }    
-
+    }
+    #Banner-{{ section.id }}.banner .content-container--full-width-mobile{
+      {%- if section.settings.mobile_layout_page == 'grid'-%}
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      {%- endif -%}      
+    }
   }
   @media screen and (min-width: 750px) {
     .desktop-only { display: block !important; }
