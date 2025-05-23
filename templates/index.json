@@ -398,7 +398,7 @@
         "video_button_background_2": "",
         "video_button_font_2": "",
         "layout": "grid",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "enable_desktop_slider": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
