@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/Product3_home1_18cf2e5d-9d97-44a4-bbbd-c0c3ddfb7ae0.png",
             "hide_image_video_mobile": false,
-            "overlap_on_image": false,
+            "overlap_on_image": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -37,7 +37,7 @@
           "settings": {
             "image": "shopify://shop_images/Product4_Home3.png",
             "hide_image_video_mobile": false,
-            "overlap_on_image": false,
+            "overlap_on_image": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -55,9 +55,9 @@
         "column_Ciznjy": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Alt_image-10.svg",
+            "image": "shopify://shop_images/Product4_home1_ef123e37-1cf0-41c9-bba6-01343b06b2f8.png",
             "hide_image_video_mobile": false,
-            "overlap_on_image": false,
+            "overlap_on_image": true,
             "caption": "",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium",
@@ -89,7 +89,7 @@
         "mobile_description_alignment": "center",
         "description": "",
         "description_style": "body",
-        "image_width": "One-Tenth",
+        "image_width": "half",
         "image_ratio": "adapt",
         "button_label": "Button",
         "button_link": "#",
