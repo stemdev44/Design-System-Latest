@@ -390,7 +390,7 @@
                 {%- case block.type -%}           
                   {%- when 'text' -%}
                     {%- if block.settings.innclude_in_mobile_container and section.settings.show_text_below and section.settings.remove_heading_text_mobile-%}
-                      <div class="banner__text rte {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
+                      <div class="banner__text banner__text_mobile-{{block.id}} rte {{ block.settings.text_style }} " {{ block.shopify_attributes }}>
                         <p>{{ block.settings.text }}</p>
                       </div>
                     {%- endif -%}
