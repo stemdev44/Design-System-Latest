@@ -207,6 +207,90 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%-for block in setion.blocks-%}
+      {%- if block.settings.overlap_on_image -%}
+        {%- liquid
+          assign multiply_value_card=85
+          assign divide_value_card=100
+          if section.settings.image_width == 'half'
+            assign padding_top = 50 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'third'
+            assign padding_top = 33 | times: multiply_value_card | divided_by: divide_value_card 
+          elsif section.settings.image_width == 'One-Tenth'
+            assign padding_top = 10 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'Two-Tenth'
+            assign padding_top = 20 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'Three-Tenth'
+            assign padding_top = 30 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'Four-Tenth'
+            assign padding_top = 40 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'Six-Tenth'
+            assign padding_top = 60 | times: multiply_value_card | divided_by: divide_value_card 
+          elsif section.settings.image_width == 'Seven-Tenth'
+            assign padding_top = 70 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'Eight-Tenth'
+            assign padding_top = 80 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'Nine-Tenth'
+            assign padding_top = 90 | times: multiply_value_card | divided_by: divide_value_card
+          elsif section.settings.image_width == 'full'
+            assign padding_top = 100 | times: multiply_value_card | divided_by: divide_value_card
+          endif
+        -%}
+        {%- liquid
+          assign multiply_value=12
+          assign divide_value=50
+          if section.settings.image_width == 'half'
+            assign slider_padding_top = 50 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'third'
+            assign slider_padding_top = 33 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'One-Tenth'
+            assign slider_padding_top = 10 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'Two-Tenth'
+            assign slider_padding_top = 20 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'Three-Tenth'
+            assign slider_padding_top = 30 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'Four-Tenth'
+            assign slider_padding_top = 40 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'Six-Tenth'
+            assign slider_padding_top = 60 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'Seven-Tenth'
+            assign slider_padding_top = 70 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'Eight-Tenth'
+            assign slider_padding_top = 80 | times: multiply_value | divided_by: divide_value    
+          elsif section.settings.image_width == 'Nine-Tenth'
+            assign slider_padding_top = 90 | times: multiply_value | divided_by: divide_value
+          elsif section.settings.image_width == 'full'
+            assign slider_padding_top = 100 | times: multiply_value | divided_by: divide_value                
+          endif
+        -%}            
+
+        <style>
+            .multicolumn--{{block.id}} .multicolumn-card.content-container {
+              overflow: visible!important;
+            }
+            .multicolumn-card__image-wrapper-{{block.id}} {
+              position: absolute;
+              transform: translate(50%, -50%);
+              right: 50%;
+            }
+            .multicolumn--{{block.id}} .multicolumn-card__info {
+              padding-top: {{padding_top}}%;
+            }
+
+            .section-{{ section.id }}-padding ul.multicolumn-list{
+              padding-top:{{slider_padding_top}}rem; 
+            }
+              
+            {%- if section.settings.image_width == 'full' -%}
+              .multicolumn-card__image-wrapper-{{block.id}} {
+                width: 100%;
+              }                  
+            {%- endif -%}
+
+        </style>          
+      {%- endif -%}    
+    {%-endfor-%}
+
 {%- endstyle -%}
 
 {%- liquid
@@ -261,89 +345,6 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
-          {%- if block.settings.overlap_on_image -%}
-            {%- liquid
-              assign multiply_value_card=85
-              assign divide_value_card=100
-              if section.settings.image_width == 'half'
-                assign padding_top = 50 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'third'
-                assign padding_top = 33 | times: multiply_value_card | divided_by: divide_value_card 
-              elsif section.settings.image_width == 'One-Tenth'
-                assign padding_top = 10 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'Two-Tenth'
-                assign padding_top = 20 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'Three-Tenth'
-                assign padding_top = 30 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'Four-Tenth'
-                assign padding_top = 40 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'Six-Tenth'
-                assign padding_top = 60 | times: multiply_value_card | divided_by: divide_value_card 
-              elsif section.settings.image_width == 'Seven-Tenth'
-                assign padding_top = 70 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'Eight-Tenth'
-                assign padding_top = 80 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'Nine-Tenth'
-                assign padding_top = 90 | times: multiply_value_card | divided_by: divide_value_card
-              elsif section.settings.image_width == 'full'
-                assign padding_top = 100 | times: multiply_value_card | divided_by: divide_value_card
-              endif
-            -%}
-            {%- liquid
-              assign multiply_value=12
-              assign divide_value=50
-              if section.settings.image_width == 'half'
-                assign slider_padding_top = 50 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'third'
-                assign slider_padding_top = 33 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'One-Tenth'
-                assign slider_padding_top = 10 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'Two-Tenth'
-                assign slider_padding_top = 20 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'Three-Tenth'
-                assign slider_padding_top = 30 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'Four-Tenth'
-                assign slider_padding_top = 40 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'Six-Tenth'
-                assign slider_padding_top = 60 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'Seven-Tenth'
-                assign slider_padding_top = 70 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'Eight-Tenth'
-                assign slider_padding_top = 80 | times: multiply_value | divided_by: divide_value    
-              elsif section.settings.image_width == 'Nine-Tenth'
-                assign slider_padding_top = 90 | times: multiply_value | divided_by: divide_value
-              elsif section.settings.image_width == 'full'
-                assign slider_padding_top = 100 | times: multiply_value | divided_by: divide_value                
-              endif
-            -%}            
-
-            <style>
-              {% comment %} @media screen and (min-width:990px){ {% endcomment %}
-                .multicolumn--{{block.id}} .multicolumn-card.content-container {
-                  overflow: visible!important;
-                }
-                .multicolumn-card__image-wrapper-{{block.id}} {
-                  position: absolute;
-                  transform: translate(50%, -50%);
-                  right: 50%;
-                }
-                .multicolumn--{{block.id}} .multicolumn-card__info {
-                  padding-top: {{padding_top}}%;
-                }
-
-                .section-{{ section.id }}-padding ul.multicolumn-list{
-                  padding-top:{{slider_padding_top}}rem; 
-                }
-                  
-                {%- if section.settings.image_width == 'full' -%}
-                  .multicolumn-card__image-wrapper-{{block.id}} {
-                    width: 100%;
-                  }                  
-                {%- endif -%}
-              {% comment %} } {% endcomment %}
-
-            </style>          
-          {%- endif -%}
 
           {%- assign empty_column = '' -%}
           {%- if block.settings.image == blank
