@@ -138,11 +138,11 @@
   }
     
   @media screen and (min-width: 990px) {
-    {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
+    {% comment %} {%- if section.settings.enable_desktop_slider and section.settings.auto_rotate -%}
       .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
           margin-left: 0 !important;
       }
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
     {%- if section.settings.enable_desktop_slider and section.settings.slider_visual == 'next_prev_arrows' -%}
       .section-{{ section.id }}-padding .slider-button--prev{
         {%- if section.settings.prev_icon == blank -%}
