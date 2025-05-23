@@ -87,7 +87,7 @@
         padding: 0 !important;
       {%- endif -%}
     }
-    #Banner-{{ section.id }}.banner .content-container--full-width-mobile{
+    #Banner-{{ section.id }}.banner .banner__buttons{
       {%- if section.settings.mobile_layout_page == 'grid'-%}
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
       {%- endif -%}      
