@@ -167,33 +167,23 @@
                   </div>
                 </details>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
-      checkbox.addEventListener('change', function () {
-        const menuUrl = new URL(this.getAttribute('data-url'), window.location.origin);
-        const currentUrl = new URL(window.location.href);
-
-        if (this.checked) {
-          // Copy existing filters (query params) to menuUrl
-          currentUrl.searchParams.forEach((value, key) => {
-            menuUrl.searchParams.set(key, value);
-          });
-
-          // If new URL is the same as current, force reload
-          if (menuUrl.href === currentUrl.href) {
-            window.location.reload();
-          } else {
-            window.location.href = menuUrl.href;
-          }
-        } else {
-          // Deselecting → keep on current path with filters
-          window.location.href = currentUrl.pathname + currentUrl.search;
-        }
-      });
-    });
-  });
-</script>
+                <script>
+                  document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
+                    checkbox.addEventListener('change', function () {
+                      const menuUrl = this.getAttribute('data-url');
+                      const currentSearch = window.location.search;
+                      if (this.checked) {
+                        // User is selecting a menu option → redirect to menu URL + filters
+                        //window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
+                        window.location.href = menuUrl + currentSearch;
+                      } else {
+                        // User is deselecting → redirect back to current path + filters (no menu URL)
+                        const baseUrl = window.location.pathname + window.location.search;
+                        window.location.href = baseUrl;
+                      }
+                    });
+                  });
+                </script>
               {% endif %}           
             {% comment %} /////////////////// Side Menu Filter Ends ////////////////// {% endcomment %}            
             {%- for filter in results.filters -%}
