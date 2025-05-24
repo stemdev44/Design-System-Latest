@@ -135,54 +135,50 @@
                       <legend class="visually-hidden">Custom Menu Filter</legend>
 
                       <ul class="facets-layout facets-layout-list facets-layout-list--text facets__list--vertical list-unstyled" role="list">
-                        {% for link in menu.links %}
-                          {% assign input_id = 'Filter-' | append: link.title | handleize %}
-                          {% assign current_url = link.url | split: '?' | first %}
-                          {% assign is_checked = false %}
-                          {% if request.path == link.url %}
-                            {% assign is_checked = true %}
-                          {% endif %}
-                          <li class="list-menu__item facets__item link_item_{{ forloop.index }}">
-                            <label for="{{ input_id }}" class="facets__label facet-checkbox">
-                              <input
-                                type="checkbox"
-                                id="{{ input_id }}"
-                                class="menu-filter-checkbox"
-                                data-url="{{ link.url }}"
-                                {% if is_checked %}checked{% endif %}
-                              >
-                                {{ 'square.svg' | inline_asset_content }}
+{% for link in menu.links %}
+  {% assign input_id = 'Filter-' | append: link.title | handleize %}
 
-                                <div class="svg-wrapper">
-                                  {{ 'icon-checkmark.svg' | inline_asset_content }}
-                                </div>
-                              <span class="facet-checkbox__text" aria-hidden="true">
-                                <span class="facet-checkbox__text-label">{{ link.title }}</span>
-                              </span>
-                            </label>
-                          </li>
-                        {% endfor %}
+  {% assign link_base = link.url | split: '?' | first %}
+  {% assign current_base = request.path | split: '?' | first %}
+  {% assign is_checked = false %}
+  {% if current_base == link_base %}
+    {% assign is_checked = true %}
+  {% endif %}
+
+  <li class="list-menu__item facets__item link_item_{{ forloop.index }}">
+    <label for="{{ input_id }}" class="facets__label facet-checkbox">
+      <input
+        type="checkbox"
+        id="{{ input_id }}"
+        class="menu-filter-checkbox"
+        data-url="{{ link.url }}"
+        {% if is_checked %}checked{% endif %}
+      >
+      {{ 'square.svg' | inline_asset_content }}
+
+      <div class="svg-wrapper">
+        {{ 'icon-checkmark.svg' | inline_asset_content }}
+      </div>
+      <span class="facet-checkbox__text" aria-hidden="true">
+        <span class="facet-checkbox__text-label">{{ link.title }}</span>
+      </span>
+    </label>
+  </li>
+{% endfor %}
                       </ul>
                     </fieldset>
                   </div>
                 </details>
 
                 <script>
-                  document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
-                    checkbox.addEventListener('change', function () {
-                      const menuUrl = this.getAttribute('data-url');
-                      const currentSearch = window.location.search;
-                      if (this.checked) {
-                        // User is selecting a menu option → redirect to menu URL + filters
-                        //window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
-                        window.location.href = menuUrl + currentSearch;
-                      } else {
-                        // User is deselecting → redirect back to current path + filters (no menu URL)
-                        const baseUrl = window.location.pathname + window.location.search;
-                        window.location.href = baseUrl;
-                      }
-                    });
-                  });
+ document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
+  checkbox.addEventListener('change', function () {
+    // Uncheck all others
+    document.querySelectorAll('.menu-filter-checkbox').forEach(cb => {
+      if (cb !== checkbox) cb.checked = false;
+    });
+  });
+});
                 </script>
               {% endif %}           
             {% comment %} /////////////////// Side Menu Filter Ends ////////////////// {% endcomment %}            
