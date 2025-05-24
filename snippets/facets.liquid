@@ -109,87 +109,6 @@
 
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
-             {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}           
-              {% if menu.links.size > 0 and filter_type == 'vertical' %}
-                <details
-                  id="Details-custom-menu-filter-{{ section.id }}"
-                  class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
-                  data-index="{{ forloop.index }}"
-                  {% if filter_type == 'vertical' and forloop.index == 1 %}
-                    open
-                  {% endif %}
-                >
-                  <summary
-                    class="facets__summary caption-large focus-offset"
-                    aria-label="Custom Menu Filter"
-                  >
-                    <div>
-                      <span class="facets__summary-label">Custom Menu Filter</span>
-                      {{ 'icon-caret.svg' | inline_asset_content }}
-                    </div>
-                  </summary>
-
-                  <div
-                    id="Facet-custom-menu-filter-{{ section.id }}"
-                    class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %} facets__display-vertical{% endif %}"
-                  >
-                    <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
-                      <legend class="visually-hidden">Custom Menu Filter</legend>
-
-                      <ul class="facets-layout facets-layout-list facets-layout-list--text facets__list--vertical list-unstyled" role="list">
-                        {% for link in menu.links %}
-                          {% assign input_id = 'Filter-' | append: link.title | handleize %}
-                          {% assign current_url = link.url | split: '?' | first %}
-                          {% assign is_checked = false %}
-                          {% if request.path == current_url %}
-                            {% assign is_checked = true %}
-                          {% endif %}
-
-                          <li class="list-menu__item facets__item link_item_{{ forloop.index }}">
-                            <label for="{{ input_id }}" class="facets__label facet-checkbox">
-                              <input
-                                type="checkbox"
-                                id="{{ input_id }}"
-                                class="menu-filter-checkbox"
-                                data-url="{{ link.url }}"
-                                {% if is_checked %}checked{% endif %}
-                              >
-                                {{ 'square.svg' | inline_asset_content }}
-
-                                <div class="svg-wrapper">
-                                  {{ 'icon-checkmark.svg' | inline_asset_content }}
-                                </div>
-                              <span class="facet-checkbox__text" aria-hidden="true">
-                                <span class="facet-checkbox__text-label">{{ link.title }}</span>
-                              </span>
-                            </label>
-                          </li>
-                        {% endfor %}
-                      </ul>
-                    </fieldset>
-                  </div>
-                </details>
-
-                <script>
-                  document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
-                    checkbox.addEventListener('click', function () {
-                      console.log('hello');
-                      const menuUrl = this.getAttribute('data-url');
-                      const currentSearch = window.location.search;
-                      if (this.checked) {
-                        // User is selecting a menu option → redirect to menu URL + filters
-                        //window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
-                        window.location.href = menuUrl + currentSearch;
-                      } else {
-                        // User is deselecting → redirect back to current path + filters (no menu URL)
-                        const baseUrl = window.location.pathname + window.location.search;
-                        window.location.href = baseUrl;
-                      }
-                    });
-                  });
-                </script>
-              {% endif %}           
-             {% comment %} /////////////////// Side Menu Filter Ends ////////////////// {% endcomment %}            
             {%- for filter in results.filters -%}
               {% liquid
                 assign total_active_values = total_active_values | plus: filter.active_values.size
@@ -415,6 +334,87 @@
                   </details>
               {% endcase %}
             {%- endfor -%}
+
+             {% comment %} /////////////////// Side Menu Filter //////////////////  {% endcomment %}           
+              {% if menu.links.size > 0 and filter_type == 'vertical' %}
+                <details
+                  id="Details-custom-menu-filter-{{ section.id }}"
+                  class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
+                  data-index="{{ forloop.index }}"
+                  {% if filter_type == 'vertical' and forloop.index == 1 %}
+                    open
+                  {% endif %}
+                >
+                  <summary
+                    class="facets__summary caption-large focus-offset"
+                    aria-label="Custom Menu Filter"
+                  >
+                    <div>
+                      <span class="facets__summary-label">Custom Menu Filter</span>
+                      {{ 'icon-caret.svg' | inline_asset_content }}
+                    </div>
+                  </summary>
+
+                  <div
+                    id="Facet-custom-menu-filter-{{ section.id }}"
+                    class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %} facets__display-vertical{% endif %}"
+                  >
+                    <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
+                      <legend class="visually-hidden">Custom Menu Filter</legend>
+
+                      <ul class="facets-layout facets-layout-list facets-layout-list--text facets__list--vertical list-unstyled" role="list">
+                        {% for link in menu.links %}
+                          {% assign input_id = 'Filter-' | append: link.title | handleize %}
+                          {% assign current_url = link.url | split: '?' | first %}
+                          {% assign is_checked = false %}
+                          {% if request.path == current_url %}
+                            {% assign is_checked = true %}
+                          {% endif %}
+
+                          <li class="list-menu__item facets__item link_item_{{ forloop.index }}">
+                            <label for="{{ input_id }}" class="facets__label facet-checkbox">
+                              <input
+                                type="checkbox"
+                                id="{{ input_id }}"
+                                class="menu-filter-checkbox"
+                                data-url="{{ link.url }}"
+                                {% if is_checked %}checked{% endif %}
+                              >
+                                {{ 'square.svg' | inline_asset_content }}
+
+                                <div class="svg-wrapper">
+                                  {{ 'icon-checkmark.svg' | inline_asset_content }}
+                                </div>
+                              <span class="facet-checkbox__text" aria-hidden="true">
+                                <span class="facet-checkbox__text-label">{{ link.title }}</span>
+                              </span>
+                            </label>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </fieldset>
+                  </div>
+                </details>
+
+                <script>
+                  document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
+                    checkbox.addEventListener('change', function () {
+                      const menuUrl = this.getAttribute('data-url');
+                      const currentSearch = window.location.search;
+                      if (this.checked) {
+                        // User is selecting a menu option → redirect to menu URL + filters
+                        //window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
+                        window.location.href = menuUrl + currentSearch;
+                      } else {
+                        // User is deselecting → redirect back to current path + filters (no menu URL)
+                        const baseUrl = window.location.pathname + window.location.search;
+                        window.location.href = baseUrl;
+                      }
+                    });
+                  });
+                </script>
+              {% endif %}           
+             {% comment %} /////////////////// Side Menu Filter Ends ////////////////// {% endcomment %}
           </div>
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
