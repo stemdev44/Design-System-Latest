@@ -173,6 +173,7 @@
                 <script>
                   document.querySelectorAll('.menu-filter-checkbox').forEach(function (checkbox) {
                     checkbox.addEventListener('change', function () {
+                      console.log('hello');
                       const menuUrl = this.getAttribute('data-url');
                       const currentSearch = window.location.search;
                       if (this.checked) {
