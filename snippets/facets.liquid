@@ -139,11 +139,9 @@
                           {% assign input_id = 'Filter-' | append: link.title | handleize %}
                           {% assign current_url = link.url | split: '?' | first %}
                           {% assign is_checked = false %}
-                          {% if request.path == current_url %}
+                          {% if request.path == link.url %}
                             {% assign is_checked = true %}
                           {% endif %}
-                          <p>{{link.url}}</p>
-                          <p>{{request.path}}</p>
                           <li class="list-menu__item facets__item link_item_{{ forloop.index }}">
                             <label for="{{ input_id }}" class="facets__label facet-checkbox">
                               <input
