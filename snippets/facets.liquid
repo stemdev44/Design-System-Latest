@@ -142,6 +142,7 @@
                           {% if request.path == current_url %}
                             {% assign is_checked = true %}
                           {% endif %}
+                          <p>{{link.url}}</p>
                           <p>{{request.path}}</p>
                           <li class="list-menu__item facets__item link_item_{{ forloop.index }}">
                             <label for="{{ input_id }}" class="facets__label facet-checkbox">
