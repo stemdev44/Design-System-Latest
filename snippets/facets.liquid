@@ -376,7 +376,7 @@
                                 id="{{ input_id }}"
                                 class="menu-filter-checkbox"
                                 data-url="{{ link.url }}"
-                                checked
+                                {% if is_checked %}checked{% endif %}
                               >
                                 {{ 'square.svg' | inline_asset_content }}
 
@@ -402,8 +402,8 @@
                       window.location.href = menuUrl + currentSearch;
                       if (this.checked) {
                         // User is selecting a menu option → redirect to menu URL + filters
-                        //window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
-                        window.location.href = menuUrl + currentSearch;
+                        window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
+                        // window.location.href = menuUrl + currentSearch;
                       } else {
                         // User is deselecting → redirect back to current path + filters (no menu URL)
                         const baseUrl = window.location.pathname + window.location.search;
