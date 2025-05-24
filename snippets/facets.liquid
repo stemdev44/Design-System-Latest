@@ -401,6 +401,7 @@
                     checkbox.addEventListener('change', function () {
                       const menuUrl = this.getAttribute('data-url');
                       const currentSearch = window.location.search;
+                      console.log('menuUrl:',menuUrl)
                       console.log('currentSearch:',currentSearch)
                       if (this.checked) {
                         // User is selecting a menu option → redirect to menu URL + filters
