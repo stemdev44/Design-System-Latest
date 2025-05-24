@@ -401,10 +401,10 @@
                     checkbox.addEventListener('change', function () {
                       const menuUrl = this.getAttribute('data-url');
                       const currentSearch = window.location.search;
-
+                      console.log('currentSearch:',currentSearch)
                       if (this.checked) {
                         // User is selecting a menu option → redirect to menu URL + filters
-                        window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
+                        //window.location.href = menuUrl + (currentSearch ? '&' + currentSearch.substring(1) : '');
                       } else {
                         // User is deselecting → redirect back to current path + filters (no menu URL)
                         const baseUrl = window.location.pathname + window.location.search;
